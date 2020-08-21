@@ -1,0 +1,13 @@
+* A c l a r a c i ó n   s o b r e   e l   l a y o u t  
+*
+*
+
+ - Se extiende de layout/credo/layouts principal.
+
+ - Ese layout tiene varios Yield relacionados con Vue y sus componentes.
+   -  @yield('vue-componenetes-cdn') -> (CDN de los plugins)
+   -  @yield('vue-componenetes-externos') -> ( Vue.use de los plugins)
+   -  @yield('vue') -> la configuración de los componentes nuestros y el root.
+ 
+ - ¿Qué gano haciendo esto? Que pueda solicitar solo lo que voy a usar. Evitando cargar cosas innecesarias.
+

@@ -1,0 +1,13 @@
+* P o r t a d a s  
+*
+* 
+
+ - El partial de la vista está en paginas/paginas_personalizadas/partials/portada_molde.blade.php
+ - Cada vez que se usa el include del partial hay que setear algunas variables previamente para indicar si es cabecera o no; y para ajustar la ruta 
+   del llamado  a la acción.
+ - Son entidades que están vinculadas con el modulo imagen usando el Trait correspondiente.
+ - Tiene lógica para poder ubicar elementos izq, centro, derecha.
+ - Se puede personalizar los tags title y description. Usan un Trait correspondiente que el mismo también se usa para el blog "Noticias".
+ - Están cacheadas y cada vez que se editan se borra el cache. Nota hay que agregar este nombre de Cache a la funcion del controlador   
+   olvidarCachesAsociadoAEstaEntidad(). La idea usa cacheRemember para enviar a la vista el objeto. 
+ - Tiene lógica para usar tanto de cabecera como en alguna otra parte de la página. 

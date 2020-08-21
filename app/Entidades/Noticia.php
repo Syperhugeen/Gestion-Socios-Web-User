@@ -1,0 +1,54 @@
+<?php
+
+namespace App\Entidades;
+
+use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
+use App\Helpers\HelpersGenerales;
+use App\Traits\entidadesMetodosComunes;
+use App\Traits\entidadesTagsTitleMetodos;
+use App\Traits\entidadesMetodosDeImagenes;
+
+class Noticia extends Model
+{
+
+    use entidadesMetodosComunes;
+    use entidadesTagsTitleMetodos;
+    use entidadesMetodosDeImagenes;
+
+    protected $table            ='noticias';
+    protected $fillable         = ['name', 'description'];
+    protected $img_key          = 'noticia_id';
+    protected $route_admin_name = 'get_admin_noticias_editar';
+    protected $appends          = ['route','fecha_personalizada'];
+  
+
+    public function getRouteAdminAttribute()
+    {        
+        return route($this->route_admin_name, $this->id);
+    }
+
+
+    public function getFechaPersonalizadaAttribute()
+    {
+        $fecha = Carbon::parse($this->created_at);
+
+        return $fecha->format('d/m/Y');
+    }
+
+    public function getRouteAttribute()
+    {
+       return route('get_pagina_noticia_individual', [HelpersGenerales::helper_convertir_cadena_para_url($this->name) ,$this->id]);
+    }
+
+    public function getContenidoRenderAttribute()
+    { 
+       $cadena = $this->description;
+
+       return HelpersGenerales::helper_convertir_caractereres_entidades_blog_o_similares($cadena);        
+    }
+
+    
+
+    
+}

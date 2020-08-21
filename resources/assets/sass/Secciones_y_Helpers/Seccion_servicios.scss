@@ -1,0 +1,11 @@
+.servicio_lista{
+  width:100%;
+}
+
+  .servicio_lista_imagen{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: $Border-radius*2  $Border-radius*2 0 0 ;
+  }

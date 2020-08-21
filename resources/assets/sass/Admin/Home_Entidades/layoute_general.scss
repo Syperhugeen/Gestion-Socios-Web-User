@@ -1,0 +1,112 @@
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  C L A S E S   E S P E C Í F I C A S            *
+ *  P A R A   D I F E R E N T E S   P Á G I N A S  *
+ *  (pertenecientes al panel de ADMIN)             *
+ * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+
+/* * * * *  - - - - -    L A Y O U T   G E N E R A L    - - - - - * * * * */
+
+
+
+
+
+
+
+
+/* --- H E A D E R --- */
+
+.admin-header{
+  width: 100%;  
+  padding: 0 6px; 
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(row); 
+  border:solid 1px transparent;
+  font-family: $font-secondary;
+  
+}  
+
+  
+
+  .admi-header-titulo{
+    font-size: 16px;
+    color: $color-gris-text;
+    margin-left: 5px; 
+  }
+
+
+/* --- C O N T E N E D O R  d e  C O L U M N A  y  C O N T E N T --- */
+
+.admin-contiene-columna-y-content{  
+  width: 100%;
+  @include flexbox;
+  @include align-items(flex-start);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  margin: 0 auto;
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: $font-secondary;
+ 
+}
+
+  .admin-contiene-content{
+    width: 80%;    
+    @include flexbox;
+    @include align-items(center);
+    @include flex-direction(column);  
+    font-family:$font-secondary;
+  }
+
+    .admin-contiene-content-wraper{
+      width: 100%;    
+      @include flexbox;
+      @include align-items(center);
+      @include flex-direction(column); 
+      padding:8px;
+      border-radius:4px;
+      font-family:$font-secondary;
+      
+    }
+
+
+  
+
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+ *    N A V I G A T I O N   S L I D E   B A R (Admin)*
+ *        (la "columna" de la izquierda)            *
+ * * * * * * * * * * * * * * * * * * * * * * * * * */
+ // columna
+ .admin-columna-contenedor{
+  width: 20%;    
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(column);   
+  min-height: 100vh;
+  position: fixed;
+  background-color: $color-grey-1;
+}
+
+
+
+
+
+
+
+
+@media (min-width: $BrackPoint-Secundario){
+
+
+
+}

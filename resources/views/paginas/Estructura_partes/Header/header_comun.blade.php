@@ -1,0 +1,89 @@
+<header-nav :scroll="true" color_tipo="simple" inline-template>
+  <header class="py-4 " :class="getClassHeader" role="banner">
+
+        <div class="container-fluid ">
+          <div class="row align-items-center justify-content-between ">
+            
+            <div class="col-6 col-lg-2">
+             <a href="{{route('get_home')}}" class="text-left titulos-class" :class="getClassColorElement">
+              <i class="fas fa-code"></i>
+               
+
+             </a>
+            </div> 
+
+          
+
+            
+              <nav v-if="mostrar_opciones_del_menu" class="col-lg-8 d-flex flex-column align-items-end" role="navigation" :class="getClassMostrarMenuMovil">
+                <ul :class="getClassNavUlEnMovil" class="d-flex flex-column align-items-start flex-lg-row align-items-lg-center m-0 px-lg-3">     
+                  <div v-if="$root.mostrar_para_celuar"  v-on:click="set_mostrar_menu_movil" class="p-2 w-100 text-right titulos-class"><i class="fas fa-times"></i>
+                  </div>
+                  
+                    <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('get_home')}}" >Inicio</a></li>
+
+                    {{--  S u b   m e n ú  --}}
+                    <menu-primer-triada name_padre="Desarrollo web" url_padre="{{route('get_home')}}" >
+
+                     {{-- O p c i o n e s   d e l   m e n ú   --}}
+                     <template slot="opciones" >
+
+                       {{-- S i   e l   m e n ú   t i e n  e   m á s   o p c i o n  e s  --}}
+                       {{-- <menu-segunda-triada name_padre="hola" url_padre="{{route('get_home')}}" >
+                          <template slot="opciones_segunda_triada" >
+                            <li class="header-li-segunda-tria">
+                              <a href="">Hola 2</a>    
+                            </li>
+                            <li class="header-li-segunda-tria">
+                              <a href="">Hola 2</a>    
+                            </li>
+                            <li class="header-li-segunda-tria">
+                              <a href="">Hola 2</a>    
+                            </li>
+                            <li class="header-li-segunda-tria">
+                              <a href="">Hola 2</a>    
+                            </li>
+                            <li class="header-li-segunda-tria">
+                              <a href="">Hola 2</a>    
+                            </li>
+                            <li class="header-li-segunda-tria">
+                              <a href="">Hola 2</a>    
+                            </li>
+                            <li class="header-li-segunda-tria">
+                              <a href="">Hola 2</a>    
+                            </li>
+                            <li class="header-li-segunda-tria">
+                              <a href="">Hola 2</a>    
+                            </li>
+                          </template>
+                       </menu-segunda-triada> --}}
+
+                       <li class="header-li-primer-tria">
+                         <a href="{{route('get_pagina_de_web_para_pymes')}}">Para PyMes</a>
+                       </li>
+                        <li class="header-li-primer-tria">
+                          <a href="{{route('get_pagina_de_web_profesionales')}}">Para profesionales</a>
+                        </li>
+
+                     </template>
+
+                    </menu-primer-triada>
+                  
+                  {{-- <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="#about-section" class="nav-link">Sobre Mauricio Costanzo</a></li>
+                  <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="#services-section" class="nav-link">Servicios</a></li>       --}}     
+                  <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('get_pagina_noticias_listado')}}">Blog</a></li>
+                  <li :class="getClassUlLI"><a :class="getClassItemsNav" href="{{route('get_pagina_contacto','-')}}" >Contacto</a>
+                  </li>
+                  
+                </ul>
+              </nav> 
+              <div v-if="$root.mostrar_para_celuar" v-on:click="set_mostrar_menu_movil" class="col-3 text-right titulos-class" :class="getClassColorElement">
+                 <i v-if="!mostrar_menu_en_movil" class="fas fa-bars"></i>
+                 
+              </div>
+
+          </div>
+        </div>      
+  </header>
+</header-nav>
+

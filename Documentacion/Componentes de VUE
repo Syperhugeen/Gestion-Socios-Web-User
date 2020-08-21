@@ -1,0 +1,11 @@
+* V u e   H e a d e r 
+*
+* 
+
+ - Usa scss Seccion_header (archivo con estilos).
+   - En el archivo de este componente hay dos componentes más que sería las opciones de un dropdown y de un segundo dropdown.
+ - Tiene dos modalidades de color: simple e invertido.
+ - Puede quedar fixed o no. 
+ - Usa muchos atributos que están en la instancia $root. Los mismo tienen que ver con los BreackPoint y scroll.
+ - Ver el componente para obtener mas información.
+ 
