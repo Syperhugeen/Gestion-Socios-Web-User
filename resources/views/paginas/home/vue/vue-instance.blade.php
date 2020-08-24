@@ -4,7 +4,9 @@
 var app = new Vue({
     el: '#app',    
     data:{
+      @if(isset($Empresa))
       empresa: {!! json_encode($Empresa) !!},
+      @endif
       cargando:false,
       scrolled:0,
       windowWidth: window.innerWidth,
