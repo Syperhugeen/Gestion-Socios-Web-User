@@ -18,7 +18,7 @@
   @include('paginas.home.vue.vue-instance')
 @stop
 
-@section('content')
+@section('contenido')
 
 
  
