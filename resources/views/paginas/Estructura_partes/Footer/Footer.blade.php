@@ -18,18 +18,7 @@
           <div class="col-md-3 p-4">
             <h3 class="footer-titulo-columna mb-5">Rutas de interés</h3>
              
-               <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_pagina_de_web_para_pymes')}}" >Desarrollo web para PyMes</a>
-               </p >
-               <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_servicio_google_ads')}}" >Posicioná tu web</a>
-               </p >
-               <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_programa_para_gestionar_gimancios')}}" >Software para gimansios</a>
-               </p >
-               <p class="contiene-p-linea">
-                 <a class="contiene-link-linea" href="{{route('get_programa_para_gestionar_academias_de_baile')}}" >Software para academias de baile</a>
-               </p >
+             
                
                @if(Auth::guest())
                <p class="contiene-p-linea">
