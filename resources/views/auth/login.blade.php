@@ -1,4 +1,4 @@
-@extends('layouts.user_layout.user_layout')
+@extends('layouts.credo.layout_pricnipal')
 
 
 @section('title')
