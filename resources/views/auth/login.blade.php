@@ -14,7 +14,9 @@
 @stop
 
 
-
+@section('vue')  
+  @include('paginas.home.vue.vue-instance')
+@stop
 
 @section('content')
 
