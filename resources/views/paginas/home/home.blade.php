@@ -3,7 +3,7 @@
 
 
 
-{{--*/ $ImagenParaTaG         = url() . '/imagenes/PaginasPersonalizadas/mauricio-costanzo-desarrollador-prgramador.jpg'/*--}}
+{{--*/ $ImagenParaTaG         = url() . '/imagenes/PaginasPersonalizadas/Socios/easy-socio-el-software-para-administrar-gimnasios-academias-de-baile-institutos-de-ingles-y-mucho-más.jpg'/*--}}
 {{--*/ $Titulo                = $Portada->titulo_de_la_pagina /*--}}
 {{--*/ $DescriptionEtiqueta   = $Portada->description_de_la_pagina   /*--}}
 {{--*/ $PalabrasClaves        = 'desarrollador web, programador web, diseñador de paginas web, diseño de webs, paginas webs' /*--}}
@@ -22,8 +22,6 @@
  <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" /> 
  <meta property="og:image:width"        content="250">
  <meta property="og:image:height"       content="250">
-
-
 @stop 
 
 
@@ -46,6 +44,10 @@
          ]
         }
 </script>
+@stop
+
+@section('favicon')
+ <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}"> 
 @stop
 
 @section('title')
