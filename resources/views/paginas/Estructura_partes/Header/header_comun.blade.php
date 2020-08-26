@@ -5,7 +5,7 @@
           <div class="row align-items-center justify-content-between ">
             
             <div class="col-6 col-lg-2">
-             <a href="{{route('get_home')}}" class="d-block w-100 p-3 p-lg-0">
+             <a href="{{route('get_home')}}" class="d-block w-100 ">
                <img v-if="$root.scrolled > 0" src="{{url()}}/imagenes/Empresa/logo-rectangular-easysocio-color.png" class="img-fluid">
                <img v-else src="{{url()}}/imagenes/Empresa/logo-rectangular-easysocio-blanco.png" class="img-fluid">
 
