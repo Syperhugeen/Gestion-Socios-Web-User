@@ -96,7 +96,7 @@
     <span id="header-llamado-a-la-accion"></span>
 
 
-    <section class="site-section bg-light" id="blog-section">
+    <section class="site-section bg-light" id="intro">
       <div class="container">
         <div class="row">
           <div class="col-12 mb-5 position-relative">
