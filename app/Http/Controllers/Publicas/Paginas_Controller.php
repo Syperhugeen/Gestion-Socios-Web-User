@@ -70,7 +70,7 @@ class Paginas_Controller extends Controller
         $Empresa  = $this->EmpresaRepo->getEmpresaDatos();
 
         $Portada  = Cache::remember('PortadaBlogs', 2000, function(){
-                    return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','blog sobre desarrollo de paginas web y seo');
+                    return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','blog');
                     });
         
 
