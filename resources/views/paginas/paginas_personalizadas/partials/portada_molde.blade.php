@@ -3,9 +3,9 @@
 <div v-lazy-container="{ selector: 'img' }" @if(!isset($EsPortada)) v-if="scrolled" @endif class="site-blocks-cover overlay bg-light" >
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
+      <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro p-1">
         <div class="row @if($Portada->posicion == 'left') @elseif($Portada->posicion == 'center') justify-content-center text-center @else justify-content-end text-right @endif">
-          <div class="col-10 col-lg-6 " >
+          <div class="col-11 col-lg-6 " >
             @if(isset($EsPortada) && $EsPortada == true) 
               <h1  class="titulos-class text-white font-secondary mb-3">{{$Portada->titulo}}</h1>
               @if($Portada->sub_titulo != '')
