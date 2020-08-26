@@ -20,11 +20,11 @@ trait entidadesTagsTitleMetodos{
                 $string = $this->name;
             }    
 
-            return '【 ' .  HelpersGenerales::helper_convertir_cadena_solo_letras_y_numeros($string) . '  】';
+            return ' ⇨ ' .  HelpersGenerales::helper_convertir_cadena_solo_letras_y_numeros($string) . '  ©';
         }
         else
         {
-            return '【 ' .  $this->title_tag . '  】';
+            return ' ⇨ ' .  $this->title_tag . '  ©';
         }
     }
 
