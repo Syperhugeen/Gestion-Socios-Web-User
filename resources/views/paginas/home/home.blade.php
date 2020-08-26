@@ -133,60 +133,39 @@
     <div  class="site-section" id="Ventadtajas-1">
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">EasySocio está en la nube</h2>
-          <p>Lo primero que tienes que saber es que Easysocio se encuentra alojado en la nube. ¿Qué ventajas brinda? Para empezar <strong>no necesitas instalar el software en tu computadora</strong>  (con el problema que trae el cambiar de computadora o el espacio en disco limitado). Tan solo con abrir el navegador (Google Chrome,Firefox, Internet Explorer, o similar ) e ingresar al programa a través de un enlace ya puedes comenzar (similar a cuando entras a Facebook desde una computadora). <strong>La gran ventaja de esto es que puedes acceder desde cualquier computadora</strong>  (de escritorio o portátil), <strong>sea que estés en tu gimnasio, en tu casa, o en China</strong> .
+          <div class="col-lg-6 order-1 order-lg-2">
+          <h2 class="section-title mb-4">Agrégale valor a tu emprendimiento sin perder más tiempo ni energía en detalles de gestión</h2>
+          <p>Los gimnasios hoy en día son uno de los emprendimientos de mayor auge. La industria del fittness y del cuidado personal se encuentra al alza, ya que millones de personas acuden en búsqueda de la oferta de productos y servicios que allí se ofrecen con la finalidad de mejorar su calidad de vida. Es un campo de trabajo y de inversión que abarca muchos aspectos, que van desde la estética personal, al bienestar físico y la salud. 
           </p>
           <p>  
-          Al estar en la nube tampoco <strong>necesitas preocuparte con el espacio en disco y el respaldo de los datos</strong>. Podrás acceder a ellos en cualquier momento. Así que si se rompe tu computadora, simplemente puedes usar otra para acceder al programa y todo estará tal cual lo dejaste la última vez. 
+          Una sociedad que promueve el cuidado personal a través de la promoción de buenas prácticas y hábitos saludables en los individuos, resulta un ambiente ideal para el surgimiento de muchas ideas y modelos de negocios asociados al cuidado del bienestar físico. Así que, bien sea que tienes un gimnasio con equipos para ejercicios anaeróbicos (pesas y máquinas de resistencia) una escuela de artes marciales, o un centro para las últimas tendencias del entrenamiento como el Crossfit, el bootcamp o el TRX, ya diste el primer paso y realizaste la inversión más importante, ahora lo que necesitas son los medios para llevar al éxito a tu emprendimiento.
           </p>  
           <p>  
-          Ya no es necesario dedicar varios días a actualizar las aplicaciones, con Easysocio las actualizaciones <strong>son automáticas y seguras</strong> . <strong>No debes comprar la última versión del software, parches o actualizaciones</strong> . Con el Easysocio en la nube,  ¡no tienes que hacer nada extra!
-  
+          Para eso, no lo dudes, el mejor aliado con el que puedes contar es esta herramienta informática multifuncional que te ayudará con la administración de negocio para que puedas dedicar más tiempo a pensar en ofertas de servicios innovadores y estrategias de marketing que te permitan aumentar y fidelizar la clientela que requieres para lograr la rentabilidad que deseas de tu inversión.
           </p>  
 
           </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
+          <div class="col-lg-6 order-2 pl-lg-5 order-lg-1">
             <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/programa-para-administrar-socios-en-la-nube.jpg" alt="Easysocio está en la nube. Por esa razon podrás acceder a los datos desde cualquier equipo, y no tendrás que preocuparte por actualizar ni pagar por las mejoras.">
           </div>
         </div>
       </div>
     </div>
-  {{-- Imagen con logo para mostrar por el medio --}}
-  <div class="contiene-todo-image-centrada">
-    <img src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/programa-para-administrar-socios-en-la-nube-artes-marciales.jpg" class="imagen-medio-de-web">
-    <div class="sub-contiene-texto-imagen-medio">
-      <div class="contiene-texto-imagen-medio-texto">Dale valor a tu emprendimiento sin gastar más tiempo y energía en detalles de gestión</div>
-      <img class="contiene-texto-imagen-medio-logo" src="{{url()}}/imagenes/Empresa/logo-rectangular-easysocio-blanco.png" alt="Easysocio ptograma de gestion de gimasios y academias simple de usar.">
-    </div>
-      
-     
-  </div>
+  
 
     <div  class="site-section bg-light" id="about-section">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Simplicidad de uso</h2>
+          <h2 class="section-title mb-4">¿Qué es y cómo funciona EasySocio?</h2>
           <p>
-             Tener <strong>la información justa y necesaria te ofrecerá mucha más productividad a la hora de administrar tu gimnasio</strong>. Tener un software <strong>simple, rápido y fácil de usar te permite explicarle a tu abuela/o cómo utilizarlo</strong> y que te ayude con el negocio.
+             Se trata del software, para administrar gimnasios, más fácil de usar que hayas conocido, y no por eso deja de ser una herramienta poderosa y totalmente funcional, ya que te ofrece todas las utilidades necesarias para que la gestión del local no se convierta en un dolor de cabeza o te consuma mucho tiempo y energía.
           </p>
+          <h2 class="section-title mb-4">¿Qué es y cómo funciona EasySocio?</h2>
           <p>
              <strong>(1)</strong>  - Gran parte de la información que necesitas se despliega la pantalla de inicio, pero a un click de distancia podrás obtener aún más detalles. 
           </p>  
-          <p>
-             <strong>(2)</strong> - En el listado de la captura podrás observar si el socio tiene algún plan/paqueteo contratado y la fecha de vencimiento <strong>(3) </strong>
-          </p> 
-          <p>
-             <strong>(4)</strong> - Haciendo click en el número de celular del socio podrás enviar un mensaje por Whatsapp automáticamente sin necesidad de agendar el contacto.  
-          </p> 
-          <p>
-              <strong>(5)</strong> - Si en tu gimnasio tienes la modalidad vender cuponeras de clases, Easysocio te permitirá gestionarlas de forma muy fácil. Podrás vender clases con vencimiento y con un simple click indicar cuando se utilizó/consumió. 
-          </p>   
-          <p>
             
-             <strong>(6)</strong>  - De forma muy accesible tendrás la información para saber cómo está el estado de cuenta de tu socio. 
-          </p>       
           </div>
           <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
             <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/vista-del-listado-de-easysocio-de-los-socios.jpg" alt="Lo mejor de Easysocio es su simplicidad de uso, realemnte tendrás la información que mas necesitás. "> 
