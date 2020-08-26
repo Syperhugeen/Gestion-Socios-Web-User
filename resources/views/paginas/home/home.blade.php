@@ -95,12 +95,11 @@
         <div class="container">
           <div class="row">
       <div class="col-12 mb-5 position-relative">
-              <p class="text-center mb-3">¿Tienes un gimnasio, cuentas con socios y estás en el punto en que te resulta difícil <span class="text-primary">saber quién te debe o quién está al día</span>? </p>
-              <p class="text-center"><strong>¿Te resulta familiar esto?</strong>  ¿Te gustaría una herramienta fácil de usar que <strong>te ayude con la administración de tu gimnasio a un precio mínimo</strong>? 
+
+              <h2 class="sub-titulos-class mb-2 text-center text-color-primary">EasySocio el Software para la gestión de gimnasios</h2>
+              <p class="text-center mb-0">EasySocio es una plataforma digital que te ofrece mucho más que un sistema contable para administrar tu gimnasio. Se trata de un conjunto de utilidades que te permitirán brindar un óptimo servicio para tus clientes al tiempo que facilita tu trabajo para que lo realices de manera rápida y sencilla.
               </p>
-              <p class="text-center">
-                <strong>¡Te invito a que conozcas Easysocio! </strong>  
-              </p>
+             
             </div>
           </div>
         </div>
@@ -111,24 +110,13 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Dale valor a tu emprendimiento sin gastar más tiempo y energía en detalles de gestión </h2>
+          <h2 class="section-title mb-4">¿Tienes un gimnasio y te encuentras en el punto que la gestión de sus socios se hace complicada?</h2>
             
-          <p>Hoy en día los gimnasios son emprendimientos en auge, buscando mejorar la calidad de vida de las personas, desde la estética hasta la salud, buscando inculcar hábitos saludables en las personas.ideas de negocios muy buenas, <strong>sea que tienes un gym de pesas, de artes marciales, centro de crossfit o de entrenamiento funcional, etc</strong>. Así qué tú, que ya tienes uno sólo te falta una herramienta que te <strong>ayude con la parte de administración y la gestión, para que puedas dedicarte de lleno a eso que le da valor a tu emprendimiento</strong>.
+          <p>En la industria de los negocios de acondicionamiento físico, es normal que en la medida en que comienza a crecer el volumen de clientes, cada vez se haga más difícil mantener al día los estados de cuentas de cada uno. Puede llegar a ocurrir que si son muchos no sepas distinguir quienes se encuentran al día con sus pagos y quienes te deben dinero. Si esta situación te resulta familiar haz encontrado la herramienta que necesitas para solucionar tus problemas de administración de forma sencilla y por una inversión mínima. Te invitamos a conocer EasySocio.
           </p>   
           <p>
-            Te voy a contar un poco más sobre de qué trata EasySocio el software para administrar gimnasios más simple que hayas conocido. El gran valor de <strong>EasySocio es su facilidad de uso</strong>, brindando las funcionalidades justas y necesarias para que la administración de tu gimnasio no sea un dolor de cabeza o te insuma mucha energía. A continuación te cuento los beneficios y las funcionalidades que EasySocio te brinda para darte una mano con todo eso. 
-          </p>
-          <p>
-            <a href="#Ventadtajas-1" class="Boton-Primario-Relleno Boton-Fuente-Chico">
-               Más información <i class="fas fa-chevron-right"></i>
-            </a>
-          </p>
-
-         
-
-
-
-
+            Esta tecnología te permite como administrador de uno o varios gimnasios saber cuál es el estado financiero del negocio en tiempo real, desde cualquier ubicación a través de un dispositivo móvil como un celular o tu laptop. Además podrás obtener información valiosa sobre las estadísticas de los servicios más utilizados por los clientes, las tendencias en cuanto a consumo y toda la información actualizada que requieras para una gestión eficiente.
+          </p>   
 
           </div>
           <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
