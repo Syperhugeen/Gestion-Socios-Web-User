@@ -168,7 +168,7 @@
     </div>
   
 
-    <div  class="site-section bg-light" id="about-section">
+    <div  class="site-section" id="about-section">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-6 order-2 order-lg-1">
