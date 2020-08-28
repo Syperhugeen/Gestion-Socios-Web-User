@@ -248,65 +248,92 @@
                 
           </div>
           <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-          <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/sistema-de-administración-con-movimientos-de-caja-multi-sucursal-y-multi-moneda.jpg" alt="Easysocio cuenta con movimientos de caja, sabrás de donde sale cada registro sea un ingres (venta) como un egreso (gasto). También sabrás que usuario(operador del sistema de administración)  fué el que lo registró. Es Multi moneda y multi sucursal. Todo para que le saques provecho y que tu gestión de negocio sea simple.
-">
+          <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/sistema-de-administración-con-movimientos-de-caja-multi-sucursal-y-multi-moneda.jpg" alt="Easysocio cuenta con movimientos de caja, sabrás de donde sale cada registro sea un ingres (venta) como un egreso (gasto). También sabrás que usuario(operador del sistema de administración)  fué el que lo registró. Es Multi moneda y multi sucursal. Todo para que le saques provecho y que tu gestión de negocio sea simple.">
           </div>
         </div>
       </div>
     </div>
 
-     <div  class="site-section">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Renovación automática de planes </h2>
-           <p> 
-            Easysocio tiene la opción de que se pueda renovar automáticamente el servicio de caracter mensual comprado por el socio por última vez. Por ejemplo: si en tu gimnasio se vende un servicio que se llama “pase libre” que se cobra por mes y un socio contrató este servicio el 01/05/2019, en la fecha de vencimiento (31/05/2019) el sistema renovará el pase libre creando otro servicio igual que vencerá el 30/06/2019. Esto hará que automáticamente se genere un movimiento de venta para ese socio el cual te pasará a deber el importe del servicio mensual renovado. En la imagen se ejemplifica esta funcionalidad. 
-          </p>    
-          <p>
-            En base comentarios de varios dueños de gimnasios y academias, estoy convencido de que una herramienta de este tipo  debería tener lo justo y necesario para que las tareas de administrar el negocio sean lo más sencillas posibles. Cada funcionalidad que pensé para Easysocio es sometida previamente a esta pregunta: ¿aporta valor  o genera complejidad? Por esto es que estoy convencido que Easysocio tiene todo lo que necesitas de una forma muy simple.
-
-          </p>         
-          </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/antes-y-despues-del-vencimiento-en-el-prgrama-de-administracion.jpg" alt="Antes y despues del vencimiento de un servicio. Easysocio te resume el trabajo automatizando este tipo de cosas. Programa para adminsitrar socios fácil de usar.">
-          </div>
-        </div> 
-      </div>
-    </div>
+    {{-- E s t a d o   d e   c u e n t a   --}}
      <div  class="site-section bg-light">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Capacitación</h2>
-           <p> 
-             Easysocio se caracteriza por ser muy simple de entender y usar. De cualquier forma, estaremos a tu disposición para enseñarte paso a paso cómo usar el software, hasta que seas un experto. 
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 order-1 order-lg-2">
+            <h3 class="section-title mb-4">Nuestro software permite integrar el estado de cuenta de los clientes</h3>
+             <p>El sistema de EasySocio, permite que en el registro de cada cliente, puedas asociar sus cuentas corrientes, de este modo optimizas tu gestión ya que podrás registrar con detalle los movimientos de las ventas de los productos y servicios, así como otros gastos, de cada usuario. Por ejemplo, el pago de un accesorio, indumentaria u otro producto que comercialices en tu local, o la adquisición de un paquete para clases de spinning. <b>Siempre sabrás lo que ha sido contratado o comprado y el monto acreditado o el saldo pendiente por cubrir</b> .
+             </p>                        
+            </div>
+            <div class="col-lg-6 order-2 pl-lg-5 order-lg-1">
+              <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+            </div>
+          </div>
+        </div>
+      </div>
 
-          </p>    
-             
+      {{-- E s t a d o   d e   c u e n t a   --}}
+     <div  class="site-section ">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 order-1 order-lg-1">
+            <h3 class="section-title mb-4">Movimientos de caja</h3>
+             <p>Es normal que dentro de un local como un gimnasio, o cualquier centro de entrenamiento físico, se disponga de un personal de apoyo en la administración, es probable que debas delegar en ellos el manejo de la caja, el cobro a los clientes y otras funciones relacionadas con las finanzas. EasySocio te permite mantener absoluto control del dinero que ingresa a tu local, los pagos realizados por los socios y la cantidad de efectivo, pagos por punto de venta, o incluso multimonedas, que se realicen. Esta función es de mucha utilidad, pues podrás hacer verificaciones de los movimientos de caja con el dinero disponible, y así podrás evitar malas sorpresas. 
+             </p>      
+             <p>
+               Cada movimiento realizado se asocia al usuario del sistema que lo realiza, por lo que siempre sabrás quién hizo cada movimiento y así serán responsables del dinero que manejan.
+             </p>        
+             <p>
+               El sistema te permite realizar cobros en diversos tipos de monedas, así si cobras algunos servicios en moneda local puedes registrarlos, y si cobras algún servicio o producto especial en dólares, también puedes llevar ese control en el mismo lugar. 
+             </p>  
+             <p>
+               Otra funcionalidad importante es que EasySocio dispone de una versión para negocios que disponen de varias sucursales, lo que te permite tener todos los movimientos diferenciados pero concentrados en la misma aplicación. Así, fácilmente puedes llevar control del funcionamiento de tu emprendimiento en diversas localidades al mismo tiempo sin necesidad de desplazarte a alguno de los locales en particular. 
+             </p>        
+            </div>
+            <div class="col-lg-6 order-2 pl-lg-5 order-lg-2">
+              <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+            </div>
           </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/programa-para-gestionar-socios-entrenamiento-a-clientes.jpg" alt="Te voy a enseñar paso a paso a usar Easysocio. El programa más simple de usar a la hora de gestionar tu emprendimeinto de fitness o academía de baile">
-          </div>
-        </div> 
+        </div>
       </div>
-    </div>
-     <div  class="site-section">
-      <div class="container">
-        <div class="row ">
-          <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Soporte</h2>
-           <p> 
-            Tanto yo (como mi equipo de vendedores) estaremos a tu disposición para darte soporte cuando lo necesites. No solo me quedaré satisfecho con haberte enseñado a ser un verdadero experto usando EasySocio, sino que estaremos disponibles para asistirte cuando sea necesario.
-          </p>    
-                
+
+     {{-- R e n o v a c i ó n   --}}
+     <div  class="site-section bg-light">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 order-1 order-lg-2">
+            <h3 class="section-title mb-4">Movimientos de caja</h3>
+             <p>Nuestro módulo de ventas te permite renovar automáticamente el servicio de afiliación mensual de los socios, replicando el último paquete adquirido por estos. Por ejemplo, si se vende un servicio del tipo “pase libre” que permite el uso ilimitado de las instalaciones de tu gimnasio, cuya adquisición y pago es mensual, el sistema, en la fecha de vencimiento realizará de manera automática el cobro y la recarga de un nuevo paquete. Generando un nuevo movimiento de venta para ese socio que solo deberá realizar el pago del mismo.
+             </p>      
+             <p>
+               Nuestra herramienta ha sido desarrollada con la colaboración y el intercambio permanente con los dueños y administradores de gimnasios, y negocios de entrenamiento físico como academias de baile, dojos de kárate, entre muchos otros. Por eso estamos convencidos de que contamos con una herramienta muy útil, que tiene todos los elementos indispensables para facilitarte la administración de tu local, a un costo muy accesible y muy fácil de aprender a utilizar.
+             </p>
+            </div>
+            <div class="col-lg-6 order-2 pl-lg-5 order-lg-1">
+              <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+            </div>
           </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/en-easy-socio-te-damos-soporte-simpre-estaré-ahí-para-darte-una-mano-con-la-tarea-de-administrar-negocio.jpg" alt="Te vamos a dar soporte ante cualquier duda sobre el uso de Easysocio. Vamos a estar ahí para cuando lo requieras">
-          </div>
-        </div> 
+        </div>
       </div>
-    </div>
+
+      {{-- C a p a c i t a c i ó n   --}}
+     <div  class="site-section ">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 order-1 order-lg-1">
+            <h3 class="section-title mb-4">Capacitación y soporte</h3>
+             <p>Adicionalmente, tenemos el personal disponible para brindarle una atención personalizada que le permita aprender paso a paso a utilizar nuestro sistema, que por sus características es muy intuitivo y amigable, para una iniciación rápida y efectiva que te convertirá muy pronto en un experto. 
+             </p>      
+             <p>
+              Personalmente y en conjunto con mi equipo de trabajo te brindaremos el soporte necesario, ya que estamos completamente a disposición de nuestros clientes para brindarles todo el apoyo necesario cuando lo requieras.
+             </p>
+            </div>
+            <div class="col-lg-6 order-2 pl-lg-5 order-lg-2">
+              <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
 
 
 
