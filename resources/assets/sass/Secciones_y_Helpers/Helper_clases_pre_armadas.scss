@@ -61,7 +61,19 @@
     display: inline-block; 
     width: 1em;
     margin-left: -1em;
+  }
+
+.lista-icono{
+
 }
+.lista-icono::before{
+    content: "\025cf";    
+    color:$color-3;  
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
 
 
 /* C a r g a d o r*/

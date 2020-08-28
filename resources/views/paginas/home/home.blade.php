@@ -161,10 +161,44 @@
           <p>
              Se trata del software, para administrar gimnasios, más fácil de usar que hayas conocido, y no por eso deja de ser una herramienta poderosa y totalmente funcional, ya que te ofrece todas las utilidades necesarias para que la gestión del local no se convierta en un dolor de cabeza o te consuma mucho tiempo y energía.
           </p>
-          <h2 class="section-title mb-4">¿Qué es y cómo funciona EasySocio?</h2>
-          <p>
-             <strong>(1)</strong>  - Gran parte de la información que necesitas se despliega la pantalla de inicio, pero a un click de distancia podrás obtener aún más detalles. 
-          </p>  
+          <h2 class="parrafo-class mb-2"><b>Algunos de los beneficios que podemos enumerar en cuanto a las funciones con las que cuenta EasySocio</b> </h2>
+          <div class="pl-1 pl-lg-3 mb-3">
+            <h3 class="">
+             <b>EasySocio se encuentra alojado en la nube</b> 
+            <h3>  
+            <p class="">
+              Esta es la primera ventaja que debes tener presente sobre nuestra herramienta, ya que se trata de una característica que te ahorra tiempo y dinero, al evitar las incómodas instalaciones de software y el inevitable soporte técnico que requieren. 
+            </p>
+            <p class="">
+              Además, no deberás adquirir y mantener servidores que representan una gran inversión tanto en hardware como en técnicos que lo manejen y le den servicio permanente. Te evitas las actualizaciones de la memoria para poder crear los respaldos necesarios y todos los costos asociados a estas actividades y a la reposición de equipos producto de la obsolescencia tecnológica.
+            </p>
+            <p class="">
+              Esta característica hace que con disponer de un dispositivo con el que te puedas conectar para navegar en internet, bien sea un teléfono móvil, una Tablet o un pc portátil o de escritorio, tendrás acceso a tu plataforma de administración a través de tu navegador preferido, sin importar el lugar donde estés, ya sea en tu oficina, en tu casa o en un chalet a la orilla de la playa o la montaña. 
+            </p>
+            <p class="">
+              Así dejarás de preocuparte porque la computadora se rompió, se quedó congelada o simplemente la dejaste olvidada cuando más la necesitabas, ya que podrás acceder a tu sesión de trabajo donde la dejaste la última vez desde cualquier equipo conectado a internet. 
+            </p>
+
+            <h3 class="">Con EasySocio siempre dispondrás de la versión más actualizada</h3>
+            <p class="">
+              Ya no necestas actualizar de manera permanente el software de gestión, dedicando tiempo o debiendo comprar nuevas licencias para lograrlo. Con EasySocio, las actualizaciones son automáticas y seguras, siempre dispondrás de la última versión que existe del software, parches de seguridad y actualizaciones.
+            </p>
+            <h3 class="">EasySocio es fácil de usar</h3>
+            <p>
+              Nuestro sistema te permite tener la información justa, cuando la necesitas y donde la necesitas, lo que se traduce en una mayor productividad para la administración de tu gimnasio. Se trata de un software sencillo, rápido de aprender a usar por lo intuitivo y amigable que le resulta al usuario, tanto que podrás explicarle a tu abuela cómo hacerlo para que te ayude a llevar las cuentas del negocio.
+            </p>
+            <p>
+              Algunas de sus ventajas más resaltantes son:
+            </p>
+            <div class="pl-2">
+              <p class="lista-icono">La pantalla de inicio contiene buena parte de la información más relevante, al tiempo que, con solo hacer click podrás obtener información al detalle sobre los diferentes aspectos de la administración de tu gimnasio.
+              </p>
+              <p class="lista-icono">
+                El listado de la captura te permite observar rápidamente los planes o paquetes contratados por el socio y las fechas de vencimiento.
+              </p>
+            </div>
+          </div>
+          
             
           </div>
           <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
