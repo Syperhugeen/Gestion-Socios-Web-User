@@ -156,6 +156,22 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-12 order-2 order-lg-1">
+          <h2 class="section-title mb-4 text-center">¿Qué es y cómo funciona EasySocio?</h2>
+          <p class="text-center">
+             Se trata del software, para administrar gimnasios, más fácil de usar que hayas conocido, y no por eso deja de ser una herramienta poderosa y totalmente funcional, ya que te ofrece todas las utilidades necesarias para que la gestión del local no se convierta en un dolor de cabeza o te consuma mucho tiempo y energía.
+          </p>
+          <h2 class="parrafo-class mb-2 text-center"><b>Algunos de los beneficios que podemos enumerar en cuanto a las funciones con las que cuenta EasySocio</b> </h2>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  
+
+    <div  class="site-section bg-light" id="about-section">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-6 order-2 order-lg-1">
           <h3 class="section-title mb-4 ">EasySocio se encuentra alojado en la nube</h3>
          <p class="">
               Esta es la primera ventaja que debes tener presente sobre nuestra herramienta, ya que se trata de una característica que te ahorra tiempo y dinero, al evitar las incómodas instalaciones de software y el inevitable soporte técnico que requieren. 
@@ -171,16 +187,18 @@
             </p>
           </div>
 
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/vista-del-listado-de-easysocio-de-los-socios.jpg" alt="Lo mejor de Easysocio es su simplicidad de uso, realemnte tendrás la información que mas necesitás. "> 
+
+          <div class="col-lg-6 order-2 pl-lg-5 order-lg-1">
+            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/programa-para-administrar-socios-en-la-nube.jpg" alt="Easysocio está en la nube. Por esa razon podrás acceder a los datos desde cualquier equipo, y no tendrás que preocuparte por actualizar ni pagar por las mejoras.">
           </div>
+
+         {{--  <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
+            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/vista-del-listado-de-easysocio-de-los-socios.jpg" alt="Lo mejor de Easysocio es su simplicidad de uso, realemnte tendrás la información que mas necesitás. "> 
+          </div> --}}
         
         </div>
       </div>
     </div>
-  
-
-
 
    <div  class="site-section" >
       <div class="container">
