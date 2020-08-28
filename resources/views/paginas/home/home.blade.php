@@ -167,7 +167,7 @@
       </div>
     </div>
   
-
+    {{-- N u e b e --}}
     <div  class="site-section" id="about-section">
       <div class="container">
         <div class="row align-items-center justify-content-center">
@@ -188,7 +188,7 @@
           </div>
 
 
-          <div class="col-lg-6 order-2 pl-lg-5 order-lg-1">
+          <div class="col-lg-6 order-1 pl-lg-5 order-lg-2">
             <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/programa-para-administrar-socios-en-la-nube.jpg" alt="Easysocio está en la nube. Por esa razon podrás acceder a los datos desde cualquier equipo, y no tendrás que preocuparte por actualizar ni pagar por las mejoras.">
           </div>
 
@@ -200,13 +200,14 @@
       </div>
     </div>
 
-   <div  class="site-section" >
+   {{-- V e r s i ó n   a c t u a l i z a d a  --}}
+   <div  class="site-section bg-light">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Software con estado de cuenta integrado</h2>
-           <p>Tener cuentas corrientes asociada a cada socio (cliente) optimiza la gestión de tu emprendimiento, es fundamental tener esta información accesible. Podrás registrar movimientos de ventas de servicios así como otros gastos, por ejemplo: la venta de algún producto o indumentaria. <strong>Siempre sabrás exactamente lo que ha contratado/comprado, si tiene algún saldo pendiente de pagar o si está al día</strong>. 
-          </p>             
+          <h3 class="section-title mb-4">Con EasySocio siempre dispondrás de la versión más actualizada</h3>
+           <p>Ya no necesitas actualizar de manera permanente el software de gestión, dedicando tiempo o debiendo comprar nuevas licencias para lograrlo. Con EasySocio, las actualizaciones son automáticas y seguras, siempre dispondrás de la última versión que existe del software, parches de seguridad y actualizaciones.
+           </p>                        
           </div>
           <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
             <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
@@ -215,24 +216,38 @@
       </div>
     </div>
 
-    <div  class="site-section bg-light" >
+    {{-- E s  f á c i l   d e   u s a r --}}
+    <div  class="site-section " >
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">         
-          <h2 class="section-title mb-4">Movimientos de caja </h2>
-          <p> Imagínate la siguiente situación: dejas a alguien a cargo de tu negocio. A primera hora de la mañana la caja cuenta con $2000. En el correr el día esa persona vende, cobra y paga ¿no crees que sería útil poder ver todos esos movimientos asociados con la persona que quedó a cargo del negocio? Luego podrías verificar que lo que hay en caja es consistente con todos los movimientos realizados durante el día. Bueno, este tipo de funcionalidades es una de las que te ofrece EasySocio.
+          <div class="col-lg-6 order-2 order-lg-2">         
+          <h3 class="section-title mb-4">EasySocio es fácil de usar </h3>
+          <p>Nuestro sistema te permite tener la información justa, cuando la necesitas y donde la necesitas, lo que se traduce en una mayor productividad para la administración de tu gimnasio. Se trata de un software sencillo, rápido de aprender a usar por lo intuitivo y amigable que le resulta al usuario, tanto que podrás explicarle a tu abuela cómo hacerlo para que te ayude a llevar las cuentas del negocio.
           </p> 
           <p>
-            <strong>Cada movimiento estará asociado al usuario que esté identificado en el sistema en ese momento</strong>. Siempre sabrás quién registró cada movimiento, y si pasan cosas “raras” sabrás con quién hablar. Otra característica de los movimientos de caja es que pueden ser <strong>multimoneda, quizás tengas productos que cobres en dólares y otros en pesos</strong>  (o tu moneda local). En cualquier caso, Easysocio ya contempla estas situaciones para que le puedas sacar el máximo provecho.
+            Algunas de sus ventajas más resaltantes son:
+          </p>  
 
-
-          </p>     
-          <p>
-            Si <strong>tu negocio cuenta con más de una sucursal</strong> , tendrás los movimientos de caja diferenciados para cada una de ellas. 
-            Recuerda que podrás controlar los movimientos de cada sucursal sin importar dónde estés,<strong> gracias a que Easysocio está en la nube</strong> . 
-          </p>        
+          <div class="pl-3">
+            <p class="lista-icono">
+              La pantalla de inicio contiene buena parte de la información más relevante, al tiempo que, con solo hacer click podrás obtener información al detalle sobre los diferentes aspectos de la administración de tu gimnasio.
+            </p>
+            <p class="lista-icono">
+              El listado de la captura te permite observar rápidamente los planes o paquetes contratados por el socio y las fechas de vencimiento.
+            </p>
+            <p class="lista-icono">
+              Con solo hacer click sobre el número de celular registrado del socio podrás enviar un mensaje vía WhatsApp, lo que te ayudará a brindar un servicio personalizado y a implementar estrategias de marketing y fidelización de forma muy sencilla.
+            </p>
+            <p class="lista-icono">
+              Podrás gestionar cuponeras para clases o servicios de forma virtual. También podrás vender clases o sesiones especiales de entrenamiento con fecha y hora establecida, además podrás llevar el control de la ejecución de estos servicios.
+            </p>
+            <p class="lista-icono mb-0">
+              Estado de cuenta del socio de forma inmediata y de fácil acceso.
+            </p>
+          </div>   
+                
           </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
+          <div class="col-lg-6 order-3 pl-lg-5 order-lg-1">
           <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/sistema-de-administración-con-movimientos-de-caja-multi-sucursal-y-multi-moneda.jpg" alt="Easysocio cuenta con movimientos de caja, sabrás de donde sale cada registro sea un ingres (venta) como un egreso (gasto). También sabrás que usuario(operador del sistema de administración)  fué el que lo registró. Es Multi moneda y multi sucursal. Todo para que le saques provecho y que tu gestión de negocio sea simple.
 ">
           </div>
