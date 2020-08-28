@@ -23,23 +23,19 @@ class Home_Public_Controller extends Controller
                                 NoticiasRepo        $NoticiasRepo, 
                                 PortadaDePaginaRepo $PortadaDePaginaRepo
                                 )
-    {
-        
+    {        
         $this->EmpresaRepo            = $EmpresaRepo;
         $this->NoticiasRepo           = $NoticiasRepo;
         $this->PortadaDePaginaRepo    = $PortadaDePaginaRepo;
-        
-        
     }
 
     public function get_home(Request $Request)
-    {       
-           
+    {                  
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();         
         $blogs          = $this->NoticiasRepo->getUltimosBlogs();    
         $Portada        = Cache::remember('PortadaHome', 2000, function(){
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home');
-                          });    
+                          });  
 
         return view('paginas.home.home', compact('Empresa','blogs','Portada'));
     }
