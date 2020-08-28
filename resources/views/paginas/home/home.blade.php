@@ -204,12 +204,12 @@
    <div  class="site-section bg-light">
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">
+          <div class="col-lg-6 order-1 order-lg-2">
           <h3 class="section-title mb-4">Con EasySocio siempre dispondrás de la versión más actualizada</h3>
            <p>Ya no necesitas actualizar de manera permanente el software de gestión, dedicando tiempo o debiendo comprar nuevas licencias para lograrlo. Con EasySocio, las actualizaciones son automáticas y seguras, siempre dispondrás de la última versión que existe del software, parches de seguridad y actualizaciones.
            </p>                        
           </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
+          <div class="col-lg-6 order-2 pl-lg-5 order-lg-1">
             <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
           </div>
         </div>
@@ -220,7 +220,7 @@
     <div  class="site-section " >
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-2">         
+          <div class="col-lg-6 order-2 order-lg-1">         
           <h3 class="section-title mb-4">EasySocio es fácil de usar </h3>
           <p>Nuestro sistema te permite tener la información justa, cuando la necesitas y donde la necesitas, lo que se traduce en una mayor productividad para la administración de tu gimnasio. Se trata de un software sencillo, rápido de aprender a usar por lo intuitivo y amigable que le resulta al usuario, tanto que podrás explicarle a tu abuela cómo hacerlo para que te ayude a llevar las cuentas del negocio.
           </p> 
@@ -247,7 +247,7 @@
           </div>   
                 
           </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-1">
+          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
           <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/sistema-de-administración-con-movimientos-de-caja-multi-sucursal-y-multi-moneda.jpg" alt="Easysocio cuenta con movimientos de caja, sabrás de donde sale cada registro sea un ingres (venta) como un egreso (gasto). También sabrás que usuario(operador del sistema de administración)  fué el que lo registró. Es Multi moneda y multi sucursal. Todo para que le saques provecho y que tu gestión de negocio sea simple.
 ">
           </div>
