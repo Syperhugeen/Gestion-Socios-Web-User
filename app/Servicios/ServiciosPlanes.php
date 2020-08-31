@@ -28,7 +28,7 @@ class ServiciosPlanes
     $Plan2->cantidad_de_socios = 400;
     $Plan2->cantidad_de_sucursales = 1;
     $Plan2->moneda = '$';
-    $Plan2->precio = 990;   
+    $Plan2->precio = 1490;   
 
     $Plan3 = new stdClass();
     $Plan3->name = 'Pro';
