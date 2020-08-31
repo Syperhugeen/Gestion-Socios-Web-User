@@ -4,12 +4,12 @@
 <div class="col-12 col-lg-4">
   
 
-<div class="w-100">
-         <header class="sub-titulos-class mb-4 text-center text-color-primary">
-            Plan {{$Plan->name}}
+<div class="w-100 d-flex flex-column align-items-center background-gris--1">
+         <header class="sub-titulos-class mb-4 text-center text-color-black">
+            <b>Plan {{$Plan->name}}</b> 
           </header>
 
-        <ul class="contiene-ul-precio-nuevo">
+        <ul class="p-3 mb-3 background-gris-0">
              <li class="contiene-li-precio-nuevo">
               <span class="text-color-primary">
                 <i class="fas fa-check-circle"></i>
@@ -24,7 +24,7 @@
              </li>
              <li class="contiene-li-precio-nuevo">
               <span class="text-color-primary">
-                <<i class="fas fa-check-circle"></i>
+                <i class="fas fa-check-circle"></i>
               </span>              
               Movimientos de caja
              </li>

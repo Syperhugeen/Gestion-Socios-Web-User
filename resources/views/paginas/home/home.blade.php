@@ -343,14 +343,10 @@
         <div class="row">
           
           <div class="col-12 mb-5 position-relative">
-            <h2 class="section-title text-center mb-5">Planes y precios</h2>
-            
+            <h2 class="titulos-class text-center mb-5">Planes y precios</h2>           
           </div>
-
-           <div class="row">
-            @include('paginas.paginas_personalizadas.precios_programa_socios')
-           </div>
-
+           
+          @include('paginas.paginas_personalizadas.precios_programa_socios')
 
 
           <div class="col-12 text-center p-5">
