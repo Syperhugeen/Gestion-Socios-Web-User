@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Repositorios\NoticiasRepo;
 use App\Repositorios\PortadaDePaginaRepo;
 use Illuminate\Support\Facades\Cache;
+use App\Servicios\ServiciosPlanes;
 
 
 
@@ -17,16 +18,19 @@ class Home_Public_Controller extends Controller
     protected $EmpresaRepo;
     protected $NoticiasRepo;  
     protected $PortadaDePaginaRepo;
+    protected $ServiciosPlanes;
   
 
     public function __construct(EmpresaRepo         $EmpresaRepo, 
                                 NoticiasRepo        $NoticiasRepo, 
-                                PortadaDePaginaRepo $PortadaDePaginaRepo
+                                PortadaDePaginaRepo $PortadaDePaginaRepo, 
+                                ServiciosPlanes     $ServiciosPlanes
                                 )
     {        
         $this->EmpresaRepo            = $EmpresaRepo;
         $this->NoticiasRepo           = $NoticiasRepo;
         $this->PortadaDePaginaRepo    = $PortadaDePaginaRepo;
+        $this->ServiciosPlanes        = $ServiciosPlanes;
     }
 
     public function get_home(Request $Request)
@@ -37,7 +41,11 @@ class Home_Public_Controller extends Controller
                           return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','home');
                           });  
 
-        return view('paginas.home.home', compact('Empresa','blogs','Portada'));
+        $Planes         = $this->ServiciosPlanes->getPlanes();
+
+        dd($Planes);
+
+        return view('paginas.home.home', compact('Empresa','blogs','Portada','Planes'));
     }
 
 
