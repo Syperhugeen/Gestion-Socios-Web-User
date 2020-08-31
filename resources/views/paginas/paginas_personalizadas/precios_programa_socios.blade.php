@@ -1,6 +1,6 @@
 
 
-@foreach($Palnes as $Plan)
+@foreach($Planes as $Plan)
 <div class="col-12 col-lg-4">
   
 
