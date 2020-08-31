@@ -171,7 +171,7 @@
     <div  class="site-section" id="about-section">
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-6 order-2 order-lg-1">
+          <div class="col-lg-6 order-2 order-lg-1">
           <h3 class="section-title mb-4 ">EasySocio se encuentra alojado en la nube</h3>
          <p class="">
               Esta es la primera ventaja que debes tener presente sobre nuestra herramienta, ya que se trata de una característica que te ahorra tiempo y dinero, al evitar las incómodas instalaciones de software y el inevitable soporte técnico que requieren. 
