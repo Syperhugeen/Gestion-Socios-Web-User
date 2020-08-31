@@ -338,7 +338,7 @@
 
 
 
-     <section class="site-section bg-light" id="precios-section">
+     <section class="site-section background-gris-0" id="precios-section">
       <div class="container">
         <div class="row">
           
@@ -347,21 +347,16 @@
             
           </div>
 
-           <div class=" mb-5 mb-lg-0 get_width_100 flex-row-center flex-justifice-space-around  flex-wrap">
+           <div class="row">
             @include('paginas.paginas_personalizadas.precios_programa_socios')
            </div>
 
 
 
-          <div class="get_width_100 flex-row-center flex-justifice-space-around">
-             <div class="Seccion_precio_aclaracion text-center">
-                
-                * Los precios están en pesos Uruguayos y no incluyen impuestos    
-                <br>
-                * Si no hay un plan que se ajuste a tu necesidad contáctame y lo vemos
-
-                        
-             </div>
+          <div class="col-12 text-center p-5">
+             <p class="color-text-gris text-center p-2 mb-0">                
+                * Los precios están en pesos Uruguayos y no incluyen impuestos  
+             </p>
           </div>
            
            
