@@ -210,7 +210,7 @@
            </p>                        
           </div>
           <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-2 pl-lg-5 order-lg-1">
-            <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Easysocio/Home/sin-actualziaciones.png" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+            <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/Easysocio/Home/sin-actualziaciones.png" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
           </div>
         </div>
       </div>
