@@ -16,7 +16,7 @@
 
 
 
- <script async src="https://kit.fontawesome.com/8cca488c92.js" crossorigin="anonymous"></script>
+ <script src="https://kit.fontawesome.com/8cca488c92.js" crossorigin="anonymous"></script>
  <link rel="stylesheet" type="text/css" href="{{url()}}{{ elixir('css/credo.css') }}">
 
 

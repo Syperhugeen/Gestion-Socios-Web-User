@@ -106,7 +106,7 @@
     </section> 
 
 
-  <div  class="site-section bg-light" id="about-section">
+  <div v-lazy-container="{ selector: 'img' }" class="site-section bg-light" id="about-section">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-6 order-2 order-lg-1">
@@ -120,7 +120,7 @@
 
           </div>
           <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-celular.png" alt="EasySocio el software para administrar gimnasios, academias de baile, institutos de inlges, academía de choferes y mucho mucho más. Easysocio está en la nuebe y lo puedes usar desde celulares y computadoras. Desde cualquier lugar. ">
+            <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-celular.png" alt="EasySocio el software para administrar gimnasios, academias de baile, institutos de inlges, academía de choferes y mucho mucho más. Easysocio está en la nuebe y lo puedes usar desde celulares y computadoras. Desde cualquier lugar. ">
           </div>
           
         </div>
@@ -145,8 +145,8 @@
           </p>  
 
           </div>
-          <div class="col-lg-6 order-2 pl-lg-5 order-lg-1">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-notebook.png" alt="Easysocio está en la nube. Por esa razon podrás acceder a los datos desde cualquier equipo, y no tendrás que preocuparte por actualizar ni pagar por las mejoras.">
+          <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-2 pl-lg-5 order-lg-1">
+            <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-notebook.png" alt="Easysocio está en la nube. Por esa razon podrás acceder a los datos desde cualquier equipo, y no tendrás que preocuparte por actualizar ni pagar por las mejoras.">
           </div>
         </div>
       </div>
@@ -188,8 +188,8 @@
           </div>
 
 
-          <div class="col-lg-6 order-1 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/programa-para-administrar-socios-en-la-nube.jpg" alt="Easysocio está en la nube. Por esa razon podrás acceder a los datos desde cualquier equipo, y no tendrás que preocuparte por actualizar ni pagar por las mejoras.">
+          <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-1 pl-lg-5 order-lg-2">
+            <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/programa-para-administrar-socios-en-la-nube.jpg" alt="Easysocio está en la nube. Por esa razon podrás acceder a los datos desde cualquier equipo, y no tendrás que preocuparte por actualizar ni pagar por las mejoras.">
           </div>
 
          {{--  <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
@@ -209,8 +209,8 @@
            <p>Ya no necesitas actualizar de manera permanente el software de gestión, dedicando tiempo o debiendo comprar nuevas licencias para lograrlo. Con EasySocio, las actualizaciones son automáticas y seguras, siempre dispondrás de la última versión que existe del software, parches de seguridad y actualizaciones.
            </p>                        
           </div>
-          <div class="col-lg-6 order-2 pl-lg-5 order-lg-1">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+          <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-2 pl-lg-5 order-lg-1">
+            <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Easysocio/Home/sin-actualziaciones.png" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
           </div>
         </div>
       </div>
@@ -247,8 +247,8 @@
           </div>   
                 
           </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-          <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/sistema-de-administración-con-movimientos-de-caja-multi-sucursal-y-multi-moneda.jpg" alt="Easysocio cuenta con movimientos de caja, sabrás de donde sale cada registro sea un ingres (venta) como un egreso (gasto). También sabrás que usuario(operador del sistema de administración)  fué el que lo registró. Es Multi moneda y multi sucursal. Todo para que le saques provecho y que tu gestión de negocio sea simple.">
+          <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-3 pl-lg-5 order-lg-2">
+          <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/sistema-de-administración-con-movimientos-de-caja-multi-sucursal-y-multi-moneda.jpg" alt="Easysocio cuenta con movimientos de caja, sabrás de donde sale cada registro sea un ingres (venta) como un egreso (gasto). También sabrás que usuario(operador del sistema de administración)  fué el que lo registró. Es Multi moneda y multi sucursal. Todo para que le saques provecho y que tu gestión de negocio sea simple.">
           </div>
         </div>
       </div>
@@ -263,8 +263,8 @@
              <p>El sistema de EasySocio, permite que en el registro de cada cliente, puedas asociar sus cuentas corrientes, de este modo optimizas tu gestión ya que podrás registrar con detalle los movimientos de las ventas de los productos y servicios, así como otros gastos, de cada usuario. Por ejemplo, el pago de un accesorio, indumentaria u otro producto que comercialices en tu local, o la adquisición de un paquete para clases de spinning. <b>Siempre sabrás lo que ha sido contratado o comprado y el monto acreditado o el saldo pendiente por cubrir</b> .
              </p>                        
             </div>
-            <div class="col-lg-6 order-2 pl-lg-5 order-lg-1">
-              <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+            <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-2 pl-lg-5 order-lg-1">
+              <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
             </div>
           </div>
         </div>
@@ -288,8 +288,8 @@
                Otra funcionalidad importante es que EasySocio dispone de una versión para negocios que disponen de varias sucursales, lo que te permite tener todos los movimientos diferenciados pero concentrados en la misma aplicación. Así, fácilmente puedes llevar control del funcionamiento de tu emprendimiento en diversas localidades al mismo tiempo sin necesidad de desplazarte a alguno de los locales en particular. 
              </p>        
             </div>
-            <div class="col-lg-6 order-2 pl-lg-5 order-lg-2">
-              <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+            <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-2 pl-lg-5 order-lg-2">
+              <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
             </div>
           </div>
         </div>
@@ -307,8 +307,8 @@
                Nuestra herramienta ha sido desarrollada con la colaboración y el intercambio permanente con los dueños y administradores de gimnasios, y negocios de entrenamiento físico como academias de baile, dojos de kárate, entre muchos otros. Por eso estamos convencidos de que contamos con una herramienta muy útil, que tiene todos los elementos indispensables para facilitarte la administración de tu local, a un costo muy accesible y muy fácil de aprender a utilizar.
              </p>
             </div>
-            <div class="col-lg-6 order-2 pl-lg-5 order-lg-1">
-              <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+            <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-2 pl-lg-5 order-lg-1">
+              <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
             </div>
           </div>
         </div>
@@ -326,8 +326,8 @@
               Personalmente y en conjunto con mi equipo de trabajo te brindaremos el soporte necesario, ya que estamos completamente a disposición de nuestros clientes para brindarles todo el apoyo necesario cuando lo requieras.
              </p>
             </div>
-            <div class="col-lg-6 order-2 pl-lg-5 order-lg-2">
-              <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+            <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-2 pl-lg-5 order-lg-2">
+              <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
             </div>
           </div>
         </div>
