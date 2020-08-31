@@ -44,36 +44,44 @@
 
 /* C L A S E S   D E   L I S T A S  */
 .lista-class{
-    width: 100%;
-    margin-top: 4px;    
-    font-size: 14px;
-    letter-spacing: 1.4px;  
-    padding-left:20px;
-    line-height:1.7;
-    font-family:$font-secondary;
-      
+  width: 100%;
+  margin-top: 4px;    
+  font-size: 14px;
+  letter-spacing: 1.4px;  
+  padding-left:20px;
+  line-height:1.7;
+  font-family:$font-secondary;      
 }
 
 .lista-class::before{
-    content: "\025cf";    
-    color:$color-3;  
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
-  }
+  content: "\025cf";    
+  color:$color-3;  
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
 
 .lista-icono{
 
 }
+
 .lista-icono::before{
-    content: "\025cf";    
-    color:$color-3;  
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
-  }
+  content: "\025cf";    
+  color:$color-3;  
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+.list-style-none{
+  list-style: none;
+}
+
+
+
+
 
 
 /* C a r g a d o r*/

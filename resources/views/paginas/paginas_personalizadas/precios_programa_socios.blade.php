@@ -4,12 +4,12 @@
 <div class="col-12 col-lg-4">
   
 
-<div class="w-100 d-flex flex-column align-items-center background-gris--1">
+<div class="w-100 d-flex flex-column align-items-center background-gris--1 py-4 px-3">
          <header class="sub-titulos-class mb-4 text-center text-color-black">
             <b>Plan {{$Plan->name}}</b> 
           </header>
 
-        <ul class="p-3 mb-3 background-gris-0">
+        <ul class="p-3 mb-3 background-gris-0 list-style-none">
              <li class="contiene-li-precio-nuevo">
               <span class="text-color-primary">
                 <i class="fas fa-check-circle"></i>
