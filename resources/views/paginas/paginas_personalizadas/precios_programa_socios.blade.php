@@ -1,7 +1,7 @@
 
 
 @foreach($Planes as $Plan)
-<div class="col-12 col-lg-4 mb-lg-3">
+<div class="col-12 col-lg-4 mb-4 mb-lg-0">
   
 
 <div class="w-100 d-flex flex-column align-items-center background-gris--1 py-4 px-3">
