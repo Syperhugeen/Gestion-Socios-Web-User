@@ -4,7 +4,7 @@ namespace App\Servicios;
 
 
 use Illuminate\Support\Facades\Cache;
-use \stdClass
+use \stdClass;
 
 
 
