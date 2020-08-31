@@ -300,7 +300,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 order-1 order-lg-2">
-            <h3 class="section-title mb-4">Movimientos de caja</h3>
+            <h3 class="section-title mb-4">Facilidades para la renovación de planes para los clientes</h3>
              <p>Nuestro módulo de ventas te permite renovar automáticamente el servicio de afiliación mensual de los socios, replicando el último paquete adquirido por estos. Por ejemplo, si se vende un servicio del tipo “pase libre” que permite el uso ilimitado de las instalaciones de tu gimnasio, cuya adquisición y pago es mensual, el sistema, en la fecha de vencimiento realizará de manera automática el cobro y la recarga de un nuevo paquete. Generando un nuevo movimiento de venta para ese socio que solo deberá realizar el pago del mismo.
              </p>      
              <p>
@@ -308,7 +308,7 @@
              </p>
             </div>
             <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-2 pl-lg-5 order-lg-1 d-flex flex-row align-items-center justify-content-center">
-              <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+              <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/antes-y-despues-del-vencimiento-en-el-prgrama-de-administracion.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
             </div>
           </div>
         </div>
@@ -327,7 +327,7 @@
              </p>
             </div>
             <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-2 pl-lg-5 order-lg-2 d-flex flex-row align-items-center justify-content-center">
-              <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+              <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/programa-para-gestionar-socios-entrenamiento-a-clientes.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
             </div>
           </div>
         </div>
