@@ -14,7 +14,7 @@
               <span class="text-color-primary">
                 <i class="fas fa-check-circle"></i>
               </span>              
-              Úsalo en las computadoras que quieras
+              Úsalo en las <b>computadoras y celulares</b> quieras
              </li>             
              <li class="contiene-li-precio-nuevo">
               <span class="text-color-primary">
