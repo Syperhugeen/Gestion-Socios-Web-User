@@ -43,8 +43,6 @@ class Home_Public_Controller extends Controller
 
         $Planes         = $this->ServiciosPlanes->getPlanes();
 
-        dd($Planes);
-
         return view('paginas.home.home', compact('Empresa','blogs','Portada','Planes'));
     }
 
