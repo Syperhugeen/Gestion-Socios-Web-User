@@ -68,7 +68,7 @@
           
           {{-- C u a r t o   B l o q u e     --}}
           <div class="col-md-3 p-4">
-            <h3 class="footer-titulo-columna mb-5  text-bold">Sígueme en mis redes</h3>
+            <h3 class="footer-titulo-columna mb-5  text-bold">EasySocio</h3>
 
             <p  class="contiene-p-linea mb-3">
               <b>¿Qué es y cómo funciona EasySocio?</b>
