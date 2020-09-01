@@ -8,8 +8,8 @@
           {{-- P r i m e r    b l o q u e   --}}
           <div class="col-md-3 p-4">
             <h3 class="footer-titulo-columna mb-5 ">@{{empresa.name}}</h3>
-            <p  class="contiene-p-linea mb-1"><em>"Solo hay una forma de comenzar a construir tu sueño: dejando de hablar y comenzando a hacer"</em>  Walt Disney. </p>    
-            <p  class="contiene-p-linea mb-0"><em>"La mente que se abre a una nueva idea, jamas volverá a su tamaño original"</em> Albert Einstein.  </p>   
+            <p  class="contiene-p-linea mb-3"><em>"La administración trata acerca de la gestión en el corto plazo, mientras se desarrollan los planes a largo plazo"</em>  Jack Welch. </p>    
+            <p  class="contiene-p-linea mb-0"><em>"La administración es la eficiencia en escalar la ladera del éxito; el liderazgo determina si la ladera está apoyada en la pared correcta"</em> Stephen Covey.  </p>   
 
                  
           </div>
@@ -53,7 +53,7 @@
                  <i class="far fa-clock mr-2 color-iconos-footer"></i>          @{{empresa.horarios}}
               </p>
               <p class="contiene-p-linea" v-if="se_muestra(empresa.email)" >    
-                 <a class="contiene-link-linea" href="{{route('get_pagina_contacto')}}"><i class="far fa-envelope color-iconos-footer mr-2"></i>       @{{empresa.email}}</a> 
+                 <a class="contiene-link-linea" href="{{route('get_pagina_contacto')}}"><i class="far fa-envelope color-iconos-footer mr-2"></i>       Contacto por email</a> 
               </p>
             
           </div> 
@@ -64,6 +64,11 @@
           {{-- C u a r t o   B l o q u e     --}}
           <div class="col-md-3 p-4">
             <h3 class="footer-titulo-columna mb-5  text-bold">Sígueme en mis redes</h3>
+
+            <p  class="contiene-p-linea mb-3">
+              <b>¿Qué es y cómo funciona EasySocio?</b>
+Se trata del software, para administrar gimnasios, más fácil de usar que hayas conocido, y no por eso deja de ser una herramienta poderosa y totalmente funcional, ya que te ofrece todas las utilidades necesarias para que la gestión del local no se convierta en un dolor de cabeza o te consuma mucho tiempo y energía. <a href="{{route('get_home')}}">Explorar EasySocio</a></p>   
+
             <p class="contiene-p-linea" v-if="se_muestra(empresa.twitter_url)">
              <a class="contiene-link-linea" :href="empresa.twitter_url">
                <i class="fab fa-twitter-square mr-2 color-iconos-footer"></i> Twitter
