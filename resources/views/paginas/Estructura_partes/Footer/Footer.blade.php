@@ -55,6 +55,11 @@
               <p class="contiene-p-linea" v-if="se_muestra(empresa.email)" >    
                  <a class="contiene-link-linea" href="{{route('get_pagina_contacto')}}"><i class="far fa-envelope color-iconos-footer mr-2"></i>       Contacto por email</a> 
               </p>
+              <p class="contiene-p-linea" v-if="se_muestra(empresa.Whatsapp_cel)"> 
+             <a class="contiene-link-linea" :href="empresa.link_whatsapp_send" >
+               <i class="fab fa-whatsapp mr-2 color-iconos-footer"></i> Hablar con alguien de EasySocio por Whatsapp ahora mismo
+             </a>
+            </p>
             
           </div> 
         
