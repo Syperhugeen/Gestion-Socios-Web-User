@@ -1,6 +1,8 @@
 @extends('layouts.credo.layout_pricnipal')
 
-
+@section('favicon')
+ <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}"> 
+@stop
 
 @section('og-tags')
   <meta property="og:url"                content="{{$Noticia->route}}" />

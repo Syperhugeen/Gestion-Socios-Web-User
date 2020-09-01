@@ -4,8 +4,7 @@
 
 
 
-{{--*/ $ImagenParaTaG         = url() . '/imagenes/PaginasPersonalizadas/mauricio-costanzo-desarrollador-prgramador.jpg'/*--}}
-{{--*/ $Titulo                = $Portada->titulo_de_la_pagina /*--}}
+{{--*/ $ImagenParaTaG         = url() . '/imagenes/PaginasPersonalizadas/Socios/easy-socio-el-software-para-administrar-gimnasios-academias-de-baile-institutos-de-ingles-y-mucho-más.jpg'/*--}}{{--*/ $Titulo                = $Portada->titulo_de_la_pagina /*--}}
 {{--*/ $DescriptionEtiqueta   = $Portada->description_de_la_pagina   /*--}}
 {{--*/ $PalabrasClaves        = '' /*--}}
 {{--*/ $UrlDeLaPagina         = route('get_pagina_noticias_listado') /*--}}
@@ -49,6 +48,10 @@
 </script>
 
 
+@stop
+
+@section('favicon')
+ <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}"> 
 @stop
 
 

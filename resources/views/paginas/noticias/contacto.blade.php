@@ -3,31 +3,14 @@
 
 
 {{--*/ $ImagenPortada         = url() . '/imagenes/PaginasPersonalizadas/pagina-web-prefesionales.jpg'/*--}}
-{{--*/ $ImagenParaTaG         = url() . '/imagenes/PaginasPersonalizadas/mauricio-costanzo-desarrollador-prgramador.jpg'/*--}}
-{{--*/ $Titulo                = 'Contacto | Mauricio Costanzo | desarrollador de páginas webs ' /*--}}
+{{--*/ $ImagenParaTaG         = url() . '/imagenes/PaginasPersonalizadas/Socios/easy-socio-el-software-para-administrar-gimnasios-academias-de-baile-institutos-de-ingles-y-mucho-más.jpg'/*--}}
+{{--*/ $Titulo                = 'Contacto' /*--}}
 {{--*/ $DescriptionEtiqueta   = 'Se lo importante que es estar por crear tu idea en software web, por esa razón me pondré en modo ninja y te daré la mejor atención.
  ' /*--}}
 {{--*/ $PalabrasClaves        = 'Se lo importante que es estar por crear tu idea en software web, por esa razón me pondré en modo ninja y te daré la mejor atención.' /*--}}
 {{--*/ $UrlDeLaPagina         = route('get_pagina_contacto') /*--}}
-@section('pixcel-facebook')
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '632331500665350');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=632331500665350&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
-
+@section('favicon')
+ <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}"> 
 @stop
 
 @section('og-tags')
