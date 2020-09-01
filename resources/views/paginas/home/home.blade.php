@@ -110,7 +110,7 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">¿Tenés un gimnasio y te encuentras en el punto que la gestión de tus socios se hace complicada?</h2>
+          <h2 class="section-title mb-4">¿Tenés un gimnasio y te encontrás en el punto que la gestión de tus socios se hace complicada?</h2>
             
           <p>En la industria de los negocios de acondicionamiento físico, es normal que en la medida en que comienza a crecer el volumen de clientes, cada vez se haga más difícil mantener al día los estados de cuentas de cada uno. Puede llegar a ocurrir que si son muchos no sepas distinguir quienes se encuentran al día con sus pagos y quienes te deben dinero. Si esta situación te resulta familiar haz encontrado la herramienta que necesitas para solucionar tus problemas de administración de forma sencilla y por una inversión mínima. Te invitamos a conocer EasySocio.
           </p>   
