@@ -236,7 +236,7 @@
               El listado de la captura te permite observar rápidamente los planes o paquetes contratados por el socio y las fechas de vencimiento.
             </p>
             <p class="lista-icono">
-              Con solo hacer click sobre el número de celular registrado del socio podrás enviar un mensaje vía WhatsApp, lo que te ayudará a brindar un servicio personalizado y a implementar estrategias de <a href="https://gestionsocios.com.uy/blog/6-estrategias-de-marketing-para-gimnasios/29">marketing</a>  y <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-enamorar-y-fidelizar-a-los-clientes-de-mi-gimnasio/28">fidelización</a>  de forma muy sencilla.
+              Con solo hacer click sobre el número de celular registrado del socio podrás enviar un mensaje vía WhatsApp, lo que te ayudará a brindar un servicio personalizado y a implementar <a href="https://gestionsocios.com.uy/blog/6-estrategias-de-marketing-para-gimnasios/29">estrategias de marketing</a>  y <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-enamorar-y-fidelizar-a-los-clientes-de-mi-gimnasio/28">fidelización</a>  de forma muy sencilla.
             </p>
             <p class="lista-icono">
               Podrás gestionar cuponeras para clases o servicios de forma virtual. También podrás <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-mejorar-las-ventas-en-tu-gimnasios:-3-consejo-que-te-ayudar%C3%A1n-a-lograrlo/27">vender</a>  clases o sesiones especiales de entrenamiento con fecha y hora establecida, además podrás llevar el control de la ejecución de estos servicios.
