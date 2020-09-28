@@ -97,7 +97,7 @@
       <div class="col-12 mb-5 position-relative">
 
               <h2 class="sub-titulos-class mb-2 text-center text-color-primary">EasySocio el Software para la gestión de gimnasios</h2>
-              <p class="text-center mb-0">EasySocio es una plataforma digital que te ofrece mucho más que un sistema contable para administrar tu gimnasio. Se trata de un conjunto de utilidades que te permitirán brindar un óptimo servicio para tus clientes al tiempo que facilita tu trabajo para que lo realices de manera rápida y sencilla.
+              <p class="text-center mb-0">EasySocio es una plataforma digital que te ofrece mucho más que un sistema contable para <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"> administrar tu gimnasio</a>. Se trata de un conjunto de utilidades que te permitirán brindar un óptimo servicio para tus clientes al tiempo que facilita tu trabajo para que lo realices de manera rápida y sencilla.
               </p>
              
             </div>
@@ -138,10 +138,10 @@
           <p>Los gimnasios hoy en día son uno de los emprendimientos de mayor auge. La industria del fittness y del cuidado personal se encuentra al alza, ya que millones de personas acuden en búsqueda de la oferta de productos y servicios que allí se ofrecen con la finalidad de mejorar su calidad de vida. Es un campo de trabajo y de inversión que abarca muchos aspectos, que van desde la estética personal, al bienestar físico y la salud. 
           </p>
           <p>  
-          Una sociedad que promueve el cuidado personal a través de la promoción de buenas prácticas y hábitos saludables en los individuos, resulta un ambiente ideal para el surgimiento de muchas ideas y modelos de negocios asociados al cuidado del bienestar físico. Así que, bien sea que tienes un gimnasio con equipos para ejercicios anaeróbicos (pesas y máquinas de resistencia) una escuela de artes marciales, o un centro para las últimas tendencias del entrenamiento como el Crossfit, el bootcamp o el TRX, ya diste el primer paso y realizaste la inversión más importante, ahora lo que necesitas son los medios para llevar al éxito a tu emprendimiento.
+          Una sociedad que promueve el cuidado personal a través de la promoción de buenas prácticas y hábitos saludables en los individuos, resulta un ambiente ideal para el surgimiento de muchas ideas y modelos de negocios asociados al cuidado del bienestar físico. Así que, bien sea que tienes un gimnasio con equipos para ejercicios anaeróbicos (pesas y máquinas de resistencia) una escuela de artes marciales, o un centro para las últimas tendencias del entrenamiento como el Crossfit, el bootcamp o el TRX, ya diste el primer paso y realizaste la inversión más importante, ahora lo que necesitas son los medios para <a href="https://gestionsocios.com.uy/blog/las-cuatro-reglas-de-oro-para-tener-un-gimnasio-exitoso/25">llevar al éxito a tu emprendimiento</a>.
           </p>  
           <p>  
-          Para eso, no lo dudes, el mejor aliado con el que puedes contar es esta herramienta informática multifuncional que te ayudará con la administración de negocio para que puedas dedicar más tiempo a pensar en ofertas de servicios innovadores y estrategias de marketing que te permitan aumentar y fidelizar la clientela que requieres para lograr la rentabilidad que deseas de tu inversión.
+          Para eso, no lo dudes, el mejor aliado con el que puedes contar es esta herramienta informática multifuncional que te ayudará con la administración de negocio para que puedas dedicar más tiempo a pensar en ofertas de servicios innovadores y estrategias de <a href="https://gestionsocios.com.uy/blog/6-estrategias-de-marketing-para-gimnasios/29">marketing</a>  que te permitan aumentar y fidelizar la clientela que requieres para lograr la rentabilidad que deseas de tu inversión.
           </p>  
 
           </div>
@@ -158,7 +158,7 @@
           <div class="col-12 order-2 order-lg-1">
           <h2 class="section-title mb-4 text-center">¿Qué es y cómo funciona EasySocio?</h2>
           <p class="text-center">
-             Se trata del software, para administrar gimnasios, más fácil de usar que hayas conocido, y no por eso deja de ser una herramienta poderosa y totalmente funcional, ya que te ofrece todas las utilidades necesarias para que la gestión del local no se convierta en un dolor de cabeza o te consuma mucho tiempo y energía.
+             Se trata del software, para <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24">administrar gimnasios</a>, más fácil de usar que hayas conocido, y no por eso deja de ser una herramienta poderosa y totalmente funcional, ya que te ofrece todas las utilidades necesarias para que la gestión del local no se convierta en un dolor de cabeza o te consuma mucho tiempo y energía.
           </p>
           <h2 class="parrafo-class mb-2 text-center"><b>Algunos de los beneficios que podemos enumerar en cuanto a las funciones con las que cuenta EasySocio</b> </h2>
           </div>
@@ -222,7 +222,7 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-6 order-2 order-lg-1">         
           <h3 class="section-title mb-4">EasySocio es fácil de usar </h3>
-          <p>Nuestro sistema te permite tener la información justa, cuando la necesitas y donde la necesitas, lo que se traduce en una mayor productividad para la administración de tu gimnasio. Se trata de un software sencillo, rápido de aprender a usar por lo intuitivo y amigable que le resulta al usuario, tanto que podrás explicarle a tu abuela cómo hacerlo para que te ayude a llevar las cuentas del negocio.
+          <p>Nuestro sistema te permite tener la información justa, cuando la necesitas y donde la necesitas, lo que se traduce en una mayor productividad para la <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"> administración de tu gimnasio</a>. Se trata de un software sencillo, rápido de aprender a usar por lo intuitivo y amigable que le resulta al usuario, tanto que podrás explicarle a tu abuela cómo hacerlo para que te ayude a llevar las cuentas del negocio.
           </p> 
           <p>
             Algunas de sus ventajas más resaltantes son:
@@ -230,16 +230,16 @@
 
           <div class="pl-3">
             <p class="lista-icono">
-              La pantalla de inicio contiene buena parte de la información más relevante, al tiempo que, con solo hacer click podrás obtener información al detalle sobre los diferentes aspectos de la administración de tu gimnasio.
+              La pantalla de inicio contiene buena parte de la información más relevante, al tiempo que, con solo hacer click podrás obtener información al detalle sobre los diferentes aspectos de la <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24">administración de tu gimnasio</a>.
             </p>
             <p class="lista-icono">
               El listado de la captura te permite observar rápidamente los planes o paquetes contratados por el socio y las fechas de vencimiento.
             </p>
             <p class="lista-icono">
-              Con solo hacer click sobre el número de celular registrado del socio podrás enviar un mensaje vía WhatsApp, lo que te ayudará a brindar un servicio personalizado y a implementar estrategias de marketing y fidelización de forma muy sencilla.
+              Con solo hacer click sobre el número de celular registrado del socio podrás enviar un mensaje vía WhatsApp, lo que te ayudará a brindar un servicio personalizado y a implementar estrategias de <a href="https://gestionsocios.com.uy/blog/6-estrategias-de-marketing-para-gimnasios/29">marketing</a>  y <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-enamorar-y-fidelizar-a-los-clientes-de-mi-gimnasio/28">fidelización</a>  de forma muy sencilla.
             </p>
             <p class="lista-icono">
-              Podrás gestionar cuponeras para clases o servicios de forma virtual. También podrás vender clases o sesiones especiales de entrenamiento con fecha y hora establecida, además podrás llevar el control de la ejecución de estos servicios.
+              Podrás gestionar cuponeras para clases o servicios de forma virtual. También podrás <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-mejorar-las-ventas-en-tu-gimnasios:-3-consejo-que-te-ayudar%C3%A1n-a-lograrlo/27">vender</a>  clases o sesiones especiales de entrenamiento con fecha y hora establecida, además podrás llevar el control de la ejecución de estos servicios.
             </p>
             <p class="lista-icono mb-0">
               Estado de cuenta del socio de forma inmediata y de fácil acceso.
@@ -276,7 +276,7 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 order-1 order-lg-1">
             <h3 class="section-title mb-4">Movimientos de caja</h3>
-             <p>Es normal que dentro de un local como un gimnasio, o cualquier centro de entrenamiento físico, se disponga de un personal de apoyo en la administración, es probable que debas delegar en ellos el manejo de la caja, el cobro a los clientes y otras funciones relacionadas con las finanzas. EasySocio te permite mantener absoluto control del dinero que ingresa a tu local, los pagos realizados por los socios y la cantidad de efectivo, pagos por punto de venta, o incluso multimonedas, que se realicen. Esta función es de mucha utilidad, pues podrás hacer verificaciones de los movimientos de caja con el dinero disponible, y así podrás evitar malas sorpresas. 
+             <p>Es normal que dentro de un local como un gimnasio, o cualquier centro de entrenamiento físico, se disponga de un personal de apoyo en la administración, es probable que debas delegar en ellos el manejo de la caja, el cobro a los clientes y otras funciones relacionadas con las finanzas. EasySocio te permite mantener absoluto control del dinero que ingresa a tu local, los pagos realizados por los socios y la cantidad de efectivo, pagos por punto de <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-mejorar-las-ventas-en-tu-gimnasios:-3-consejo-que-te-ayudar%C3%A1n-a-lograrlo/27">venta</a>, o incluso multimonedas, que se realicen. Esta función es de mucha utilidad, pues podrás hacer verificaciones de los movimientos de caja con el dinero disponible, y así podrás evitar malas sorpresas. 
              </p>      
              <p>
                Cada movimiento realizado se asocia al usuario del sistema que lo realiza, por lo que siempre sabrás quién hizo cada movimiento y así serán responsables del dinero que manejan.
@@ -301,10 +301,10 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 order-1 order-lg-2">
             <h3 class="section-title mb-4">Facilidades para la renovación de planes para los clientes</h3>
-             <p>Nuestro módulo de ventas te permite renovar automáticamente el servicio de afiliación mensual de los socios, replicando el último paquete adquirido por estos. Por ejemplo, si se vende un servicio del tipo “pase libre” que permite el uso ilimitado de las instalaciones de tu gimnasio, cuya adquisición y pago es mensual, el sistema, en la fecha de vencimiento realizará de manera automática el cobro y la recarga de un nuevo paquete. Generando un nuevo movimiento de venta para ese socio que solo deberá realizar el pago del mismo.
+             <p>Nuestro módulo de <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-mejorar-las-ventas-en-tu-gimnasios:-3-consejo-que-te-ayudar%C3%A1n-a-lograrlo/27">ventas</a>  te permite renovar automáticamente el servicio de afiliación mensual de los socios, replicando el último paquete adquirido por estos. Por ejemplo, si se vende un servicio del tipo “pase libre” que permite el uso ilimitado de las instalaciones de tu gimnasio, cuya adquisición y pago es mensual, el sistema, en la fecha de vencimiento realizará de manera automática el cobro y la recarga de un nuevo paquete. Generando un nuevo movimiento de venta para ese socio que solo deberá realizar el pago del mismo.
              </p>      
              <p>
-               Nuestra herramienta ha sido desarrollada con la colaboración y el intercambio permanente con los dueños y administradores de gimnasios, y negocios de entrenamiento físico como academias de baile, dojos de kárate, entre muchos otros. Por eso estamos convencidos de que contamos con una herramienta muy útil, que tiene todos los elementos indispensables para facilitarte la administración de tu local, a un costo muy accesible y muy fácil de aprender a utilizar.
+               Nuestra herramienta ha sido desarrollada con la colaboración y el intercambio permanente con los dueños y <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"> administradores de gimnasios</a>, y negocios de entrenamiento físico como academias de baile, dojos de kárate, entre muchos otros. Por eso estamos convencidos de que contamos con una herramienta muy útil, que tiene todos los elementos indispensables para facilitarte la administración de tu local, a un costo muy accesible y muy fácil de aprender a utilizar.
              </p>
             </div>
             <div v-lazy-container="{ selector: 'img' }" class="col-lg-6 order-2 pl-lg-5 order-lg-1 d-flex flex-row align-items-center justify-content-center">
