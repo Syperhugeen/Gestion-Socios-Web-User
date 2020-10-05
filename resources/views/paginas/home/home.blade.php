@@ -107,24 +107,24 @@
 
      <div  class="py-4 background-gris-0" id="Ventadtajas-1">
       <div class="container">
-        <div class="row align-items-center justify-content-center">
+        <div class="row justify-content-center">
           <div class="col-6 col-lg-3  ">
             <div class="d-flex flex-column align-items-center p-3">
                <div class="text-color-primary titulos-class text-center mb-3">
                   <i class="fas fa-users"></i>
                </div>
                <p class="text-center mb-0">
-                  Gestión de socios
+                  Control de socios
                </p>
             </div>            
           </div>
            <div class="col-6 col-lg-3  ">
             <div class="d-flex flex-column align-items-center p-3">
                <div class="text-color-primary titulos-class text-center mb-3">
-                 <i class="fas fa-undo-alt"></i>
+                 <i class="fas fa-check"></i>
                </div>
                <p class="text-center mb-0">
-                  Manejo simple de cuponeras y pases libres de cada socio
+                  Simple gestión de cuponeras y pases libres 
                </p>
             </div>            
           </div>
