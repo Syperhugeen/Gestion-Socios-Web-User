@@ -91,7 +91,7 @@
       <span id="intro"></span>
       <span id="header-llamado-a-la-accion"></span> 
 
-    <section class="site-section pb-5" id="pregunta-aclaracion">
+    <section class="site-section pb-5 " id="pregunta-aclaracion">
         <div class="container">
           <div class="row">
       <div class="col-12 mb-5 position-relative">
@@ -104,6 +104,22 @@
           </div>
         </div>
     </section> 
+
+     <div  class="site-section" id="Ventadtajas-1">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-6 col-lg-3 d-flex flex-column align-items-center">
+             <div class="titulos-class text-center mb-2">
+                <i class="fas fa-users"></i>
+             </div>
+             <p class="text-center mb-0">
+                Gestión de socios
+             </p>
+          </div>
+        
+        </div>
+      </div>
+    </div>
 
 
   <div v-lazy-container="{ selector: 'img' }" class="site-section bg-light" id="about-section">
