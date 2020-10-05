@@ -108,13 +108,16 @@
      <div  class="site-section" id="Ventadtajas-1">
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-6 col-lg-3 d-flex flex-column align-items-center">
-             <div class="titulos-class text-center mb-2">
-                <i class="fas fa-users"></i>
-             </div>
-             <p class="text-center mb-0">
-                Gestión de socios
-             </p>
+          <div class="col-6 col-lg-3  ">
+            <div class="d-flex flex-column align-items-center p-3">
+               <div class="titulos-class text-center mb-2">
+                  <i class="fas fa-users"></i>
+               </div>
+               <p class="text-center mb-0">
+                  Gestión de socios
+               </p>
+            </div>
+            
           </div>
         
         </div>
