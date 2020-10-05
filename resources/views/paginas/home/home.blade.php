@@ -105,12 +105,12 @@
         </div>
     </section> 
 
-     <div  class="site-section" id="Ventadtajas-1">
+     <div  class="py-4 background-gris-0" id="Ventadtajas-1">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-6 col-lg-3  ">
             <div class="d-flex flex-column align-items-center p-3">
-               <div class="titulos-class text-center mb-2">
+               <div class="text-color-primary titulos-class text-center mb-3">
                   <i class="fas fa-users"></i>
                </div>
                <p class="text-center mb-0">
