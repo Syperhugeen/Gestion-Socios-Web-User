@@ -116,8 +116,37 @@
                <p class="text-center mb-0">
                   Gestión de socios
                </p>
-            </div>
-            
+            </div>            
+          </div>
+           <div class="col-6 col-lg-3  ">
+            <div class="d-flex flex-column align-items-center p-3">
+               <div class="text-color-primary titulos-class text-center mb-3">
+                 <i class="fas fa-undo-alt"></i>
+               </div>
+               <p class="text-center mb-0">
+                  Manejo simple de cuponeras y pases libres de cada socio
+               </p>
+            </div>            
+          </div>
+          <div class="col-6 col-lg-3  ">
+            <div class="d-flex flex-column align-items-center p-3">
+               <div class="text-color-primary titulos-class text-center mb-3">
+                 <i class="fas fa-undo-alt"></i>
+               </div>
+               <p class="text-center mb-0">
+                  Renovaciones automáticas
+               </p>
+            </div>            
+          </div>
+           <div class="col-6 col-lg-3  ">
+            <div class="d-flex flex-column align-items-center p-3">
+               <div class="text-color-primary titulos-class text-center mb-3">
+                 <i class="fas fa-cash-register"></i>
+               </div>
+               <p class="text-center mb-0">
+                  Flujo de caja y cuentas corrientes
+               </p>
+            </div>            
           </div>
         
         </div>
