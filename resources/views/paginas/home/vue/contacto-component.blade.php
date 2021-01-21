@@ -14,7 +14,9 @@ data:function(){
                       tipo_consulta_de_easy:'',
                       celular:'',
                       nombre_empresa:'',
-                      Logo_url:'https://gestionsocios.com.uy/imagenes/Empresa/logo-rectangular-easy-socio-grande.png'},
+                      Logo_url:'https://gestionsocios.com.uy/imagenes/Empresa/logo-rectangular-easy-socio-grande.png',
+                      Logo_url_blanco:'https://gestionsocios.com.uy/imagenes/Empresa/logo-rectangular-easysocio-blanco.png'
+                    },
 
 
       se_envio:false,
