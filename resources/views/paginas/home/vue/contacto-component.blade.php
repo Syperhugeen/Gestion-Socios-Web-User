@@ -13,7 +13,8 @@ data:function(){
                       que_necesitas:[],
                       tipo_consulta_de_easy:'',
                       celular:'',
-                      nombre_empresa:''},
+                      nombre_empresa:'',
+                      Logo_url:'https://gestionsocios.com.uy/imagenes/Empresa/logo-rectangular-easy-socio-grande.png'},
 
 
       se_envio:false,

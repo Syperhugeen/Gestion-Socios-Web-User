@@ -46,7 +46,7 @@ class Envio_Formularios_Controller extends Controller
       $email              = $Request->get('email');
       $mensaje            = $Request->get('mensaje');
       $Email_al_que_envia = $this->EmpresaRepo->getEmpresaDatos()->email;
-      $Titulo_de_email    = 'Solicitud de contacto por web de ' .$name ;
+      $Titulo_de_email    = 'EasySocio: contacto por web de ' .$name ;
       $manager            = new envio_contacto_manager( null, $Request->all());
 
 
@@ -66,7 +66,7 @@ class Envio_Formularios_Controller extends Controller
 
                  return   [ 
                    'Validacion'            => $Validacion,
-                   'Validacion_mensaje'    => 'Mensaje enviado correctamente. En breve te estarmos respondiendo a '.$email    
+                   'Validacion_mensaje'    => 'Mensaje enviado correctamente. En breve te estaremos respondiendo a '.$email    
                      ];
 
                       

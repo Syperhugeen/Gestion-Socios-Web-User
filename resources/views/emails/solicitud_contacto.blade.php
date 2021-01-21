@@ -58,7 +58,7 @@
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="Margin:0;padding-bottom:5px;padding-left:30px;padding-right:30px;padding-top:35px">
 
-                        <h1 style="Margin:0;line-height:58px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:48px;font-style:normal;font-weight:normal;color:#111111">Contacto</h1>
+                        <h1 style="Margin:0;line-height:58px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:48px;font-style:normal;font-weight:normal;color:#111111">Contacto de {{$nombre}}</h1>
 
                       </td> 
                      </tr> 
@@ -67,7 +67,7 @@
                        <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                         <tbody>
                          <tr style="border-collapse:collapse"> 
-                          <td style="padding:0;Margin:0px;border-bottom:1px solid #FFFFFF;background:#FFFFFFnone repeat scroll 0% 0%;height:1px;width:100%;margin:0px"></td> 
+                          <td style="padding:0;Margin:0px;border-bottom:1px solid #FFFFFF;background:#FFFFFF none repeat scroll 0% 0%;height:1px;width:100%;margin:0px"></td> 
                          </tr> 
                         </tbody>
                        </table></td> 
@@ -186,7 +186,7 @@
                       </td> 
                      </tr>                       
                      @endif
-                      @if($request->get('que_necesitas') != '')
+                     @if($request->get('que_necesitas') != '' || $request->get('que_necesitas') != null)
                      <tr style="border-collapse:collapse"> 
                       <td class="es-m-txt-l" align="left" style="padding:0;Margin:0;padding-top:10px;padding-left:30px;padding-right:30px">
                         <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">
@@ -237,7 +237,7 @@
                       <td align="center" style="padding:0;Margin:0;padding-top:30px;padding-left:30px;padding-right:30px"><h3 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#111111">Más información de ...</h3></td> 
                      </tr> 
                      <tr style="border-collapse:collapse"> 
-                      <td esdev-links-color="#ffa73b" align="center" style="padding:0;Margin:0;padding-bottom:30px;padding-left:30px;padding-right:30px"><a target="_blank" href="{{url()}}" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:18px;text-decoration:underline;color:{{$Color_principal}}">Mauricio Costanzo</a></td> 
+                      <td esdev-links-color="#ffa73b" align="center" style="padding:0;Margin:0;padding-bottom:30px;padding-left:30px;padding-right:30px"><a target="_blank" href="{{url()}}" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:18px;text-decoration:underline;color:{{$Color_principal}}">EasySocio</a></td> 
                      </tr> 
                     </tbody>
                    </table></td> 
