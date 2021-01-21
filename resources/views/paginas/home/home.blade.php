@@ -6,7 +6,7 @@
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/PaginasPersonalizadas/Socios/easy-socio-el-software-para-administrar-gimnasios-academias-de-baile-institutos-de-ingles-y-mucho-más.jpg'/*--}}
 {{--*/ $Titulo                = $Portada->titulo_de_la_pagina /*--}}
 {{--*/ $DescriptionEtiqueta   = $Portada->description_de_la_pagina   /*--}}
-{{--*/ $PalabrasClaves        = 'desarrollador web, programador web, diseñador de paginas web, diseño de webs, paginas webs' /*--}}
+{{--*/ $PalabrasClaves        = 'Software para gimnasios, gym software' /*--}}
 {{--*/ $UrlDeLaPagina         = route('get_home') /*--}}
 
 @section('pixcel-facebook')
@@ -114,7 +114,7 @@
                   <i class="fas fa-users"></i>
                </div>
                <p class="text-center mb-0">
-                  Control de socios
+                  Control de acceso
                </p>
             </div>            
           </div>

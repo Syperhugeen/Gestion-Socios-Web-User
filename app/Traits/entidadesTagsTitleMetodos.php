@@ -2,6 +2,7 @@
 
 namespace App\Traits;
 use App\Helpers\HelpersGenerales;
+use Carbon\Carbon;
 
 trait entidadesTagsTitleMetodos{
     
@@ -12,7 +13,7 @@ trait entidadesTagsTitleMetodos{
         $Iconos = ['🥇','✅','⭐','▷','≫','☝','🔥','【','♡','▶'];
         $Random = array_rand($Iconos,1);
 
-        return $Iconos[$Random] . ' ';
+        return '🥇 ';
     }
 
     public function getSimboloCierreRandom()
@@ -21,8 +22,15 @@ trait entidadesTagsTitleMetodos{
         $Iconos = ['🔥','⚡','⭐','©','★★★★★','】','♡'];
         $Random = array_rand($Iconos,1);
 
-        return  ' '. $Iconos[$Random] ;
+        return  $this->añoDestaque() ;
     }
+
+    public function añoDestaque()
+	{
+		$Año = Carbon::now()->year;
+
+		return ' 【 ' . $Año . ' 】';
+	}
 
     public function getTituloDeLaPaginaAttribute()
     {
@@ -38,11 +46,11 @@ trait entidadesTagsTitleMetodos{
                 $string = $this->name;
             }    
 
-            return ' ⇨ ' .  HelpersGenerales::helper_convertir_cadena_solo_letras_y_numeros($string) . $this->getSimboloCierreRandom();
+            return $this->getSimboloRandom() .  HelpersGenerales::helper_convertir_cadena_solo_letras_y_numeros($string) . $this->getSimboloCierreRandom();
         }
         else
         {
-            return ' ⇨ ' .  $this->title_tag .  $this->getSimboloCierreRandom();
+            return $this->getSimboloRandom() .  $this->title_tag .  $this->getSimboloCierreRandom();
         }
     }
 

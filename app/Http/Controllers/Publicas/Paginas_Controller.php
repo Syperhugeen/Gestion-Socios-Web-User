@@ -40,9 +40,13 @@ class Paginas_Controller extends Controller
     public function get_pagina_contacto($tipo)
     {       
         $Empresa        = $this->EmpresaRepo->getEmpresaDatos();
-        $blogs          = $this->NoticiasRepo->getUltimosBlogs();        
+        $blogs          = $this->NoticiasRepo->getUltimosBlogs();    
+        
+        $Portada  = Cache::remember('contactoPortada', 2000, function(){
+            return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name','contacto');
+            });       
 
-        return view('paginas.paginas_personalizadas.contacto', compact('Empresa','blogs','tipo'));
+        return view('paginas.paginas_personalizadas.contacto', compact('Empresa','blogs','tipo','Portada'));
         
     }
 

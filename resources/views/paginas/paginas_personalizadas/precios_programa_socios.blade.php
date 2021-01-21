@@ -65,8 +65,8 @@
 
           
              
-          <a class="Boton-Primario-Relleno Boton-Fuente-Chica mt-3" href="{{$Empresa->link_whatsapp_send}}" target="_blank">
-           <i class="fab fa-whatsapp"></i> <small>Hablar con alguien por más información</small> 
+          <a class="Boton-Primario-Relleno Boton-Fuente-Chica mt-3" href="{{route('get_pagina_contacto','-')}}" >
+           Contactar
           </a>     
           
 </div>
