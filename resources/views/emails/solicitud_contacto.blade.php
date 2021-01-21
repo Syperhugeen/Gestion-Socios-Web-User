@@ -186,7 +186,7 @@
                       </td> 
                      </tr>                       
                      @endif
-                     @if($request->get('que_necesitas') != '' || $request->get('que_necesitas') != null)
+                     @if($request->get('que_necesitas') != '' && $request->get('que_necesitas') != null)
                      <tr style="border-collapse:collapse"> 
                       <td class="es-m-txt-l" align="left" style="padding:0;Margin:0;padding-top:10px;padding-left:30px;padding-right:30px">
                         <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#666666">

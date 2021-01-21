@@ -33,8 +33,7 @@ class Envio_Formularios_Controller extends Controller
     public function post_contacto_form(Request $Request)
     {
 
-      $Request->attributes->add(['Color_principal' =>'#ff5a5f' ]);
-      $Request->attributes->add(['Logo_url'        => null ]);
+      $Request->attributes->add(['Color_principal' =>'#ff5a5f' ]);      
       $Request->attributes->add(['Color_fondo'     => '#ff5a5f' ]);
 
 
