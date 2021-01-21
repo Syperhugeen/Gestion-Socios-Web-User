@@ -99,6 +99,10 @@
  {{-- @include('paginas.Estructura_partes.Footer.Footer') --}}
 @stop
 
+@section('favicon')
+ <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}"> 
+@stop
+
 
 @section('contenido')
 
