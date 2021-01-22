@@ -23,7 +23,7 @@
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;font-size:0"> 
                         @if( $request->get('Logo_url_blanco') != null && $request->get('Logo_url_blanco') != '' )
-                          <img src="{{$Logo_url}}" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="150">
+                          <img src="{{$Logo_url_blanco}}" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="150">
                         @endif
                       </td> 
                      </tr> 
@@ -219,38 +219,7 @@
 
 @section('mas-ayuda')
 
-<table class="es-header" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:{{$Color_fondo}};background-repeat:repeat;background-position:center top"> 
-        <tbody>
-         <tr style="border-collapse:collapse"> 
-          <td align="center" style="padding:0;Margin:0"> 
-           <table class="es-header-body" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px"> 
-            <tbody>
-             <tr style="border-collapse:collapse"> 
-              <td align="left" style="Margin:0;padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:20px"> 
-               <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
-                <tbody>
-                 <tr style="border-collapse:collapse"> 
-                  <td valign="top" align="center" style="padding:0;Margin:0;width:580px"> 
-                   <table width="100%" cellspacing="0" cellpadding="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
-                    <tbody>
-                     <tr style="border-collapse:collapse"> 
-                      <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;font-size:0"> 
-                        @if( $request->get('Logo_url') != null && $request->get('Logo_url') != '' )
-                          <img src="{{$Logo_url}}" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="150">
-                        @endif
-                      </td> 
-                     </tr> 
-                    </tbody>
-                   </table></td> 
-                 </tr> 
-                </tbody>
-               </table></td> 
-             </tr> 
-            </tbody>
-           </table></td> 
-         </tr> 
-        </tbody>
-       </table> 
+
 
 <table class="es-content" cellspacing="0" cellpadding="0" align="center" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%"> 
         <tbody>
@@ -266,6 +235,13 @@
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px"> 
                    <table style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;background-color:#FFECD1;border-radius:4px" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffecd1"> 
                     <tbody>
+                    <tr style="border-collapse:collapse"> 
+                      <td align="center" style="Margin:0;padding-left:10px;padding-right:10px;padding-top:25px;padding-bottom:25px;font-size:0"> 
+                        @if( $request->get('Logo_url') != null && $request->get('Logo_url') != '' )
+                          <img src="{{$Logo_url}}" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="150">
+                        @endif
+                      </td>  
+                     </tr> 
                      <tr style="border-collapse:collapse"> 
                       <td align="center" style="padding:0;Margin:0;padding-top:30px;padding-left:30px;padding-right:30px"><h3 style="Margin:0;line-height:24px;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:20px;font-style:normal;font-weight:normal;color:#111111">Más información de ...</h3></td> 
                      </tr> 
