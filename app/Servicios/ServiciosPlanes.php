@@ -2,46 +2,28 @@
 
 namespace App\Servicios;
 
-
+use App\Helpers\CurlHelper;
 use Illuminate\Support\Facades\Cache;
-use \stdClass;
 
-
-
-
-class ServiciosPlanes 
+class ServiciosPlanes
 {
 
-	public static function getPlanes()
-	{
-    $array = [];
+    public static function getPlanes()
+    {
+        $ip = strval($_SERVER['REMOTE_ADDR']);
 
-		$Plan1 = new stdClass();
-    $Plan1->name = 'Estandar';
-    $Plan1->cantidad_de_socios = 150;
-    $Plan1->cantidad_de_sucursales = 1;
-    $Plan1->moneda = '$';
-    $Plan1->precio = 990;		
+        $header = [
 
-    $Plan2 = new stdClass();
-    $Plan2->name = 'Starter';
-    $Plan2->cantidad_de_socios = 400;
-    $Plan2->cantidad_de_sucursales = 1;
-    $Plan2->moneda = '$';
-    $Plan2->precio = 1490;   
+            'Ip:' . $ip,
+        ];
 
-    $Plan3 = new stdClass();
-    $Plan3->name = 'Pro';
-    $Plan3->cantidad_de_socios = 1200;
-    $Plan3->cantidad_de_sucursales = 2;
-    $Plan3->moneda = '$';
-    $Plan3->precio = 1990;   
+        $Planes = Cache::remember('Planes', 600, function () use ($header) {
 
-    array_push($array,$Plan1);
-    array_push($array,$Plan2);
-    array_push($array,$Plan3);
+            return CurlHelper::getUrlData('https://apptest.gestionsocios.com.uy/get-planes-public', $header);
 
-    return $array;
-	}
+        });
+
+        return $Planes;
+    }
 
 }

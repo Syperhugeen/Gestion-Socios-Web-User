@@ -1,7 +1,7 @@
 
 
 @foreach($Planes as $Plan)
-<div class="col-12 col-lg-4 mb-4 mb-lg-0">
+<div class="col-6 col-lg-3 mb-4 mb-lg-0">
   
 
 <div class="w-100 d-flex flex-column align-items-center background-gris--1 py-4 px-3">
@@ -54,11 +54,25 @@
                {{$Plan->cantidad_de_sucursales}} @if($Plan->cantidad_de_sucursales > 1)sucursales @else sucursal @endif
              </li>
              
+             @if ($Plan->control_acceso == 'si')
+
+             <li class="contiene-li-precio-nuevo">
+              <span class="text-color-primary">
+                <i class="fas fa-check-circle"></i>
+              </span>         
+
+              <b> Control de acceso </b>
+             </li>
+               
+             @endif
+             
+             
+             
           
          </ul>
 
           <div class="contiene-precios-precios">
-            <div class="contiene-precio-dato"> Precio: {{$Plan->moneda}} <strong> {{$Plan->precio}}</strong> / mes</div> 
+            <div class="contiene-precio-dato"> Precio: {{$Plan->moneda}} <strong> {{$Plan->valor}}</strong> / mes</div> 
           </div>
 
 
