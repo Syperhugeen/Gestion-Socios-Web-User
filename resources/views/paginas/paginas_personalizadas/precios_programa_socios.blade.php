@@ -28,12 +28,7 @@
               </span>              
               Movimientos de caja
              </li>
-              <li class="contiene-li-precio-nuevo">
-              <span class="text-color-primary">
-                <i class="fas fa-check-circle"></i>
-              </span>              
-              Capacitación 
-             </li>
+              
              <li class="contiene-li-precio-nuevo">
               <span class="text-color-primary">
                 <i class="fas fa-check-circle"></i>
@@ -44,14 +39,14 @@
               <span class="text-color-primary">
                 <i class="fas fa-check-circle"></i>
               </span>              
-              Hasta <strong> {{$Plan->cantidad_de_socios}}</strong>  socios
+              Hasta <strong> {{$Plan->cantidad_socios}}</strong>  socios
              </li>
              <li class="contiene-li-precio-nuevo">
               <span class="text-color-primary">
                 <i class="fas fa-check-circle"></i>
               </span>         
 
-               {{$Plan->cantidad_de_sucursales}} @if($Plan->cantidad_de_sucursales > 1)sucursales @else sucursal @endif
+               {{$Plan->cantidad_sucursales}} @if($Plan->cantidad_sucursales > 1)sucursales @else sucursal @endif
              </li>
              
              @if ($Plan->control_acceso == 'si')
