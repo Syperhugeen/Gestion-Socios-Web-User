@@ -385,7 +385,11 @@
 
 
 
-
+    
+    @if (count($Planes) > 0) 
+      
+    
+    
      <section class="site-section background-gris-0" id="precios-section">
       <div class="container">
         <div class="row">
@@ -408,6 +412,7 @@
         </div>
       </div>
     </section>
+    @endif
     
 @stop  
 

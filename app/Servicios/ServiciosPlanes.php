@@ -16,14 +16,10 @@ class ServiciosPlanes
             'Ip:' . $ip,
         ];
 
-        $Planes = CurlHelper::getUrlData('https://apptest.gestionsocios.com.uy/get-planes-public', $header);
+        $Response = CurlHelper::getUrlData('https://apptest.gestionsocios.com.uy/get-planes-public', $header);
 
-        dd($Planes);
-        // Cache::remember('Planes', 600, function () use ($header) {
+        return $Response['Https_status'] == '200' ? $Response['Data'] : [];
 
-        // });
-
-        return $Planes;
     }
 
 }
