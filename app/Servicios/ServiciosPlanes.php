@@ -3,6 +3,7 @@
 namespace App\Servicios;
 
 use App\Helpers\CurlHelper;
+use Illuminate\Support\Facades\Cache;
 
 class ServiciosPlanes
 {
@@ -16,10 +17,12 @@ class ServiciosPlanes
             'Ip:' . $ip,
         ];
 
-        $Response = CurlHelper::getUrlData('https://apptest.gestionsocios.com.uy/get-planes-public', $header);
+        return Cache::remember('Planes', 6000, function () use ($header) {
+            $Response = CurlHelper::getUrlData('https://apptest.gestionsocios.com.uy/get-planes-public', $header);
 
-        dd($Response);
-        return $Response['Https_status'] == '200' ? $Response['Data']->Data : [];
+            return $Response['Https_status'] == '200' ? $Response['Data']->Data : [];
+
+        });
 
     }
 
