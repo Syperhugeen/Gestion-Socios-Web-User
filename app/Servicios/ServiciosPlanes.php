@@ -19,7 +19,7 @@ class ServiciosPlanes
         $Response = CurlHelper::getUrlData('https://apptest.gestionsocios.com.uy/get-planes-public', $header);
 
         dd($Response);
-        return $Response['Https_status'] == '200' ? $Response['Data'] : [];
+        return $Response['Https_status'] == '200' ? $Response['Data']->Data : [];
 
     }
 
