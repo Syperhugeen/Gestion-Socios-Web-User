@@ -24,7 +24,6 @@ class ServiciosPlanes
 
         });
 
-        dd($Planes);
         return $Planes;
 
     }
