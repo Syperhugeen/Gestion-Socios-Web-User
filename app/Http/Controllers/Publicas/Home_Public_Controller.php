@@ -36,8 +36,6 @@ class Home_Public_Controller extends Controller
 
         $Planes = ServiciosPlanes::getPlanes();
 
-        dd($Planes);
-
         return view('paginas.home.home', compact('Empresa', 'blogs', 'Portada', 'Planes'));
     }
 

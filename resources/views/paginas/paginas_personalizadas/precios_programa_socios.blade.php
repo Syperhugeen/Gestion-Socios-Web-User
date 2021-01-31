@@ -1,5 +1,5 @@
 
-
+{{dd($Planes )}}
 @foreach($Planes as $Plan)
 <div class="col-6 col-lg-3 mb-4 mb-lg-0">
   
