@@ -1,29 +1,40 @@
-<div v-if="!se_envio" class="container"> 
+<div v-if="!se_envio" class="container">
 
-    <div class="d-flex  flex-column align-items-center justify-content-center">   
+    <h3 class="text-center mb-5">
+    Te podés contactar de 3 maneras diferentes
+    </h3>
+
+    <ol class="mb-5">
+    <li>  Llamá al celular {{$Empresa->celular}}.  </li>
+    <li>  Envía un mensaje por Whatsapp {{$Empresa->celular}}  <a href="{{$Empresa->link_whatsapp_send}}" class="btn btn-success">
+          Click aquí para enviar mensaje por Whatsapp <i class="fab fa-whatsapp"></i>
+
+          </a>  </li>
+          <li>  Rellená el formulario de aquí abajo y te responderemos muy rápido por email  <i class="fas fa-hand-point-down"></i> </li>
+    </ol>
+
+    <div class="d-flex  flex-column align-items-center justify-content-center">
         <div class="col-6 col-lg-5 p-5 mb-3">
-            <img src="{{url()}}/imagenes/team/mauricio-costanza-atencion-al-pubico-Easysocio-worldmaster-webs.jpg" class="img-fluid p5 rounded-circle ">                           
+            <img src="{{url()}}/imagenes/team/mauricio-costanza-atencion-al-pubico-Easysocio-worldmaster-webs.jpg" class="img-fluid p5 rounded-circle ">
         </div>
-    
-                
+
+
 
         <div class="col-12 col-lg-10  mb-5">
            <p class="text-center color-text-gris">
                 Hay un ninja <span class="color-text-success">disponible</span> para atenderte.
             </p>
-            <p class="text-center color-text-gris">
-                Para contratar EasySocio o resolver alguna pregunta debes hacer lo siguiente...
-            </p>
-        </div>      
+
+        </div>
 
     </div>
 
 
     <div class="row mx-0 w-100 mb-5 ">
-      <h3 class="col-12 text-bold mb-4">1 - Explicá lo que necesitás.</h3>      
+      <h3 class="col-12 text-bold mb-4">1 - Explicá lo que necesitás.</h3>
       <div class="col-12">
         <textarea v-model="data_mensaje.mensaje" class="border-primary" cols="30" rows="4" :class="classImput" placeholder="Explica brevemente lo que necesitás"></textarea>
-      </div>       
+      </div>
     </div>
 
 
@@ -31,12 +42,12 @@
 
       <h3 class="col-12 text-bold  mb-4">2 - Dejá tus datos.</h3>
 
-      <div class="col-12 col-lg-6 mb-2">         
+      <div class="col-12 col-lg-6 mb-2">
         <input v-model="data_mensaje.name" type="text" :class="classImput" placeholder="Tu nombre">
       </div>
 
        <div class="col-12 col-lg-6 mb-2">
-         <input v-model="data_mensaje.nombre_empresa" type="text" :class="classImput" placeholder="Tu empresa">        
+         <input v-model="data_mensaje.nombre_empresa" type="text" :class="classImput" placeholder="Tu empresa">
       </div>
 
       <div class="col-12 col-lg-6 mb-2">
@@ -45,15 +56,15 @@
 
       <div class="col-12 col-lg-6 mb-2">
         <input v-model="data_mensaje.celular" type="number" :class="classImput" placeholder="Un celular válido">
-      </div>  
-      
+      </div>
+
     </div>
 
 
 
 
 
-   
+
 
 
 
@@ -75,10 +86,10 @@
         <div v-else v-on:click="enviarMensaje" :class="classBoton" value="Enviar mensaje">
           Enviar solicitud ahora
         </div>
-      </div> 
+      </div>
       <div>
-       
-      </div>  
+
+      </div>
 
     </div>
     <div class="row align-items-center justify-content-center mb-4 mt-4">
@@ -88,12 +99,12 @@
          <div class="col-12 text-center parrafo-class p-3 mb-1 color-text-gris" >
           {{$Empresa->texto_tiempo_respuesta_contacto}}
          </div>
-       
-        
+
+
       </div>
-      
+
     </div>
-    
-  
+
+
 </div>
 @include('paginas.home.vue.Contacto.PartialLuegoEnvio')

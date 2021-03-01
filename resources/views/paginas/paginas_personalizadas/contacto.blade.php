@@ -18,12 +18,12 @@
  <meta property="og:title"              content="{{ $Titulo}} " />
  <meta property="og:description"        content="{{$DescriptionEtiqueta}}" />
  <meta property="og:image"              content="{{$ImagenParaTaG }}" />
- <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" /> 
+ <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" />
  <meta property="og:image:width"        content="250">
  <meta property="og:image:height"       content="250">
 
 
-@stop 
+@stop
 
 
 @section('data-estructurada')
@@ -42,7 +42,7 @@
             "@id": "{{$UrlDeLaPagina}}",
             "name": "{{$Titulo}}"
             }
-          }          
+          }
          ]
         }
 </script>
@@ -71,13 +71,13 @@
 @stop
 
 @section('vue-componenetes-cdn')
-  <script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script> 
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
   {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-select/2.6.2/vue-select.js"></script> --}}
   <script  src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
   {{-- <script  src="https://cdn.jsdelivr.net/npm/vue-awesome-notifications@3.1.1/dist/index.min.js"></script> --}}
-  
-  
-  
+
+
+
 @stop
 
 @section('vue-componenetes-externos')
@@ -93,14 +93,14 @@
 
 @section('header')
 {{--  @include('paginas.Estructura_partes.Header.header_comun') --}}
-@stop   
+@stop
 
 @section('footer')
  {{-- @include('paginas.Estructura_partes.Footer.Footer') --}}
 @stop
 
 @section('favicon')
- <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}"> 
+ <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}">
 @stop
 
 
@@ -111,48 +111,46 @@
     {{--*/ $EsPortada  = true /*--}}
     {{-- Se necesita asignar la variable $Portada y $Route. Si $Route no se quiere definir se le dará valor "" (string vacio) y toamara el link que viene del objeto portada y se usara scrool_to en el llamado a la acción --}}
 
-    @include('paginas.paginas_personalizadas.partials.portada_molde')   
-      
-      
-     
-
-   
+    @include('paginas.paginas_personalizadas.partials.portada_molde')
 
 
 
-    <div  class="site-section" id="iniciar-contacto">
+
+
+
+
+
+    <div  class="py-2 py-lg-5" id="iniciar-contacto">
     <div class="container">
-    <div class="d-flex  flex-column align-items-center justify-content-center">          
-        
-        
-        
-    <div class="col-lg-6  px-0" id="formulario_contacto">              
+    <div class="d-flex  flex-column align-items-center justify-content-center">
 
-        <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template> 
+
+
+    <div class="col-lg-6  px-0" id="formulario_contacto">
+
+        <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
             @include('paginas.home.vue.Contacto.Contacto_completo_para_contacto')
-        </contacto-component>            
+        </contacto-component>
     </div>
 
-        
+
     </div>
     </div>
     </div>
 
-   
-
-    
-
-    
-
-   
 
 
-   
-
-    
-
-   
-
-@stop  
 
 
+
+
+
+
+
+
+
+
+
+
+
+@stop
