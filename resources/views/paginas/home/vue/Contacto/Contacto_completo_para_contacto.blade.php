@@ -94,18 +94,7 @@
       </div>
 
     </div>
-    <div class="row align-items-center justify-content-center mb-4 mt-4">
-      <div class="row  align-items-center justify-content-center">
 
-
-         <div class="col-12 text-center parrafo-class p-3 mb-1 color-text-gris" >
-          {{$Empresa->texto_tiempo_respuesta_contacto}}
-         </div>
-
-
-      </div>
-
-    </div>
 
 
 </div>
