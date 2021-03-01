@@ -5,12 +5,12 @@
     </h3>
 
     <ol class="mb-5">
-    <li>  Llamá al celular {{$Empresa->celular}}.  </li>
-    <li>  Envía un mensaje por Whatsapp {{$Empresa->celular}}  <a href="{{$Empresa->link_whatsapp_send}}" class="btn btn-success">
-          Click aquí para enviar mensaje por Whatsapp <i class="fab fa-whatsapp"></i>
+    <li class="mb-3">  Llamá al celular <strong>{{$Empresa->celular}}</strong> (fuera de Uruguay el númer sería 598 {{ substr( $Empresa->celular,1)}}).  </li>
+    <li class="mb-3">  Envía un mensaje por Whatsapp {{$Empresa->celular}}  <a href="{{$Empresa->link_whatsapp_send}}" class="btn btn-success">
+          Click aquí para enviar mensaje <i class="fab fa-whatsapp"></i>
 
           </a>  </li>
-          <li>  Rellená el formulario de aquí abajo y te responderemos muy rápido por email  <i class="fas fa-hand-point-down"></i> </li>
+          <li class="mb-3">  Rellená el formulario de aquí abajo y te responderemos muy rápido por email  <i class="fas fa-hand-point-down"></i> </li>
     </ol>
 
     <div class="d-flex  flex-column align-items-center justify-content-center">
