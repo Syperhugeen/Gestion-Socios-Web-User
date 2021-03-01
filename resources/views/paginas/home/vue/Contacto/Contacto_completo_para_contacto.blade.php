@@ -5,7 +5,7 @@
     </h3>
 
     <ol class="mb-5">
-    <li class="mb-3">  Llamá al celular <strong>{{$Empresa->celular}}</strong> (fuera de Uruguay el númer sería 598 {{ substr( $Empresa->celular,1)}}).  </li>
+    <li class="mb-3">  Llamá al celular <strong>{{$Empresa->celular}}</strong>. <br>Desde fuera de Uruguay el número sería 598 {{ substr( $Empresa->celular,1)}}.  </li>
     <li class="mb-3">  Envía un mensaje por Whatsapp {{$Empresa->celular}}  <a href="{{$Empresa->link_whatsapp_send}}" class="btn btn-success">
           Click aquí para enviar mensaje <i class="fab fa-whatsapp"></i>
 
