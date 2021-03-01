@@ -1,7 +1,7 @@
 <div v-if="!se_envio" class="container">
 
 <div class="d-flex  flex-column align-items-center justify-content-center mb-5">
-        <div class="col-6 col-lg-5 p-3 p-lg-5 mb-3">
+        <div class="col-6 col-lg-5 p-4 p-lg-5 mb-3">
             <img src="{{url()}}/imagenes/team/mauricio-costanza-atencion-al-pubico-Easysocio-worldmaster-webs.jpg" class="img-fluid  rounded-circle ">
         </div>
 
