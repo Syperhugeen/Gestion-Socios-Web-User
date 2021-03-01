@@ -1,5 +1,21 @@
 <div v-if="!se_envio" class="container">
 
+<div class="d-flex  flex-column align-items-center justify-content-center mb-5">
+        <div class="col-6 col-lg-5 p-3 p-lg-5 mb-3">
+            <img src="{{url()}}/imagenes/team/mauricio-costanza-atencion-al-pubico-Easysocio-worldmaster-webs.jpg" class="img-fluid  rounded-circle ">
+        </div>
+
+
+
+        <div class="col-12 col-lg-10 ">
+           <p class="text-center color-text-gris">
+                Hay un ninja <span class="color-text-success">disponible</span> para atenderte.
+            </p>
+
+        </div>
+
+    </div>
+
     <h3 class="text-center mb-5">
     Te podés contactar de 3 maneras diferentes
     </h3>
@@ -13,21 +29,7 @@
           <li class="mb-3">  Rellená el formulario de aquí abajo y te responderemos muy rápido por email  <i class="fas fa-hand-point-down"></i> </li>
     </ol>
 
-    <div class="d-flex  flex-column align-items-center justify-content-center">
-        <div class="col-6 col-lg-5 p-5 mb-3">
-            <img src="{{url()}}/imagenes/team/mauricio-costanza-atencion-al-pubico-Easysocio-worldmaster-webs.jpg" class="img-fluid p5 rounded-circle ">
-        </div>
 
-
-
-        <div class="col-12 col-lg-10  mb-5">
-           <p class="text-center color-text-gris">
-                Hay un ninja <span class="color-text-success">disponible</span> para atenderte.
-            </p>
-
-        </div>
-
-    </div>
 
 
     <div class="row mx-0 w-100 mb-5 ">
