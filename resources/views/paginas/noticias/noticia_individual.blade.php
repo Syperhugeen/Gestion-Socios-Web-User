@@ -1,7 +1,7 @@
 @extends('layouts.credo.layout_pricnipal')
 
 @section('favicon')
- <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}"> 
+ <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}">
 @stop
 
 @section('og-tags')
@@ -11,8 +11,8 @@
   <meta property="og:description"        content="
    {{$Noticia->descripcion_breve}} | {{$Empresa->name}}." />
    <meta property="og:image"               content="{{$Noticia->url_img_foto_principal_chica}}" />
-   <meta property="og:image:secure_url"  content="{{$Noticia->url_img_foto_principal_chica}}" /> 
-   <meta property="og:image:alt"         content="{{$Noticia->name}} |  {{$Empresa->name}}" /> 
+   <meta property="og:image:secure_url"  content="{{$Noticia->url_img_foto_principal_chica}}" />
+   <meta property="og:image:alt"         content="{{$Noticia->name}} |  {{$Empresa->name}}" />
    <meta property="og:image:width" content="350">
    <meta property="og:image:height" content="350">
 @stop
@@ -33,7 +33,7 @@
             "@id": "{{$Noticia->route}}",
             "name": "{{$Noticia->name}}"
             }
-          }          
+          }
          ]
         }
 </script>
@@ -52,12 +52,12 @@
 
 
 @section('title')
-  {{ $Noticia->titulo_de_la_pagina}}   
+  {{ $Noticia->titulo_de_la_pagina}}
 @stop
 
 
 @section('MetaContent')
- {{$Noticia->description_de_la_pagina}} 
+ {{$Noticia->description_de_la_pagina}}
 @stop
 
 @section('MetaRobot')
@@ -65,10 +65,11 @@
 @stop
 
 @section('palabras-claves')
-  
+
 @stop
 
 @section('vue')
+@include('paginas.home.vue.indice')
   @include('paginas.home.vue.header-component')
   @include('paginas.home.vue.vue-instance')
 @stop
@@ -86,12 +87,12 @@
 
 
  <div   class="get_width_100 contenedor-iconos-share">
-  
+
 
  <div class="flex-row-center sub-contenedor-iconos-share">
 
     <div class="iconos-share-titulo"><i class="fas fa-share-alt"></i> Compartir</div>
-    
+
 
     {{-- //whatzap icono --}}
     <a class="iconos-share-formato mostrar-solo-mobil" href="whatsapp://send?text={{$Noticia->route}}" data-action="share/whatsapp/share">
@@ -110,8 +111,8 @@
     <a class="iconos-share-formato" href="https://twitter.com/?status=Me gusta esta página {{$Noticia->route}}">
             <i class="fab fa-twitter-square"></i>
     </a>
-   
- </div> 
+
+ </div>
 
 
 
@@ -125,18 +126,18 @@
 
 @section('contenido')
 
-   <div v-lazy-container="{ selector: 'img' }" class="blog-portada-contenedor" id="home-section">      
+   <div v-lazy-container="{ selector: 'img' }" class="blog-portada-contenedor" id="home-section">
       <img v-if="mostrar_para_celuar" class="blog-img-slider-size" style="position: absolute;top: 0;" data-src="{{$Noticia->url_img_foto_principal_chica}}" alt="{{$Noticia->descripcion_breve}}. {{$Noticia->name}}">
-       <img v-else class="blog-img-slider-size" style="position: absolute;top: 0;" data-src="{{$Noticia->url_img_foto_principal}}" alt="{{$Noticia->descripcion_breve}}. {{$Noticia->name}}">      
-   </div>  
+       <img v-else class="blog-img-slider-size" style="position: absolute;top: 0;" data-src="{{$Noticia->url_img_foto_principal}}" alt="{{$Noticia->descripcion_breve}}. {{$Noticia->name}}">
+   </div>
 
 
-  
+
 
 <div class="conenedor-maximo-blog">
-  
+
    {{-- Contenido del blog --}}
-   <div v-lazy-container="{ selector: 'img' }" class="contenedor-blog"> 
+   <div v-lazy-container="{ selector: 'img' }" class="contenedor-blog">
        {!! $Noticia->contenido_render !!}
    </div>
 
@@ -147,22 +148,20 @@
      @include('paginas.noticias.sobre_el_autor')
     </div>
    </div>
-   
+
 
    {{-- Blog relacionados --}}
    @if($blogs_relacionados->count() > 0)
    <div class="wraper-secciones-blog-titulo-content">
      <div class="wrpaer-titulo-de-seccion">Artículos relacionados</div>
-     
+
       @include('paginas.noticias.blogs_relacionados')
-     
+
    </div>
    @endif
-   
-
-</div>  
 
 
-@stop 
+</div>
 
 
+@stop

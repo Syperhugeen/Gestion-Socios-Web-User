@@ -1,6 +1,4 @@
-
-
-@import "resources/assets/sass/Secciones_y_Helpers/Helper_Plug-flex"; 
+@import "resources/assets/sass/Secciones_y_Helpers/Helper_Plug-flex";
 @import "resources/assets/sass/Secciones_y_Helpers/Helper_mediCueris";
 @import "resources/assets/sass/Secciones_y_Helpers/Helper_AJUSTES_Y_MIXIN_GENERALES";
 @import "resources/assets/sass/Secciones_y_Helpers/Helper_botones";
@@ -8,193 +6,108 @@
 @import "resources/assets/sass/Secciones_y_Helpers/Helper_Inputs_Estilos";
 @import "resources/assets/sass/Secciones_y_Helpers/Helper_Imagenes_background";
 
-
-
-
-.flex-row-center{
-  @include flexbox;       
+.flex-row-center {
+  @include flexbox;
   @include flex-direction(row);
-  @include align-items(center); 
+  @include align-items(center);
 }
 
-.flex-row-column{
-  @include flexbox;       
+.flex-row-column {
+  @include flexbox;
   @include flex-direction(column);
-  @include align-items(center); 
+  @include align-items(center);
 }
 
-.flex-justifice-space-around{
+.flex-justifice-space-around {
   @include justify-content(space-around);
 }
 
-.flex-wrap{
-  @include flex-wrap(wrap); 
+.flex-wrap {
+  @include flex-wrap(wrap);
 }
-
-
 
 /* C L A S E S   D E   T A M A Ñ O  */
-.get_width_100{
-  width:100%;
-}
-
-.get_height_100{
-  height:100%;
-}
-
-/* C L A S E S   D E   L I S T A S  */
-.lista-class{
+.get_width_100 {
   width: 100%;
-  margin-top: 4px;    
-  font-size: 14px;
-  letter-spacing: 1.4px;  
-  padding-left:20px;
-  line-height:1.7;
-  font-family:$font-secondary;      
 }
 
-.lista-class::before{
-  content: "\025cf";    
-  color:$color-3;  
-  font-weight: bold;
-  display: inline-block; 
-  width: 1em;
-  margin-left: -1em;
+.get_height_100 {
+  height: 100%;
 }
-
-.lista-icono{
-
-}
-
-.lista-icono::before{
-  content: "\025cf";    
-  color:$color-3;  
-  font-weight: bold;
-  display: inline-block; 
-  width: 1em;
-  margin-left: -1em;
-}
-
-.list-style-none{
-  list-style: none;
-}
-
-
-
-
-
 
 /* C a r g a d o r*/
 .lazy-hidden {
-    background: $color-3 url('loading.gif') no-repeat 50% 50%;
+  background: $color-3 url("loading.gif") no-repeat 50% 50%;
 }
-
-
-
-
-
-
-
 
 /* CLASES BOTONES */
-.boton-simple{
-  background-color: $color-3; 
-  color:white;
+.boton-simple {
+  background-color: $color-3;
+  color: white;
   padding: 20px 35px;
   border-radius: 4px;
-  font-size:30px; 
+  font-size: 30px;
   cursor: pointer;
-  font-weight:bold;
+  font-weight: bold;
   font-family: arial;
 }
-.boton-simple:hover{
-  background-color: $color-3-primary_hover; 
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.boton-simple:hover {
+  background-color: $color-3-primary_hover;
+}
 
 /* M A R G E N E S */
-.margin-botto-only-mobil{
- margin-bottom: 30px;
+.margin-botto-only-mobil {
+  margin-bottom: 30px;
 }
-
-
-
 
 /* clases para mostrar o no */
-.no-mostrar{
-  display:none;
-}
-
-.mostrar-solo-mobil{
-
-}
-
-.no-mostrar-en-mobil{
-  display:none;
-}
-
-
-/*simula un link*/
-.simula_link{
-  cursor:pointer;
-  color:  $color-3;
-}
-
-.simula_link:hover{
-  color:$color-3-primary_hover;
-}
-
-.helper_cursor_pointer{
-  cursor:pointer;
-}
-
-.helper_max_width_100{
-  max-width: 100%;
-}
-
-
-
-.helper-relative{
-  position:relative;
-}
-
-.helper-border-radius-16{
-  border-radius: 16px;
-}
-
-
-
-
-@media (min-width: $BrackPoint-Secundario){
-.mostrar-solo-mobil{
+.no-mostrar {
   display: none;
 }
 
-.no-mostrar-en-mobil{
-  display:block;
+.mostrar-solo-mobil {
 }
 
-.margin-botto-only-mobil{
- margin-bottom: 0;
+.no-mostrar-en-mobil {
+  display: none;
 }
 
+/*simula un link*/
+.simula_link {
+  cursor: pointer;
+  color: $color-3;
+}
 
-}  
+.simula_link:hover {
+  color: $color-3-primary_hover;
+}
+
+.helper_cursor_pointer {
+  cursor: pointer;
+}
+
+.helper_max_width_100 {
+  max-width: 100%;
+}
+
+.helper-relative {
+  position: relative;
+}
+
+.helper-border-radius-16 {
+  border-radius: 16px;
+}
+
+@media (min-width: $BrackPoint-Secundario) {
+  .mostrar-solo-mobil {
+    display: none;
+  }
+
+  .no-mostrar-en-mobil {
+    display: block;
+  }
+
+  .margin-botto-only-mobil {
+    margin-bottom: 0;
+  }
+}
