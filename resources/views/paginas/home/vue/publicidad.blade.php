@@ -4,7 +4,7 @@ Vue.component('publicidad' ,
 {
 
 
-props['titulo', 'descripcion','url','url_img_chica','url_img_grande','call_to_action'],
+props:['titulo', 'descripcion','url','url_img_chica','url_img_grande','call_to_action'],
 
 
 data:function(){
