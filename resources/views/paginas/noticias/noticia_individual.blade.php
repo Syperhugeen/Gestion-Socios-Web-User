@@ -69,7 +69,8 @@
 @stop
 
 @section('vue')
-@include('paginas.home.vue.indice')
+  @include('paginas.home.vue.publicidad')
+  @include('paginas.home.vue.indice')
   @include('paginas.home.vue.header-component')
   @include('paginas.home.vue.vue-instance')
 @stop
@@ -139,6 +140,15 @@
    {{-- Contenido del blog --}}
    <div v-lazy-container="{ selector: 'img' }" class="contenedor-blog">
        {!! $Noticia->contenido_render !!}
+   </div>
+
+   <div class="contiene-otras-secciones-del-blog">
+   <publicidad titulo="Software en la nube para gimnasios"
+descripcion="El programa para administrar gimnasios más simple de usar"
+url="https://gestionsocios.com.uy/"
+url_img_chica="https://gestionsocios.com.uy/imagenes/Publicidad/easysocio-imagen-chica.jpg"
+url_img_grande="https://gestionsocios.com.uy/imagenes/Publicidad/easysocio-imagen-grande.jpg"
+call_to_action="Concer más sobre Easysocio" ></publicidad>
    </div>
 
    {{-- Sobre el autor --}}
