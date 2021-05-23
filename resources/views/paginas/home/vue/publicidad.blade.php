@@ -55,7 +55,7 @@ template:`
             @{{descripcion}}
         </p>
 
-        <a :href="url" class="col-12">
+        <a :href="url" class="col-12 mb-4">
             <div class="Boton-Fuente-Chica Boton-Primario-Relleno">
                @{{call_to_action}}    <i class="fas fa-angle-double-right"></i>
             </div>
