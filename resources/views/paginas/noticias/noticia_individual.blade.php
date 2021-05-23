@@ -142,14 +142,18 @@
        {!! $Noticia->contenido_render !!}
    </div>
 
+   <div class="wraper-secciones-blog-titulo-content">
    <div class="contiene-otras-secciones-del-blog">
    <publicidad titulo="Software en la nube para gimnasios"
-descripcion="El programa para administrar gimnasios más simple de usar"
-url="https://gestionsocios.com.uy/"
-url_img_chica="https://gestionsocios.com.uy/imagenes/Publicidad/easysocio-imagen-chica.jpg"
-url_img_grande="https://gestionsocios.com.uy/imagenes/Publicidad/easysocio-imagen-grande.jpg"
-call_to_action="Concer más sobre Easysocio" ></publicidad>
+    descripcion="El programa para administrar gimnasios más simple de usar"
+    url="https://gestionsocios.com.uy/"
+    url_img_chica="https://gestionsocios.com.uy/imagenes/Publicidad/easysocio-imagen-chica.jpg"
+    url_img_grande="https://gestionsocios.com.uy/imagenes/Publicidad/easysocio-imagen-grande.jpg"
+    call_to_action="Concer más sobre Easysocio" >
+  </publicidad>
    </div>
+   </div>
+
 
    {{-- Sobre el autor --}}
    <div v-lazy-container="{ selector: 'img' }" class="wraper-secciones-blog-titulo-content">

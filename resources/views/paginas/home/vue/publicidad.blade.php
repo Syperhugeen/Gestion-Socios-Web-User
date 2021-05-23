@@ -51,11 +51,11 @@ template:`
         <div class="col-12 h4 mb-4">
             @{{titulo}}
         </div>
-        <p class="mb-4 ">
+        <p class="col-12 mb-4 ">
             @{{descripcion}}
         </p>
 
-        <a :href="url">
+        <a :href="url" class="col-12">
             <div class="Boton-Fuente-Chica Boton-Primario-Relleno">
                @{{call_to_action}}    <i class="fas fa-angle-double-right"></i>
             </div>
