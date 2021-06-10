@@ -21,7 +21,7 @@ class CurlHelper
         curl_setopt($cliente, CURLOPT_RETURNTRANSFER, true);
 
         $contenido = json_decode(curl_exec($cliente));
-        $httpcode = curl_getinfo($cliente, CURLINFO_HTTP_CODE);
+        $httpcode  = curl_getinfo($cliente, CURLINFO_HTTP_CODE);
         curl_close($cliente);
 
         return ['Data' => $contenido,

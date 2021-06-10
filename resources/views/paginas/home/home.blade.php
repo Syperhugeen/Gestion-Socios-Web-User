@@ -411,17 +411,14 @@
         <div class="row">
 
           <div class="col-12 mb-5 position-relative">
+             <p class="text-center text-uppercase"><strong>¿Cuánto cobramos? ¿Cómo se paga?</strong></p>
             <h2 class="titulos-class text-center mb-5">Planes y precios</h2>
           </div>
 
           @include('paginas.paginas_personalizadas.precios_programa_socios')
 
 
-          <div class="col-12 text-center p-5">
-             <p class="color-text-gris text-center p-2 mb-0">
-                * Los precios están en pesos Uruguayos y no incluyen impuestos
-             </p>
-          </div>
+
 
 
 
