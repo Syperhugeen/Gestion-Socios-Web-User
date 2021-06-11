@@ -1,107 +1,99 @@
 /* CLASES DE TEXTO */
 
-.text-bold{
+.text-bold {
   font-weight: bold;
 }
-.text-color-primary{
+.text-color-primary {
   color: $color-3 !important;
 }
 
-.text-color-black{
+.text-color-black {
   color: $color-negro-para-textos;
 }
 
-.helper-aumenta-texto{
-  font-size:1.2em;
+.helper-aumenta-texto {
+  font-size: 1.2em;
 }
 
-.helper-reduce-texto{
-  font-size:0.7em;
+.helper-reduce-texto {
+  font-size: 0.7em;
 }
 
-.espacio-letras{
+.espacio-letras {
   letter-spacing: 2px;
   font-family: arial;
   margin-bottom: 8px;
 }
 
-.espacio-letras-chico{
+.espacio-letras-chico {
   letter-spacing: 1px;
   font-family: arial;
   margin-bottom: 8px;
 }
 
 /* colores personalizados */
-.color-text-gris{
+.color-text-gris {
   color: $color-gris-text;
 }
 
 /* colores personalizados */
-.color-text-white{
+.color-text-white {
   color: white;
 }
 
 /*color-texto-verde-success*/
-.color-text-success{
-  color:$color-verde-texto-success;
+.color-text-success {
+  color: $color-verde-texto-success;
 }
 
-.font-primary{
-  font-family:$font-primary;
+.font-primary {
+  font-family: $font-primary;
 }
 
-.font-secondary{
-  font-family:$font-secondary;
+.font-secondary {
+  font-family: $font-secondary;
 }
-
-
 
 /*  S e r á n   l o s   t í t u l o s  */
-.titulos-class{
-  font-size:48px !important;
-  letter-spacing:1px;
-  font-weight:bold;
+.titulos-class {
+  font-size: 48px !important;
+  letter-spacing: 1px;
+  font-weight: bold;
   line-height: 1;
-  font-family:$font-primary;
+  font-family: $font-primary;
 }
 
 /*  S e r á n   l o s   s u b   t í t u l o s  */
-.sub-titulos-class{
-  font-size:24px !important; 
-  letter-spacing:1.4px;  
+.sub-titulos-class {
+  font-size: 24px !important;
+  letter-spacing: 1.4px;
   line-height: 1;
-  font-family:$font-secondary;
+  font-family: $font-secondary;
 }
 
 /* P a r a   l o s   h 2   d e   l o s   p a r r a f o s  */
-.section-title{
+.section-title {
   @include Parrafo_Titulo_Style;
-  font-weight:bold;  
-  color:$color-3;
+  font-weight: bold;
+  color: $color-3;
 }
-
 
 /*  S e r á n   l o s   p á r r a f o s  */
-.parrafo-class{
-  @include Parrafo_Style;  
- }
-
-
-
-
-
-
-
-@media (min-width: $BrackPoint-Secundario){
-
- .titulos-class{
-  font-size:60px !important;
+.parrafo-class {
+  @include Parrafo_Style;
 }
 
-
-.sub-titulos-class{
-  font-size:28px !important; 
+.parrafo-class-pequeño {
+  @include Parrafo_Style;
+  font-size: 12px !important;
 }
 
+@media (min-width: $BrackPoint-Secundario) {
+  .titulos-class {
+    font-size: 60px !important;
+  }
 
+  .sub-titulos-class {
+    font-size: 28px !important;
+  }
 }
