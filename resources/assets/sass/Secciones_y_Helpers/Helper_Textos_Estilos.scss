@@ -51,7 +51,7 @@
 }
 
 .font-secondary {
-  font-family: $font-secondary;
+  font-family: $font-secondary !important;
 }
 
 /*  S e r á n   l o s   t í t u l o s  */
@@ -68,7 +68,7 @@
   font-size: 24px !important;
   letter-spacing: 1.4px;
   line-height: 1;
-  font-family: $font-secondary;
+  font-family: $font-primary;
 }
 
 /* P a r a   l o s   h 2   d e   l o s   p a r r a f o s  */

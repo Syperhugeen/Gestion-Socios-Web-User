@@ -109,7 +109,10 @@
           {name:'box de crossfit'},
           {name:'academía de artes marciales'}
 
-        ]"></portada>
+        ]"
+
+
+        ></portada>
 
       <span id="intro"></span>
       <span id="header-llamado-a-la-accion"></span>
