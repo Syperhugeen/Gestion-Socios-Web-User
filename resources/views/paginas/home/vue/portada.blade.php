@@ -1,5 +1,5 @@
 
-@include('paginas.home.vue.slider-text')
+
 
 Vue.component('portada' ,
 {
@@ -52,21 +52,15 @@ template:`
   }">
   </div>
 
-  <div class="container py-5 my-3">
-    <h1 class="text-white mb-5">
-        Software para gestionar gimnasios o  <slider-text :data="data_texto_variable"></slider-text>
-    </h1>
-    <ul class="mb-5">
-
-     <li class="text-white espacio-letras"> Manejo de mebresías <span class="font-secondary helper-aumenta-texto"> easy </span></li>
-     <li class="text-white espacio-letras"> Finanzas <span class="font-secondary helper-aumenta-texto"> easy </span></li>
-     <li class="text-white espacio-letras"> Reservas online de clases <span class="font-secondary helper-aumenta-texto"> easy </span></li>
-     <li class="text-white espacio-letras"> Control de acceso <span class="font-secondary helper-aumenta-texto"> easy </span></li>
-    </ul>
+  <div class="container py-5 position-relative">
 
 
-    <a href="#intro" class="btn btn-success mr-2 cursor-pointer text-white"> Comenzar ahora</a>
-    <a href="#intro" class="btn  btn-outline-primary cursor-pointer"> Seguir leyendo</a>
+  <slot name="titulo">
+  </slot>
+  <slot name="descripcion">
+  </slot>
+
+
 
   </div>
 

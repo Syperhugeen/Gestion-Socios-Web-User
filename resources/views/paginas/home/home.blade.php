@@ -85,6 +85,9 @@
 
 
 @section('vue')
+
+   @include('paginas.home.vue.pregunta-componente')
+   @include('paginas.home.vue.slider-text')
    @include('paginas.home.vue.portada')
    @include('paginas.home.vue.simple-card')
    @include('paginas.home.vue.header-component')
@@ -103,16 +106,44 @@
 
 
 
-        <portada altura_portada="80" :data_texto_variable="[
-
-          {name:'escuelas de danza',url:'https://mwebs.com.uy/programa-para-administrar-academias-de-baile-online'},
-          {name:'box de crossfit'},
-          {name:'academía de artes marciales'}
-
-        ]"
+        <portada altura_portada="80"
 
 
-        ></portada>
+        >
+
+            <template slot="titulo">
+              <h1 class="text-white mb-5">
+                  Software para gestionar gimnasios o  <slider-text :data="[
+
+{name:'escuelas de danza',url:'https://mwebs.com.uy/programa-para-administrar-academias-de-baile-online'},
+{name:'box de crossfit'},
+{name:'academía de artes marciales'}
+
+]"></slider-text>
+              </h1>
+            </template>
+            <template slot="descripcion">
+              <ul class="mb-5">
+                <li class="text-white espacio-letras"> Manejo de mebresías <span class="font-secondary helper-aumenta-texto"> <b>easy</b>  </span></li>
+                <li class="text-white espacio-letras"> Finanzas <span class="font-secondary helper-aumenta-texto"> easy </span></li>
+                <li class="text-white espacio-letras"> Reservas online de clases <span class="font-secondary helper-aumenta-texto"> easy </span></li>
+                <li class="text-white espacio-letras"> Control de acceso <span class="font-secondary helper-aumenta-texto"> easy </span></li>
+              </ul>
+
+               <a href="#intro" class="btn btn-success mr-2 cursor-pointer text-white"> Comenzar ahora</a>
+               <a href="#intro" class="btn  btn-outline-light cursor-pointer"> Seguir leyendo</a>
+
+               <img class="d-none d-lg-block " style="position: absolute; right:0; top:40%; height:auto; width:600px;"  src="{{url()}}/imagenes/Easysocio/Capturas/socios-listado-notebook.png" alt="">
+
+            </template>
+
+
+
+
+
+
+
+        </portada>
 
       <span id="intro"></span>
       <span id="header-llamado-a-la-accion"></span>
@@ -123,7 +154,19 @@
           <div class="row">
       <div class="col-12 mb-5 position-relative">
 
-              <h2 class="sub-titulos-class mb-2 text-center text-color-primary">EasySocio es el Software para la gestión de <slider-text :data="[{name:'gimnasios'},{name:'escuelas de danza'},{name:'academias de artes marciales'},{name:'box funcionales'}]"></slider-text> </h2>
+         @if( Session::get('esDeUruguay'))
+         <div class="w-100 d-flex flex-column align-items-center mb-2">
+          <div class="d-flex flex-row align-items-center">
+            <small class=" mb-0 mr-2 text-center text-uppercase">Software made in Uruguay</small>
+            <img class="shadow-sm mr-2 rounded-circle border border-light" height="30" width="30" src="{{url()}}/imagenes/monedas/{{  Session::get('esDeUruguay') ? 'pesos.jpg' : 'dolar.jpg'}}" alt="Moneda">
+          </div>
+
+         </div>
+
+
+         @endif
+
+              <h2 class="sub-titulos-class mb-4 text-center text-color-primary">EasySocio es el Software para la gestión de <slider-text :data="[{name:'gimnasios'},{name:'escuelas de danza'},{name:'academias de artes marciales'},{name:'box funcionales'}]"></slider-text> </h2>
               <p class="text-center mb-0">EasySocio es una plataforma digital que te ofrece mucho más que un sistema contable para <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"> administrar tu gimnasio</a>. Se trata de un conjunto de utilidades que te permitirán brindar un óptimo servicio para tus clientes al tiempo que facilita tu trabajo para que lo realices de manera rápida y sencilla.
               </p>
 
@@ -134,17 +177,11 @@
 
 
     <section class="site-section background-white" >
-
-
     <div class="container ">
-
     <div class="row justify-content-center">
-
       <div class="col-12 mb-5 position-relative">
           <p class="text-center text-uppercase"><strong>¿Qué resolvemos?</strong></p>
       </div>
-
-
       <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
           <simple-card titulo="Manejo de mebresías" call_to_action="Más información" url="https://worldmaster.com.uy/">
             <template slot="icono">
@@ -158,9 +195,7 @@
                   Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
                 </div>
             </template>
-
           </simple-card>
-
       </div>
 
       <div class="col-11 col-lg-3 px-2  mb-3 mb-lg-0">
@@ -170,15 +205,12 @@
               <i class="far fa-calendar-alt"></i>
                </div>
             </template>
-
             <template slot="description">
                 <div class="parrafo-class-pequeño">
                  Te ayudaremos a organizar las clases, permitiendo a tus socios hacer reservas de clases online.
                 </div>
             </template>
-
           </simple-card>
-
       </div>
 
       <div class="col-11 col-lg-3 px-2  mb-3 mb-lg-0">
@@ -188,15 +220,12 @@
                   <i class="fas fa-cash-register"></i>
                </div>
             </template>
-
             <template slot="description">
                 <div class="parrafo-class-pequeño">
                   Cada operación que hagas se irá registrando y luego podremos darte informes que te dirán lo que vendiste y lo que gastaste.
                 </div>
             </template>
-
           </simple-card>
-
       </div>
 
       <div class="col-11 col-lg-3 px-2  mb-3 mb-lg-0">
@@ -206,16 +235,19 @@
                   <i class="fas fa-cash-register"></i>
                </div>
             </template>
-
             <template slot="description">
                 <div class="parrafo-class-pequeño">
                   Es fastidioso tener que decirle a alquien que tiene que pagar. Nosotros nos ocuparemos de eso al momento que tu socios pasa por el control de acceso.
                 </div>
             </template>
-
           </simple-card>
-
       </div>
+
+
+
+      <p class="col-12 text-center mt-5 ">
+            <a href="">Ver todas las funcionalidades</a>
+      </p>
 
     </div>
 
@@ -228,16 +260,13 @@
 
     <section class="site-section background-gris-1" >
 
-
     <div class="container ">
-
-    <div class="row justify-content-center">
+      <div class="row justify-content-center">
 
       <div class="col-12 mb-5 position-relative">
-          <p class="text-center text-uppercase mb-1"><strong>¿Para quién es?</strong></p>
-          <h3 class="text-center mb-0">Lo creamos pensando en ...</h3>
+          <p class="text-center text-uppercase mb-1">¿Para quién es?</p>
+          <h3 class="text-center mb-0 h2">Lo creamos pensando en ...</h3>
       </div>
-
 
       <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
           <simple-card titulo="Gimnasios de pesas" call_to_action="Más información" url="https://worldmaster.com.uy/">
@@ -246,15 +275,12 @@
                   <img src="{{url()}}/imagenes/Easysocio/SirvePara/pesas.jpg" class="img-fluid rounded" alt="">
                </div>
             </template>
-
             <template slot="description">
                 <div class="parrafo-class-pequeño">
                   Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
                 </div>
             </template>
-
           </simple-card>
-
       </div>
 
       <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
@@ -264,15 +290,12 @@
                   <img src="{{url()}}/imagenes/Easysocio/SirvePara/box-funcional.jpg" class="img-fluid rounded" alt="">
                </div>
             </template>
-
             <template slot="description">
                 <div class="parrafo-class-pequeño">
                   Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
                 </div>
             </template>
-
           </simple-card>
-
       </div>
 
       <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
@@ -282,15 +305,12 @@
                   <img src="{{url()}}/imagenes/Easysocio/SirvePara/danza.jpg" class="img-fluid rounded" alt="">
                </div>
             </template>
-
             <template slot="description">
                 <div class="parrafo-class-pequeño">
                   Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
                 </div>
             </template>
-
           </simple-card>
-
       </div>
 
       <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
@@ -306,16 +326,48 @@
                   Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
                 </div>
             </template>
-
           </simple-card>
-
       </div>
-
+    </div>
     </div>
 
+    </section>
 
-    </div>
+    @if(count($Planes) > 0)
+      <section class="site-section background-gris-0" id="precios-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mb-5 position-relative">
+                <p class="text-center text-uppercase">¿Cuánto cobramos? ¿Cómo se paga?</p>
+              <h2 class=" text-center mb-5 h2">Planes y precios</h2>
+            </div>
+            @include('paginas.paginas_personalizadas.precios_programa_socios')
+          </div>
+        </div>
+      </section>
+    @endif
 
+
+    @include('paginas.home.preguntasFrecuentes')
+
+
+    <section class="site-section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mb-5 position-relative">
+            <p class="text-center text-uppercase mb-1">Blog</p>
+            <h3 class="  text-center h2 mb-2">Descubrí contenidos especializados para tu negocio</h3>
+            <p class="  text-center mb-5">
+              Artículos para aprender más y lograr que tu negocio sea exitoso
+            </p>
+          </div>
+          @foreach($blogs as $Entidad)
+            {{--*/ $Entidad  = $Entidad /*--}}
+            {{--*/ $Route    = $Entidad->route /*--}}
+            @include('admin.noticias.partes.lista')
+         @endforeach
+        </div>
+      </div>
     </section>
 
 
@@ -325,7 +377,7 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">¿Tenés un gimnasio y te encontrás en el punto que la gestión de tus socios se hace complicada?</h2>
+          <h2 class=" mb-4">¿Tenés un gimnasio y te encontrás en el punto que la gestión de tus socios se hace complicada?</h2>
 
           <p>En la industria de los negocios de acondicionamiento físico, es normal que en la medida en que comienza a crecer el volumen de clientes, cada vez se haga más difícil mantener al día los estados de cuentas de cada uno. Puede llegar a ocurrir que si son muchos no sepas distinguir quienes se encuentran al día con sus pagos y quienes te deben dinero. Si esta situación te resulta familiar haz encontrado la herramienta que necesitas para solucionar tus problemas de administración de forma sencilla y por una inversión mínima. Te invitamos a conocer EasySocio.
           </p>
@@ -553,29 +605,5 @@
 
 
 
-    @if(count($Planes) > 0)
-
-
-
-     <section class="site-section background-gris-0" id="precios-section">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-12 mb-5 position-relative">
-             <p class="text-center text-uppercase"><strong>¿Cuánto cobramos? ¿Cómo se paga?</strong></p>
-            <h2 class="titulos-class text-center mb-5">Planes y precios</h2>
-          </div>
-
-          @include('paginas.paginas_personalizadas.precios_programa_socios')
-
-
-
-
-
-
-        </div>
-      </div>
-    </section>
-    @endif
 
 @stop
