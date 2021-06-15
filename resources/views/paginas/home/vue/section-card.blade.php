@@ -1,56 +1,51 @@
+Vue.component("section-card", {
+  props: [
+    "titulo",
+    "titulo_aclarador",
+    "background",
+    "order",
+    "url_img_chica",
+    "url_img_grande",
+    "call_to_action",
+    "con_parte_oculta"
+  ],
 
-
-Vue.component('section-card' ,
-{
-
-
-props:['titulo', 'background','order','url_img_chica','url_img_grande','call_to_action'],
-
-
-data:function(){
+  data: function() {
     return {
-       cargando:false,
-       showSection:false
+      cargando: false,
+      showSection: false
+    };
+  },
 
-
-    }
-},
-
-watch:{
-
-
-
-
-},
-methods:{
-
-
-
-
-},
-computed:{
-    ordenTextClass:function(){
-        return `${this.order == 'left' ? 'order-1 order-lg-1': 'order-1 order-lg-2 text-right'}`;
+  watch: {},
+  methods: {},
+  computed: {
+    ordenTextClass: function() {
+      return `${
+        this.order == "left"
+          ? "order-1 order-lg-1"
+          : "order-1 order-lg-2 "
+      }`;
     },
-    ordenImgClass:function(){
-        return `${this.order == 'left' ? 'order-2  order-lg-2': 'order-2 order-lg-1'}`;
+    ordenImgClass: function() {
+      return `${
+        this.order == "left" ? "order-2  order-lg-2" : "order-2 order-lg-1"
+      }`;
     }
-
-},
-mounted: function mounted (){
-
-
-
-},
-template:`
+  },
+  mounted: function mounted() {},
+  template: `
 
 
-     <section  class="site-section" :class="background">
+     <section  class="py-5" :class="background">
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-lg-6"  :class="ordenTextClass">
 
-            <h3 class="h3 mb-4"> @{{titulo}} </h3>
+            <p class="text-uppercase mb-1" v-if="titulo_aclarador != ''">
+                <small>@{{titulo_aclarador}}</small>
+            </p>
+            <h3 v-if="titulo != ''" class="h3 mb-4"> @{{titulo}} </h3>
 
             <slot name="description-visible">
 
@@ -62,7 +57,7 @@ template:`
                 </slot>
             </transition>
 
-            <div @click="showSection = !showSection">
+            <div v-if="con_parte_oculta" class="cursor-pointer" @click="showSection = !showSection">
                 <span v-if="!showSection">
                     Leer mas <i class="fas fa-chevron-down"></i>
                 </span>
@@ -77,8 +72,8 @@ template:`
 
 
             </div>
-            <div :class="ordenImgClass" v-lazy-container="{ selector: 'img' }" class="col-lg-6  pl-lg-5  d-flex flex-row align-items-center justify-content-center">
-              <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
+            <div :class="ordenImgClass" v-lazy-container="{ selector: 'img' }" class="col-lg-6  p-2 p-lg-5  d-flex flex-row align-items-center justify-content-center">
+              <img class="img-fluid  helper-border-radius-16" :data-src="$root.mostrar_para_celuar ? url_img_chica : url_img_grande" :alt="titulo">
             </div>
           </div>
         </div>
@@ -89,6 +84,4 @@ template:`
 
 
 `
-
-
 });

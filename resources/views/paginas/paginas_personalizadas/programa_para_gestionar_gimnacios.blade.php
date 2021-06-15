@@ -171,6 +171,50 @@
         </div>
     </section>
 
+    <section-card
+       titulo_aclarador=""
+       titulo="¿Tenés un gimnasio y te encontrás en el punto que la gestión de tus socios se hace complicada?"
+       background="background-gris--1"
+       order="left"
+       :con_parte_oculta="true"
+       url_img_chica="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-celular.png"
+       url_img_grande="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-celular.png" >
+
+        <template slot="description-visible">
+        <p>En la industria de los negocios de acondicionamiento físico, es normal que en la medida en que comienza a crecer el volumen de clientes, cada vez se haga más difícil mantener al día los estados de cuentas de cada uno. Puede llegar a ocurrir que si son muchos no sepas distinguir quienes se encuentran al día con sus pagos y quienes te deben dinero. Si esta situación te resulta familiar haz encontrado la herramienta que necesitas para solucionar tus problemas de administración de forma sencilla y por una inversión mínima. Te invitamos a conocer EasySocio.
+          </p>
+        </template>
+        <template slot="description-oculta">
+        <p>
+            Esta tecnología te permite como administrador de uno o varios gimnasios saber cuál es el estado financiero del negocio en tiempo real, desde cualquier ubicación a través de un dispositivo móvil como un celular o tu laptop. Además podrás obtener información valiosa sobre las estadísticas de los servicios más utilizados por los clientes, las tendencias en cuanto a consumo y toda la información actualizada que requieras para una gestión eficiente.
+          </p>
+        </template>
+      </section-card>
+
+
+      <section-card
+       titulo_aclarador=""
+       titulo="Agrégale valor a tu emprendimiento sin perder más tiempo ni energía en detalles de gestión"
+       background="background-gris-1"
+       order="right"
+       :con_parte_oculta="true"
+       url_img_chica="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-notebook.png"
+       url_img_grande="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-notebook.png" >
+
+        <template slot="description-visible">
+         <p>Los gimnasios hoy en día son uno de los emprendimientos de mayor auge. La industria del fittness y del cuidado personal se encuentra al alza, ya que millones de personas acuden en búsqueda de la oferta de productos y servicios que allí se ofrecen con la finalidad de mejorar su calidad de vida. Es un campo de trabajo y de inversión que abarca muchos aspectos, que van desde la estética personal, al bienestar físico y la salud.
+          </p>
+        </template>
+        <template slot="description-oculta">
+        <p>
+          Una sociedad que promueve el cuidado personal a través de la promoción de buenas prácticas y hábitos saludables en los individuos, resulta un ambiente ideal para el surgimiento de muchas ideas y modelos de negocios asociados al cuidado del bienestar físico. Así que, bien sea que tienes un gimnasio con equipos para ejercicios anaeróbicos (pesas y máquinas de resistencia) una escuela de artes marciales, o un centro para las últimas tendencias del entrenamiento como el Crossfit, el bootcamp o el TRX, ya diste el primer paso y realizaste la inversión más importante, ahora lo que necesitas son los medios para <a href="https://gestionsocios.com.uy/blog/las-cuatro-reglas-de-oro-para-tener-un-gimnasio-exitoso/25">llevar al éxito a tu emprendimiento</a>.
+          </p>
+          <p>
+          Para eso, no lo dudes, el mejor aliado con el que puedes contar es esta herramienta informática multifuncional que te ayudará con la administración de negocio para que puedas dedicar más tiempo a pensar en ofertas de servicios innovadores y estrategias de <a href="https://gestionsocios.com.uy/blog/6-estrategias-de-marketing-para-gimnasios/29">marketing</a>  que te permitan aumentar y fidelizar la clientela que requieres para lograr la rentabilidad que deseas de tu inversión.
+          </p>
+        </template>
+      </section-card>
+
 
     <section class="site-section background-white" >
     <div class="container ">
@@ -253,16 +297,12 @@
     </section>
 
 
-
-
-
-
+    @include('paginas.paginas_personalizadas.beneficiosGenerales')
     @include('paginas.paginas_personalizadas.planes')
     @include('paginas.paginas_personalizadas.preguntasFrecuentes')
     @include('paginas.paginas_personalizadas.blog')
 
 
-    @include('paginas.paginas_personalizadas.beneficiosGenerales')
 
 
 
@@ -270,66 +310,12 @@
 
 
 
-  <div v-lazy-container="{ selector: 'img' }" class="site-section bg-light" id="about-section">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="mb-4">¿Tenés un gimnasio y te encontrás en el punto que la gestión de tus socios se hace complicada?</h2>
-
-          <p>En la industria de los negocios de acondicionamiento físico, es normal que en la medida en que comienza a crecer el volumen de clientes, cada vez se haga más difícil mantener al día los estados de cuentas de cada uno. Puede llegar a ocurrir que si son muchos no sepas distinguir quienes se encuentran al día con sus pagos y quienes te deben dinero. Si esta situación te resulta familiar haz encontrado la herramienta que necesitas para solucionar tus problemas de administración de forma sencilla y por una inversión mínima. Te invitamos a conocer EasySocio.
-          </p>
-          <p>
-            Esta tecnología te permite como administrador de uno o varios gimnasios saber cuál es el estado financiero del negocio en tiempo real, desde cualquier ubicación a través de un dispositivo móvil como un celular o tu laptop. Además podrás obtener información valiosa sobre las estadísticas de los servicios más utilizados por los clientes, las tendencias en cuanto a consumo y toda la información actualizada que requieras para una gestión eficiente.
-          </p>
-
-          </div>
-          <div class="d-flex flex-row align-items-center justify-content-center col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-celular.png" alt="EasySocio el software para administrar gimnasios, academias de baile, institutos de inlges, academía de choferes y mucho mucho más. Easysocio está en la nuebe y lo puedes usar desde celulares y computadoras. Desde cualquier lugar. ">
-          </div>
-
-        </div>
-      </div>
-    </div>
 
 
 
 
-    <div  class="site-section" id="Ventadtajas-1">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-1 order-lg-2">
-          <h2 class="section-title mb-4">Agrégale valor a tu emprendimiento sin perder más tiempo ni energía en detalles de gestión</h2>
-          <p>Los gimnasios hoy en día son uno de los emprendimientos de mayor auge. La industria del fittness y del cuidado personal se encuentra al alza, ya que millones de personas acuden en búsqueda de la oferta de productos y servicios que allí se ofrecen con la finalidad de mejorar su calidad de vida. Es un campo de trabajo y de inversión que abarca muchos aspectos, que van desde la estética personal, al bienestar físico y la salud.
-          </p>
-          <p>
-          Una sociedad que promueve el cuidado personal a través de la promoción de buenas prácticas y hábitos saludables en los individuos, resulta un ambiente ideal para el surgimiento de muchas ideas y modelos de negocios asociados al cuidado del bienestar físico. Así que, bien sea que tienes un gimnasio con equipos para ejercicios anaeróbicos (pesas y máquinas de resistencia) una escuela de artes marciales, o un centro para las últimas tendencias del entrenamiento como el Crossfit, el bootcamp o el TRX, ya diste el primer paso y realizaste la inversión más importante, ahora lo que necesitas son los medios para <a href="https://gestionsocios.com.uy/blog/las-cuatro-reglas-de-oro-para-tener-un-gimnasio-exitoso/25">llevar al éxito a tu emprendimiento</a>.
-          </p>
-          <p>
-          Para eso, no lo dudes, el mejor aliado con el que puedes contar es esta herramienta informática multifuncional que te ayudará con la administración de negocio para que puedas dedicar más tiempo a pensar en ofertas de servicios innovadores y estrategias de <a href="https://gestionsocios.com.uy/blog/6-estrategias-de-marketing-para-gimnasios/29">marketing</a>  que te permitan aumentar y fidelizar la clientela que requieres para lograr la rentabilidad que deseas de tu inversión.
-          </p>
 
-          </div>
-          <div v-lazy-container="{ selector: 'img' }" class="d-flex flex-row align-items-center justify-content-center col-lg-6 order-2 pl-lg-5 order-lg-1">
-            <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-notebook.png" alt="Easysocio está en la nube. Por esa razon podrás acceder a los datos desde cualquier equipo, y no tendrás que preocuparte por actualizar ni pagar por las mejoras.">
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div  class="site-section bg-light" id="about-section">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-12 order-2 order-lg-1">
-          <h2 class="section-title mb-4 text-center">¿Qué es y cómo funciona EasySocio?</h2>
-          <p class="text-center">
-             Se trata del software, para <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24">administrar gimnasios</a>, más fácil de usar que hayas conocido, y no por eso deja de ser una herramienta poderosa y totalmente funcional, ya que te ofrece todas las utilidades necesarias para que la gestión del local no se convierta en un dolor de cabeza o te consuma mucho tiempo y energía.
-          </p>
-          <h2 class="parrafo-class mb-2 text-center"><b>Algunos de los beneficios que podemos enumerar en cuanto a las funciones con las que cuenta EasySocio</b> </h2>
-          </div>
-
-        </div>
-      </div>
-    </div>
 
 
 
