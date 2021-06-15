@@ -85,7 +85,7 @@
 
 
 @section('vue')
-
+   @include('paginas.home.vue.section-card')
    @include('paginas.home.vue.pregunta-componente')
    @include('paginas.home.vue.slider-text')
    @include('paginas.home.vue.portada')
@@ -106,7 +106,7 @@
 
 
 
-        <portada altura_portada="80"
+        <portada altura_portada="60"
 
 
         >
@@ -146,7 +146,7 @@
         </portada>
 
       <span id="intro"></span>
-      <span id="header-llamado-a-la-accion"></span>
+
 
 
       <section class="site-section pb-5 background-gris-0" >
@@ -269,7 +269,7 @@
       </div>
 
       <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-          <simple-card titulo="Gimnasios de pesas" call_to_action="Más información" url="https://worldmaster.com.uy/">
+          <simple-card titulo="Gimnasios de pesas" call_to_action="Más información" url="{{route('get_programa_para_gestionar_gimancios')}}">
             <template slot="icono">
               <div class="rounded  mb-2 ">
                   <img src="{{url()}}/imagenes/Easysocio/SirvePara/pesas.jpg" class="img-fluid rounded" alt="">
@@ -333,42 +333,14 @@
 
     </section>
 
-    @if(count($Planes) > 0)
-      <section class="site-section background-gris-0" id="precios-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 mb-5 position-relative">
-                <p class="text-center text-uppercase">¿Cuánto cobramos? ¿Cómo se paga?</p>
-              <h2 class=" text-center mb-5 h2">Planes y precios</h2>
-            </div>
-            @include('paginas.paginas_personalizadas.precios_programa_socios')
-          </div>
-        </div>
-      </section>
-    @endif
 
 
-    @include('paginas.home.preguntasFrecuentes')
+    @include('paginas.paginas_personalizadas.planes')
+    @include('paginas.paginas_personalizadas.preguntasFrecuentes')
+    @include('paginas.paginas_personalizadas.blog')
 
 
-    <section class="site-section bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 mb-5 position-relative">
-            <p class="text-center text-uppercase mb-1">Blog</p>
-            <h3 class="  text-center h2 mb-2">Descubrí contenidos especializados para tu negocio</h3>
-            <p class="  text-center mb-5">
-              Artículos para aprender más y lograr que tu negocio sea exitoso
-            </p>
-          </div>
-          @foreach($blogs as $Entidad)
-            {{--*/ $Entidad  = $Entidad /*--}}
-            {{--*/ $Route    = $Entidad->route /*--}}
-            @include('admin.noticias.partes.lista')
-         @endforeach
-        </div>
-      </div>
-    </section>
+
 
 
 

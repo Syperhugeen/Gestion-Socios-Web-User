@@ -6,24 +6,12 @@
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/PaginasPersonalizadas/Socios/easy-socio-el-software-para-administrar-gimnasios-academias-de-baile-institutos-de-ingles-y-mucho-más.jpg'/*--}}
 {{--*/ $Titulo                = $Portada->titulo_de_la_pagina /*--}}
 {{--*/ $DescriptionEtiqueta   = $Portada->description_de_la_pagina   /*--}}
-{{--*/ $PalabrasClaves        = '' /*--}}
-{{--*/ $UrlDeLaPagina         = route('get_programa_para_gestionar_gimancios') /*--}}
-
-@section('og-tags')
- <meta property="og:type"               content="website" />
- <meta property="og:title"              content="{{ $Titulo}} " />
- <meta property="og:description"        content="{{$DescriptionEtiqueta}}" />
- <meta property="og:image"             content="{{$ImagenParaTaG }}" />
- <meta property="og:image:secure_url"  content="{{$ImagenParaTaG }}" /> 
- <meta property="og:image:width" content="250">
- <meta property="og:image:height" content="250">
-
-
-@stop 
+{{--*/ $PalabrasClaves        = 'Software para gimnasios, gym software' /*--}}
+{{--*/ $UrlDeLaPagina         = route('get_home') /*--}}
 
 @section('pixcel-facebook')
 <!-- Facebook Pixel Code -->
-{{-- <script>
+<script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -32,21 +20,28 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '202374637488888');
+  fbq('init', '1301666320204392');
   fbq('track', 'PageView');
-  
-
 </script>
 <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=202374637488888&ev=PageView&noscript=1"
-/></noscript> --}}
+  src="https://www.facebook.com/tr?id=1301666320204392&ev=PageView&noscript=1"
+/></noscript>
 <!-- End Facebook Pixel Code -->
 
 @stop
 
+@section('og-tags')
+ <meta property="og:type"               content="website" />
+ <meta property="og:title"              content="{{ $Titulo}} " />
+ <meta property="og:description"        content="{{$DescriptionEtiqueta}}" />
+ <meta property="og:image"              content="{{$ImagenParaTaG }}" />
+ <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" />
+ <meta property="og:image:width"        content="250">
+ <meta property="og:image:height"       content="250">
+@stop
+
 
 @section('data-estructurada')
-
  <script type="application/ld+json">
         {
          "@context": "http://schema.org",
@@ -61,24 +56,22 @@
             "@id": "{{$UrlDeLaPagina}}",
             "name": "{{$Titulo}}"
             }
-          }          
+          }
          ]
         }
 </script>
-
-
 @stop
 
-
-
+@section('favicon')
+ <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}">
+@stop
 
 @section('title')
    {{$Titulo}}
 @stop
 
-
 @section('MetaContent')
-      {{$DescriptionEtiqueta}}
+   {{$DescriptionEtiqueta}}
 @stop
 
 @section('MetaRobot')
@@ -86,83 +79,214 @@
 @stop
 
 @section('palabras-claves')
-{{$PalabrasClaves}}
+   {{$PalabrasClaves}}
 @stop
 
-@section('favicon')
- <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}"> 
-@stop
 
 
 @section('vue')
-  @include('paginas.home.vue.header-component')
-  @include('paginas.home.vue.contacto-component')
-  @include('paginas.home.vue.blog-list-component')
-  @include('paginas.home.vue.vue-instance')
+
+
+   @include('paginas.home.vue.section-card')
+   @include('paginas.home.vue.pregunta-componente')
+   @include('paginas.home.vue.slider-text')
+   @include('paginas.home.vue.portada')
+   @include('paginas.home.vue.simple-card')
+   @include('paginas.home.vue.header-component')
+   @include('paginas.home.vue.vue-instance')
 @stop
 
-
 @section('header')
- @include('paginas.Estructura_partes.Header.header_easy_socio')
-@stop   
+ @include('paginas.Estructura_partes.Header.header_comun')
+@stop
 
 @section('footer')
  @include('paginas.Estructura_partes.Footer.Footer')
 @stop
 
-
 @section('contenido')
 
-    {{--*/  $Portada   =  $Portada /*--}}
-    {{--*/  $Route     = '' /*--}}
-    {{--*/ $EsPortada  = true /*--}}
-    @include('paginas.paginas_personalizadas.partials.portada_molde') 
-    <span id="header-llamado-a-la-accion"></span> 
 
-    <section class="site-section pb-5" id="pregunta-aclaracion">
+
+        <portada altura_portada="60"
+
+
+        >
+
+            <template slot="titulo">
+              <h1 class="text-white mb-5">
+                  Software para administrar gimnasios
+              </h1>
+            </template>
+            <template slot="descripcion">
+              <ul class="mb-5">
+                <li class="text-white espacio-letras"> Manejo de mebresías <span class="font-secondary helper-aumenta-texto"> <b>easy</b>  </span></li>
+                <li class="text-white espacio-letras"> Finanzas <span class="font-secondary helper-aumenta-texto"> easy </span></li>
+                <li class="text-white espacio-letras"> Reservas online de clases <span class="font-secondary helper-aumenta-texto"> easy </span></li>
+                <li class="text-white espacio-letras"> Control de acceso <span class="font-secondary helper-aumenta-texto"> easy </span></li>
+              </ul>
+
+               <a href="#intro" class="btn btn-success mr-2 cursor-pointer text-white"> Comenzar ahora</a>
+               <a href="#intro" class="btn  btn-outline-light cursor-pointer"> Seguir leyendo</a>
+
+               <img class="d-none d-lg-block " style="position: absolute; right:0; top:40%; height:auto; width:600px;"  src="{{url()}}/imagenes/Easysocio/Capturas/socios-listado-notebook.png" alt="">
+
+            </template>
+
+
+
+
+
+
+
+        </portada>
+
+      <span id="intro"></span>
+
+
+
+      <section class="site-section pb-5 background-gris-0" >
         <div class="container">
           <div class="row">
       <div class="col-12 mb-5 position-relative">
-              <p class="text-center mb-3">¿Tienes un gimnasio, cuentas con socios y estás en el punto en que te resulta difícil <span class="text-primary">saber quién te debe o quién está al día</span>? </p>
-              <p class="text-center"><strong>¿Te resulta familiar esto?</strong>  ¿Te gustaría una herramienta fácil de usar que <strong>te ayude con la administración de tu gimnasio a un precio mínimo</strong>? 
+
+         @if( Session::get('esDeUruguay'))
+         <div class="w-100 d-flex flex-column align-items-center mb-2">
+          <div class="d-flex flex-row align-items-center">
+            <small class=" mb-0 mr-2 text-center text-uppercase">Software made in Uruguay</small>
+            <img class="shadow-sm mr-2 rounded-circle border border-light" height="30" width="30" src="{{url()}}/imagenes/monedas/{{  Session::get('esDeUruguay') ? 'pesos.jpg' : 'dolar.jpg'}}" alt="Moneda">
+          </div>
+
+         </div>
+
+
+         @endif
+
+              <h2 class="sub-titulos-class mb-4 text-center text-color-primary">EasySocio es el Software para la gestión de <slider-text :data="[{name:'gimnasios'},{name:'escuelas de danza'},{name:'academias de artes marciales'},{name:'box funcionales'}]"></slider-text> </h2>
+              <p class="text-center mb-0">EasySocio es una plataforma digital que te ofrece mucho más que un sistema contable para <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"> administrar tu gimnasio</a>. Se trata de un conjunto de utilidades que te permitirán brindar un óptimo servicio para tus clientes al tiempo que facilita tu trabajo para que lo realices de manera rápida y sencilla.
               </p>
-              <p class="text-center">
-                <strong>¡Te invito a que conozcas Easysocio! </strong>  
-              </p>
+
             </div>
           </div>
         </div>
-    </section> 
+    </section>
 
 
-  <div  class="site-section bg-light" id="about-section">
+    <section class="site-section background-white" >
+    <div class="container ">
+    <div class="row justify-content-center">
+      <div class="col-12 mb-5 position-relative">
+          <p class="text-center text-uppercase"><strong>¿Qué resolvemos?</strong></p>
+      </div>
+      <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
+          <simple-card titulo="Manejo de mebresías" call_to_action="Más información" url="https://worldmaster.com.uy/">
+            <template slot="icono">
+              <div class="text-color-primary h3 rounded  mb-1 ">
+                  <i class="fas fa-users"></i>
+               </div>
+            </template>
+
+            <template slot="description">
+                <div class="parrafo-class-pequeño">
+                  Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
+                </div>
+            </template>
+          </simple-card>
+      </div>
+
+      <div class="col-11 col-lg-3 px-2  mb-3 mb-lg-0">
+          <simple-card titulo="Reservas online">
+            <template slot="icono">
+              <div class="text-color-primary h3 rounded  mb-1 ">
+              <i class="far fa-calendar-alt"></i>
+               </div>
+            </template>
+            <template slot="description">
+                <div class="parrafo-class-pequeño">
+                 Te ayudaremos a organizar las clases, permitiendo a tus socios hacer reservas de clases online.
+                </div>
+            </template>
+          </simple-card>
+      </div>
+
+      <div class="col-11 col-lg-3 px-2  mb-3 mb-lg-0">
+          <simple-card titulo="Finanzas">
+            <template slot="icono">
+              <div class="text-color-primary h3 rounded  mb-1 ">
+                  <i class="fas fa-cash-register"></i>
+               </div>
+            </template>
+            <template slot="description">
+                <div class="parrafo-class-pequeño">
+                  Cada operación que hagas se irá registrando y luego podremos darte informes que te dirán lo que vendiste y lo que gastaste.
+                </div>
+            </template>
+          </simple-card>
+      </div>
+
+      <div class="col-11 col-lg-3 px-2  mb-3 mb-lg-0">
+          <simple-card titulo="Control de acceso">
+            <template slot="icono">
+              <div class="text-color-primary h3 rounded  mb-1 ">
+                  <i class="fas fa-cash-register"></i>
+               </div>
+            </template>
+            <template slot="description">
+                <div class="parrafo-class-pequeño">
+                  Es fastidioso tener que decirle a alquien que tiene que pagar. Nosotros nos ocuparemos de eso al momento que tu socios pasa por el control de acceso.
+                </div>
+            </template>
+          </simple-card>
+      </div>
+
+
+
+      <p class="col-12 text-center mt-5 ">
+            <a href="">Ver todas las funcionalidades</a>
+      </p>
+
+    </div>
+
+
+    </div>
+
+    </section>
+
+
+
+
+
+
+    @include('paginas.paginas_personalizadas.planes')
+    @include('paginas.paginas_personalizadas.preguntasFrecuentes')
+    @include('paginas.paginas_personalizadas.blog')
+
+
+    @include('paginas.paginas_personalizadas.beneficiosGenerales')
+
+
+
+
+
+
+
+  <div v-lazy-container="{ selector: 'img' }" class="site-section bg-light" id="about-section">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Dale valor a tu emprendimiento sin gastar más tiempo y energía en detalles de gestión </h2>
-            
-          <p>Hoy en día los gimnasios son emprendimientos en auge, buscando mejorar la calidad de vida de las personas, desde la estética hasta la salud, buscando inculcar hábitos saludables en las personas.ideas de negocios muy buenas, <strong>sea que tienes un gym de pesas, de artes marciales, centro de crossfit o de entrenamiento funcional, etc</strong>. Así qué tú, que ya tienes uno sólo te falta una herramienta que te <strong>ayude con la parte de administración y la gestión, para que puedas dedicarte de lleno a eso que le da valor a tu emprendimiento</strong>.
-          </p>   
-          <p>
-            Te voy a contar un poco más sobre de qué trata EasySocio el software para administrar gimnasios más simple que hayas conocido. El gran valor de <strong>EasySocio es su facilidad de uso</strong>, brindando las funcionalidades justas y necesarias para que la administración de tu gimnasio no sea un dolor de cabeza o te insuma mucha energía. A continuación te cuento los beneficios y las funcionalidades que EasySocio te brinda para darte una mano con todo eso. 
+          <h2 class="mb-4">¿Tenés un gimnasio y te encontrás en el punto que la gestión de tus socios se hace complicada?</h2>
+
+          <p>En la industria de los negocios de acondicionamiento físico, es normal que en la medida en que comienza a crecer el volumen de clientes, cada vez se haga más difícil mantener al día los estados de cuentas de cada uno. Puede llegar a ocurrir que si son muchos no sepas distinguir quienes se encuentran al día con sus pagos y quienes te deben dinero. Si esta situación te resulta familiar haz encontrado la herramienta que necesitas para solucionar tus problemas de administración de forma sencilla y por una inversión mínima. Te invitamos a conocer EasySocio.
           </p>
           <p>
-            <a href="#Ventadtajas-1" class="Boton-Primario-Relleno Boton-Fuente-Chico">
-               Más información <i class="fas fa-chevron-right"></i>
-            </a>
+            Esta tecnología te permite como administrador de uno o varios gimnasios saber cuál es el estado financiero del negocio en tiempo real, desde cualquier ubicación a través de un dispositivo móvil como un celular o tu laptop. Además podrás obtener información valiosa sobre las estadísticas de los servicios más utilizados por los clientes, las tendencias en cuanto a consumo y toda la información actualizada que requieras para una gestión eficiente.
           </p>
 
-         
-
-
-
-
-
           </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-celular.png" alt="EasySocio el software para administrar gimnasios, academias de baile, institutos de inlges, academía de choferes y mucho mucho más. Easysocio está en la nuebe y lo puedes usar desde celulares y computadoras. Desde cualquier lugar. ">
+          <div class="d-flex flex-row align-items-center justify-content-center col-lg-6 order-3 pl-lg-5 order-lg-2">
+            <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-celular.png" alt="EasySocio el software para administrar gimnasios, academias de baile, institutos de inlges, academía de choferes y mucho mucho más. Easysocio está en la nuebe y lo puedes usar desde celulares y computadoras. Desde cualquier lugar. ">
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -173,217 +297,46 @@
     <div  class="site-section" id="Ventadtajas-1">
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">EasySocio está en la nube</h2>
-          <p>Lo primero que tienes que saber es que Easysocio se encuentra alojado en la nube. ¿Qué ventajas brinda? Para empezar <strong>no necesitas instalar el software en tu computadora</strong>  (con el problema que trae el cambiar de computadora o el espacio en disco limitado). Tan solo con abrir el navegador (Google Chrome,Firefox, Internet Explorer, o similar ) e ingresar al programa a través de un enlace ya puedes comenzar (similar a cuando entras a Facebook desde una computadora). <strong>La gran ventaja de esto es que puedes acceder desde cualquier computadora</strong>  (de escritorio o portátil), <strong>sea que estés en tu gimnasio, en tu casa, o en China</strong> .
+          <div class="col-lg-6 order-1 order-lg-2">
+          <h2 class="section-title mb-4">Agrégale valor a tu emprendimiento sin perder más tiempo ni energía en detalles de gestión</h2>
+          <p>Los gimnasios hoy en día son uno de los emprendimientos de mayor auge. La industria del fittness y del cuidado personal se encuentra al alza, ya que millones de personas acuden en búsqueda de la oferta de productos y servicios que allí se ofrecen con la finalidad de mejorar su calidad de vida. Es un campo de trabajo y de inversión que abarca muchos aspectos, que van desde la estética personal, al bienestar físico y la salud.
           </p>
-          <p>  
-          Al estar en la nube tampoco <strong>necesitas preocuparte con el espacio en disco y el respaldo de los datos</strong>. Podrás acceder a ellos en cualquier momento. Así que si se rompe tu computadora, simplemente puedes usar otra para acceder al programa y todo estará tal cual lo dejaste la última vez. 
-          </p>  
-          <p>  
-          Ya no es necesario dedicar varios días a actualizar las aplicaciones, con Easysocio las actualizaciones <strong>son automáticas y seguras</strong> . <strong>No debes comprar la última versión del software, parches o actualizaciones</strong> . Con el Easysocio en la nube,  ¡no tienes que hacer nada extra!
-  
-          </p>  
+          <p>
+          Una sociedad que promueve el cuidado personal a través de la promoción de buenas prácticas y hábitos saludables en los individuos, resulta un ambiente ideal para el surgimiento de muchas ideas y modelos de negocios asociados al cuidado del bienestar físico. Así que, bien sea que tienes un gimnasio con equipos para ejercicios anaeróbicos (pesas y máquinas de resistencia) una escuela de artes marciales, o un centro para las últimas tendencias del entrenamiento como el Crossfit, el bootcamp o el TRX, ya diste el primer paso y realizaste la inversión más importante, ahora lo que necesitas son los medios para <a href="https://gestionsocios.com.uy/blog/las-cuatro-reglas-de-oro-para-tener-un-gimnasio-exitoso/25">llevar al éxito a tu emprendimiento</a>.
+          </p>
+          <p>
+          Para eso, no lo dudes, el mejor aliado con el que puedes contar es esta herramienta informática multifuncional que te ayudará con la administración de negocio para que puedas dedicar más tiempo a pensar en ofertas de servicios innovadores y estrategias de <a href="https://gestionsocios.com.uy/blog/6-estrategias-de-marketing-para-gimnasios/29">marketing</a>  que te permitan aumentar y fidelizar la clientela que requieres para lograr la rentabilidad que deseas de tu inversión.
+          </p>
 
           </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/programa-para-administrar-socios-en-la-nube.jpg" alt="Easysocio está en la nube. Por esa razon podrás acceder a los datos desde cualquier equipo, y no tendrás que preocuparte por actualizar ni pagar por las mejoras.">
+          <div v-lazy-container="{ selector: 'img' }" class="d-flex flex-row align-items-center justify-content-center col-lg-6 order-2 pl-lg-5 order-lg-1">
+            <img class="img-fluid mb-4 helper-border-radius-16" data-src="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-notebook.png" alt="Easysocio está en la nube. Por esa razon podrás acceder a los datos desde cualquier equipo, y no tendrás que preocuparte por actualizar ni pagar por las mejoras.">
           </div>
         </div>
       </div>
     </div>
-  {{-- Imagen con logo para mostrar por el medio --}}
-  <div class="contiene-todo-image-centrada">
-    <img src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/programa-para-administrar-socios-en-la-nube-artes-marciales.jpg" class="imagen-medio-de-web">
-    <div class="sub-contiene-texto-imagen-medio">
-      <div class="contiene-texto-imagen-medio-texto">Dale valor a tu emprendimiento sin gastar más tiempo y energía en detalles de gestión</div>
-      <img class="contiene-texto-imagen-medio-logo" src="{{url()}}/imagenes/Empresa/logo-rectangular-easysocio-blanco.png" alt="Easysocio ptograma de gestion de gimasios y academias simple de usar.">
-    </div>
-      
-     
-  </div>
 
     <div  class="site-section bg-light" id="about-section">
       <div class="container">
         <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Simplicidad de uso</h2>
-          <p>
-             Tener <strong>la información justa y necesaria te ofrecerá mucha más productividad a la hora de administrar tu gimnasio</strong>. Tener un software <strong>simple, rápido y fácil de usar te permite explicarle a tu abuela/o cómo utilizarlo</strong> y que te ayude con el negocio.
+          <div class="col-12 order-2 order-lg-1">
+          <h2 class="section-title mb-4 text-center">¿Qué es y cómo funciona EasySocio?</h2>
+          <p class="text-center">
+             Se trata del software, para <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24">administrar gimnasios</a>, más fácil de usar que hayas conocido, y no por eso deja de ser una herramienta poderosa y totalmente funcional, ya que te ofrece todas las utilidades necesarias para que la gestión del local no se convierta en un dolor de cabeza o te consuma mucho tiempo y energía.
           </p>
-          <p>
-             <strong>(1)</strong>  - Gran parte de la información que necesitas se despliega la pantalla de inicio, pero a un click de distancia podrás obtener aún más detalles. 
-          </p>  
-          <p>
-             <strong>(2)</strong> - En el listado de la captura podrás observar si el socio tiene algún plan/paqueteo contratado y la fecha de vencimiento <strong>(3) </strong>
-          </p> 
-          <p>
-             <strong>(4)</strong> - Haciendo click en el número de celular del socio podrás enviar un mensaje por Whatsapp automáticamente sin necesidad de agendar el contacto.  
-          </p> 
-          <p>
-              <strong>(5)</strong> - Si en tu gimnasio tienes la modalidad vender cuponeras de clases, Easysocio te permitirá gestionarlas de forma muy fácil. Podrás vender clases con vencimiento y con un simple click indicar cuando se utilizó/consumió. 
-          </p>   
-          <p>
-            
-             <strong>(6)</strong>  - De forma muy accesible tendrás la información para saber cómo está el estado de cuenta de tu socio. 
-          </p>       
+          <h2 class="parrafo-class mb-2 text-center"><b>Algunos de los beneficios que podemos enumerar en cuanto a las funciones con las que cuenta EasySocio</b> </h2>
           </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/vista-del-listado-de-easysocio-de-los-socios.jpg" alt="Lo mejor de Easysocio es su simplicidad de uso, realemnte tendrás la información que mas necesitás. "> 
-          </div>
+
         </div>
       </div>
     </div>
 
-   <div  class="site-section" >
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Software con estado de cuenta integrado</h2>
-           <p>Tener cuentas corrientes asociada a cada socio (cliente) optimiza la gestión de tu emprendimiento, es fundamental tener esta información accesible. Podrás registrar movimientos de ventas de servicios así como otros gastos, por ejemplo: la venta de algún producto o indumentaria. <strong>Siempre sabrás exactamente lo que ha contratado/comprado, si tiene algún saldo pendiente de pagar o si está al día</strong>. 
-          </p>             
-          </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg" alt="Este programa de administración tiene estado de cuenta incorporado, es decir, vas a poder saber en que han gastado tus socios y si están al día o no.">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div  class="site-section bg-light" >
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">         
-          <h2 class="section-title mb-4">Movimientos de caja </h2>
-          <p> Imagínate la siguiente situación: dejas a alguien a cargo de tu negocio. A primera hora de la mañana la caja cuenta con $2000. En el correr el día esa persona vende, cobra y paga ¿no crees que sería útil poder ver todos esos movimientos asociados con la persona que quedó a cargo del negocio? Luego podrías verificar que lo que hay en caja es consistente con todos los movimientos realizados durante el día. Bueno, este tipo de funcionalidades es una de las que te ofrece EasySocio.
-          </p> 
-          <p>
-            <strong>Cada movimiento estará asociado al usuario que esté identificado en el sistema en ese momento</strong>. Siempre sabrás quién registró cada movimiento, y si pasan cosas “raras” sabrás con quién hablar. Otra característica de los movimientos de caja es que pueden ser <strong>multimoneda, quizás tengas productos que cobres en dólares y otros en pesos</strong>  (o tu moneda local). En cualquier caso, Easysocio ya contempla estas situaciones para que le puedas sacar el máximo provecho.
-
-
-          </p>     
-          <p>
-            Si <strong>tu negocio cuenta con más de una sucursal</strong> , tendrás los movimientos de caja diferenciados para cada una de ellas. 
-            Recuerda que podrás controlar los movimientos de cada sucursal sin importar dónde estés,<strong> gracias a que Easysocio está en la nube</strong> . 
-          </p>        
-          </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-          <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/sistema-de-administración-con-movimientos-de-caja-multi-sucursal-y-multi-moneda.jpg" alt="Easysocio cuenta con movimientos de caja, sabrás de donde sale cada registro sea un ingres (venta) como un egreso (gasto). También sabrás que usuario(operador del sistema de administración)  fué el que lo registró. Es Multi moneda y multi sucursal. Todo para que le saques provecho y que tu gestión de negocio sea simple.
-">
-          </div>
-        </div>
-      </div>
-    </div>
-
-     <div  class="site-section">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Renovación automática de planes </h2>
-           <p> 
-            Easysocio tiene la opción de que se pueda renovar automáticamente el servicio de caracter mensual comprado por el socio por última vez. Por ejemplo: si en tu gimnasio se vende un servicio que se llama “pase libre” que se cobra por mes y un socio contrató este servicio el 01/05/2019, en la fecha de vencimiento (31/05/2019) el sistema renovará el pase libre creando otro servicio igual que vencerá el 30/06/2019. Esto hará que automáticamente se genere un movimiento de venta para ese socio el cual te pasará a deber el importe del servicio mensual renovado. En la imagen se ejemplifica esta funcionalidad. 
-          </p>    
-          <p>
-            En base comentarios de varios dueños de gimnasios y academias, estoy convencido de que una herramienta de este tipo  debería tener lo justo y necesario para que las tareas de administrar el negocio sean lo más sencillas posibles. Cada funcionalidad que pensé para Easysocio es sometida previamente a esta pregunta: ¿aporta valor  o genera complejidad? Por esto es que estoy convencido que Easysocio tiene todo lo que necesitas de una forma muy simple.
-
-          </p>         
-          </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/antes-y-despues-del-vencimiento-en-el-prgrama-de-administracion.jpg" alt="Antes y despues del vencimiento de un servicio. Easysocio te resume el trabajo automatizando este tipo de cosas. Programa para adminsitrar socios fácil de usar.">
-          </div>
-        </div> 
-      </div>
-    </div>
-     <div  class="site-section bg-light">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Capacitación</h2>
-           <p> 
-             Easysocio se caracteriza por ser muy simple de entender y usar. De cualquier forma, estaremos a tu disposición para enseñarte paso a paso cómo usar el software, hasta que seas un experto. 
-
-          </p>    
-             
-          </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/programa-para-gestionar-socios-entrenamiento-a-clientes.jpg" alt="Te voy a enseñar paso a paso a usar Easysocio. El programa más simple de usar a la hora de gestionar tu emprendimeinto de fitness o academía de baile">
-          </div>
-        </div> 
-      </div>
-    </div>
-     <div  class="site-section">
-      <div class="container">
-        <div class="row ">
-          <div class="col-lg-6 order-2 order-lg-1">
-          <h2 class="section-title mb-4">Soporte</h2>
-           <p> 
-            Tanto yo (como mi equipo de vendedores) estaremos a tu disposición para darte soporte cuando lo necesites. No solo me quedaré satisfecho con haberte enseñado a ser un verdadero experto usando EasySocio, sino que estaremos disponibles para asistirte cuando sea necesario.
-          </p>    
-                
-          </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <img class="img-fluid mb-4 helper-border-radius-16" src="{{url()}}/imagenes/PaginasPersonalizadas/Socios/en-easy-socio-te-damos-soporte-simpre-estaré-ahí-para-darte-una-mano-con-la-tarea-de-administrar-negocio.jpg" alt="Te vamos a dar soporte ante cualquier duda sobre el uso de Easysocio. Vamos a estar ahí para cuando lo requieras">
-          </div>
-        </div> 
-      </div>
-    </div>
 
 
 
 
-     <section class="site-section bg-light" id="precios-section">
-      <div class="container">
-        <div class="row">
-          
-          <div class="col-12 mb-5 position-relative">
-            <h2 class="section-title text-center mb-5">Planes y precios</h2>
-            
-          </div>
-
-           <div class=" mb-5 mb-lg-0 get_width_100 flex-row-center flex-justifice-space-around  flex-wrap">
-            @include('paginas.paginas_personalizadas.precios_programa_socios')
-           </div>
-
-
-
-          <div class="get_width_100 flex-row-center flex-justifice-space-around">
-             <div class="Seccion_precio_aclaracion text-center">
-                
-                * Los precios están en pesos Uruguayos y no incluyen impuestos    
-                <br>
-                * Si no hay un plan que se ajuste a tu necesidad contáctame y lo vemos
-
-                        
-             </div>
-          </div>
-           
-           
-
-        </div>
-      </div>
-    </section>
-
-    @include('paginas.noticias.blog_3_para_home_y_secciones') 
 
 
 
 
-    
-
-    
-
-   
-
-
-   
-
-
-
-   
-
-@stop
-
-
-@section('rutas_de_interes')
-<li><a href="#precios-section" >Precios y planes</a></li>
 @stop

@@ -1,54 +1,34 @@
-<?php 
-
-
-
+<?php
 
 require __DIR__ . '/Formularios/Rutas_Formularios_Publicas.php';
 
 require __DIR__ . '/Noticias/Rutas_Noticias_Publicas.php';
 
-
-
-
-//Ruta de Home
-Route::get('/' , [                    
-  'uses' => 'Publicas\Home_Public_Controller@get_home',
-  'as'   => 'get_home']
+//H o m e
+Route::get('/', [
+    'uses' => 'Publicas\Home_Public_Controller@get_home',
+    'as'   => 'get_home']
 );
 
-
-//Contacto
-Route::get('/Contacto{tipo}' , [                    
-  'uses' => 'Publicas\Paginas_Controller@get_pagina_contacto',
-  'as'   => 'get_pagina_contacto']
+// C o n t a c t o
+Route::get('/Contacto{tipo}', [
+    'uses' => 'Publicas\Paginas_Controller@get_pagina_contacto',
+    'as'   => 'get_pagina_contacto']
 );
 
-Route::get('/EasySocio-Contacto-De-Software-para-gimnasios' , [                    
-  'uses' => 'Publicas\Paginas_Controller@get_pagina_contacto_easy',
-  'as'   => 'get_pagina_contacto_easy']
+Route::get('/EasySocio-Contacto-De-Software-para-gimnasios', [
+    'uses' => 'Publicas\Paginas_Controller@get_pagina_contacto_easy',
+    'as'   => 'get_pagina_contacto_easy']
 );
 
-//Empresa
-Route::get('/Empresa' , [                    
-  'uses' => 'Publicas\Paginas_Controller@get_pagina_empresa',
-  'as'   => 'get_pagina_empresa']
+// E m p r e s a
+Route::get('/Empresa', [
+    'uses' => 'Publicas\Paginas_Controller@get_pagina_empresa',
+    'as'   => 'get_pagina_empresa']
 );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// S o f t w a r e   p a r a   g i m n a s i o s
+Route::get('/software-para-gimnasios', [
+    'uses' => 'Publicas\Paginas_Controller@get_programa_para_gestionar_gimancios',
+    'as'   => 'get_programa_para_gestionar_gimancios']
+);
