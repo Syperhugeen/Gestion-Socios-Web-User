@@ -84,7 +84,6 @@ class Paginas_Controller extends Controller
     public function get_programa_para_gestionar_gimancios()
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
-        $blogs   = $this->NoticiasRepo->getUltimosBlogs();
 
         $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
             return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
@@ -97,5 +96,22 @@ class Paginas_Controller extends Controller
         $Planes = ServiciosPlanes::getPlanes();
 
         return view('paginas.paginas_personalizadas.programa_para_gestionar_gimnacios', compact('Empresa', 'blogs', 'Portada', 'Planes'));
+    }
+
+    public function get_pagina_precios()
+    {
+        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+
+        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
+            return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
+        });
+
+        $Portada = Cache::remember('PreciosSoftwareParaGimnasio', 2000, function () {
+            return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'precios');
+        });
+
+        $Planes = ServiciosPlanes::getPlanes();
+
+        return view('paginas.paginas_personalizadas.pagina_de_precios', compact('Empresa', 'blogs', 'Portada', 'Planes'));
     }
 }

@@ -20,6 +20,9 @@
                   <div v-if="$root.mostrar_para_celuar"  v-on:click="set_mostrar_menu_movil" class="p-5 w-100 text-right "><i class="fas fa-times"></i>
                   </div>
                   <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="{{route('get_home')}}" class="nav-link">Inicio</a></li>
+                  <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="{{route('get_pagina_precios')}}" class="nav-link">Precios</a></li>
+
+
 
                   <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="{{route('get_pagina_noticias_listado')}}" class="nav-link">Blog</a></li>
                   <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="{{route('get_pagina_contacto','-')}}" class="nav-link">Contacto</a>
