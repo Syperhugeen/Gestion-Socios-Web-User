@@ -180,10 +180,11 @@
     <div class="container ">
     <div class="row justify-content-center">
       <div class="col-12 mb-5 position-relative">
-          <p class="text-center text-uppercase"><strong>¿Qué resolvemos?</strong></p>
+          <p class="text-center text-uppercase mb-1"><strong>¿Qué resolvemos?</strong></p>
+          <h3 class="text-center mb-0 h2">Nuestra solución </h3>
       </div>
       <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-          <simple-card titulo="Manejo de mebresías" call_to_action="Más información" url="https://worldmaster.com.uy/">
+          <simple-card titulo="Manejo de mebresías" >
             <template slot="icono">
               <div class="text-color-primary h3 rounded  mb-1 ">
                   <i class="fas fa-users"></i>
@@ -232,7 +233,7 @@
           <simple-card titulo="Control de acceso">
             <template slot="icono">
               <div class="text-color-primary h3 rounded  mb-1 ">
-                  <i class="fas fa-cash-register"></i>
+                  <i class="fas fa-check-circle"></i>
                </div>
             </template>
             <template slot="description">

@@ -42,12 +42,12 @@ template:`
         <div class="cssload-tube-tunnel-color-3 "></div>
     </div>
 </div>
-<div v-else class="w-100 h-100 d-flex flex-column shadow-sm  rounded p-3 background-white" >
+<div v-else class="w-100 h-100 d-flex flex-column shadow rounded p-4" >
     <slot name="icono">
 
     </slot>
 
-    <h3 class="h5"> <strong>@{{titulo}}</strong> </h3>
+    <h3 class="h5 mt-2"> <strong>@{{titulo}}</strong> </h3>
 
 
     <div class="color-text-gris">
@@ -59,8 +59,8 @@ template:`
 
 
 
-    <div v-if="call_to_action">
-        <a :href="url">@{{call_to_action}}</a>
+    <div class="mt-4"  v-if="call_to_action">
+        <a :href="url" class="btn btn-outline-info">@{{call_to_action}}</a>
     </div>
 
 

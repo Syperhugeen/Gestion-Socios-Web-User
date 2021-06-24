@@ -114,4 +114,22 @@ class Paginas_Controller extends Controller
 
         return view('paginas.paginas_personalizadas.pagina_de_precios', compact('Empresa', 'blogs', 'Portada', 'Planes'));
     }
+
+    public function get_hablemos()
+    {
+        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+
+        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
+            return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
+        });
+
+        $Portada = Cache::remember('PreciosSoftwareParaGimnasio', 2000, function () {
+            return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'precios');
+        });
+
+        $Planes = ServiciosPlanes::getPlanes();
+
+        return view('paginas.paginas_personalizadas.pagina_de_hablemos_demo', compact('Empresa', 'blogs', 'Portada', 'Planes'));
+    }
+
 }

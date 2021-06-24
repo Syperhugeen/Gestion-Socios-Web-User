@@ -37,3 +37,8 @@ Route::get('/software-para-gimnasios', [
     'uses' => 'Publicas\Paginas_Controller@get_programa_para_gestionar_gimancios',
     'as'   => 'get_programa_para_gestionar_gimancios']
 );
+
+Route::get('/hablemos', [
+    'uses' => 'Publicas\Paginas_Controller@get_hablemos',
+    'as'   => 'get_hablemos']
+);
