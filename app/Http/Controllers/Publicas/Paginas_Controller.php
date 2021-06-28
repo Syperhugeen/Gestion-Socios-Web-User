@@ -123,8 +123,8 @@ class Paginas_Controller extends Controller
             return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
         });
 
-        $Portada = Cache::remember('PreciosSoftwareParaGimnasio', 2000, function () {
-            return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'precios');
+        $Portada = Cache::remember('hablamos', 2000, function () {
+            return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'hablamos');
         });
 
         $Planes = ServiciosPlanes::getPlanes();
