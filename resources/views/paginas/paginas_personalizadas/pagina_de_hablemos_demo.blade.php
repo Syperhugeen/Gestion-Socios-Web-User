@@ -155,9 +155,9 @@
     <section >
         <div class="container d-flex flex-column algin-items-center">
             <div class="row mx-0 p-3 p-lg-5 shadow mb-5">
-            <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template>
+            <contacto-component :empresa="empresa" :color="variables.input_color_primary" inline-template >
 
-                @include('paginas.home.vue.Contacto.Contacto_completo_easy_socio')
+               @include('paginas.home.vue.Contacto.Contacto_completo_easy_socio')
 
               </contacto-component>
             </div>

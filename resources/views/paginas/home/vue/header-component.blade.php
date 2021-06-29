@@ -1,26 +1,26 @@
 Vue.component("header-nav", {
   props: ["scroll", "color_tipo"],
-  data: function() {
+  data: function () {
     return {
-      mostrar_menu_en_movil: false
+      mostrar_menu_en_movil: false,
     };
   },
 
   watch: {},
   methods: {
-    set_mostrar_menu_movil: function() {
+    set_mostrar_menu_movil: function () {
       if (this.mostrar_menu_en_movil) {
         this.mostrar_menu_en_movil = false;
       } else {
         this.mostrar_menu_en_movil = true;
       }
-    }
+    },
   },
   computed: {
-    determinar_la_nav_queda_fixed: function() {
+    determinar_la_nav_queda_fixed: function () {
       return this.scroll;
     },
-    mostrar_opciones_del_menu: function() {
+    mostrar_opciones_del_menu: function () {
       if (!this.$root.mostrar_para_celuar) {
         return true;
       }
@@ -31,7 +31,7 @@ Vue.component("header-nav", {
         return false;
       }
     },
-    se_muestra_al_hacer_scroll: function() {
+    se_muestra_al_hacer_scroll: function () {
       if (!this.determinar_la_nav_queda_fixed) {
         return false;
       }
@@ -42,113 +42,113 @@ Vue.component("header-nav", {
 
       return false;
     },
-    getClassHeader: function() {
+    getClassHeader: function () {
       if (this.color_tipo == "simple") {
         return {
           "header-nav-clase-base": true,
           "position-fixed shadow-xs": this.determinar_la_nav_queda_fixed,
-          "background-header-opasity": this.se_muestra_al_hacer_scroll
+          "background-header-opasity": this.se_muestra_al_hacer_scroll,
         };
       } else if (this.color_tipo == "invertido") {
         return {
           "header-nav-clase-base": true,
           "position-fixed": this.determinar_la_nav_queda_fixed,
-          "background-primary": this.se_muestra_al_hacer_scroll
+          "background-primary": this.se_muestra_al_hacer_scroll,
         };
       }
     },
-    getClassUlLI: function() {
+    getClassUlLI: function () {
       if (this.$root.mostrar_para_celuar) {
         return {
-          "header-nav-ul-li__celular": true
+          "header-nav-ul-li__celular": true,
         };
       } else {
         return {
-          "header-nav-ul-li": true
+          "header-nav-ul-li": true,
         };
       }
     },
-    getClassItemsNav: function() {
+    getClassItemsNav: function () {
       if (this.$root.mostrar_para_celuar) {
         return {
-          "header-nav-ul-li__en_movil": true
+          "header-nav-ul-li__en_movil": true,
         };
       }
 
       if (this.color_tipo == "simple") {
         return {
           "header-nav-ul-general text-color-items__blanco": true,
-          "text-color-items__negro": this.se_muestra_al_hacer_scroll
+          "text-color-items__negro": this.se_muestra_al_hacer_scroll,
         };
       } else if (this.color_tipo == "invertido") {
         return {
           "header-nav-ul-general  text-color-items__blanco": true,
-          "text-color-items__blanco": this.se_muestra_al_hacer_scroll
+          "text-color-items__blanco": this.se_muestra_al_hacer_scroll,
         };
       }
     },
-    getClassMostrarMenuMovil: function() {
+    getClassMostrarMenuMovil: function () {
       if (this.$root.mostrar_para_celuar) {
         if (this.mostrar_menu_en_movil) {
           return {
-            "header-nav__on_action": true
+            "header-nav__on_action": true,
           };
         }
       }
     },
-    getClassNavUlEnMovil: function() {
+    getClassNavUlEnMovil: function () {
       if (this.$root.mostrar_para_celuar) {
         if (this.mostrar_menu_en_movil) {
           if (this.color_tipo == "simple") {
             return {
               "header-nav-ul__on_action": true,
-              "background-gris--1": true
+              "background-gris--1": true,
             };
           } else if (this.color_tipo == "invertido") {
             return {
               "header-nav-ul__on_action": true,
-              "background-gris--1": true
+              "background-gris--1": true,
             };
           }
         }
       }
     },
-    getClassColorElement: function() {
+    getClassColorElement: function () {
       if (this.color_tipo == "simple") {
         return {
           "text-color-items__blanco": true,
-          "text-color-items__negro": this.se_muestra_al_hacer_scroll
+          "text-color-items__negro": this.se_muestra_al_hacer_scroll,
         };
       } else if (this.color_tipo == "invertido") {
         return {
           "text-color-items__blanco": true,
-          "text-color-items__blanco": this.se_muestra_al_hacer_scroll
+          "text-color-items__blanco": this.se_muestra_al_hacer_scroll,
         };
       }
-    }
-  }
+    },
+  },
 });
 
 Vue.component("menu-primer-triada", {
   props: ["name_padre", "url_padre"],
 
-  data: function() {
+  data: function () {
     return {
-      mostrar: false
+      mostrar: false,
     };
   },
   methods: {
-    mostrar_menu_on_mouseover: function() {
+    mostrar_menu_on_mouseover: function () {
       if (this.$root.mostrar_para_grande) {
         this.mostrar = true;
       }
     },
-    ocultar_menu_on_mouse_leave: function() {
+    ocultar_menu_on_mouse_leave: function () {
       if (this.$root.mostrar_para_grande) {
         this.mostrar = false;
       }
     },
-    mostrar_ocultar_con_click: function() {
+    mostrar_ocultar_con_click: function () {
       if (this.$root.mostrar_para_celuar) {
         if (this.mostrar) {
           this.mostrar = false;
@@ -156,31 +156,31 @@ Vue.component("menu-primer-triada", {
           this.mostrar = true;
         }
       }
-    }
+    },
   },
   computed: {
-    getClassUl: function() {
+    getClassUl: function () {
       if (this.$root.mostrar_para_celuar) {
         return {
-          "header-ul-primer-tria__celular": true
+          "header-ul-primer-tria__celular": true,
         };
       } else {
         return {
-          "header-ul-primer-tria": true
+          "header-ul-primer-tria": true,
         };
       }
     },
-    getClassLi: function() {
+    getClassLi: function () {
       if (this.$root.mostrar_para_celuar) {
         return {
-          "header-nav-ul-li__celular flex-wrap d-flex flex-row align-items-center justify-content-between w-100": true
+          "header-nav-ul-li__celular flex-wrap d-flex flex-row align-items-center justify-content-between w-100": true,
         };
       } else {
         return {
-          "header-nav-ul-li": true
+          "header-nav-ul-li": true,
         };
       }
-    }
+    },
   },
   template: `
 
@@ -206,29 +206,29 @@ Vue.component("menu-primer-triada", {
 
 
 
-`
+`,
 });
 
 Vue.component("menu-segunda-triada", {
   props: ["name_padre", "url_padre"],
 
-  data: function() {
+  data: function () {
     return {
-      mostrar: false
+      mostrar: false,
     };
   },
   methods: {
-    mostrar_menu_on_mouseover: function() {
+    mostrar_menu_on_mouseover: function () {
       if (this.$root.mostrar_para_grande) {
         this.mostrar = true;
       }
     },
-    ocultar_menu_on_mouse_leave: function() {
+    ocultar_menu_on_mouse_leave: function () {
       if (this.$root.mostrar_para_grande) {
         this.mostrar = false;
       }
     },
-    mostrar_ocultar_con_click: function() {
+    mostrar_ocultar_con_click: function () {
       if (this.$root.mostrar_para_celuar) {
         if (this.mostrar) {
           this.mostrar = false;
@@ -236,31 +236,31 @@ Vue.component("menu-segunda-triada", {
           this.mostrar = true;
         }
       }
-    }
+    },
   },
   computed: {
-    getClassUl: function() {
+    getClassUl: function () {
       if (this.$root.mostrar_para_celuar) {
         return {
-          "header-ul-segunda-tria__celular": true
+          "header-ul-segunda-tria__celular": true,
         };
       } else {
         return {
-          "header-ul-segunda-tria": true
+          "header-ul-segunda-tria": true,
         };
       }
     },
-    getClassLi: function() {
+    getClassLi: function () {
       if (this.$root.mostrar_para_celuar) {
         return {
-          "flex-wrap d-flex flex-row align-items-center justify-content-between w-100": true
+          "flex-wrap d-flex flex-row align-items-center justify-content-between w-100": true,
         };
       } else {
         return {
-          "": true
+          "": true,
         };
       }
-    }
+    },
   },
   template: `
 
@@ -287,5 +287,5 @@ Vue.component("menu-segunda-triada", {
 
 
 
-`
+`,
 });
