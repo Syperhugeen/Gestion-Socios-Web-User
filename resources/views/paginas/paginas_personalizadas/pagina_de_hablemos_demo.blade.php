@@ -143,7 +143,8 @@
 
 
 
-              <h4 class="h5  my-5  text-center mb-0"> Contanos  un poco sobre vos, tu negocio y cómo Easyscio puede ayudarte. Una vez que completes el formulario a continuación, un miembro del equipo se pondrá en contacto. </h4>
+              <h4 class="h5  my-5  text-center mb-0"> Contanos  un poco sobre vos, tu negocio y cómo <span class="font-secondary helper-aumenta-texto">easy</span>socio puede ayudarte. <br>
+              Una vez que completes el formulario a continuación, un miembro del equipo se pondrá en contacto. </h4>
 
 
             </div>

@@ -1,19 +1,19 @@
 /*  I M Á G E N E S  */
 
-.background_img{
- max-height: 100vh;
- width: 100%;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
+.background_img {
+  max-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.background_img_fixed{
- background-attachment: fixed; 
+.background_img_fixed {
+  background-attachment: fixed;
 }
 
 /* S e   u s a   p a r a   l a s  p o r t a d a s */
-.imagen-portada-altura-100vh{
+.imagen-portada-altura-100vh {
   display: block;
   width: 100vw;
   height: 100vh;
@@ -21,34 +21,31 @@
 }
 
 /* A j u s t a   l a   im a g e n   s u   a l t u r a   y   s u    w i d t h */
-.img-cover{
-  width: 100%;    
+.img-cover {
+  width: 100%;
   object-fit: cover;
-  display: block;   
+  display: block;
 }
 
 /* S e   u s a   p a r a   i m a g e n e s   e n   m i n i a t u r a s   c o n 
   i m g - c o v e r */
 
-$altura-imagen-miniaturas:150px; /* D e f i n o   l a   a l t u r a */
+$altura-imagen-miniaturas: 150px; /* D e f i n o   l a   a l t u r a */
 
-.img-altura-chica{
-  height:$altura-imagen-miniaturas;
+.img-altura-chica {
+  height: $altura-imagen-miniaturas;
 }
-.img-altura-normal{
-  height:$altura-imagen-miniaturas*1.5;
+.img-altura-normal {
+  height: $altura-imagen-miniaturas * 1.5;
 }
-.img-altura-grande{
-  height:$altura-imagen-miniaturas*2;
+.img-altura-grande {
+  height: $altura-imagen-miniaturas * 2;
 }
-
-
-
 
 /*  B a c k g r o u n d s  */
 
-.background-layer-layoute-opasity{
-  background-color:$color-black;
+.background-layer-layoute-opasity {
+  background-color: $color-black;
   opacity: 0.5;
   position: absolute;
   top: 0;
@@ -57,37 +54,41 @@ $altura-imagen-miniaturas:150px; /* D e f i n o   l a   a l t u r a */
   height: 100%;
 }
 
-.background-primary{
+.background-primary {
   background-color: $color-3;
 }
 
-.background-white{
+.background-white {
   background-color: $color-white;
 }
 
-.background-gris--1{
+.background-gris--1 {
   background-color: $color-grey-2;
 }
 
-.background-gris-0{
+.background-gris-0 {
   background-color: $color-grey-1;
 }
-.background-gris-1{
+.background-gris-1 {
   background-color: $color-grey0;
 }
 
-.background-gris-2{
+.background-gris-2 {
   background-color: $color-grey1;
 }
 
-.background-gris-3{
+.background-gris-3 {
   background-color: $color-grey2;
 }
 
-.background-gris-4{
+.background-gris-4 {
   background-color: $color-grey3;
 }
 
-.background-black{
+.background-black {
   background-color: $color-black;
+}
+
+.background-header-opasity {
+  background-color: rgba(255, 255, 255, 0.98);
 }

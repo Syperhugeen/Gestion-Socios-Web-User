@@ -24,96 +24,126 @@
 
 							<p>
 
-							Cada página es un mundo, por lo tanto es difícl detallar un precio exacto.
-							Si querés saber de manera detallada cuánto cuesta el desarrollo  de tu sitio
-							web, lo podés calcular
-							<a href="{{ route('get_pagina_contacto', '-') }}">
+							Cada negocio es un mundo, por lo tanto hemos creado varios planes que se adaptan a diferente tipo de negocios. Mirá los planes y precios
+							<a  href="{{ route('get_pagina_precios') }}">
 								<strong>aquí</strong> </a
 							>.
+							<br>
+
+							<a href="{{ route('get_pagina_precios') }}
+							" class="btn btn-primary mt-3">Ver planes y precios</a>
 							</p>
 
 
 						</template>
 					</pregunta-componente>
 				</div>
+
+
 				<div class="col-12 col-lg 8">
 					<pregunta-componente
-						pregunta="¿Qué tipo de páginas hacen?"
+						pregunta="¿Cuáles son los pasos a seguir si quiero contratar?"
 						:muestra="false"
 					>
 						<template slot="respuesta">
-							Principalmente páginas web corporativas y tiendas online para
-							empresas de todos los tamaños y sectores.
+
+						<ol>
+							<li>Avisanos que querés el software <a href="{{ route('get_hablemos') }}
+							" class="">aquí</a>. </li>
+							<li>
+							   Alquien de nuestro equipo se pondrá en contacto contigo para hablar de tu negocio,  mostrarte el software y <a href="{{ route('get_pagina_precios') }}"> elegir el plan </a>
+							    más conveniente.
+							</li>
+							<li>
+								Te ayudaremos a configurarlo y ponerlo en marcha.
+							</li>
+							<li>
+								Te enseñaremos a manejarlo paso a paso cada función del software.
+							</li>
+							<li>
+								Luego de que esté en marcha y ya sepas como usarlo te comenzaremos a cobrar.
+							</li>
+
+						</ol>
+
+
+
+
+<a href="{{ route('get_hablemos') }}
+" class="btn btn-primary mt-3">Contratar <span class="font-secondary helper-aumenta-texto">easy</span>socio </a>
+
+
+
 						</template>
 					</pregunta-componente>
 				</div>
 
 				<div class="col-12 col-lg 8">
 					<pregunta-componente
-						pregunta="¿Cuánto demoran en hacer una página web?"
+						pregunta="¿Me capacitan?"
 						:muestra="false"
 					>
 						<template slot="respuesta">
-							Tardamos unos 10 días aproximadamente.  A lo largo de los años, hemos creado un proceso ágil y simple que nos
-							permite diseñar y desarrollar páginas web y tiendas online con
-							mucha calidad en muy poco tiempo.
+
+						Nuestro software se aprende  <span class="font-secondary helper-aumenta-texto"> easy. </span> A pesar de eso te enseñaremos paso a paso a como operar <span class="font-secondary helper-aumenta-texto">easy</span>socio.
+
+						</template>
+					</pregunta-componente>
+				</div>
+
+
+				<div class="col-12 col-lg 8">
+					<pregunta-componente
+						pregunta="¿Se hace contrato?"
+						:muestra="false"
+					>
+						<template slot="respuesta">
+
+						No se hace contrato. <span class="font-secondary helper-aumenta-texto">easy</span>socio es de pago mensual. Si querés dejar de usar easysocio, simplemente dejas de abonar y ¡listo!
+
 						</template>
 					</pregunta-componente>
 				</div>
 
 				<div class="col-12 col-lg 8">
 					<pregunta-componente
-						pregunta="¿Qué tecnologías usan para hacer las páginas webs?"
+						pregunta="¿Cómo se instala?"
 						:muestra="false"
 					>
 						<template slot="respuesta">
-							Hacemos los sitios web utilizando tecnologías como React, Vue, Node y Laravel.
-							Esto nos permite contruir  páginas webs profesionales, muy optimizadas, escalables y modernas.
-						</template>
+
+						<p><b>No se instala</b>. <span class="font-secondary helper-aumenta-texto">easy</span>socio se encuentra alojado en la nube. Esta es la primera ventaja que debes tener presente sobre nuestra herramienta, ya que se trata de una característica que te ahorra tiempo y dinero, al evitar las incómodas instalaciones de software y el inevitable soporte técnico que requieren.</p>
+
+
+
+						<p>Además, no deberás adquirir y mantener servidores que representan una gran inversión tanto en hardware como en técnicos que lo manejen y le den servicio permanente. Te evitas las actualizaciones de la memoria para poder crear los respaldos necesarios y todos los costos asociados a estas actividades y a la reposición de equipos producto de la obsolescencia tecnológica.</p>
+							</template>
 					</pregunta-componente>
 				</div>
 
 				<div class="col-12 col-lg 8">
 					<pregunta-componente
-						pregunta="¿Solo hacen diseño web en Uruguay?"
+						pregunta="¿Qué se necesita para poder usar easysocio?"
 						:muestra="false"
 					>
 						<template slot="respuesta">
-							No. No solo hacemos diseño web en Uruguay. Ofrecemos nuestro
-							servicios de diseño web a cualquier empresa sin importar el país.
+
+						<p>sSolo necesitas un dispositivo (pc, celular o notebook) que esté conectado a internet</p>
+
+
+
 						</template>
 					</pregunta-componente>
 				</div>
 
-				<div class="col-12 col-lg 8">
-					<pregunta-componente
-						pregunta="¿Cómo son los pasos si ya estoy decidido/a a tener mi página web?"
-						:muestra="false"
-					>
-						<template slot="respuesta">
-							<ol>
-								<li>
-									Danos la orden de comenzar a diseñar entrando a
-									<a href="{{ route('get_pagina_contacto', '-') }}">
 
-									<strong>este link</strong></a>.
-								</li>
-								<li>
-									Te cobraremos una parte del costo adelantado y ahí comenzaremos
-									a diseñar (nos lleva algunos días y quizás te contactemos
-									varias veces para que nos vayas dando feedback de cómo
-									venimos).
-								</li>
-								<li>
-									Una vez terminada y ya montada en el servidor, te enseñaremos
-									a usarla y además estaremos orientándote y trabajando contigo
-									la mejor extrategía para que tú página se posicione.
-								</li>
 
-							</ol>
-						</template>
-					</pregunta-componente>
-				</div>
+
+
+
+
+
+
 			</div>
 		</div>
 	</div>

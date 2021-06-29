@@ -162,7 +162,7 @@
 
          @endif
 
-              <h2 class="sub-titulos-class mb-4 text-center text-color-primary">EasySocio es el Software para la gestión de <slider-text :data="[{name:'gimnasios'},{name:'escuelas de danza'},{name:'academias de artes marciales'},{name:'box funcionales'}]"></slider-text> </h2>
+              <h2 class="sub-titulos-class mb-4 text-center text-color-primary">EasySocio es el Software para la gestión de gimnasios </h2>
               <p class="text-center mb-0">EasySocio es una plataforma digital que te ofrece mucho más que un sistema contable para <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"> administrar tu gimnasio</a>. Se trata de un conjunto de utilidades que te permitirán brindar un óptimo servicio para tus clientes al tiempo que facilita tu trabajo para que lo realices de manera rápida y sencilla.
               </p>
 
@@ -222,66 +222,9 @@
       <div class="col-12 mb-5 position-relative">
           <p class="text-center text-uppercase"><strong>¿Qué resolvemos?</strong></p>
       </div>
-      <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-          <simple-card titulo="Manejo de mebresías" call_to_action="Más información" url="https://worldmaster.com.uy/">
-            <template slot="icono">
-              <div class="text-color-primary h3 rounded  mb-1 ">
-                  <i class="fas fa-users"></i>
-               </div>
-            </template>
 
-            <template slot="description">
-                <div class="parrafo-class-pequeño">
-                  Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
-                </div>
-            </template>
-          </simple-card>
-      </div>
 
-      <div class="col-11 col-lg-3 px-2  mb-3 mb-lg-0">
-          <simple-card titulo="Reservas online">
-            <template slot="icono">
-              <div class="text-color-primary h3 rounded  mb-1 ">
-              <i class="far fa-calendar-alt"></i>
-               </div>
-            </template>
-            <template slot="description">
-                <div class="parrafo-class-pequeño">
-                 Te ayudaremos a organizar las clases, permitiendo a tus socios hacer reservas de clases online.
-                </div>
-            </template>
-          </simple-card>
-      </div>
-
-      <div class="col-11 col-lg-3 px-2  mb-3 mb-lg-0">
-          <simple-card titulo="Finanzas">
-            <template slot="icono">
-              <div class="text-color-primary h3 rounded  mb-1 ">
-                  <i class="fas fa-cash-register"></i>
-               </div>
-            </template>
-            <template slot="description">
-                <div class="parrafo-class-pequeño">
-                  Cada operación que hagas se irá registrando y luego podremos darte informes que te dirán lo que vendiste y lo que gastaste.
-                </div>
-            </template>
-          </simple-card>
-      </div>
-
-      <div class="col-11 col-lg-3 px-2  mb-3 mb-lg-0">
-          <simple-card titulo="Control de acceso">
-            <template slot="icono">
-              <div class="text-color-primary h3 rounded  mb-1 ">
-                  <i class="fas fa-cash-register"></i>
-               </div>
-            </template>
-            <template slot="description">
-                <div class="parrafo-class-pequeño">
-                  Es fastidioso tener que decirle a alquien que tiene que pagar. Nosotros nos ocuparemos de eso al momento que tu socios pasa por el control de acceso.
-                </div>
-            </template>
-          </simple-card>
-      </div>
+      @include('paginas.home.partial.funciones')
 
 
 
