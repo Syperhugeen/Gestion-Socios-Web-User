@@ -132,4 +132,16 @@ class Paginas_Controller extends Controller
         return view('paginas.paginas_personalizadas.pagina_de_hablemos_demo', compact('Empresa', 'blogs', 'Portada', 'Planes'));
     }
 
+    public function get_funcionalidades()
+    {
+        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+
+        $Portada = Cache::remember('funciones', 2000, function () {
+            return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'funciones');
+        });
+
+        return view('paginas.paginas_personalizadas.pagina_de_funciones', compact('Empresa', 'Portada'));
+
+    }
+
 }

@@ -42,3 +42,8 @@ Route::get('/hablemos', [
     'uses' => 'Publicas\Paginas_Controller@get_hablemos',
     'as'   => 'get_hablemos']
 );
+
+Route::get('/funcionalidades', [
+    'uses' => 'Publicas\Paginas_Controller@get_funcionalidades',
+    'as'   => 'get_funcionalidades']
+);

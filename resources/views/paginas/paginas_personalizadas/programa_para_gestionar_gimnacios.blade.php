@@ -229,7 +229,7 @@
 
 
       <p class="col-12 text-center mt-5 ">
-            <a href="">Ver todas las funcionalidades</a>
+            <a href="{{route('get_funcionalidades')}} ">Ver todas las funcionalidades</a>
       </p>
 
     </div>
