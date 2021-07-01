@@ -38,6 +38,11 @@ Route::get('/software-para-gimnasios', [
     'as'   => 'get_programa_para_gestionar_gimancios']
 );
 
+Route::get('/software-para-escuelas-de-danza', [
+    'uses' => 'Publicas\Paginas_Controller@get_programa_para_gestionar_escuelas_de_danza',
+    'as'   => 'get_programa_para_gestionar_escuelas_de_danza']
+);
+
 Route::get('/hablemos', [
     'uses' => 'Publicas\Paginas_Controller@get_hablemos',
     'as'   => 'get_hablemos']

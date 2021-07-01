@@ -85,6 +85,8 @@
 
 
 @section('vue')
+
+
    @include('paginas.home.vue.section-card')
    @include('paginas.home.vue.pregunta-componente')
    @include('paginas.home.vue.slider-text')
@@ -113,14 +115,7 @@
 
             <template slot="titulo">
               <h1 class="text-white mb-5">
-                  Software para gestionar   <slider-text :data="[
-                    {name:'gimnasios'},
-
-{name:'escuelas de danza'},
-{name:'box de crossfit'},
-{name:'academía de artes marciales'}
-
-]"></slider-text>
+                  Software para escuelas de danza
               </h1>
             </template>
             <template slot="descripcion">
@@ -131,7 +126,7 @@
                 <li class="text-white espacio-letras"> Control de acceso <span class="font-secondary helper-aumenta-texto"> easy </span></li>
               </ul>
 
-               <a href="{{route('get_hablemos')}}" class="btn btn-success mr-2 cursor-pointer text-white"> Comenzar ahora</a>
+               <a href="#intro" class="btn btn-success mr-2 cursor-pointer text-white"> Comenzar ahora</a>
                <a href="#intro" class="btn  btn-outline-light cursor-pointer"> Seguir leyendo</a>
 
                <img class="d-none d-lg-block " style="position: absolute; right:0; top:40%; height:auto; width:600px;"  src="{{url()}}/imagenes/Easysocio/Capturas/socios-listado-notebook.png" alt="">
@@ -167,8 +162,10 @@
 
          @endif
 
-              <h2 class="sub-titulos-class mb-4 text-center text-color-primary">EasySocio es el Software para la gestión de <slider-text :data="[{name:'gimnasios'},{name:'escuelas de danza'},{name:'academias de artes marciales'},{name:'box funcionales'}]"></slider-text> </h2>
-              <p class="text-center mb-0">EasySocio es una plataforma digital que te ofrece mucho más que un sistema contable para <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"> administrar tu gimnasio</a>. Se trata de un conjunto de utilidades que te permitirán brindar un óptimo servicio para tus clientes al tiempo que facilita tu trabajo para que lo realices de manera rápida y sencilla.
+              <h2 class="h1 mb-4 text-center ">Software para administrar academias de baile de manera <span class="font-secondary helper-aumenta-texto"> easy </span> </h2>
+              <p class="text-center mb-0">
+               Estás registrando en una planilla de excel o anotando en un cuaderno tus ventas ¡Olvídalo!
+               Ahorrá tiempo y dinero con un sistema que te permita controlar y organizar tu academia de baile y destacá en tu rubro.
               </p>
 
             </div>
@@ -177,20 +174,23 @@
     </section>
 
 
+
+
     <section class="site-section background-white" >
     <div class="container ">
     <div class="row justify-content-center">
       <div class="col-12 mb-5 position-relative">
-          <p class="text-center text-uppercase mb-1"><strong>¿Qué resolvemos?</strong></p>
-          <h3 class="text-center mb-0 h2">Nuestra solución </h3>
+          <h3 class="text-center mb-0"><strong>Herramientas que harán que tu trabajo sea <span class="font-secondary helper-aumenta-texto"> easy </span></strong></h3>
+
+
       </div>
 
 
-      @include('paginas.home.partial.funciones')
+      @include('paginas.paginas_personalizadas.principalesFunciones')
 
-      <p class="col-12 text-center mt-5 ">
-            <a href="{{route('get_funcionalidades')}} ">Ver todas las funcionalidades</a>
-      </p>
+
+
+
 
     </div>
 
@@ -200,87 +200,19 @@
     </section>
 
 
-
-    <section class="site-section background-gris-1" >
-
-    <div class="container ">
-      <div class="row justify-content-center">
-
-      <div class="col-12 mb-5 position-relative">
-          <p class="text-center text-uppercase mb-1">¿Para quién es?</p>
-          <h3 class="text-center mb-0 h2">Lo creamos pensando en ...</h3>
-      </div>
-
-      <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-          <simple-card titulo="Gimnasios de pesas" call_to_action="Más información" url="{{route('get_programa_para_gestionar_gimancios')}}">
-            <template slot="icono">
-              <div class="rounded  mb-2 ">
-                  <img src="{{url()}}/imagenes/Easysocio/SirvePara/pesas.jpg" class="img-fluid rounded" alt="">
-               </div>
-            </template>
-            <template slot="description">
-                <div class="parrafo-class-pequeño">
-                  Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
-                </div>
-            </template>
-          </simple-card>
-      </div>
-
-      <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-          <simple-card titulo="Centros de entrenamiento funcional" call_to_action="Más información" url="https://worldmaster.com.uy/">
-            <template slot="icono">
-            <div class="rounded  mb-2 ">
-                  <img src="{{url()}}/imagenes/Easysocio/SirvePara/box-funcional.jpg" class="img-fluid rounded" alt="">
-               </div>
-            </template>
-            <template slot="description">
-                <div class="parrafo-class-pequeño">
-                  Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
-                </div>
-            </template>
-          </simple-card>
-      </div>
-
-      <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-          <simple-card titulo="Academías de baile" call_to_action="Más información" url="{{route('get_programa_para_gestionar_escuelas_de_danza')}}">
-            <template slot="icono">
-            <div class="rounded  mb-2 ">
-                  <img src="{{url()}}/imagenes/Easysocio/SirvePara/danza.jpg" class="img-fluid rounded" alt="">
-               </div>
-            </template>
-            <template slot="description">
-                <div class="parrafo-class-pequeño">
-                  Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
-                </div>
-            </template>
-          </simple-card>
-      </div>
-
-      <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-          <simple-card titulo="Escuelas de artes marciales" call_to_action="Más información" url="https://worldmaster.com.uy/">
-            <template slot="icono">
-            <div class="rounded  mb-2 ">
-                  <img src="{{url()}}/imagenes/Easysocio/SirvePara/artes-marciales.jpg" class="img-fluid rounded" alt="">
-               </div>
-            </template>
-
-            <template slot="description">
-                <div class="parrafo-class-pequeño">
-                  Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
-                </div>
-            </template>
-          </simple-card>
-      </div>
-    </div>
-    </div>
-
-    </section>
-
-
-
+    @include('paginas.paginas_personalizadas.beneficiosGenerales')
     @include('paginas.paginas_personalizadas.planes')
     @include('paginas.paginas_personalizadas.preguntasFrecuentes')
     @include('paginas.paginas_personalizadas.blog')
+
+
+
+
+
+
+
+
+
 
 
 

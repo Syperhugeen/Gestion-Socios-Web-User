@@ -162,7 +162,7 @@
 
          @endif
 
-              <h2 class="sub-titulos-class mb-4 text-center text-color-primary">EasySocio es el Software para la gestión de gimnasios </h2>
+              <h2 class="h1 mb-4 text-center">EasySocio es el Software para la gestión de gimnasios </h2>
               <p class="text-center mb-0">EasySocio es una plataforma digital que te ofrece mucho más que un sistema contable para <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"> administrar tu gimnasio</a>. Se trata de un conjunto de utilidades que te permitirán brindar un óptimo servicio para tus clientes al tiempo que facilita tu trabajo para que lo realices de manera rápida y sencilla.
               </p>
 
@@ -220,7 +220,8 @@
     <div class="container ">
     <div class="row justify-content-center">
       <div class="col-12 mb-5 position-relative">
-          <p class="text-center text-uppercase"><strong>Funcionalidades</strong></p>
+      <h3 class="text-center mb-0"><strong>Herramientas pensadas para un gimnasio que harán que tu trabajo sea <span class="font-secondary helper-aumenta-texto"> easy </span></strong></h3>
+
 
       </div>
 

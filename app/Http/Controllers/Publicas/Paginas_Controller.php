@@ -98,6 +98,24 @@ class Paginas_Controller extends Controller
         return view('paginas.paginas_personalizadas.programa_para_gestionar_gimnacios', compact('Empresa', 'blogs', 'Portada', 'Planes'));
     }
 
+    public function get_programa_para_gestionar_escuelas_de_danza()
+    {
+
+        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+
+        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
+            return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
+        });
+
+        $Portada = Cache::remember('PortadaSoftwareParaDanza', 2000, function () {
+            return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'software para danza');
+        });
+
+        $Planes = ServiciosPlanes::getPlanes();
+
+        return view('paginas.paginas_personalizadas.programa_para_gestionar_escuelas_de_danza', compact('Empresa', 'blogs', 'Portada', 'Planes'));
+    }
+
     public function get_pagina_precios()
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
