@@ -1,7 +1,18 @@
-{{-- N u e b e --}}
 
 
+   <section class="site-section py-5 ">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mb-5 position-relative">
+            <p class="text-center text-uppercase mb-1">Características</p>
+            <h3 class="  text-center h2 mb-0"> Ventajas de  <span class="font-secondary helper-aumenta-texto"> easy</span>socio</h3>
 
+
+        </div>
+      </div>
+    </section>
+
+      {{-- N u e b e --}}
       <section-card
        titulo_aclarador="Está en la nube"
        titulo="EasySocio se encuentra alojado en la nube"

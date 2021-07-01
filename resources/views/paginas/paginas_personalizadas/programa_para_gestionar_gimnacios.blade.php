@@ -220,17 +220,16 @@
     <div class="container ">
     <div class="row justify-content-center">
       <div class="col-12 mb-5 position-relative">
-          <p class="text-center text-uppercase"><strong>¿Qué resolvemos?</strong></p>
+          <p class="text-center text-uppercase"><strong>Funcionalidades</strong></p>
+
       </div>
 
 
-      @include('paginas.home.partial.funciones')
+      @include('paginas.paginas_personalizadas.principalesFunciones')
 
 
 
-      <p class="col-12 text-center mt-5 ">
-            <a href="{{route('get_funcionalidades')}} ">Ver todas las funcionalidades</a>
-      </p>
+
 
     </div>
 
