@@ -103,7 +103,7 @@ class Paginas_Controller extends Controller
 
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
 
-        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
+        $blogs = Cache::remember('BlogsSoftwareParaDanza', 2000, function () {
             return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
         });
 
@@ -116,6 +116,42 @@ class Paginas_Controller extends Controller
         return view('paginas.paginas_personalizadas.programa_para_gestionar_escuelas_de_danza', compact('Empresa', 'blogs', 'Portada', 'Planes'));
     }
 
+    public function get_programa_para_gestionar_escuela_de_artes_marciales()
+    {
+
+        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+
+        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
+            return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
+        });
+
+        $Portada = Cache::remember('PortadaSoftwareParaMarcial', 2000, function () {
+            return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'software marcial');
+        });
+
+        $Planes = ServiciosPlanes::getPlanes();
+
+        return view('paginas.paginas_personalizadas.programa_para_gestionar_artes_marciales', compact('Empresa', 'blogs', 'Portada', 'Planes'));
+    }
+
+    public function get_programa_para_gestionar_box_crossfit()
+    {
+
+        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+
+        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
+            return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
+        });
+
+        $Portada = Cache::remember('PortadaSoftwareParaBox', 2000, function () {
+            return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'software para box');
+        });
+
+        $Planes = ServiciosPlanes::getPlanes();
+
+        return view('paginas.paginas_personalizadas.programa_para_gestionar_box_crossfit', compact('Empresa', 'blogs', 'Portada', 'Planes'));
+    }
+
     public function get_pagina_precios()
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
@@ -124,7 +160,7 @@ class Paginas_Controller extends Controller
             return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
         });
 
-        $Portada = Cache::remember('PreciosSoftwareParaGimnasio', 2000, function () {
+        $Portada = Cache::remember('PreciosSoftwareParaPrecios', 2000, function () {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'precios');
         });
 

@@ -20,6 +20,59 @@
                   <div v-if="$root.mostrar_para_celuar"  v-on:click="set_mostrar_menu_movil" class="p-5 w-100 text-right "><i class="fas fa-times"></i>
                   </div>
                   <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="{{route('get_home')}}" class="nav-link">Inicio</a></li>
+                  <li @click="showModalSolucion = true" class="header-nav-ul-li"><span :class="getClassItemsNav" class="nav-link cursor-pointer">Nuestra solución</span></li>
+
+                  <transition name="modal" v-if="showModalSolucion">
+<div class="modal-mask ">
+  <div class="modal-wrapper">
+    <div class="modal-container position-relative">
+    <span class="modal-cerrar-icono sub-titulos-class text-center color-text-gris" @click="showModalSolucion = !showModalSolucion">
+      <i class="fas fa-times"></i>
+    </span>
+
+
+      <div class="row mx-0">
+        <h4 class="col-12 text-center mb-4"> Software para ...   </h4>
+        <div class="col-12 col-md-6 mb-2">
+          <a class="Boton-Fuente-Chica Boton-Primario-Sin-Relleno" href="{{route('get_programa_para_gestionar_gimancios')}}">
+             Gimnasios y centros de fitness
+          </a>
+        </div>
+        <div class="col-12 col-md-6 mb-2">
+          <a class="Boton-Fuente-Chica Boton-Primario-Sin-Relleno" href="{{route('get_programa_para_gestionar_escuelas_de_danza')}}">
+              Academias de danza
+          </a>
+        </div>
+        <div class="col-12 col-md-6 mb-2">
+          <a class="Boton-Fuente-Chica Boton-Primario-Sin-Relleno" href="{{route('get_programa_para_gestionar_box_crossfit')}}">
+              Box de crossfit y funcionales
+          </a>
+        </div>
+        <div class="col-12 col-md-6 mb-2">
+          <a class="Boton-Fuente-Chica Boton-Primario-Sin-Relleno" href="{{route('get_programa_para_gestionar_escuela_de_artes_marciales')}}">
+              Escuela de artes marciales
+          </a>
+        </div>
+
+      </div>
+
+      <div class="modal-body">
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="modal-default-button"   @click="showModalSolucion = !showModalSolucion">
+         Cerrar
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</transition>
+
+
+
                   <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="{{route('get_pagina_precios')}}" class="nav-link">Precios</a></li>
 
 

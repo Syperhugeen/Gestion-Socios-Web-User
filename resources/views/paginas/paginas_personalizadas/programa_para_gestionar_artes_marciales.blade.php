@@ -7,7 +7,7 @@
 {{--*/ $Titulo                = $Portada->titulo_de_la_pagina /*--}}
 {{--*/ $DescriptionEtiqueta   = $Portada->description_de_la_pagina   /*--}}
 {{--*/ $PalabrasClaves        = 'Software para gimnasios, gym software' /*--}}
-{{--*/ $UrlDeLaPagina         = route('get_home') /*--}}
+{{--*/ $UrlDeLaPagina         = route('get_programa_para_gestionar_escuela_de_artes_marciales') /*--}}
 
 @section('pixcel-facebook')
 <!-- Facebook Pixel Code -->
@@ -115,7 +115,7 @@
 
             <template slot="titulo">
               <h1 class="text-white mb-5">
-                  Software para administrar gimnasios
+                  Software para escuelas de artes marciales
               </h1>
             </template>
             <template slot="descripcion">
@@ -162,8 +162,10 @@
 
          @endif
 
-              <h2 class="h1 mb-4 text-center"> Software para la gestión de gimnasios </h2>
-              <p class="text-center mb-0">EasySocio es una plataforma digital que te ofrece mucho más que un sistema contable para <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"> administrar tu gimnasio</a>. Se trata de un conjunto de utilidades que te permitirán brindar un óptimo servicio para tus clientes al tiempo que facilita tu trabajo para que lo realices de manera <span class="font-secondary helper-aumenta-texto"> easy</span>.
+              <h2 class="h1 mb-4 text-center ">Software para administrar club de artes marciales <span class="font-secondary helper-aumenta-texto"> easy </span> </h2>
+              <p class="text-center mb-0">
+               Estás registrando en una planilla de excel o anotando en un cuaderno tus ventas ¡Olvídalo!
+               Ahorrá tiempo y dinero con un sistema que te permita controlar y organizar tu academia de baile y destacá en tu rubro.
               </p>
 
             </div>
@@ -171,56 +173,14 @@
         </div>
     </section>
 
-    <section-card
-       titulo_aclarador=""
-       titulo="¿Tenés un gimnasio y te encontrás en el punto que la gestión de tus socios se hace complicada?"
-       background="background-gris--1"
-       order="left"
-       :con_parte_oculta="true"
-       url_img_chica="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-celular.png"
-       url_img_grande="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-celular.png" >
 
-        <template slot="description-visible">
-        <p>En la industria de los negocios de acondicionamiento físico, es normal que en la medida en que comienza a crecer el volumen de clientes, cada vez se haga más difícil mantener al día los estados de cuentas de cada uno. Puede llegar a ocurrir que si son muchos no sepas distinguir quienes se encuentran al día con sus pagos y quienes te deben dinero. Si esta situación te resulta familiar haz encontrado la herramienta que necesitas para solucionar tus problemas de administración de forma sencilla y por una inversión mínima. Te invitamos a conocer EasySocio.
-          </p>
-        </template>
-        <template slot="description-oculta">
-        <p>
-            Esta tecnología te permite como administrador de uno o varios gimnasios saber cuál es el estado financiero del negocio en tiempo real, desde cualquier ubicación a través de un dispositivo móvil como un celular o tu laptop. Además podrás obtener información valiosa sobre las estadísticas de los servicios más utilizados por los clientes, las tendencias en cuanto a consumo y toda la información actualizada que requieras para una gestión eficiente.
-          </p>
-        </template>
-      </section-card>
-
-
-      <section-card
-       titulo_aclarador=""
-       titulo="Agrégale valor a tu emprendimiento sin perder más tiempo ni energía en detalles de gestión"
-       background="background-gris-1"
-       order="right"
-       :con_parte_oculta="true"
-       url_img_chica="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-notebook.png"
-       url_img_grande="{{url()}}/imagenes/Easysocio/Easysocio-software-para-administrar-gimnasisos-notebook.png" >
-
-        <template slot="description-visible">
-         <p>Los gimnasios hoy en día son uno de los emprendimientos de mayor auge. La industria del fittness y del cuidado personal se encuentra al alza, ya que millones de personas acuden en búsqueda de la oferta de productos y servicios que allí se ofrecen con la finalidad de mejorar su calidad de vida. Es un campo de trabajo y de inversión que abarca muchos aspectos, que van desde la estética personal, al bienestar físico y la salud.
-          </p>
-        </template>
-        <template slot="description-oculta">
-        <p>
-          Una sociedad que promueve el cuidado personal a través de la promoción de buenas prácticas y hábitos saludables en los individuos, resulta un ambiente ideal para el surgimiento de muchas ideas y modelos de negocios asociados al cuidado del bienestar físico. Así que, bien sea que tienes un gimnasio con equipos para ejercicios anaeróbicos (pesas y máquinas de resistencia) una escuela de artes marciales, o un centro para las últimas tendencias del entrenamiento como el Crossfit, el bootcamp o el TRX, ya diste el primer paso y realizaste la inversión más importante, ahora lo que necesitas son los medios para <a href="https://gestionsocios.com.uy/blog/las-cuatro-reglas-de-oro-para-tener-un-gimnasio-exitoso/25">llevar al éxito a tu emprendimiento</a>.
-          </p>
-          <p>
-          Para eso, no lo dudes, el mejor aliado con el que puedes contar es esta herramienta informática multifuncional que te ayudará con la administración de negocio para que puedas dedicar más tiempo a pensar en ofertas de servicios innovadores y estrategias de <a href="https://gestionsocios.com.uy/blog/6-estrategias-de-marketing-para-gimnasios/29">marketing</a>  que te permitan aumentar y fidelizar la clientela que requieres para lograr la rentabilidad que deseas de tu inversión.
-          </p>
-        </template>
-      </section-card>
 
 
     <section class="site-section background-white" >
     <div class="container ">
     <div class="row justify-content-center">
       <div class="col-12 mb-5 position-relative">
-      <h3 class="text-center mb-0"><strong>Herramientas pensadas para tu gimnasio que harán que tu trabajo sea <span class="font-secondary helper-aumenta-texto"> easy </span></strong></h3>
+          <h3 class="text-center mb-0"><strong>Herramientas que harán que tu trabajo sea <span class="font-secondary helper-aumenta-texto"> easy </span></strong></h3>
 
 
       </div>

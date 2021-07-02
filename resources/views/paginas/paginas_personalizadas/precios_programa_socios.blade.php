@@ -154,7 +154,7 @@
 
 
 
-          <a class="Boton-Primario-Relleno Boton-Fuente-Chica mt-3" href="{{route('get_pagina_contacto','-')}}" >
+          <a class="Boton-Primario-Relleno Boton-Fuente-Chica mt-3" href="{{route('get_hablemos')}}" >
            Contactar
           </a>
 

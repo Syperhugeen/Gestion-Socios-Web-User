@@ -43,11 +43,15 @@ template:`
     </div>
 </div>
 <div v-else class="w-100 h-100 d-flex flex-column shadow rounded p-4" >
+<a :href="url" >
     <slot name="icono">
 
     </slot>
+    </a>
 
-    <h3 class="h5 mt-2"> <strong>@{{titulo}}</strong> </h3>
+    <a :href="url" >
+    <h3 class="h5 mt-2 text-dark"> <strong>@{{titulo}}</strong> </h3>
+    </a>
 
 
     <div class="color-text-gris">

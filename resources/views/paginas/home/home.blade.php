@@ -167,7 +167,7 @@
 
          @endif
 
-              <h2 class="sub-titulos-class mb-4 text-center text-color-primary">EasySocio es el Software para la gestión de <slider-text :data="[{name:'gimnasios'},{name:'escuelas de danza'},{name:'academias de artes marciales'},{name:'box funcionales'}]"></slider-text> </h2>
+              <h2 class="h1 mb-4 text-center "> Software para la gestión de <slider-text :data="[{name:'gimnasios'},{name:'escuelas de danza'},{name:'academias de artes marciales'},{name:'box funcionales'}]"></slider-text> </h2>
               <p class="text-center mb-0">EasySocio es una plataforma digital que te ofrece mucho más que un sistema contable para <a href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"> administrar tu gimnasio</a>. Se trata de un conjunto de utilidades que te permitirán brindar un óptimo servicio para tus clientes al tiempo que facilita tu trabajo para que lo realices de manera rápida y sencilla.
               </p>
 
@@ -227,7 +227,7 @@
       </div>
 
       <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-          <simple-card titulo="Centros de entrenamiento funcional" call_to_action="Más información" url="https://worldmaster.com.uy/">
+          <simple-card titulo="Centros de entrenamiento funcional" call_to_action="Más información" url="{{route('get_programa_para_gestionar_box_crossfit')}}">
             <template slot="icono">
             <div class="rounded  mb-2 ">
                   <img src="{{url()}}/imagenes/Easysocio/SirvePara/box-funcional.jpg" class="img-fluid rounded" alt="">
@@ -257,7 +257,7 @@
       </div>
 
       <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-          <simple-card titulo="Escuelas de artes marciales" call_to_action="Más información" url="https://worldmaster.com.uy/">
+          <simple-card titulo="Escuelas de artes marciales" call_to_action="Más información" url="{{route('get_programa_para_gestionar_escuela_de_artes_marciales')}}">
             <template slot="icono">
             <div class="rounded  mb-2 ">
                   <img src="{{url()}}/imagenes/Easysocio/SirvePara/artes-marciales.jpg" class="img-fluid rounded" alt="">

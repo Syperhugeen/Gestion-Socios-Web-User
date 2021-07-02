@@ -43,6 +43,16 @@ Route::get('/software-para-escuelas-de-danza', [
     'as'   => 'get_programa_para_gestionar_escuelas_de_danza']
 );
 
+Route::get('/software-para-box-corssfit-y-funcionales', [
+    'uses' => 'Publicas\Paginas_Controller@get_programa_para_gestionar_box_crossfit',
+    'as'   => 'get_programa_para_gestionar_box_crossfit']
+);
+
+Route::get('/software-para-escuela-de-artes-marciales', [
+    'uses' => 'Publicas\Paginas_Controller@get_programa_para_gestionar_escuela_de_artes_marciales',
+    'as'   => 'get_programa_para_gestionar_escuela_de_artes_marciales']
+);
+
 Route::get('/hablemos', [
     'uses' => 'Publicas\Paginas_Controller@get_hablemos',
     'as'   => 'get_hablemos']

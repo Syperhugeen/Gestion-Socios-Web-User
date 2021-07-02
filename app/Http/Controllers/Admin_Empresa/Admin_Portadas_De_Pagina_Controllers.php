@@ -69,8 +69,17 @@ class Admin_Portadas_De_Pagina_Controllers extends Controller implements entidad
     public function olvidarCachesAsociadoAEstaEntidad()
     {
         HelpersGenerales::helper_olvidar_este_cache('PortadaHome');
-
         HelpersGenerales::helper_olvidar_este_cache('contactoPortada');
+        HelpersGenerales::helper_olvidar_este_cache('PortadaBlogs');
+        HelpersGenerales::helper_olvidar_este_cache('BlogsSoftwareParaGimnasio');
+        HelpersGenerales::helper_olvidar_este_cache('PortadaSoftwareParaGimnasio');
+        HelpersGenerales::helper_olvidar_este_cache('BlogsSoftwareParaDanza');
+        HelpersGenerales::helper_olvidar_este_cache('PortadaSoftwareParaDanza');
+        HelpersGenerales::helper_olvidar_este_cache('PortadaSoftwareParaMarcial');
+        HelpersGenerales::helper_olvidar_este_cache('PortadaSoftwareParaBox');
+        HelpersGenerales::helper_olvidar_este_cache('PreciosSoftwareParaPrecios');
+        HelpersGenerales::helper_olvidar_este_cache('hablamos');
+        HelpersGenerales::helper_olvidar_este_cache('funciones');
 
     }
 

@@ -3,6 +3,7 @@ Vue.component("header-nav", {
   data: function () {
     return {
       mostrar_menu_en_movil: false,
+      showModalSolucion:false
     };
   },
 
@@ -184,23 +185,23 @@ Vue.component("menu-primer-triada", {
   },
   template: `
 
-<li @mouseover="mostrar_menu_on_mouseover"  
+<li @mouseover="mostrar_menu_on_mouseover"
     @mouseleave="ocultar_menu_on_mouse_leave"
 
-    
+
     :class="getClassLi">
-    <a :class="$parent.getClassItemsNav" 
-         :href="url_padre"> 
+    <a :class="$parent.getClassItemsNav"
+         :href="url_padre">
          @{{name_padre}} <i v-if="$root.mostrar_para_grande" class="fas fa-angle-down"></i>
     </a>
-    <span class="p-2 sub-titulos-class  color-text-gris" 
+    <span class="p-2 sub-titulos-class  color-text-gris"
            v-if="$root.mostrar_para_celuar"
            @click="mostrar_ocultar_con_click">
       <i v-if="mostrar" class="fas fa-angle-up"></i>
       <i v-else class="fas fa-angle-down"></i>
     </span>
-     <ul v-if="mostrar" :class="getClassUl">      
-       <slot name="opciones"></slot>      
+     <ul v-if="mostrar" :class="getClassUl">
+       <slot name="opciones"></slot>
      </ul>
 </li>
 
@@ -264,24 +265,24 @@ Vue.component("menu-segunda-triada", {
   },
   template: `
 
-<li @mouseover="mostrar_menu_on_mouseover"  
+<li @mouseover="mostrar_menu_on_mouseover"
     @mouseleave="ocultar_menu_on_mouse_leave"
     :class="getClassLi"
     class="header-li-primer-tria">
-     <a 
-        :href="url_padre"          
+     <a
+        :href="url_padre"
         class="">
         @{{name_padre}}
         <i v-if="$root.mostrar_para_grande" class="fas fa-angle-right"></i>
      </a>
-     <span class="p-2 sub-titulos-class  color-text-gris" 
+     <span class="p-2 sub-titulos-class  color-text-gris"
            v-if="$root.mostrar_para_celuar"
            @click="mostrar_ocultar_con_click">
       <i v-if="mostrar" class="fas fa-angle-up"></i>
       <i v-else class="fas fa-angle-down"></i>
      </span>
-     <ul v-if="mostrar" :class="getClassUl">      
-       <slot name="opciones_segunda_triada"></slot>      
+     <ul v-if="mostrar" :class="getClassUl">
+       <slot name="opciones_segunda_triada"></slot>
      </ul>
 </li>
 
