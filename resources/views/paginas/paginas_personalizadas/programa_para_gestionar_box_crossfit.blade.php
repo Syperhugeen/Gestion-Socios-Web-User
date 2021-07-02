@@ -110,6 +110,8 @@
 
         <portada altura_portada="60"
 
+        grandiente="linear-gradient(180deg, rgba(14,42,108,1) 7%, rgba(90,138,255,1) 88%, rgba(90,138,255,1) 100%)"
+
 
         >
 

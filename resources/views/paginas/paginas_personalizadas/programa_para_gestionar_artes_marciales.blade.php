@@ -110,7 +110,7 @@
 
         <portada altura_portada="60"
 
-
+        grandiente="linear-gradient(180deg, rgba(6,22,61,1) 0%, rgba(42,149,63,1) 100%)"
         >
 
             <template slot="titulo">

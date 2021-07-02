@@ -5,7 +5,7 @@ Vue.component('portada' ,
 {
 
 
-props:['titulo', 'descripcion','url','url_img_chica','url_img_grande','call_to_action','altura_portada','data_texto_variable'],
+props:['titulo', 'descripcion','url','url_img_chica','url_img_grande','call_to_action','altura_portada','data_texto_variable','grandiente'],
 
 
 data:function(){
@@ -43,8 +43,8 @@ template:`
 
 <div  class="w-100 "  :style="{
     minHeight: altura_portada + 'vh',
-    background:'rgb(144,28,28)',
-    background: 'linear-gradient(180deg, rgba(144,28,28,1) 0%, rgba(255,90,95,1) 75%)'
+
+    background: grandiente != null && typeof grandiente != 'undefined' ? grandiente : 'linear-gradient(180deg, rgba(144,28,28,1) 0%, rgba(255,90,95,1) 75%)'
   }">
 
   <div :style="{
