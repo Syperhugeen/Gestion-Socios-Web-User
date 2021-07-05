@@ -125,7 +125,7 @@
             </template>
             <template slot="descripcion">
               <ul class="mb-5">
-                <li class="text-white espacio-letras"> Manejo de mebresías <span class="font-secondary helper-aumenta-texto"> <b>easy</b>  </span></li>
+                <li class="text-white espacio-letras"> Manejo de mebresías <span class="font-secondary helper-aumenta-texto">easy</span></li>
                 <li class="text-white espacio-letras"> Finanzas <span class="font-secondary helper-aumenta-texto"> easy </span></li>
                 <li class="text-white espacio-letras"> Reservas online de clases <span class="font-secondary helper-aumenta-texto"> easy </span></li>
                 <li class="text-white espacio-letras"> Control de acceso <span class="font-secondary helper-aumenta-texto"> easy </span></li>
@@ -220,7 +220,7 @@
             </template>
             <template slot="description">
                 <div class="parrafo-class-pequeño">
-                  Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
+                 Software para gestión de gimnasios. Sistema pensado para que puedas controlar y llevar todo de manera <span class="font-secondary helper-aumenta-texto">easy</span>.
                 </div>
             </template>
           </simple-card>
@@ -235,7 +235,7 @@
             </template>
             <template slot="description">
                 <div class="parrafo-class-pequeño">
-                  Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
+                 Software para box de crossfit o funcional. Pensado para que llevar en orden tu centro de alto redimiento sea <span class="font-secondary helper-aumenta-texto">easy</span>.
                 </div>
             </template>
           </simple-card>
@@ -250,7 +250,7 @@
             </template>
             <template slot="description">
                 <div class="parrafo-class-pequeño">
-                  Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
+                  Software para gestión academias de baile. Sistema especializado para las tareas operativas de una escuel de danzas como la tuya.
                 </div>
             </template>
           </simple-card>
@@ -266,7 +266,7 @@
 
             <template slot="description">
                 <div class="parrafo-class-pequeño">
-                  Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
+                Software para gestión escuelas de artes marciales. Software en la nueba que se usa de manera <span class="font-secondary helper-aumenta-texto">easy</span> que te resolverá la operativa de una escuela marcial como la tuya.
                 </div>
             </template>
           </simple-card>

@@ -8,7 +8,8 @@
 
             <template slot="description">
                 <div class="parrafo-class-pequeño">
-                  Te ayudaremos a que sepas qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que no tengas que gastar nada de tiempo.
+                 Te facilitaremos la información sobre lo qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que tu trabajo sea <span class="font-secondary helper-aumenta-texto">easy</span>.
+
                 </div>
             </template>
           </simple-card>
@@ -23,7 +24,7 @@
             </template>
             <template slot="description">
                 <div class="parrafo-class-pequeño">
-                 Te ayudaremos a organizar las clases, permitiendo a tus socios hacer reservas de clases online.
+                  Permitimos que tus socios hagan reservas de tus clases de manera online de manera <span class="font-secondary helper-aumenta-texto">easy</span>. Ya no tendrás que estresarte organizando las clases por Whatsapp.
                 </div>
             </template>
           </simple-card>
@@ -38,7 +39,7 @@
             </template>
             <template slot="description">
                 <div class="parrafo-class-pequeño">
-                  Cada operación que hagas se irá registrando y luego podremos darte informes que te dirán lo que vendiste y lo que gastaste.
+                  Todo lo que venís haciendo en tu planilla de excel pero ahora de manera automática <span class="font-secondary helper-aumenta-texto">easy</span>.
                 </div>
             </template>
           </simple-card>
@@ -53,7 +54,7 @@
             </template>
             <template slot="description">
                 <div class="parrafo-class-pequeño">
-                  Es fastidioso tener que decirle a alquien que tiene que pagar. Nosotros nos ocuparemos de eso al momento que tu socios pasa por el control de acceso.
+                ¿Te gusta tener que decirle a alguien que debe dinero? ¡Claro que no! Nosotros nos ocuparemos de eso al momento que tu socio pasa por el control de acceso.
                 </div>
             </template>
           </simple-card>

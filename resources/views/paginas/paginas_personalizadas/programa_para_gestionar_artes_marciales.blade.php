@@ -120,7 +120,7 @@
             </template>
             <template slot="descripcion">
               <ul class="mb-5">
-                <li class="text-white espacio-letras"> Manejo de mebresías <span class="font-secondary helper-aumenta-texto"> <b>easy</b>  </span></li>
+                <li class="text-white espacio-letras"> Manejo de mebresías <span class="font-secondary helper-aumenta-texto">easy</span></li>
                 <li class="text-white espacio-letras"> Finanzas <span class="font-secondary helper-aumenta-texto"> easy </span></li>
                 <li class="text-white espacio-letras"> Reservas online de clases <span class="font-secondary helper-aumenta-texto"> easy </span></li>
                 <li class="text-white espacio-letras"> Control de acceso <span class="font-secondary helper-aumenta-texto"> easy </span></li>
