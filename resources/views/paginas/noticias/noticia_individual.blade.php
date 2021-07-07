@@ -38,6 +38,36 @@
         }
 </script>
 
+<script type="application/ld+json">
+
+{ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "{{$Noticia->name}}",
+ "alternativeHeadline": "{{$Noticia->title_tag}}",
+ "image": "{{$Noticia->url_img_portada}}",
+ "keywords": "{{$Noticia->tags}}",
+ "publisher":{
+    "@type": "Organization",
+    "name": "M webs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{url() . '/imagenes/PaginasPersonalizadas/Socios/easy-socio-el-software-para-administrar-gimnasios-academias-de-baile-institutos-de-ingles-y-mucho-más.jpg'}}"
+    }
+  },
+ "url": "{{$Noticia->route}}",
+ "datePublished": "{{$Noticia->created_at}}",
+ "dateCreated": "{{$Noticia->created_at}}",
+ "dateModified": "{{$Noticia->updated_at}}",
+ "description": "{{$Noticia->descripcion_breve}}",
+   "author": {
+    "@type": "Person",
+    "name": "Mauricio Costanzo"
+  }
+ }
+
+
+</script>
+
 
 @stop
 
