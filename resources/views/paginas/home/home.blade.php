@@ -242,7 +242,7 @@
       </div>
 
       <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-          <simple-card titulo="Academías de baile" call_to_action="Más información" url="{{route('get_programa_para_gestionar_escuelas_de_danza')}}">
+          <simple-card titulo="Academias de baile" call_to_action="Más información" url="{{route('get_programa_para_gestionar_escuelas_de_danza')}}">
             <template slot="icono">
             <div class="rounded  mb-2 ">
                   <img src="{{url()}}/imagenes/Easysocio/SirvePara/danza.jpg" class="img-fluid rounded" alt="">
