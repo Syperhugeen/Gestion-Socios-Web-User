@@ -8,7 +8,7 @@
 
             <template slot="description">
                 <div class="parrafo-class-pequeño">
-                 Te facilitaremos la información sobre lo qué tiene contratado cada socio, cuándo se le vence y si está al día. Atomatizaremos este proceso para que tu trabajo sea <span class="font-secondary helper-aumenta-texto">easy</span>.
+                 Te facilitaremos la información sobre lo qué tiene contratado cada socio, cuándo se le vence y si está al día. Automatizaremos este proceso para que tu trabajo sea <span class="font-secondary helper-aumenta-texto">easy</span>.
 
                 </div>
             </template>
