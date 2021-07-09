@@ -118,7 +118,7 @@
 
 {name:'escuelas de danza'},
 {name:'box de crossfit'},
-{name:'academía de artes marciales'}
+{name:'academia de artes marciales'}
 
 ]"></slider-text>
               </h1>
