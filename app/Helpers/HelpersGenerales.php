@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Cache;
 
 class HelpersGenerales
 {
-
     /**
      * Convierte una cadena y la prepara para URL
      */
@@ -25,6 +24,7 @@ class HelpersGenerales
         $cadena = str_replace(' ', '-', $cadena);
         $cadena = str_replace('?', '', $cadena);
         $cadena = str_replace('¿', '', $cadena);
+
         return $cadena;
 
     }
@@ -43,6 +43,7 @@ class HelpersGenerales
         $cadena = str_replace('¿', '', $cadena);
         $cadena = str_replace('!', '', $cadena);
         $cadena = str_replace('¡', '', $cadena);
+
         return $cadena;
 
     }
@@ -135,7 +136,27 @@ class HelpersGenerales
         $cadena = str_replace('(/LENGUAJE)', '">', $cadena);
 
         /*return htmlentities($cadena, ENT_QUOTES | ENT_IGNORE, "UTF-8");*/
+
         return $cadena;
     }
 
+    public static function getSimbolitoAbrir()
+    {
+        // $Iconos = ['🥇','✅','⭐','▷','≫','☝','🔥','【','♡','▶'];
+        // $Random = array_rand($Iconos,1);
+        // return $Iconos[$Random] . ' ';
+
+        return '🥇 ';
+
+    }
+
+    public static function getSimbolitoCerrar()
+    {
+        // $Iconos = ['🔥','⚡','⭐','©','★★★★★','】','♡'];
+        // $Random = array_rand($Iconos,1);
+
+        // return  ' '. $Iconos[$Random] ;
+
+        return ' ⭐';
+    }
 }
