@@ -44,7 +44,7 @@
  "@type": "BlogPosting",
  "headline": "{{$Noticia->name}}",
  "alternativeHeadline": "{{$Noticia->title_tag}}",
- "image": "{{$Noticia->url_img_portada}}",
+ "image": "{{$Noticia->url_img_foto_principal_chica}}",
  "keywords": "{{$Noticia->tags}}",
  "publisher":{
     "@type": "Organization",
