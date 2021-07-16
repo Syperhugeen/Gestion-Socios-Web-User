@@ -1,5 +1,5 @@
 <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-          <simple-card titulo="Manejo de mebresías" >
+          <simple-card titulo="Manejo de membresías" >
             <template slot="icono">
               <div class="d-flex flex-row align-items-center rounded  mb-1" :style=" $root.mostrar_para_grande ?  {height:'200px'} : {}"  >
                  <img class="img-fluid" src="{{url()}}/imagenes/Drwas/mebresias.png" alt="Icono de manejo de mebresías">
