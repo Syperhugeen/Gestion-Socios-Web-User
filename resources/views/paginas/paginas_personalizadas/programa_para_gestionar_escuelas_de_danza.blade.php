@@ -114,7 +114,7 @@
         >
 
             <template slot="titulo">
-              <h1 class="text-white mb-5">
+              <h1 class="text-white mb-5 col-lg-6 px-0">
                   Software para escuelas de danza
               </h1>
             </template>
@@ -129,7 +129,7 @@
                <a href="#intro" class="btn btn-success mr-2 cursor-pointer text-white"> Comenzar ahora</a>
                <a href="#intro" class="btn  btn-outline-light cursor-pointer"> Seguir leyendo</a>
 
-               <img class="d-none d-lg-block " style="position: absolute; right:0; top:40%; height:auto; width:600px;"  src="{{url()}}/imagenes/Easysocio/Capturas/socios-listado-notebook.png" alt="">
+               <img class="d-none d-lg-block " style="position: absolute; right:0; top:5%; height:auto; width:600px;"  src="{{url()}}/imagenes/Easysocio/Paquetes/academias-de-baile-png.png" alt="">
 
             </template>
 
