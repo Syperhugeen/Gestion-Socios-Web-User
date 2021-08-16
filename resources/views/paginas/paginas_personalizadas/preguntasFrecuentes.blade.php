@@ -12,8 +12,8 @@
 				<div class="w-100 mb-3"></div>
 			</div>
 
-			<div class="col-12 d-flex flex-column align-items-center">
-				<div class="col-12 col-lg 8">
+			<div class="col-12">
+				<div class="col-12">
 					<pregunta-componente
 						pregunta="¿Cuál es el precio?"
 						:muestra="true"
@@ -40,7 +40,7 @@
 				</div>
 
 
-				<div class="col-12 col-lg 8">
+				<div class="col-12">
 					<pregunta-componente
 						pregunta="¿Cuáles son los pasos a seguir si quiero contratar?"
 						:muestra="false"
@@ -78,7 +78,7 @@
 					</pregunta-componente>
 				</div>
 
-				<div class="col-12 col-lg 8">
+				<div class="col-12">
 					<pregunta-componente
 						pregunta="¿Me capacitan?"
 						:muestra="false"
@@ -92,7 +92,7 @@
 				</div>
 
 
-				<div class="col-12 col-lg 8">
+				<div class="col-12">
 					<pregunta-componente
 						pregunta="¿Se hace contrato?"
 						:muestra="false"
@@ -105,7 +105,7 @@
 					</pregunta-componente>
 				</div>
 
-				<div class="col-12 col-lg 8">
+				<div class="col-12">
 					<pregunta-componente
 						pregunta="¿Cómo se instala?"
 						:muestra="false"
@@ -121,7 +121,7 @@
 					</pregunta-componente>
 				</div>
 
-				<div class="col-12 col-lg 8">
+				<div class="col-12">
 					<pregunta-componente
 						pregunta="¿Qué se necesita para poder usar easysocio?"
 						:muestra="false"
