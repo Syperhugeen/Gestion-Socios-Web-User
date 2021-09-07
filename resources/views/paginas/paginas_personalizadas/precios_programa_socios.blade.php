@@ -154,7 +154,7 @@
 
 
 
-          <a class="Boton-Primario-Relleno Boton-Fuente-Chica mt-3" href="{{route('get_hablemos')}}" >
+          <a class="Boton-Primario-Relleno Boton-Fuente-Chica mt-3" href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" >
            Contactar
           </a>
 

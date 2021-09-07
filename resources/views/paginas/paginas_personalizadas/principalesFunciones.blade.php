@@ -36,7 +36,7 @@
           </p>
 
           <div class="mt-2">
-             <a href="{{route('get_hablemos')}}" class="btn btn-primary  cursor-pointer text-white"> Agendar una demo</a>
+             <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" class="btn btn-primary  cursor-pointer text-white"> Agendar una demo</a>
           </div>
 
       </template>
@@ -68,7 +68,7 @@
           </p>
 
           <div class="mt-2">
-             <a href="{{route('get_hablemos')}}" class="btn btn-primary  cursor-pointer text-white"> Agendar una demo</a>
+             <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" class="btn btn-primary  cursor-pointer text-white"> Agendar una demo</a>
           </div>
 
 
@@ -108,7 +108,7 @@
           </p>
 
           <div class="mt-2">
-             <a href="{{route('get_hablemos')}}" class="btn btn-primary  cursor-pointer text-white"> Agendar una demo</a>
+             <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" class="btn btn-primary  cursor-pointer text-white"> Agendar una demo</a>
           </div>
 
 
@@ -143,7 +143,7 @@
 
 
           <div class="mt-2">
-             <a href="{{route('get_hablemos')}}" class="btn btn-primary  cursor-pointer text-white"> Agendar una demo</a>
+             <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" class="btn btn-primary  cursor-pointer text-white"> Agendar una demo</a>
           </div>
 
 

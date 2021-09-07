@@ -48,8 +48,7 @@
 						<template slot="respuesta">
 
 						<ol>
-							<li>Avisanos que querés el software <a href="{{ route('get_hablemos') }}
-							" class="">aquí</a>. </li>
+							<li>Avisanos que querés el software <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" class="">aquí</a>. </li>
 							<li>
 							   Alquien de nuestro equipo se pondrá en contacto contigo para hablar de tu negocio,  mostrarte el software y <a href="{{ route('get_pagina_precios') }}"> elegir el plan </a>
 							    más conveniente.
@@ -69,8 +68,7 @@
 
 
 
-<a href="{{ route('get_hablemos') }}
-" class="btn btn-primary mt-3">Contratar <span class="font-secondary helper-aumenta-texto">easy</span>socio </a>
+<a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" class="btn btn-primary mt-3">Contratar <span class="font-secondary helper-aumenta-texto">easy</span>socio </a>
 
 
 
