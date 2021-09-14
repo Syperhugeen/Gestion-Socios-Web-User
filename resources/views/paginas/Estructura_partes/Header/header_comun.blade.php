@@ -79,7 +79,7 @@
 
                   <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="{{route('get_pagina_noticias_listado')}}" class="nav-link">Blog</a></li>
                   <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="{{route('get_pagina_contacto','-')}}" class="nav-link">Contacto</a>
-                  <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="{{route('get_hablemos')}}" class="nav-link">
+                  <li class="header-nav-ul-li"><a :class="getClassItemsNav" href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" class="nav-link">
 
                   <span class="btn btn-success text-white">
                     Demo

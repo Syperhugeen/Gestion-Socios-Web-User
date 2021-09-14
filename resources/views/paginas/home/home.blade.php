@@ -131,7 +131,7 @@
                 <li class="text-white espacio-letras"> Control de acceso <span class="font-secondary helper-aumenta-texto"> easy </span></li>
               </ul>
 
-               <a href="{{route('get_hablemos')}}" class="btn btn-success mr-2 cursor-pointer text-white"> Comenzar ahora</a>
+               <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" class="btn btn-success mr-2 cursor-pointer text-white"> Comenzar ahora</a>
                <a href="#intro" class="btn  btn-outline-light cursor-pointer"> Seguir leyendo</a>
 
                <img class="d-none d-lg-block " style="position: absolute; right:0; top:40%; height:auto; width:600px;"  src="{{url()}}/imagenes/Easysocio/Capturas/socios-listado-notebook.png" alt="">
