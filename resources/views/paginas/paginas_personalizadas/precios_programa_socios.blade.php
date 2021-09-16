@@ -121,9 +121,31 @@
           <div class="contiene-precios-precios mb-1">
             <div class="contiene-precio-dato">
 
+
+            @if(Auth::guest())
             <img class="shadow-sm mr-2 rounded-circle border border-light" height="40" width="40" src="{{url()}}/imagenes/monedas/{{  Session::get('esDeUruguay') ? 'pesos.jpg' : 'dolar.jpg'}}" alt="Moneda">
 
             {{  Session::get('esDeUruguay') ?  $Plan->moneda : 'USD' }} <strong>   {{  Session::get('esDeUruguay') ?  (int) $Plan->valor : (int) $Plan->valor_fuera_de_uruguay }}  </strong> / mes</div>
+            @else
+
+            <div>
+            <img class="shadow-sm mr-2 rounded-circle border border-light" height="40" width="40" src="{{url()}}/imagenes/monedas/pesos.jpg" alt="Moneda">
+
+            $ <strong>   {{  (int) $Plan->valor }}  </strong> / mes
+
+            </div>
+
+            <div>
+            <img class="shadow-sm mr-2 rounded-circle border border-light" height="40" width="40" src="{{url()}}/imagenes/monedas/dolar.jpg" alt="Moneda">
+
+            U$S <strong>   {{  (int) $Plan->valor_fuera_de_uruguay }}  </strong> / mes
+
+            </div>
+
+          </div>
+
+
+            @endif
           </div>
 
            @if( Session::get('esDeUruguay'))
