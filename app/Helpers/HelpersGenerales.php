@@ -50,7 +50,8 @@ class HelpersGenerales
 
     public static function helper_olvidar_este_cache($nombre_de_cache)
     {
-        if (Cache::has($nombre_de_cache)) {
+        if (Cache::has($nombre_de_cache))
+        {
             Cache::forget($nombre_de_cache);
         }
     }
@@ -59,9 +60,12 @@ class HelpersGenerales
     e n t r e g a   e l   v a l o r  */
     public static function helper_dame_sino_es_null_o_vacio($variable)
     {
-        if (($variable != null) || ($variable != '')) {
+        if (($variable != null) || ($variable != ''))
+        {
             return $variable;
-        } else {
+        }
+        else
+        {
             return false;
         }
     }
@@ -97,6 +101,9 @@ class HelpersGenerales
         //ul
         $cadena = str_replace('(U)', '<ul class="post-individual-section-ul">', $cadena);
         $cadena = str_replace('(/U)', '</ul>', $cadena);
+
+        $cadena = str_replace('(O)', '<ol class="post-individual-section-ul">', $cadena);
+        $cadena = str_replace('(/O)', '</ol>', $cadena);
 
         //li
         $cadena = str_replace('(L)', '<li class="post-individual-section-li">
