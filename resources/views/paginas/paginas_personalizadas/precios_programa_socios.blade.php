@@ -15,7 +15,7 @@
                 <i class="fas fa-check-circle"></i>
               </span>
               <span>
-                Gestión de membresías a socios
+                Gestión de membresías <span class="font-secondary helper-aumenta-texto"> easy </span>
               </span>
 
              </li>
@@ -24,7 +24,7 @@
                 <i class="fas fa-check-circle"></i>
               </span>
               <span>
-              Finanzas
+                Finanzas
               </span>
 
              </li>
@@ -33,7 +33,7 @@
                 <i class="fas fa-check-circle"></i>
               </span>
               <span>
-              Analíticas
+                Analíticas
               </span>
 
              </li>
@@ -82,12 +82,27 @@
              @if ($Plan->control_acceso == 'si')
 
               <li class="contiene-li-precio-nuevo border d-flex flex-row border-success">
+
+
                 <span class="text-color-primary mr-2">
                   <i class="fas fa-check-circle"></i>
                 </span>
                 <span>
+                  <div>
                   <b> Control de acceso </b>
+                  </div>
+                <div>
+                  <small>Nosotros somos los que le decimos a tus socios que deben dinero. <span class="font-secondary helper-aumenta-texto"> easy </span> ¿no?. Además te guardamos todo el historial de accesos.</small>
+                </div>
                 </span>
+
+
+
+
+
+
+
+
               </li>
 
              @endif
@@ -105,6 +120,25 @@
                 <div>
                   <small>Tus socios podrán reservas online tus clases</small>
 
+                </div>
+
+                </span>
+              </li>
+
+              @endif
+
+              @if ($Plan->rutina_dieta == 'si')
+
+              <li class="contiene-li-precio-nuevo border d-flex flex-row border-success ">
+                <span class="text-color-primary mr-2">
+                  <i class="fas fa-check-circle"></i>
+                </span>
+                <span>
+                  <div>
+                    <b> Rutinas y dietas </b>
+                  </div>
+                <div>
+                  <small>Asignale a tus socios rutinas de entrenamientos o dietas de manera <span class="font-secondary helper-aumenta-texto"> easy </span> </small>
                 </div>
 
                 </span>
@@ -135,7 +169,7 @@
 
             </div>
 
-            <div>
+            <div class="mt-2">
             <img class="shadow-sm mr-2 rounded-circle border border-light" height="40" width="40" src="{{url()}}/imagenes/monedas/dolar.jpg" alt="Moneda">
 
             U$S <strong>   {{  (int) $Plan->valor_fuera_de_uruguay }}  </strong> / mes
@@ -175,10 +209,19 @@
 
 
 
+          <div class="w-100 d-flex flex-column align-items-center">
 
-          <a class="Boton-Primario-Relleno Boton-Fuente-Chica mt-3" href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" >
-           Contactar
+          <a class="btn btn-primary btn-lg mt-3" href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" >
+           Probar gratis
           </a>
+
+          <small class="text-center px-3" >No te pediremos que ingreses tarjeta de crédito.</small>
+
+          </div>
+
+
+
+
 
 </div>
 </div>

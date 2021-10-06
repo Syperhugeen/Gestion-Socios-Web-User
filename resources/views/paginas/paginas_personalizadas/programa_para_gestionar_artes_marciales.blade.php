@@ -167,6 +167,7 @@
                Estás registrando en una planilla de excel o anotando en un cuaderno tus ventas ¡Olvídalo!
                Ahorrá tiempo y dinero con un sistema que te permita controlar y organizar tu academia de baile y destacá en tu rubro.
               </p>
+              @include('paginas.paginas_personalizadas.llamadoALaAccionPrincipalCentrado')
 
             </div>
           </div>

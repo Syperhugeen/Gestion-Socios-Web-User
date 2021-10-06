@@ -168,6 +168,8 @@
                Ahorrá tiempo y dinero con un sistema que te permita controlar y organizar tu academia de baile y destacá en tu rubro.
               </p>
 
+              @include('paginas.paginas_personalizadas.llamadoALaAccionPrincipalCentrado')
+
             </div>
           </div>
         </div>
