@@ -50,8 +50,7 @@ class HelpersGenerales
 
     public static function helper_olvidar_este_cache($nombre_de_cache)
     {
-        if (Cache::has($nombre_de_cache))
-        {
+        if (Cache::has($nombre_de_cache)) {
             Cache::forget($nombre_de_cache);
         }
     }
@@ -60,12 +59,9 @@ class HelpersGenerales
     e n t r e g a   e l   v a l o r  */
     public static function helper_dame_sino_es_null_o_vacio($variable)
     {
-        if (($variable != null) || ($variable != ''))
-        {
+        if (($variable != null) || ($variable != '')) {
             return $variable;
-        }
-        else
-        {
+        } else {
             return false;
         }
     }
@@ -118,10 +114,10 @@ class HelpersGenerales
         $cadena = str_replace('(/AT)', '</a>', $cadena);
 
         //img
-        $cadena = str_replace('(IMG)', '<img class="post-img-secundarias" data-src="', $cadena);
-        $cadena = str_replace('(/IMG)', '">', $cadena);
+        $cadena = str_replace('(IMG)', '<div class="w-100 d-flex flex-column align-items-center"> <img class="post-img-secundarias" data-src="', $cadena);
+        $cadena = str_replace('(/IMG)', '"> </div>', $cadena);
 
-        $cadena = str_replace('(IMGT)', '<span class="post-img-texto" >', $cadena);
+        $cadena = str_replace('(IMGT)', '<span class="post-img-texto text-center" >', $cadena);
         $cadena = str_replace('(/IMGT)', '</span>', $cadena);
 
         $cadena = str_replace('(YOU)', '<div class="video-responsive" > <iframe  src="https://www.youtube.com/embed/', $cadena);
