@@ -26,7 +26,7 @@ methods:{
 
     crearIndice:function(){
         this.cargando = true;
-        let elementos = document.querySelectorAll('.post-individual-section-titulo,.post-individual-section-sub-titulo, .contenedor-blog h3, .contenedor-blog h4');
+        let elementos = document.querySelectorAll('.post-individual-section-titulo,.post-individual-section-sub-titulo,.contenedor-blog h2, .contenedor-blog h3, .contenedor-blog h4');
 
         for (var prop in elementos) {
 
