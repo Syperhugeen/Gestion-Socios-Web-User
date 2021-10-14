@@ -88,6 +88,9 @@
   <script src="//cdn.ckeditor.com/4.6.2/full/ckeditor.js"></script>
 @stop
 
+
+
+
 @section('custom-javascript-no-vue')
   CKEDITOR.replace( 'editor', @include('admin.vue_partials.config_editor') );
 
