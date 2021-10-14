@@ -26,7 +26,7 @@ methods:{
 
     crearIndice:function(){
         this.cargando = true;
-        let elementos = document.querySelectorAll('.post-individual-section-titulo,.post-individual-section-sub-titulo');
+        let elementos = document.querySelectorAll('.post-individual-section-titulo,.post-individual-section-sub-titulo, h3,h4');
 
         for (var prop in elementos) {
 
