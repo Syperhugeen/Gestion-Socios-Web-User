@@ -39,6 +39,10 @@ ul > li::marker {
   font-size: 1em;
 }
 
+li::marker {
+  color: $color-3;
+}
+
 /* C L A S E S   D E   L I S T A S  */
 .lista-class {
   width: 100%;

@@ -163,11 +163,12 @@
 
          @endif
 
-              <h2 class="h1 mb-4 text-center ">Software para administrar box de corssfit o box funcionales <span class="font-secondary helper-aumenta-texto"> easy </span> </h2>
+              <h2 class="h1 mb-4 text-center ">Software para administrar box de crossfit o box funcionales <span class="font-secondary helper-aumenta-texto"> easy </span> </h2>
               <p class="text-center mb-0">
                Estás registrando en una planilla de excel o anotando en un cuaderno tus ventas ¡Olvídalo!
                Ahorrá tiempo y dinero con un sistema que te permita controlar y organizar tu centro de alto rendimiento y destacá en tu rubro.
               </p>
+              @include('paginas.paginas_personalizadas.llamadoALaAccionPrincipalCentrado')
 
             </div>
           </div>
@@ -188,7 +189,7 @@
 
 
       @include('paginas.paginas_personalizadas.principalesFunciones')
-
+      @include('paginas.paginas_personalizadas.llamadoALaAccionPrincipalCentrado')
 
 
 
