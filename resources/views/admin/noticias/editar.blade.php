@@ -89,8 +89,6 @@
 @stop
 
 
-
-
 @section('custom-javascript-no-vue')
   CKEDITOR.replace( 'editor', @include('admin.vue_partials.config_editor') );
 
