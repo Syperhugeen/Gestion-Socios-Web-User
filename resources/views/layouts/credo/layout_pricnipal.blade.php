@@ -14,7 +14,8 @@
     @yield('pixcel-facebook')
     @yield('favicon')
 
-    <meta name="Description" CONTENT="@yield('MetaContent')">      
+    <meta name="facebook-domain-verification" content="20ezzwn14s6bw0rp4q3711awjo32zc" />
+    <meta name="Description" CONTENT="@yield('MetaContent')">
     <META name="robots" content="@yield('MetaRobot')">
     <meta name="Keywords"  content="@yield('palabras-claves')">
 
@@ -24,20 +25,20 @@
 
   </head>
   <body >
-  
+
 
 
   <div id="app" class="site-wrap">
-    
 
-     @include('layouts.cargador-conv-if-y-style') 
+
+     @include('layouts.cargador-conv-if-y-style')
      @yield('header')
      @yield('contenido')
      @yield('footer')
-  </div>    
+  </div>
 
 
- 
+
    @include('layouts.layout_partial_vue')
   </body>
-</html> 
+</html>
