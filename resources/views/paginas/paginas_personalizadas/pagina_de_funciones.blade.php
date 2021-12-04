@@ -149,7 +149,7 @@
 
 
 
-              <h2 class="sub-titulos-class mb-4 text-center text-color-primary"> Sirve para que tu trabajo sea <span class="font-secondary helper-aumenta-texto">easy  </span> </h2>
+              <h2 class="titulos-class mb-4 text-center "> Sirve para que tu trabajo sea <span class="font-secondary helper-aumenta-texto">easy  </span> </h2>
               <p class="text-center mb-0"> Funcionalidades creadas para tu tipo de negocio que te permitirán ahorrar tiempo y dinero.
               </p>
 
