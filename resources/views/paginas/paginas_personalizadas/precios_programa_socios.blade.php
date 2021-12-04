@@ -85,8 +85,7 @@
           <div>
             <small
               >Nosotros somos los que le decimos a tus socios que deben dinero.
-              <span class="font-secondary helper-aumenta-texto"> easy </span>
-              ¿no?. Además te guardamos todo el historial de accesos.</small
+              ¿<span class="font-secondary helper-aumenta-texto"> easy </span> no?. Además te guardamos todo el historial de accesos.</small
             >
           </div>
         </span>
@@ -120,7 +119,7 @@
         </span>
         <span>
           <div>
-            <b> Rutinas y dietas </b>
+            <b> Rutinas y dietas 🏋️‍♀️</b>
           </div>
           <div>
             <small
@@ -147,7 +146,7 @@
             <small
               >Podrás monitorear la evolución del peso corporal (así como la de
               cualquier otro atributo) con el fin saber si se cumplió con el
-              objetivo de tu cliente en un determinado período de tiempo.
+              objetivo 🏁 de tu cliente en un determinado período de tiempo.
               <span class="font-secondary helper-aumenta-texto"> easy </span>
             </small>
           </div>
@@ -175,6 +174,28 @@
           </div>
         </span>
       </li>
+      <li
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success "
+      >
+        <span class="text-color-primary mr-2">
+          <i class="fas fa-check-circle"></i>
+        </span>
+        <span>
+          <div>
+            <b>
+              Alerta de cumpleaños 🎂
+            </b>
+          </div>
+          <div>
+            <small
+              > Hacé sentir especiales a tus socios y prepará algo para homenagear. El ratio de fidelidad despegará 🚀  ¿<span class="font-secondary helper-aumenta-texto"> easy </span> no?
+            </small>
+          </div>
+        </span>
+      </li>
+
+
+
     </ul>
 
     <div class="contiene-precios-precios mb-1">

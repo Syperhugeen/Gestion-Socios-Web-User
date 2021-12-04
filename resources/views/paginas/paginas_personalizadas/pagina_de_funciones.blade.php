@@ -113,7 +113,7 @@
 
             <template slot="titulo">
               <h1 class="text-white mb-5">
-                 ¿Para qué sirve easysocio?
+                 Funcionalidades
               </h1>
             </template>
             <template slot="descripcion">
@@ -149,7 +149,7 @@
 
 
 
-              <h2 class="titulos-class mb-4 text-center "> Sirve para que tu trabajo sea <span class="font-secondary helper-aumenta-texto">easy  </span> </h2>
+              <h2 class="h1 mb-4 text-center "> Easysocio sirve para que el trabajo de gestionar tu gimnasio sea <span class="font-secondary helper-aumenta-texto">easy  </span> </h2>
               <p class="text-center mb-0"> Funcionalidades creadas para tu tipo de negocio que te permitirán ahorrar tiempo y dinero.
               </p>
 
