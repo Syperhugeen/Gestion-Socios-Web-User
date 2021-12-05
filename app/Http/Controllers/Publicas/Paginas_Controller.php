@@ -19,9 +19,10 @@ class Paginas_Controller extends Controller
     protected $PortadaDePaginaRepo;
 
     public function __construct(NoticiasRepo $NoticiasRepo,
-        EmpresaRepo $EmpresaRepo,
-        CurlHelper $CurlHelper,
-        PortadaDePaginaRepo $PortadaDePaginaRepo) {
+        EmpresaRepo                              $EmpresaRepo,
+        CurlHelper                               $CurlHelper,
+        PortadaDePaginaRepo                      $PortadaDePaginaRepo)
+    {
 
         $this->NoticiasRepo        = $NoticiasRepo;
         $this->EmpresaRepo         = $EmpresaRepo;
@@ -36,7 +37,8 @@ class Paginas_Controller extends Controller
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
         $blogs   = $this->NoticiasRepo->getUltimosBlogs();
 
-        $Portada = Cache::remember('contactoPortada', 2000, function () {
+        $Portada = Cache::remember('contactoPortada', 2000, function ()
+        {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'contacto');
         });
 
@@ -56,13 +58,15 @@ class Paginas_Controller extends Controller
     //Noticias
     public function get_pagina_noticias_listado(Request $Request)
     {
-        $blogs = Cache::remember('PaginaDeBlogs', 2000, function () {
+        $blogs = Cache::remember('PaginaDeBlogs', 2000, function ()
+        {
             return $this->NoticiasRepo->getEntidadActivasYOrdenadasSegunPaginadas('id', 'desc', 100);
         });
 
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
 
-        $Portada = Cache::remember('PortadaBlogs', 2000, function () {
+        $Portada = Cache::remember('PortadaBlogs', 2000, function ()
+        {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'blog');
         });
 
@@ -70,7 +74,10 @@ class Paginas_Controller extends Controller
     }
 
     // B l o g   I n d i v i d u a l
-    public function get_pagina_noticia_individual($name, $id)
+    public function get_pagina_noticia_individual(
+        $name,
+        $id
+    )
     {
 
         $Noticia            = $this->NoticiasRepo->find($id);
@@ -85,11 +92,13 @@ class Paginas_Controller extends Controller
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
 
-        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
+        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function ()
+        {
             return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
         });
 
-        $Portada = Cache::remember('PortadaSoftwareParaGimnasio', 2000, function () {
+        $Portada = Cache::remember('PortadaSoftwareParaGimnasio', 2000, function ()
+        {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'software para gimnasio');
         });
 
@@ -103,11 +112,13 @@ class Paginas_Controller extends Controller
 
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
 
-        $blogs = Cache::remember('BlogsSoftwareParaDanza', 2000, function () {
+        $blogs = Cache::remember('BlogsSoftwareParaDanza', 2000, function ()
+        {
             return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
         });
 
-        $Portada = Cache::remember('PortadaSoftwareParaDanza', 2000, function () {
+        $Portada = Cache::remember('PortadaSoftwareParaDanza', 2000, function ()
+        {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'software para danza');
         });
 
@@ -121,11 +132,13 @@ class Paginas_Controller extends Controller
 
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
 
-        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
+        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function ()
+        {
             return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
         });
 
-        $Portada = Cache::remember('PortadaSoftwareParaMarcial', 2000, function () {
+        $Portada = Cache::remember('PortadaSoftwareParaMarcial', 2000, function ()
+        {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'software marcial');
         });
 
@@ -139,11 +152,13 @@ class Paginas_Controller extends Controller
 
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
 
-        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
+        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function ()
+        {
             return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
         });
 
-        $Portada = Cache::remember('PortadaSoftwareParaBox', 2000, function () {
+        $Portada = Cache::remember('PortadaSoftwareParaBox', 2000, function ()
+        {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'software para box');
         });
 
@@ -156,11 +171,13 @@ class Paginas_Controller extends Controller
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
 
-        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
+        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function ()
+        {
             return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
         });
 
-        $Portada = Cache::remember('PreciosSoftwareParaPrecios', 2000, function () {
+        $Portada = Cache::remember('PreciosSoftwareParaPrecios', 2000, function ()
+        {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'precios');
         });
 
@@ -173,11 +190,13 @@ class Paginas_Controller extends Controller
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
 
-        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function () {
+        $blogs = Cache::remember('BlogsSoftwareParaGimnasio', 2000, function ()
+        {
             return $this->NoticiasRepo->getBlogsRelacionadosConEsteValor('easysocio');
         });
 
-        $Portada = Cache::remember('hablamos', 2000, function () {
+        $Portada = Cache::remember('hablamos', 2000, function ()
+        {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'hablamos');
         });
 
@@ -190,11 +209,16 @@ class Paginas_Controller extends Controller
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
 
-        $Portada = Cache::remember('funciones', 2000, function () {
+        $Portada = Cache::remember('funciones', 2000, function ()
+        {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'funciones');
         });
 
-        return view('paginas.paginas_personalizadas.pagina_de_funciones', compact('Empresa', 'Portada'));
+        $blogs = $this->NoticiasRepo->getUltimosBlogs();
+
+        $Planes = ServiciosPlanes::getPlanes();
+
+        return view('paginas.paginas_personalizadas.pagina_de_funciones', compact('Empresa', 'Portada', 'Planes', 'blogs'));
 
     }
 

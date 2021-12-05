@@ -159,6 +159,10 @@
     </section>
 
     @include('paginas.paginas_personalizadas.principalesFunciones')
+    @include('paginas.paginas_personalizadas.beneficiosGenerales')
+    @include('paginas.paginas_personalizadas.planes')
+    @include('paginas.paginas_personalizadas.preguntasFrecuentes')
+    @include('paginas.paginas_personalizadas.blog')
 
 
 
