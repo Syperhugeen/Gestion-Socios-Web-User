@@ -150,6 +150,15 @@
             <li class="header-nav-ul-li">
               <a
                 :class="getClassItemsNav"
+                href="{{route('get_funcionalidades')}}"
+                class="nav-link"
+                >Funcionalidades</a
+              >
+            </li>
+
+            <li class="header-nav-ul-li">
+              <a
+                :class="getClassItemsNav"
                 href="{{route('get_pagina_noticias_listado')}}"
                 class="nav-link"
                 >Blog</a
