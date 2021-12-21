@@ -99,6 +99,7 @@
 @stop
 
 @section('vue')
+  @include('paginas.home.vue.baner-newsletter')
   @include('paginas.home.vue.publicidad')
   @include('paginas.home.vue.indice')
   @include('paginas.home.vue.header-component')
@@ -161,6 +162,8 @@
       <img v-if="mostrar_para_celuar" class="blog-img-slider-size" style="position: absolute;top: 0;" data-src="{{$Noticia->url_img_foto_principal_chica}}" alt="{{$Noticia->descripcion_breve}}. {{$Noticia->name}}">
        <img v-else class="blog-img-slider-size" style="position: absolute;top: 0;" data-src="{{$Noticia->url_img_foto_principal}}" alt="{{$Noticia->descripcion_breve}}. {{$Noticia->name}}">
    </div>
+
+   <baner-newsletter titulo="Suscríbete a nuestro newsletter para recibir novedades, estrategias y soluciones para tu emprendimiento de fitness."></baner-newsletter>
 
 
 

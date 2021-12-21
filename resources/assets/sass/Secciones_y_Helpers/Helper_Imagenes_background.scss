@@ -59,7 +59,7 @@ $altura-imagen-miniaturas: 150px; /* D e f i n o   l a   a l t u r a */
 }
 
 .background-white {
-  background-color: $color-white;
+  background-color: $color-white !important;
 }
 
 .background-gris--1 {

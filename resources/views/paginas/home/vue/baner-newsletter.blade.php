@@ -19,41 +19,35 @@ Vue.component("baner-newsletter", {
   watch: {},
   methods: {
     post:function(){
-        
+
     }
 
   },
   computed: {
-    url_img: function () {
-      return this.$root.mostrar_para_celuar
-        ? this.url_img_chica
-        : this.url_img_grande;
-    },
+
   },
   mounted: function mounted() {},
   template: `
 
-<div v-if="cargando"  class="w-100 d-flex flex-column align-items-center py-5">
-          <div class="cssload-container ">
-              <div class="cssload-tube-tunnel-color-3 "></div>
-          </div>
-        </div>
-<div v-else class="mb-4 col-12 d-flex flex-column shadow-sm" >
-    <a :href="url">
-        <img v-lazy="url_img" :alt="titulo" class="img-fluid mb-4">
-    </a>
-        <div class="col-12 h4 mb-4">
+
+<div  class=" col-12 d-flex flex-column  align-items-center shadow-sm py-3" style="background-color: #44e0d1;" >
+
+        <div class="col-12 col-lg-8 h6 mb-3 text-white text-center">
             @{{titulo}}
         </div>
-        <p class="col-12 mb-4 ">
-            @{{descripcion}}
-        </p>
 
-        <a :href="url" class="col-12 mb-4">
-            <div class="Boton-Fuente-Chica Boton-Primario-Relleno">
-               @{{call_to_action}}    <i class="fas fa-angle-double-right"></i>
-            </div>
-        </a>
+
+        <div :style="{ opacity: cargando ? '0.5' : '1', pointerEvents: cargando ? 'none':'auto' }"  class="d-flex flex-row align-items-center">
+                <div class="input-group mb-3">
+          <input type="text" v-model="email" class="form-control" placeholder="Tu email" aria-label="Tu email" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button @click="post" class="btn btn-secondary" type="button">Enviar</button>
+          </div>
+        </div>
+        </div>
+
+
+
 
 
 
