@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Publicas;
 
+use App\Helpers\HelpersGenerales;
 use App\Http\Controllers\Controller;
 use App\Managers\envio_contacto_manager;
+use App\Managers\nuevo_newsletter_manager;
 use App\Repositorios\Emails\EmailsEspecificosDePaginasRepo;
 use App\Repositorios\Emails\EmailsRepo;
 use App\Repositorios\EmpresaRepo;
+use App\Repositorios\NewslleterUserRepo;
 use Illuminate\Http\Request;
 
 class Envio_Formularios_Controller extends Controller
@@ -15,14 +18,34 @@ class Envio_Formularios_Controller extends Controller
     protected $EmpresaRepo;
     protected $EmailsRepo;
     protected $EmailsEspecificosDePaginasRepo;
+    protected $NewslleterUserRepo;
 
-    public function __construct(EmpresaRepo $EmpresaRepo,
-        EmailsRepo $EmailsRepo,
-        EmailsEspecificosDePaginasRepo $EmailsEspecificosDePaginasRepo) {
+    public function __construct(
+        EmpresaRepo                    $EmpresaRepo,
+        EmailsRepo                     $EmailsRepo,
+        EmailsEspecificosDePaginasRepo $EmailsEspecificosDePaginasRepo,
+        NewslleterUserRepo             $NewslleterUserRepo)
+    {
 
         $this->EmpresaRepo                    = $EmpresaRepo;
         $this->EmailsRepo                     = $EmailsRepo;
         $this->EmailsEspecificosDePaginasRepo = $EmailsEspecificosDePaginasRepo;
+        $this->NewslleterUserRepo             = $NewslleterUserRepo;
+
+    }
+
+    public function post_nuevo_newsletter(Request $Request)
+    {
+        $manager = new nuevo_newsletter_manager(null, $Request->all());
+
+        if ($manager->isValid())
+        {
+            $this->NewslleterUserRepo->crearNuevoUserNewslleter($Request->get('email'));
+
+            return HelpersGenerales::formateResponseToVue(true, 'Email registrado al newsletter semanal con éxito');
+        }
+
+        return HelpersGenerales::formateResponseToVue(false, 'Algo no está bien.', $manager->getErrors());
     }
 
     public function post_contacto_form(Request $Request)
@@ -42,7 +65,8 @@ class Envio_Formularios_Controller extends Controller
 
         $Validacion = $manager->isValid();
 
-        if ($Validacion == true) {
+        if ($Validacion == true)
+        {
             $this->EmailsRepo->EnvioEmailDeContacto($name, $email, $mensaje, $Email_al_que_envia, $Nombre_de_empresa, $Titulo_de_email, $Request);
 
             return [
@@ -50,7 +74,9 @@ class Envio_Formularios_Controller extends Controller
                 'Validacion_mensaje' => 'Mensaje enviado correctamente. En breve te estaremos respondiendo a ' . $email,
             ];
 
-        } else {
+        }
+        else
+        {
             return [
                 'Validacion'         => $Validacion,
                 'Validacion_mensaje' => 'Upssssss! algo está mal',
@@ -73,7 +99,8 @@ class Envio_Formularios_Controller extends Controller
 
         $Validacion = $manager->isValid();
 
-        if ($Validacion == true) {
+        if ($Validacion == true)
+        {
             $this->EmailsRepo->EnvioEmailDeContacto($name, $email, $mensaje, $Email_al_que_envia, $Nombre_de_empresa, $Titulo_de_email, $Request);
 
             return [
@@ -81,7 +108,9 @@ class Envio_Formularios_Controller extends Controller
                 'Validacion_mensaje' => 'Mensaje enviado correctamente. En breve te estarmos respondiendo a ' . $email,
             ];
 
-        } else {
+        }
+        else
+        {
             return [
                 'Validacion'         => $Validacion,
                 'Validacion_mensaje' => 'Upssssss! algo está mal',
@@ -97,7 +126,8 @@ class Envio_Formularios_Controller extends Controller
         $entidad = '';
         $manager = new envio_solicitud_trabajo_manager($entidad, $Request->all());
 
-        if ($manager->isValid()) {
+        if ($manager->isValid())
+        {
 
             //envio el email de la solciitud de trabajo
             $this->EmailsEspecificosDePaginasRepo->EnviarEmailDeSolicitudDeCotizacion($Request);

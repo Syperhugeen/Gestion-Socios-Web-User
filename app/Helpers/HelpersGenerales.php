@@ -6,6 +6,25 @@ use Illuminate\Support\Facades\Cache;
 
 class HelpersGenerales
 {
+
+    /**
+     * Es la función que utilozo para formatear todas las respuestas para Vue.
+     *
+     * @return array
+     */
+    public static function formateResponseToVue(
+        $Validacion,
+        $Validacion_mensaje,
+        $Data = null
+    )
+    {
+        return [
+            'Validacion'         => $Validacion,
+            'Validacion_mensaje' => $Validacion_mensaje,
+            'Data'               => $Data,
+        ];
+    }
+
     /**
      * Convierte una cadena y la prepara para URL
      */
@@ -50,7 +69,8 @@ class HelpersGenerales
 
     public static function helper_olvidar_este_cache($nombre_de_cache)
     {
-        if (Cache::has($nombre_de_cache)) {
+        if (Cache::has($nombre_de_cache))
+        {
             Cache::forget($nombre_de_cache);
         }
     }
@@ -59,9 +79,12 @@ class HelpersGenerales
     e n t r e g a   e l   v a l o r  */
     public static function helper_dame_sino_es_null_o_vacio($variable)
     {
-        if (($variable != null) || ($variable != '')) {
+        if (($variable != null) || ($variable != ''))
+        {
             return $variable;
-        } else {
+        }
+        else
+        {
             return false;
         }
     }

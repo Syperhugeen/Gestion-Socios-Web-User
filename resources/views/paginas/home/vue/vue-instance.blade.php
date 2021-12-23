@@ -1,8 +1,8 @@
 
-
+var bus = new Vue({});
 
 var app = new Vue({
-    el: '#app',    
+    el: '#app',
     data:{
       @if(isset($Empresa))
       empresa: {!! json_encode($Empresa) !!},
@@ -16,27 +16,27 @@ var app = new Vue({
                   input_color_white:'input_color_white'
                 }
 
-      
+
 
     },
-    mounted: function mounted () {        
+    mounted: function mounted () {
       this.$nextTick(() => {
       window.addEventListener('resize', () => {
         this.windowWidth = window.innerWidth
       });
       })
-     
+
 
 
     },
 
-    methods:{ 
+    methods:{
 
     cerrarModal:function(id_modal){
 
      $(id_modal).modal('hide');
      $('.modal-backdrop').remove();
-    },   
+    },
     abrirModal:function(id_modal){
     var id_modal = '#'+id_modal;
     $(id_modal).appendTo("body").modal('show');
@@ -45,7 +45,7 @@ var app = new Vue({
 
 
     contacto_evento:function(){
-      
+
       gtag('event', 'contacto');
     },
 
@@ -61,23 +61,23 @@ var app = new Vue({
     {
       return true;
     }
-    },  
+    },
     handleScroll: function() {
-        
-          this.scrolled = window.scrollY > 0;
-          
-         
 
-      },    
-    
+          this.scrolled = window.scrollY > 0;
+
+
+
+      },
+
     },
     computed:{
-       mostrar_logo_nav:function(){    
+       mostrar_logo_nav:function(){
 
         if(this.scrolled)
         {
           return true;
-        }  
+        }
         else
         {
          return false;
@@ -87,7 +87,7 @@ var app = new Vue({
         if(this.windowWidth > 990)
         {
           return true;
-        }  
+        }
         else
         {
          return false;
@@ -97,7 +97,7 @@ var app = new Vue({
        if(this.windowWidth <= 990)
         {
           return true;
-        }  
+        }
         else
         {
          return false;
@@ -110,9 +110,9 @@ var app = new Vue({
       this.windowWidth = window.innerWidth
     });
     }
-    },  
+    },
 
-     
+
       created () {
         window.addEventListener('scroll', this.handleScroll);
       },
@@ -120,8 +120,8 @@ var app = new Vue({
         window.removeEventListener('scroll', this.handleScroll);
       }
 
-     
 
-   
+
+
 
    });

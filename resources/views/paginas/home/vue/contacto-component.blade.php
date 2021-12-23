@@ -76,17 +76,17 @@ Vue.component("contacto-component", {
 
   methods: {
     enviarMensaje: function () {
-      var data = this.data_mensaje;
+      let data = this.data_mensaje;
 
-      var url = "/post_contacto_form";
-      var vue = this;
+      let url = "/post_contacto_form";
+      let vue = this;
 
       this.cargando = true;
 
       axios
         .post(url, data)
         .then(function (response) {
-          var data = response.data;
+          let data = response.data;
 
           if (data.Validacion == true) {
             gtag("event", "contacto");

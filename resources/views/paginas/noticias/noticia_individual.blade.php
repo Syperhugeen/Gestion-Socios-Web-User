@@ -98,6 +98,10 @@
 
 @stop
 
+@section('vue-componenetes-cdn')
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+@stop
+
 @section('vue')
   @include('paginas.home.vue.baner-newsletter')
   @include('paginas.home.vue.publicidad')

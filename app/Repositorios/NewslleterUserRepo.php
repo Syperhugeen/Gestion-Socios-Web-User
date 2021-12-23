@@ -25,8 +25,8 @@ class NewslleterUserRepo extends BaseRepo
         else
         {
             $Entidad                  = $this->getEntidad();
-            $Entidad->se_puede_enviar = $email;
-            $Entidad->email           = 'si';
+            $Entidad->se_puede_enviar = 'si';
+            $Entidad->email           = $email;
             $Entidad->save();
         }
 
