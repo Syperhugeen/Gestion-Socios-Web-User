@@ -33,4 +33,23 @@ class NewslleterUserRepo extends BaseRepo
         return $Entidad;
     }
 
+    /**
+     * Deja de enviar publicidad o artículos de blog.
+     */
+    public function changeUserToNotSend($email)
+    {
+        $userNewsletter = $this->getFirstEntidadSegunAtributo('email', $email);
+
+        if ($userNewsletter != '')
+        {
+            $userNewsletter->se_puede_enviar = 'no';
+            $userNewsletter->save();
+        }
+    }
+
+    public function getUserAEnviar($id_blog)
+    {
+        return $this->getEntidad()->where('se_puede_enviar', 'si')->where('ultimo_blog_enviado_id', '<>', $id_blog)->get();
+    }
+
 }

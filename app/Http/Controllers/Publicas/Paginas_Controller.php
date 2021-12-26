@@ -88,6 +88,19 @@ class Paginas_Controller extends Controller
         return view('paginas.noticias.noticia_individual', compact('Noticia', 'Empresa', 'blogs', 'blogs_relacionados'));
     }
 
+    public function get_pagina_newsletter_noticias_listado(
+
+        $id,
+        $Email
+
+    )
+    {
+        $Blog  = $this->NoticiasRepo->find($id);
+        $Email = 'mauricio@worldmaster.com.uy';
+
+        return view('emails.newslleter_blog', compact('Blog', 'Email'));
+    }
+
     public function get_programa_para_gestionar_gimancios()
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();

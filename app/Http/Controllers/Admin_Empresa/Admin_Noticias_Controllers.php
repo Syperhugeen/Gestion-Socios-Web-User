@@ -7,8 +7,10 @@ use App\Http\Controllers\Controller;
 use App\Interfaces\entidadCrudControllerInterface;
 use App\Managers\noticia_manager;
 use App\Repositorios\ImagenRepo;
+use App\Repositorios\NewslleterUserRepo;
 use App\Repositorios\NoticiasRepo;
 use App\Traits\entidadesControllerComunesCrud;
+use Illuminate\Support\Facades\Mail;
 
 class Admin_Noticias_Controllers extends Controller implements entidadCrudControllerInterface
 {
@@ -32,7 +34,8 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
     protected $Nombre_del_campo_imagen;
 
     public function __construct(NoticiasRepo $NoticiasRepo,
-        ImagenRepo $ImagenRepo) {
+        ImagenRepo                               $ImagenRepo)
+    {
         $this->Entidad_principal          = $NoticiasRepo;
         $this->ImagenRepo                 = $ImagenRepo;
         $this->Nombre_entidad_plural      = 'Noticias';
@@ -67,6 +70,42 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
     {
         HelpersGenerales::helper_olvidar_este_cache('UltimosBlogs');
         HelpersGenerales::helper_olvidar_este_cache('PaginaDeBlogs');
+    }
+
+    public function enviar_noticias_por_email($id)
+    {
+        $Blog               = $this->Entidad_principal->find($id);
+        $UserNewsletterRepo = new NewslleterUserRepo();
+
+        $UsuariosNewsletterAEnviar = $UserNewsletterRepo->getUserAEnviar($id);
+
+        if ($UsuariosNewsletterAEnviar->count() > 0)
+        {
+            foreach ($UsuariosNewsletterAEnviar as $UserNewsletter)
+            {
+                $Email = $UserNewsletter->email;
+
+                Mail::send('emails.newslleter_blog',
+
+                    //con esta funcion le envia los datos a la vista.
+                    compact('Blog', 'Email'),
+                    function ($m) use ($Blog, $Email)
+                    {
+
+                        $m->from('mauricio@gestionsocios.com.uy', 'Easysocio blog');
+
+                        $m->to($Email,
+                            $Email)->subject($Blog->name . ' 🚀');
+                    }
+                );
+
+                $UserNewsletterRepo->setAtributoEspecifico($UserNewsletter, 'ultimo_blog_enviado_id', $id);
+            }
+
+            $this->Entidad_principal->setAtributoEspecifico($Blog, 'enviado_por_email', 'si');
+        }
+
+        return redirect()->back()->with('alert', 'Se envío con éxitos');
     }
 
 }

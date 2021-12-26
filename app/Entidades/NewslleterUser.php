@@ -12,4 +12,9 @@ class NewslleterUser extends Model
 
     // A t r i b u t o s   m u t a d o s
 
+    public function getRouteDesuscribirAttribute()
+    {
+        return route('changeUserNewsletterToNotSend', $this->email);
+    }
+
 }

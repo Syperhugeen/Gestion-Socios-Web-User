@@ -13,6 +13,12 @@ Route::post('post_nuevo_newsletter',
         'as'   => 'post_nuevo_newsletter',
     ]);
 
+Route::get('changeUserNewsletterToNotSend-{email}',
+    [
+        'uses' => 'Publicas\Envio_Formularios_Controller@changeUserNewsletterToNotSend',
+        'as'   => 'changeUserNewsletterToNotSend',
+    ]);
+
 //Post Form Solciitud de Trabajo
 Route::post('post_envio_solicitud_trabajo_form',
     [

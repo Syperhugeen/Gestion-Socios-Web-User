@@ -34,6 +34,11 @@ class Envio_Formularios_Controller extends Controller
 
     }
 
+    /**
+     * Cuando alguien se suscribe al newsletter
+     *
+     * @return array
+     */
     public function post_nuevo_newsletter(Request $Request)
     {
         $manager = new nuevo_newsletter_manager(null, $Request->all());
@@ -46,6 +51,13 @@ class Envio_Formularios_Controller extends Controller
         }
 
         return HelpersGenerales::formateResponseToVue(false, 'Algo no está bien.', $manager->getErrors());
+    }
+
+    public function changeUserNewsletterToNotSend($email)
+    {
+        $this->NewslleterUserRepo->changeUserToNotSend($email);
+
+        return 'Te haz borrado del boletin de noticias de manera correcta. Ya no te llegarán más emails con contenidos de valor para mejorar tu negocio. ';
     }
 
     public function post_contacto_form(Request $Request)
