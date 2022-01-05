@@ -1,5 +1,12 @@
 @extends('layouts.credo.layout_pricnipal')
 
+
+@section('head-custome')
+
+
+
+@stop
+
 @section('favicon')
  <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}">
 @stop
@@ -162,56 +169,75 @@
 
 @section('contenido')
 
-   <div v-lazy-container="{ selector: 'img' }" class="blog-portada-contenedor" id="home-section">
-      <img v-if="mostrar_para_celuar" class="blog-img-slider-size" style="position: absolute;top: 0;" data-src="{{$Noticia->url_img_foto_principal_chica}}" alt="{{$Noticia->descripcion_breve}}. {{$Noticia->name}}">
-       <img v-else class="blog-img-slider-size" style="position: absolute;top: 0;" data-src="{{$Noticia->url_img_foto_principal}}" alt="{{$Noticia->descripcion_breve}}. {{$Noticia->name}}">
-   </div>
+<div
+  v-lazy-container="{ selector: 'img' }"
+  class="blog-portada-contenedor"
+  id="home-section"
+>
+  <img
+    v-if="mostrar_para_celuar"
+    class="blog-img-slider-size"
+    style="position: absolute; top: 0"
+    data-src="{{$Noticia->url_img_foto_principal_chica}}"
+    alt="{{$Noticia->descripcion_breve}}. {{$Noticia->name}}"
+  />
+  <img
+    v-else
+    class="blog-img-slider-size"
+    style="position: absolute; top: 0"
+    data-src="{{$Noticia->url_img_foto_principal}}"
+    alt="{{$Noticia->descripcion_breve}}. {{$Noticia->name}}"
+  />
+</div>
 
-   <baner-newsletter titulo="Suscríbete a nuestro newsletter para recibir novedades, estrategias y soluciones para tu emprendimiento de fitness."></baner-newsletter>
-
-
-
+<baner-newsletter
+  titulo="Suscríbete a nuestro newsletter para recibir novedades, estrategias y soluciones para tu emprendimiento de fitness."
+></baner-newsletter>
 
 <div class="conenedor-maximo-blog">
+  {{-- Contenido del blog --}}
+  <div v-lazy-container="{ selector: 'img' }" class="contenedor-blog">
+    {!! $Noticia->contenido_render !!}
+  </div>
 
-   {{-- Contenido del blog --}}
-   <div v-lazy-container="{ selector: 'img' }" class="contenedor-blog">
-       {!! $Noticia->contenido_render !!}
-   </div>
+  <div class="wraper-secciones-blog-titulo-content">
+    <div class="contiene-otras-secciones-del-blog">
+      <publicidad
+        titulo="Software en la nube para gimnasios"
+        descripcion="El programa para administrar gimnasios más simple de usar"
+        url="https://gestionsocios.com.uy/"
+        url_img_chica="https://gestionsocios.com.uy/imagenes/baner/easysocio-imagen-chica.jpg"
+        url_img_grande="https://gestionsocios.com.uy/imagenes/baner/easysocio-imagen-grande.jpg"
+        call_to_action="Concer más sobre Easysocio"
+      >
+      </publicidad>
+    </div>
+  </div>
 
-   <div class="wraper-secciones-blog-titulo-content">
-   <div class="contiene-otras-secciones-del-blog">
-   <publicidad titulo="Software en la nube para gimnasios"
-    descripcion="El programa para administrar gimnasios más simple de usar"
-    url="https://gestionsocios.com.uy/"
-    url_img_chica="https://gestionsocios.com.uy/imagenes/baner/easysocio-imagen-chica.jpg"
-    url_img_grande="https://gestionsocios.com.uy/imagenes/baner/easysocio-imagen-grande.jpg"
-    call_to_action="Concer más sobre Easysocio" >
-  </publicidad>
-   </div>
-   </div>
+  <div class="wraper-secciones-blog-titulo-content">
+    <div class="contiene-otras-secciones-del-blog">
+      @include('paginas.adsens.custom_ads_code')
+    </div>
+  </div>
 
-
-   {{-- Sobre el autor --}}
-   <div v-lazy-container="{ selector: 'img' }" class="wraper-secciones-blog-titulo-content">
+  {{-- Sobre el autor --}}
+  <div
+    v-lazy-container="{ selector: 'img' }"
+    class="wraper-secciones-blog-titulo-content"
+  >
     <div class="wrpaer-titulo-de-seccion">Sobre el autor</div>
     <div class="contiene-otras-secciones-del-blog">
-     @include('paginas.noticias.sobre_el_autor')
+      @include('paginas.noticias.sobre_el_autor')
     </div>
-   </div>
+  </div>
 
+  {{-- Blog relacionados --}} @if($blogs_relacionados->count() > 0)
+  <div class="wraper-secciones-blog-titulo-content">
+    <div class="wrpaer-titulo-de-seccion">Artículos relacionados</div>
 
-   {{-- Blog relacionados --}}
-   @if($blogs_relacionados->count() > 0)
-   <div class="wraper-secciones-blog-titulo-content">
-     <div class="wrpaer-titulo-de-seccion">Artículos relacionados</div>
-
-      @include('paginas.noticias.blogs_relacionados')
-
-   </div>
-   @endif
-
-
+    @include('paginas.noticias.blogs_relacionados')
+  </div>
+  @endif
 </div>
 
 
