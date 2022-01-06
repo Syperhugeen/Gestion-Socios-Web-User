@@ -3,7 +3,7 @@
 
 @section('head-custome')
 
-
+  @include('paginas.adsens.general_code')
 
 @stop
 
