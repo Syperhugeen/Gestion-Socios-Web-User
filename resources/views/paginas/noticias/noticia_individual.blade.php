@@ -115,7 +115,11 @@
   @include('paginas.home.vue.vue-instance')
 
 
-     (adsbygoogle = window.adsbygoogle || []).push({});
+  window.addEventListener('load', () => {
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  });
+
+
 
 @stop
 
@@ -217,7 +221,7 @@
   </div>
 
   <div class="wraper-secciones-blog-titulo-content">
-    <div class="contiene-otras-secciones-del-blog">
+    <div class="contiene-otras-secciones-del-blog ">
       @include('paginas.adsens.custom_ads_code')
     </div>
   </div>
