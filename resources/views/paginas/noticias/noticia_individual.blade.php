@@ -1,11 +1,7 @@
 @extends('layouts.credo.layout_pricnipal')
 
 
-@section('head-custome')
 
-  @include('paginas.adsens.general_code')
-
-@stop
 
 @section('favicon')
  <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}">
@@ -80,6 +76,8 @@
 
 @section('head-custome')
 
+@include('paginas.adsens.general_code')
+
   {{--  A g r e g o   c d n   d e l   p l u g   d e l   c ó d i g o   h i g h l i g h t --}}
  <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/styles/a11y-dark.min.css">
@@ -115,6 +113,10 @@
   @include('paginas.home.vue.indice')
   @include('paginas.home.vue.header-component')
   @include('paginas.home.vue.vue-instance')
+
+
+     (adsbygoogle = window.adsbygoogle || []).push({});
+
 @stop
 
 @section('header')
