@@ -11,7 +11,7 @@ Route::get('/blog/{name}/{id}', [
     'as'   => 'get_pagina_noticia_individual']
 )->where([
     'id'   => '[0-9]+',
-    'name' => '[ 0-9A-Za-zñÑáéíóúÁÉÍÓÚ +-.,]+',
+    'name' => '[ 0-9A-Za-zñÑáéíóúÁÉÍÓÚ +.,]+',
 ]);
 
 Route::get('/blog-newsletter-{id}-{email}', [
