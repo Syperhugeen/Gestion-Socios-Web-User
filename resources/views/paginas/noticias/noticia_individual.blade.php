@@ -117,7 +117,7 @@
 
 
 
-     (adsbygoogle = window.adsbygoogle || []).push({});
+
 
 
 
@@ -227,7 +227,7 @@
   </div>
 
 
-      @include('paginas.adsens.custom_ads_code')
+
 
 
   {{-- Sobre el autor --}}
