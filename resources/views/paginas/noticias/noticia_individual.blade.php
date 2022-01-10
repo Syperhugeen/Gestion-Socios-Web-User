@@ -226,11 +226,9 @@
     </div>
   </div>
 
-  <div class="wraper-secciones-blog-titulo-content">
-    <div class="contiene-otras-secciones-del-blog ">
+
       @include('paginas.adsens.custom_ads_code')
-    </div>
-  </div>
+
 
   {{-- Sobre el autor --}}
   <div
