@@ -115,19 +115,7 @@
   @include('paginas.home.vue.vue-instance')
 
 
-  window.addEventListener('load', () => {
- let matches = document.querySelectorAll("ins.ADSENSE");
 
-        Array.from(matches).forEach((element) => {
-            let parentElement = element.parentElement;
-            if (window.getComputedStyle(parentElement).getPropertyValue("display") === "none")  {
-                element.remove();
-            } else {
-            element.classList.remove("ADSENSE");
-            element.classList.add("adsbygoogle");
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            }
-        });
 
 });
 
