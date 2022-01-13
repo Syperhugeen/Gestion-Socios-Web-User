@@ -55,8 +55,8 @@ Vue.component("baner-newsletter", {
   template: `
 
 
-<div  v-if="!yaSeRegistro" class=" col-12 d-flex flex-column  align-items-center shadow-sm py-4" style="background-color: #44e0d1;" >
-  <div class="col-12 col-lg-7 h6 mb-3 text-white text-center">
+<div  v-if="!yaSeRegistro" class=" col-12 d-flex flex-column  align-items-center shadow-sm py-4 py-lg-5" style="background-color: #44e0d1;" >
+  <div class="col-12 col-lg-7 h5 mb-3 text-white text-center">
       @{{titulo}}
   </div>
   <div :style="{ opacity: cargando ? '0.5' : '1', pointerEvents: cargando ? 'none':'auto' }"  class="d-flex flex-row align-items-center">

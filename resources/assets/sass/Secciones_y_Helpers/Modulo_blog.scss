@@ -233,3 +233,9 @@
     width: 65%;
   }
 }
+
+@media (min-width: $BrackPoint-Cuarto) {
+  .contenedor-listado-noticias {
+    width: 55%;
+  }
+}
