@@ -325,7 +325,7 @@
                                                                                 {{$Blog->name}}
                                                                               </h1>
 
-                                                                              <p>
+                                                                              <p style="font-size: 16px;">
                                                                                 {{$Blog->descripcion_breve}}
                                                                               </p>
 
