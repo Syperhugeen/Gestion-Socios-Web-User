@@ -382,7 +382,7 @@
                                                                               </h2>
 
                                                                               <img
-                                                                                src="http://gestionsocios.test/imagenes/Empresa/logo-rectangular-easysocio-color.png"
+                                                                                src="https://gestionsocios.com.uy/imagenes/Empresa/logo-rectangular-easysocio-color.png"
                                                                                 alt=""
                                                                                 style="max-width: 300px"
                                                                               />
