@@ -248,7 +248,7 @@
                                           cellspacing="0"
                                           cellpadding="0"
                                           align="center"
-                                          style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:#f2f2f2;background-repeat:repeat;background-position:center top"
+                                          style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:#ffffff;background-repeat:repeat;background-position:center top"
                                         >
                                           <tbody>
                                             <tr
