@@ -380,12 +380,13 @@
                                                                                 la
                                                                                 proxima,
                                                                               </h2>
-
+                                                                              <a href="https://gestionsocios.com.uy">
                                                                               <img
                                                                                 src="https://gestionsocios.com.uy/imagenes/Empresa/logo-rectangular-easysocio-color.png"
                                                                                 alt=""
                                                                                 style="max-width: 300px"
                                                                               />
+                                                                              </a>
                                                                             </td>
                                                                           </tr>
 
