@@ -121,7 +121,7 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
                             $m->from('mauricio@gestionsocios.com.uy', 'Easysocio blog');
 
-                            $m->to($Email,
+                            $m->to(trim($Email),
                                 $Email)->subject($Blog->name . ' 🚀');
                         }
                     );
