@@ -17,8 +17,7 @@ class ServicioPaises
             'Ip:' . $ip,
         ];
 
-        $Paises = Cache::remember('PaisesApi', 6000, function () use ($header)
-        {
+        $Paises = Cache::remember('PaisesApi', 6000, function () use ($header) {
             $Response = CurlHelper::getUrlData('https://app.gestionsocios.com.uy/get_paises', $header);
 
             return $Response['Https_status'] == '200' ? $Response['Data']->Paises : [];
