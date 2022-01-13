@@ -111,19 +111,29 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
             {
                 $Email = $UserNewsletter->email;
 
-                Mail::send('emails.newslleter_blog',
+                try {
+                    Mail::send('emails.newslleter_blog',
 
-                    //con esta funcion le envia los datos a la vista.
-                    compact('Blog', 'Email'),
-                    function ($m) use ($Blog, $Email)
+                        //con esta funcion le envia los datos a la vista.
+                        compact('Blog', 'Email'),
+                        function ($m) use ($Blog, $Email)
+                        {
+
+                            $m->from('mauricio@gestionsocios.com.uy', 'Easysocio blog');
+
+                            $m->to($Email,
+                                $Email)->subject($Blog->name . ' 🚀');
+                        }
+                    );
+                }
+                catch (\Exception$e)
+                {
+                    if ($e->getMessage() == 'Swift_RfcComplianceException')
                     {
-
-                        $m->from('mauricio@gestionsocios.com.uy', 'Easysocio blog');
-
-                        $m->to($Email,
-                            $Email)->subject($Blog->name . ' 🚀');
+                        $UserNewsletterRepo->setAtributoEspecifico($UserNewsletter, 'se_puede_enviar', 'no');
                     }
-                );
+
+                }
 
                 $convierto_enArray = explode(',', $UserNewsletter->ultimo_blog_enviado_id);
 
