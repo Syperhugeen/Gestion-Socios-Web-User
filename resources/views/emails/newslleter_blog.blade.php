@@ -329,38 +329,11 @@
                                                                                 {{$Blog->descripcion_breve}}
                                                                               </p>
 
-                                                                              <!--
-              <p
-                style="
-                  white-space: pre;
-                  background: #eee;
-                  padding: 10px;
-                  font-family: monaco, monospace;
-                  border: 1px solid #ccc;
-                "
-              >
-                .example { color: red; }
-              </p>
-              -->
+
                                                                             </td>
                                                                           </tr>
 
-                                                                          <!-- feature -->
-                                                                          <!--
-          <tr>
-            <td class="news-section">
-              <h2>"Best Of" Content</h2>
 
-              <p>Just a few Pens that have been blowing minds recently.</p>
-
-              <ul>
-                <li>Great</li>
-                <li>Stuff</li>
-                <li>Heere</li>
-              </ul>
-            </td>
-          </tr>
-          -->
 
                                                                           <tr>
                                                                             <td
@@ -389,13 +362,11 @@
                   border: 1px solid #000000;
                   display: inline-block;
                 "
-                                                                                >Ir
-                                                                                a
-                                                                                la
-                                                                                artículo
-                                                                                y
-                                                                                seguir
-                                                                                leyendo</a
+                                                                                >
+                                                                                Ir
+                                                                                al
+                                                                                artículo ➤
+                                                                               </a
                                                                               >
                                                                             </td>
                                                                           </tr>

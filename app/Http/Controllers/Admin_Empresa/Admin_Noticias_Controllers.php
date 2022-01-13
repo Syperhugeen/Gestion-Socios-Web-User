@@ -35,7 +35,8 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
     protected $Nombre_del_campo_imagen;
 
     public function __construct(NoticiasRepo $NoticiasRepo,
-        ImagenRepo $ImagenRepo) {
+        ImagenRepo                               $ImagenRepo)
+    {
         $this->Entidad_principal          = $NoticiasRepo;
         $this->ImagenRepo                 = $ImagenRepo;
         $this->Nombre_entidad_plural      = 'Noticias';
@@ -79,9 +80,7 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
         $UserNewsletterTodos = $UserNewsletterRepo->getAllUserNewsletter();
 
         // me fijo los emails disponibles en la app
-
-        $ip = strval($_SERVER['REMOTE_ADDR']);
-
+        $ip     = strval($_SERVER['REMOTE_ADDR']);
         $header = [
             'Token:EasyToken5224874@',
             'Ip:' . $ip,
@@ -89,31 +88,35 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
         $Response = CurlHelper::getUrlData('https://app.gestionsocios.com.uy/get_empresas_curl', $header);
 
-        if ($Response['Https_status'] == '200') {
+        if ($Response['Https_status'] == '200')
+        {
             $Empresas = collect($Response['Data']->Data);
 
-            $Empresas = $Empresas->filter(function ($Empresa) use ($UserNewsletterTodos) {
-
+            $Empresas = $Empresas->filter(function ($Empresa) use ($UserNewsletterTodos)
+            {
                 return count($Empresa->servicios_contratados_a_empresas_activos) == 0 && !$UserNewsletterTodos->contains('email', $Empresa->email);
             });
 
-            foreach ($Empresas as $Empresa) {
+            foreach ($Empresas as $Empresa)
+            {
                 $UserNewsletterRepo->crearNuevoUserNewslleter($Empresa->email);
             }
-
         }
 
         $UsuariosNewsletterAEnviar = $UserNewsletterRepo->getUserAEnviar($id);
 
-        if ($UsuariosNewsletterAEnviar->count() > 0) {
-            foreach ($UsuariosNewsletterAEnviar as $UserNewsletter) {
+        if ($UsuariosNewsletterAEnviar->count() > 0)
+        {
+            foreach ($UsuariosNewsletterAEnviar as $UserNewsletter)
+            {
                 $Email = $UserNewsletter->email;
 
                 Mail::send('emails.newslleter_blog',
 
                     //con esta funcion le envia los datos a la vista.
                     compact('Blog', 'Email'),
-                    function ($m) use ($Blog, $Email) {
+                    function ($m) use ($Blog, $Email)
+                    {
 
                         $m->from('mauricio@gestionsocios.com.uy', 'Easysocio blog');
 
@@ -122,7 +125,11 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
                     }
                 );
 
-                $UserNewsletterRepo->setAtributoEspecifico($UserNewsletter, 'ultimo_blog_enviado_id', $id);
+                $convierto_enArray = explode(',', $UserNewsletter->ultimo_blog_enviado_id);
+
+                array_push($convierto_enArray, $id);
+
+                $UserNewsletterRepo->setAtributoEspecifico($UserNewsletter, 'ultimo_blog_enviado_id', implode(",", $convierto_enArray));
             }
 
             $this->Entidad_principal->setAtributoEspecifico($Blog, 'enviado_por_email', 'si');

@@ -21,11 +21,14 @@ class NewslleterUserRepo extends BaseRepo
     {
         $Entidades = $this->getEntidad()->where('email', $email)->get();
 
-        if ($Entidades->count() > 0) {
+        if ($Entidades->count() > 0)
+        {
             $Entidad                  = $Entidades->first();
             $Entidad->se_puede_enviar = 'si';
             $Entidad->save();
-        } else {
+        }
+        else
+        {
             $Entidad                  = $this->getEntidad();
             $Entidad->se_puede_enviar = 'si';
             $Entidad->email           = $email;
@@ -42,7 +45,8 @@ class NewslleterUserRepo extends BaseRepo
     {
         $userNewsletter = $this->getFirstEntidadSegunAtributo('email', $email);
 
-        if ($userNewsletter != '') {
+        if ($userNewsletter != '')
+        {
             $userNewsletter->se_puede_enviar = 'no';
             $userNewsletter->save();
         }
@@ -50,7 +54,8 @@ class NewslleterUserRepo extends BaseRepo
 
     public function getUserAEnviar($id_blog)
     {
-        return $this->getEntidad()->where('se_puede_enviar', 'si')->where('ultimo_blog_enviado_id', '<>', $id_blog)->get();
+
+        return $this->getEntidad()->where('se_puede_enviar', 'si')->where('ultimo_blog_enviado_id', 'not like', '%' . $id_blog . '%')->get();
     }
 
 }
