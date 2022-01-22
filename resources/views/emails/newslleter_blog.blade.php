@@ -339,12 +339,7 @@
                                                                             <td
                                                                               class="news-section"
                                                                             >
-                                                                              <h2>
-                                                                                Seguí
-                                                                                leyendo
-                                                                                el
-                                                                                artículo..
-                                                                              </h2>
+
 
                                                                               <a
                                                                                 class="btn"
@@ -363,9 +358,7 @@
                   display: inline-block;
                 "
                                                                                 >
-                                                                                Ir
-                                                                                al
-                                                                                artículo ➤
+                                                                                Seguir leyendo ➤
                                                                                </a
                                                                               >
                                                                             </td>
@@ -378,7 +371,7 @@
                                                                               <h2>
                                                                                 Hasta
                                                                                 la
-                                                                                proxima,
+                                                                                próxima,
                                                                               </h2>
                                                                               <a href="https://gestionsocios.com.uy">
                                                                               <img
