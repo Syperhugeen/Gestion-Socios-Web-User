@@ -4,8 +4,8 @@
   background=""
   order="left"
   :con_parte_oculta="false"
-  url_img_chica="{{url()}}/imagenes/Drwas/mebresias.png"
-  url_img_grande="{{url()}}/imagenes/Drwas/mebresias.png"
+  url_img_chica="{{ url() }}/imagenes/Drwas/mebresias.png"
+  url_img_grande="{{ url() }}/imagenes/Drwas/mebresias.png"
 >
   <template slot="description-visible">
     <h3 class="mb-4">
@@ -55,12 +55,12 @@
   background=""
   order="right"
   :con_parte_oculta="false"
-  url_img_chica="{{url()}}/imagenes/Drwas/reservas.png"
-  url_img_grande="{{url()}}/imagenes/Drwas/reservas.png"
+  url_img_chica="{{ url() }}/imagenes/Drwas/reservas.png"
+  url_img_grande="{{ url() }}/imagenes/Drwas/reservas.png"
 >
   <template slot="description-visible">
     <h3 class="mb-4">
-      Reservas de clases online
+      Reserva de clases online
       <span class="font-secondary helper-aumenta-texto"> easy </span>
     </h3>
     <p></p>
@@ -93,8 +93,8 @@
   background=""
   order="left"
   :con_parte_oculta="false"
-  url_img_chica="{{url()}}/imagenes/Drwas/finanzas.png"
-  url_img_grande="{{url()}}/imagenes/Drwas/finanzas.png"
+  url_img_chica="{{ url() }}/imagenes/Drwas/finanzas.png"
+  url_img_grande="{{ url() }}/imagenes/Drwas/finanzas.png"
 >
   <template slot="description-visible">
     <h3 class="mb-4">
@@ -136,8 +136,8 @@
   background=""
   order="right"
   :con_parte_oculta="false"
-  url_img_chica="{{url()}}/imagenes/Drwas/control.png"
-  url_img_grande="{{url()}}/imagenes/Drwas/control.png"
+  url_img_chica="{{ url() }}/imagenes/Drwas/control.png"
+  url_img_grande="{{ url() }}/imagenes/Drwas/control.png"
 >
   <template slot="description-visible">
     <h3 class="mb-4">
@@ -164,25 +164,30 @@
   </template>
 </section-card>
 
-
 <section-card
   titulo_aclarador="Ranking de socios"
   titulo=""
   background=""
   order="left"
   :con_parte_oculta="false"
-  url_img_chica="{{url()}}/imagenes/Drwas/ranking.png"
-  url_img_grande="{{url()}}/imagenes/Drwas/ranking.png"
+  url_img_chica="{{ url() }}/imagenes/Drwas/ranking.png"
+  url_img_grande="{{ url() }}/imagenes/Drwas/ranking.png"
 >
   <template slot="description-visible">
     <h3 class="mb-4">
-       Insentivá la competencia (friendly) 🏆
+      Insentivá la competencia (friendly) 🏆
       <span class="font-secondary helper-aumenta-texto"> easy </span>
     </h3>
 
-    <p> ¿Quiénes vienen más? ¿Quiénes se esfuerzan más? ¿Quiénes cumplen con su compromiso? ¿Quiénes se destacan más? </p>
-    <p> Te organizaremos toda esta información de manera <span class="font-secondary helper-aumenta-texto"> easy </span>
-    para que puedas tomar acciones, crear competencias o  lo que se te ocurra. </p>
+    <p>
+      ¿Quiénes vienen más? ¿Quiénes se esfuerzan más? ¿Quiénes cumplen con su
+      compromiso? ¿Quiénes se destacan más?
+    </p>
+    <p>
+      Te organizaremos toda esta información de manera
+      <span class="font-secondary helper-aumenta-texto"> easy </span> para que
+      puedas tomar acciones, crear competencias o lo que se te ocurra.
+    </p>
 
     <div class="mt-2">
       <a
@@ -202,8 +207,8 @@
   background=""
   order="right"
   :con_parte_oculta="false"
-  url_img_chica="{{url()}}/imagenes/Drwas/seguimiento.png"
-  url_img_grande="{{url()}}/imagenes/Drwas/seguimiento.png"
+  url_img_chica="{{ url() }}/imagenes/Drwas/seguimiento.png"
+  url_img_grande="{{ url() }}/imagenes/Drwas/seguimiento.png"
 >
   <template slot="description-visible">
     <h3 class="mb-4">
@@ -211,11 +216,20 @@
       <span class="font-secondary helper-aumenta-texto"> easy </span>
     </h3>
 
-    <p> ¿Qué es lo típico por lo cual alguien va a un gimnasio? "Quiero bajar de peso". Para ayudarte a cumplir con eso creamos sistema de seguimiento (que te dará graficas, datos, y más) el cual hará que seguir la evolución del peso corporal de un socio sea
-     pan comido.
+    <p>
+      ¿Qué es lo típico por lo cual alguien va a un gimnasio? "Quiero bajar de
+      peso". Para ayudarte a cumplir con eso creamos sistema de seguimiento (que
+      te dará graficas, datos, y más) el cual hará que seguir la evolución del
+      peso corporal de un socio sea pan comido.
     </p>
     <p>
-      Además del peso corporal podrás hacer seguimiento de <strong>lo que se te ocurra</strong>  ¿<span class="font-secondary helper-aumenta-texto"> easy </span> no?.
+      Además del peso corporal podrás hacer seguimiento de
+      <strong>lo que se te ocurra</strong> ¿<span
+        class="font-secondary helper-aumenta-texto"
+      >
+        easy
+      </span>
+      no?.
     </p>
 
     <div class="mt-2">
@@ -236,8 +250,8 @@
   background=""
   order="left"
   :con_parte_oculta="false"
-  url_img_chica="{{url()}}/imagenes/Drwas/rutinas.png"
-  url_img_grande="{{url()}}/imagenes/Drwas/rutinas.png"
+  url_img_chica="{{ url() }}/imagenes/Drwas/rutinas.png"
+  url_img_grande="{{ url() }}/imagenes/Drwas/rutinas.png"
 >
   <template slot="description-visible">
     <h3 class="mb-4">
@@ -245,9 +259,19 @@
       <span class="font-secondary helper-aumenta-texto"> easy </span>
     </h3>
 
-    <p>Creá de manera simple rutinas de entrenamientos detallando los ejercicios y días en los cuales se tienen que hacer, inclusive podrás agregar videos e imágenes explicando los ejercicio.</p>
     <p>
-      Luego asigná la rutina a los socios que quieras. Ellos podrán ver las rutinas desde su celular  ¿<span class="font-secondary helper-aumenta-texto"> easy </span> no?
+      Creá de manera simple rutinas de entrenamientos detallando los ejercicios
+      y días en los cuales se tienen que hacer, inclusive podrás agregar videos
+      e imágenes explicando los ejercicio.
+    </p>
+    <p>
+      Luego asigná la rutina a los socios que quieras. Ellos podrán ver las
+      rutinas desde su celular ¿<span
+        class="font-secondary helper-aumenta-texto"
+      >
+        easy
+      </span>
+      no?
     </p>
 
     <div class="mt-2">
@@ -268,8 +292,8 @@
   background=""
   order="right"
   :con_parte_oculta="false"
-  url_img_chica="{{url()}}/imagenes/Drwas/dietas.png"
-  url_img_grande="{{url()}}/imagenes/Drwas/dietas.png"
+  url_img_chica="{{ url() }}/imagenes/Drwas/dietas.png"
+  url_img_grande="{{ url() }}/imagenes/Drwas/dietas.png"
 >
   <template slot="description-visible">
     <h3 class="mb-4">
@@ -277,8 +301,17 @@
       <span class="font-secondary helper-aumenta-texto"> easy </span>
     </h3>
 
-    <p> Creá dietas y superá las espectativas de tus clientes. Podrás especificar que deben comer, cuando y como. Si lo crees necesario podrás agregar videos e imágenes.  <p>
-      Luego asigná la dieta a los socios que quieras. Ellos podrán ver toda esa info desde su celular  ¿<span class="font-secondary helper-aumenta-texto"> easy </span> no?
+    <p>
+      Creá dietas y superá las espectativas de tus clientes. Podrás especificar
+      que deben comer, cuando y como. Si lo crees necesario podrás agregar
+      videos e imágenes.
+    </p>
+    <p>
+      Luego asigná la dieta a los socios que quieras. Ellos podrán ver toda esa
+      info desde su celular ¿<span class="font-secondary helper-aumenta-texto">
+        easy
+      </span>
+      no?
     </p>
 
     <div class="mt-2">
@@ -299,8 +332,8 @@
   background=""
   order="left"
   :con_parte_oculta="false"
-  url_img_chica="{{url()}}/imagenes/Drwas/cumpleanos.png"
-  url_img_grande="{{url()}}/imagenes/Drwas/cumpleanos.png"
+  url_img_chica="{{ url() }}/imagenes/Drwas/cumpleanos.png"
+  url_img_grande="{{ url() }}/imagenes/Drwas/cumpleanos.png"
 >
   <template slot="description-visible">
     <h3 class="mb-4">
@@ -308,7 +341,49 @@
       <span class="font-secondary helper-aumenta-texto"> easy </span>
     </h3>
 
-    <p> Hacé sentir especiales a tus socios y prepará algo para homenagear. El ratio de fidelidad despegará 🚀  ¿<span class="font-secondary helper-aumenta-texto"> easy </span> no?
+    <p>
+      Hacé sentir especiales a tus socios y prepará algo para homenagear. El
+      ratio de fidelidad despegará 🚀 ¿<span
+        class="font-secondary helper-aumenta-texto"
+      >
+        easy
+      </span>
+      no?
+    </p>
+
+    <div class="mt-2">
+      <a
+        href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+        class="btn btn-lg btn-primary cursor-pointer text-white"
+      >
+        Comenzar a probar gratis</a
+      >
+    </div>
+    <small>No te pediremos que ingreses tarjeta de crédito.</small>
+  </template>
+</section-card>
+
+<section-card
+  titulo_aclarador="Feedback de los socios"
+  titulo=""
+  background=""
+  order="right"
+  :con_parte_oculta="false"
+  url_img_chica="{{ url() }}/imagenes/Drwas/reviews.png"
+  url_img_grande="{{ url() }}/imagenes/Drwas/reviews.png"
+>
+  <template slot="description-visible">
+    <h3 class="mb-4">
+      Le pedimos a tus socios que te den feedback ⭐⭐⭐⭐⭐
+      <span class="font-secondary helper-aumenta-texto"> easy </span>
+    </h3>
+
+    <p>
+      Obten puntuaciones y comentarios por parte de tus socios de forma
+      automática, ¿<span class="font-secondary helper-aumenta-texto">
+        easy
+      </span>
+      no?. Esto te ayudará a mejorar tu servicio e incrementar la fidelidad de tus socios.
     </p>
 
     <div class="mt-2">

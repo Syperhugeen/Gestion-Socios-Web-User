@@ -13,24 +13,7 @@
           <i class="fas fa-check-circle"></i>
         </span>
         <span>
-          Gestión de membresías
-          <span class="font-secondary helper-aumenta-texto"> easy </span>
-        </span>
-      </li>
-      <li class="contiene-li-precio-nuevo d-flex flex-row">
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          Finanzas
-        </span>
-      </li>
-      <li class="contiene-li-precio-nuevo d-flex flex-row">
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          Analíticas
+          Hasta <strong> {{$Plan->cantidad_socios}}</strong> socios
         </span>
       </li>
 
@@ -40,21 +23,93 @@
         </span>
         Soporte
       </li>
+
       <li class="contiene-li-precio-nuevo d-flex flex-row">
         <span class="text-color-primary mr-2">
           <i class="fas fa-check-circle"></i>
         </span>
+        Capacitación (curso paso a paso).
+      </li>
+
+      <li
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
+      >
+        <span class="text-color-primary mr-2">
+          <i class="fas fa-check-circle"></i>
+        </span>
         <span>
-          Hasta <strong> {{$Plan->cantidad_socios}}</strong> socios
+          <div>
+            <b> Gestión de membresías</b>
+          </div>
+          <div>
+            <small
+              >Controlamos de manera automática el vencimiento de los planes
+              (membresías) que le vendés a tus socios. Lo mismo que hacés a mano
+              o en excel <strong>pero de manera automática</strong>
+            </small>
+          </div>
         </span>
       </li>
-      <li class="contiene-li-precio-nuevo d-flex flex-row">
+
+      <li
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
+      >
         <span class="text-color-primary mr-2">
           <i class="fas fa-check-circle"></i>
         </span>
         <span>
-          {{$Plan->cantidad_sucursales}} @if($Plan->cantidad_sucursales >
-          1)sucursales @else sucursal @endif
+          <div>
+            <b> Cuentas corrientes</b>
+          </div>
+          <div>
+            <small>
+              Te informamos sobre cuáles socios te deben y por qué.
+              <strong
+                >Además guardamos todo el historial de transacciones de cada
+                socio.</strong
+              >
+            </small>
+          </div>
+        </span>
+      </li>
+
+      <li
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
+      >
+        <span class="text-color-primary mr-2">
+          <i class="fas fa-check-circle"></i>
+        </span>
+        <span>
+          <div>
+            <b> Finanzas 💰</b>
+          </div>
+          <div>
+            <small
+              >Registramos todas tus ventas así como tus gastos.
+              <strong>Automatizamos la contabilidad de tu negocio.</strong>
+              ¡Ólvidate de la planilla de excel!
+            </small>
+          </div>
+        </span>
+      </li>
+
+      <li
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
+      >
+        <span class="text-color-primary mr-2">
+          <i class="fas fa-check-circle"></i>
+        </span>
+        <span>
+          <div>
+            <b> Analíticas 📈</b>
+          </div>
+          <div>
+            <small
+              >Reportes de ventas de membresías, ingresos y egresos de caja.
+              Asistencia a clases, días y horarios más concurridos por los
+              socios... y más!
+            </small>
+          </div>
         </span>
       </li>
 
@@ -63,9 +118,7 @@
           <i class="fas fa-check-circle"></i>
         </span>
         <span>
-          <div>
-            Avisos automáticos
-          </div>
+          <div>Avisos automáticos</div>
           <small class="color-text-gris">Notificaciones por email. </small>
         </span>
       </li>
@@ -85,7 +138,8 @@
           <div>
             <small
               >Nosotros somos los que le decimos a tus socios que deben dinero.
-              ¿<span class="font-secondary helper-aumenta-texto"> easy </span> no?. Además te guardamos todo el historial de accesos.</small
+              ¿<span class="font-secondary helper-aumenta-texto"> easy </span>
+              no?. Además te guardamos todo el historial de accesos.</small
             >
           </div>
         </span>
@@ -94,7 +148,7 @@
       @endif @if ($Plan->reserva_de_clases_on_line == 'si')
 
       <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success "
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
       >
         <span class="text-color-primary mr-2">
           <i class="fas fa-check-circle"></i>
@@ -104,7 +158,7 @@
             <b> Reservas online </b>
           </div>
           <div>
-            <small>Tus socios podrán reservas online tus clases</small>
+            <small>Tus socios podrán reservar online tus clases</small>
           </div>
         </span>
       </li>
@@ -112,7 +166,7 @@
       @endif @if ($Plan->rutina_dieta == 'si')
 
       <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success "
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
       >
         <span class="text-color-primary mr-2">
           <i class="fas fa-check-circle"></i>
@@ -123,7 +177,7 @@
           </div>
           <div>
             <small
-              >Asignale a tus socios rutinas de entrenamientos o dietas de
+              >Asígnale a tus socios rutinas de entrenamientos o dietas de
               manera
               <span class="font-secondary helper-aumenta-texto"> easy </span>
             </small>
@@ -133,7 +187,7 @@
 
       @endif
       <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success "
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
       >
         <span class="text-color-primary mr-2">
           <i class="fas fa-check-circle"></i>
@@ -144,16 +198,16 @@
           </div>
           <div>
             <small
-              >Podrás monitorear la evolución del peso corporal (así como la de
-              cualquier otro atributo) con el fin saber si se cumplió con el
-              objetivo 🏁 de tu cliente en un determinado período de tiempo.
+              >Podrás monitorear la evolución del peso corporal (entre otros)
+              con el fin saber si se cumplió con el objetivo 🏁 de tu socio en
+              un determinado período de tiempo.
               <span class="font-secondary helper-aumenta-texto"> easy </span>
             </small>
           </div>
         </span>
       </li>
       <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success "
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
       >
         <span class="text-color-primary mr-2">
           <i class="fas fa-check-circle"></i>
@@ -162,7 +216,7 @@
           <div>
             <b>
               Ranking de atletas
-              <i style="color:gold;" class="fas fa-trophy"></i>
+              <i style="color: gold" class="fas fa-trophy"></i>
             </b>
           </div>
           <div>
@@ -175,27 +229,50 @@
         </span>
       </li>
       <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success "
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
       >
         <span class="text-color-primary mr-2">
           <i class="fas fa-check-circle"></i>
         </span>
         <span>
           <div>
-            <b>
-              Alerta de cumpleaños 🎂
-            </b>
+            <b> Alerta de cumpleaños 🎂 </b>
           </div>
           <div>
-            <small
-              > Hacé sentir especiales a tus socios y prepará algo para homenagear. El ratio de fidelidad despegará 🚀  ¿<span class="font-secondary helper-aumenta-texto"> easy </span> no?
+            <small>
+              Hacé sentir especiales a tus socios y prepará algo para
+              homenagear. El ratio de fidelidad despegará 🚀 ¿<span
+                class="font-secondary helper-aumenta-texto"
+              >
+                easy
+              </span>
+              no?
             </small>
           </div>
         </span>
       </li>
 
-
-
+      <li
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
+      >
+        <span class="text-color-primary mr-2">
+          <i class="fas fa-check-circle"></i>
+        </span>
+        <span>
+          <div>
+            <b> Reviews ⭐⭐⭐⭐⭐ </b>
+          </div>
+          <div>
+            <small>
+              Obten puntuaciones y comentarios por parte de tus socios de forma
+              automática, ¿<span class="font-secondary helper-aumenta-texto">
+                easy
+              </span>
+              no?
+            </small>
+          </div>
+        </span>
+      </li>
     </ul>
 
     <div class="contiene-precios-precios mb-1">
@@ -247,8 +324,8 @@
       @endif
 
       <p
-        class="text-center color-text-gris mb-0 mt-2 "
-        style="font-size: 12px !important;"
+        class="text-center color-text-gris mb-0 mt-2"
+        style="font-size: 12px !important"
       >
         @if( Session::get('esDeUruguay'))
 
