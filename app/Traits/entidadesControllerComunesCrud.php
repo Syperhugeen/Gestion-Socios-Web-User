@@ -120,9 +120,7 @@ trait entidadesControllerComunesCrud
         // S i  e l  a r r a y   d e   i m á g e n e s   n o   e s t á   v a c i o
         $files = $Request->file('img');
 
-        dd($files);
-
-        if ($files[0] != null) {
+        if ($files != null && $files[0] != null) {
 
             foreach ($files as $file) {
 
