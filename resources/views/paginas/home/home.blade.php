@@ -153,7 +153,7 @@
 
     <img
       class="d-none d-lg-block "
-      style="position: absolute; right:0; top:40%; height:auto; width:600px;"
+      style="position: absolute; right:0; top:30%; height:auto; width:600px;"
       src="{{url()}}/imagenes/Easysocio/Capturas/socios-listado-notebook.png"
       alt=""
     />

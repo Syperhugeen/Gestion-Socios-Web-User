@@ -126,7 +126,7 @@
 
                <a href="#intro" class="btn  btn-outline-light cursor-pointer"> Seguir leyendo</a>
 
-               <img class="d-none d-lg-block " style="position: absolute; right:0; top:40%; height:auto; width:600px;"  src="{{url()}}/imagenes/Easysocio/Capturas/socios-listado-notebook.png" alt="">
+               <img class="d-none d-lg-block " style="position: absolute; right:0; top:30%; height:auto; width:600px;"  src="{{url()}}/imagenes/Easysocio/Capturas/socios-listado-notebook.png" alt="">
 
             </template>
 

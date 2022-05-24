@@ -49,6 +49,18 @@
   </template>
 </section-card>
 
+
+<div class="my-5 d-flex flex-column align-items-center w-100 ">
+          <small class="text-center">Agregando una membresía a un socio</small>
+          <div class="col-12 col-lg-8">
+            <img
+              class="img-fluid"
+              src="{{url()}}/imagenes/Easysocio/gifs/notebook/agregar membresia.gif"
+              alt=""
+            />
+          </div>
+</div>
+
 <section-card
   titulo_aclarador="Asistencia a clases por agenda"
   titulo=""
@@ -86,6 +98,33 @@
     <small>No te pediremos que ingreses tarjeta de crédito.</small>
   </template>
 </section-card>
+
+<div class="container"> 
+<div class="row mx-0 align-items-center ">
+  <div class="col-12 col-lg-6 mb-3 mb-lg-0 d-flex flex-column align-items-center w-100 ">
+          <small class="text-center"> Tu gestionando las reservas</small>
+          
+            <img
+              class="img-fluid"
+              src="{{url()}}/imagenes/Easysocio/gifs/notebook/reservas.gif"
+              alt=""
+            />
+          
+</div>
+<div class="col-12 col-lg-6 d-flex flex-column align-items-center  ">
+          <small class="text-center"> Tu cliente reservando</small>
+          
+            <img
+              class="img-fluid"
+              src="{{url()}}/imagenes/Easysocio/gifs/socioPanel/reserva-exito.gif"
+              alt=""
+            />
+         
+</div>
+</div>
+</div>
+
+
 
 <section-card
   titulo_aclarador="Control de ingresos y egresos"
@@ -129,6 +168,31 @@
     <small>No te pediremos que ingreses tarjeta de crédito.</small>
   </template>
 </section-card>
+
+<div class="container"> 
+<div class="row mx-0 align-items-center ">
+  <div class="col-12 col-lg-6 mb-3 mb-lg-0 d-flex flex-column align-items-center w-100 ">
+          <small class="text-center"> Tu  agregando un gastos o ingresos</small>
+          
+            <img
+              class="img-fluid"
+              src="{{url()}}/imagenes/Easysocio/gifs/notebook/gastos.gif"
+              alt=""
+            />
+          
+</div>
+<div class="col-12 col-lg-6 d-flex flex-column align-items-center  ">
+          <small class="text-center"> Tu viendo los reportes de gastos e ingresos </small>
+          
+            <img
+              class="img-fluid"
+              src="{{url()}}/imagenes/Easysocio/gifs/notebook/analitics.gif"
+              alt=""
+            />
+         
+</div>
+</div>
+</div>
 
 <section-card
   titulo_aclarador="Control de acceso"
