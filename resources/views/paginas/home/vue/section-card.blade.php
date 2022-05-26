@@ -72,8 +72,8 @@ Vue.component("section-card", {
 
 
             </div>
-            <div :class="ordenImgClass" v-lazy-container="{ selector: 'img' }" class="col-lg-6  p-2 p-lg-5  d-flex flex-row align-items-center justify-content-center">
-              <img class="img-fluid  helper-border-radius-16" :data-src="$root.mostrar_para_celuar ? url_img_chica : url_img_grande" :alt="titulo">
+            <div :class="ordenImgClass"  class="col-lg-6  p-2 p-lg-5  d-flex flex-row align-items-center justify-content-center">
+              <img class="img-fluid  helper-border-radius-16" :src="$root.mostrar_para_celuar ? url_img_chica : url_img_grande" :alt="titulo">
             </div>
           </div>
         </div>
