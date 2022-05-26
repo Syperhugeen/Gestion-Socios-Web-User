@@ -243,7 +243,7 @@
     <div
       class="col-12 col-lg-6 mb-3 mb-lg-0 d-flex flex-column align-items-center w-100"
     >
-      <small class="text-center"> Tu cliente ingesando </small>
+      <small class="text-center"> Tu cliente ingresando </small>
 
       <img
         class="img-fluid"
@@ -350,6 +350,36 @@
   </template>
 </section-card>
 
+<div class="container">
+  <div class="row mx-0 align-items-center">
+    <div
+      class="col-12 col-lg-6 mb-3 mb-lg-0 d-flex flex-column align-items-center w-100"
+    >
+      <small class="text-center"> Tu cliente ingresando seguimientos</small>
+
+      <img
+        class="img-fluid"
+        src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/seguimientos.gif"
+        alt=""
+      />
+    </div>
+    <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+      <small class="text-center">
+        Tu viendo y gestionando los seguimientos
+      </small>
+
+      <img
+        class="img-fluid"
+        src="{{ url() }}/imagenes/Easysocio/gifs/notebook/seguimientos.gif"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+<div class="py-5 w-100 border-bottom border-primary"></div>
+
+
 <section-card
   titulo_aclarador="Rutinas"
   titulo=""
@@ -432,6 +462,35 @@
   </template>
 </section-card>
 
+<div class="container">
+  <div class="row mx-0 align-items-center">
+    <div
+      class="col-12 col-lg-6 mb-3 mb-lg-0 d-flex flex-column align-items-center w-100"
+    >
+      <small class="text-center"> Tu cliente viendo sus rutinas o dietas</small>
+
+      <img
+        class="img-fluid"
+        src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/rutinas.gif"
+        alt=""
+      />
+    </div>
+    <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+      <small class="text-center">
+        Tu creando y gestionando las rutinas o dietas
+      </small>
+
+      <img
+        class="img-fluid"
+        src="{{ url() }}/imagenes/Easysocio/gifs/notebook/rutinas.gif"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+<div class="py-5 w-100 border-bottom border-primary"></div>
+
 <section-card
   titulo_aclarador="Cumpleaños"
   titulo=""
@@ -504,4 +563,32 @@
     <small>No te pediremos que ingreses tarjeta de crédito.</small>
   </template>
 </section-card>
+<div class="container">
+  <div class="row mx-0 align-items-center">
+    <div
+      class="col-12 col-lg-6 mb-3 mb-lg-0 d-flex flex-column align-items-center w-100"
+    >
+      <small class="text-center"> Tu cliente ingresando seguimientos</small>
+
+      <img
+        class="img-fluid"
+        src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/review.gif"
+        alt=""
+      />
+    </div>
+    <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+      <small class="text-center">
+        Tu viendo y gestionando los seguimientos
+      </small>
+
+      <img
+        class="img-fluid"
+        src="{{ url() }}/imagenes/Easysocio/gifs/notebook/review.gif"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+<div class="py-5 w-100 border-bottom border-primary"></div>
 </span>

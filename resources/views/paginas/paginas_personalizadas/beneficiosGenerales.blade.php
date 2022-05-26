@@ -168,15 +168,11 @@
   <section-card
     titulo_aclarador="Cuentas corrientes"
     titulo="Nuestro software permite integrar el estado de cuenta de los clientes"
-    background="background-gris--1"
+    background="bg-white"
     order="right"
     :con_parte_oculta="false"
-    url_img_chica="{{
-      url()
-    }}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg"
-    url_img_grande="{{
-      url()
-    }}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg"
+    url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/panel de socio.gif"
+    url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/panel de socio.gif"
   >
     <template slot="description-visible">
       <p>
@@ -201,15 +197,11 @@
   <section-card
     titulo_aclarador="Arqueos de caja"
     titulo="Movimientos de caja"
-    background="background-gris-1"
+    background="bg-white"
     order="left"
     :con_parte_oculta="true"
-    url_img_chica="{{
-      url()
-    }}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg"
-    url_img_grande="{{
-      url()
-    }}/imagenes/PaginasPersonalizadas/Socios/estado-de-cuenta-de-programa-de-administracion-de-socio.jpg"
+    url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/movimientos de caja.gif"
+    url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/movimientos de caja.gif"
   >
     <template slot="description-visible">
       <p>
@@ -254,15 +246,11 @@
   <section-card
     titulo_aclarador="Automatización"
     titulo="Manejo easy de membresías"
-    background="background-gris--1"
+    background="bg-white"
     order="right"
     :con_parte_oculta="true"
-    url_img_chica="{{
-      url()
-    }}/imagenes/PaginasPersonalizadas/Socios/antes-y-despues-del-vencimiento-en-el-prgrama-de-administracion.jpg"
-    url_img_grande="{{
-      url()
-    }}/imagenes/PaginasPersonalizadas/Socios/antes-y-despues-del-vencimiento-en-el-prgrama-de-administracion.jpg"
+    url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/agregar membresia.gif"
+    url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/agregar membresia.gif"
   >
     <template slot="description-visible">
       <p>
