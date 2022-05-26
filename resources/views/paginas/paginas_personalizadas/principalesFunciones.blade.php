@@ -568,7 +568,7 @@
     <div
       class="col-12 col-lg-6 mb-3 mb-lg-0 d-flex flex-column align-items-center w-100"
     >
-      <small class="text-center"> Tu cliente ingresando seguimientos</small>
+      <small class="text-center"> Tu cliente calificando una clase</small>
 
       <img
         class="img-fluid"
@@ -578,7 +578,7 @@
     </div>
     <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
       <small class="text-center">
-        Tu viendo y gestionando los seguimientos
+        Tu viendo las calificaciones
       </small>
 
       <img
