@@ -120,11 +120,13 @@
     <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
       <small class="text-center"> Tu cliente reservando</small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/reserva-exito.gif"
-        alt=""
-      />
+      
+       <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/reserva-exito.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
+
+     
     </div>
   </div>
 </div>
@@ -181,11 +183,11 @@
     >
       <small class="text-center"> Tu agregando un gastos o ingresos</small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/notebook/gastos.gif"
-        alt=""
-      />
+
+       <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/notebook/gastos.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
     </div>
     <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
       <small class="text-center">
@@ -357,11 +359,11 @@
     >
       <small class="text-center"> Tu cliente ingresando seguimientos</small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/seguimientos.gif"
-        alt=""
-      />
+     
+       <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/seguimientos.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
     </div>
     <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
       <small class="text-center">
@@ -468,11 +470,10 @@
     >
       <small class="text-center"> Tu cliente viendo sus rutinas o dietas</small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/rutinas.gif"
-        alt=""
-      />
+      <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/rutinas.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
     </div>
     <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
       <small class="text-center">
@@ -568,11 +569,12 @@
     >
       <small class="text-center"> Tu cliente calificando una clase</small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/review.gif"
-        alt=""
-      />
+      <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/review.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
+
+      
     </div>
     <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
       <small class="text-center">
