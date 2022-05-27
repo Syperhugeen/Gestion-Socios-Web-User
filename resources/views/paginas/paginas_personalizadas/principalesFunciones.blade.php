@@ -110,11 +110,12 @@
     >
       <small class="text-center"> Tu gestionando las reservas</small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/notebook/reservas.gif"
-        alt=""
-      />
+      <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/notebook/reservas.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
+
+      
     </div>
     <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
       <small class="text-center"> Tu cliente reservando</small>
@@ -578,11 +579,12 @@
         Tu viendo las calificaciones
       </small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/notebook/review.gif"
-        alt=""
-      />
+     
+
+      <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/notebook/review.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </div>

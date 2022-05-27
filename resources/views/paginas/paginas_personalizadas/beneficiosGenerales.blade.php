@@ -170,9 +170,11 @@
     titulo="Nuestro software permite integrar el estado de cuenta de los clientes"
     background="bg-white"
     order="right"
-    :con_parte_oculta="false"
-    url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/panel de socio.gif"
-    url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/panel de socio.gif"
+    video="si"
+    video_type="video/webm"
+    :con_parte_oculta="true"
+    url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/panel-de-socio.webm"
+    url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/panel-de-socio.webm"
   >
     <template slot="description-visible">
       <p>
@@ -199,9 +201,11 @@
     titulo="Movimientos de caja"
     background="bg-white"
     order="left"
+    video="si"
+    video_type="video/webm"
     :con_parte_oculta="true"
-    url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/movimientos de caja.gif"
-    url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/movimientos de caja.gif"
+    url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/movimientos-de-caja.webm"
+    url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/movimientos-de-caja.webm"
   >
     <template slot="description-visible">
       <p>
