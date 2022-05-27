@@ -7,7 +7,9 @@ Vue.component("section-card", {
     "url_img_chica",
     "url_img_grande",
     "call_to_action",
-    "con_parte_oculta"
+    "con_parte_oculta",
+    "video",
+    "video_type"
   ],
 
   data: function() {
@@ -73,7 +75,11 @@ Vue.component("section-card", {
 
             </div>
             <div :class="ordenImgClass"  class="col-lg-6  p-2 p-lg-5  d-flex flex-row align-items-center justify-content-center">
-              <img class="img-fluid  helper-border-radius-16" :src="$root.mostrar_para_celuar ? url_img_chica : url_img_grande" :alt="titulo">
+            <video v-if="video == 'si'" muted autoplay loop class="img-fluid" >
+           <source :src="url_img_chica" :type="video_type">
+      Your browser does not support the video tag.
+    </video>
+              <img v-else class="img-fluid  helper-border-radius-16" :src="$root.mostrar_para_celuar ? url_img_chica : url_img_grande" :alt="titulo">
             </div>
           </div>
         </div>

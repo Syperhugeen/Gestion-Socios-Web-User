@@ -9,9 +9,9 @@
 @section('pixcel-facebook')
 <!-- Facebook Pixel Code -->
 <script>
-  !(function(f, b, e, v, n, t, s) {
+  !(function (f, b, e, v, n, t, s) {
     if (f.fbq) return;
-    n = f.fbq = function() {
+    n = f.fbq = function () {
       n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
     };
     if (!f._fbq) f._fbq = n;
@@ -37,7 +37,7 @@
   ><img
     height="1"
     width="1"
-    style="display:none"
+    style="display: none"
     src="https://www.facebook.com/tr?id=1301666320204392&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
@@ -126,13 +126,13 @@
     >
       Comenzar ahora</a
     >
-    <a href="#intro" class="btn  btn-outline-light cursor-pointer">
+    <a href="#intro" class="btn btn-outline-light cursor-pointer">
       Seguir leyendo</a
     >
 
     <img
-      class="d-none d-lg-block "
-      style="position: absolute; right:0; top:30%; height:auto; width:600px;"
+      class="d-none d-lg-block"
+      style="position: absolute; right: 0; top: 30%; height: auto; width: 600px"
       src="{{ url() }}/imagenes/Easysocio/Capturas/socios-listado-notebook.png"
       alt=""
     />
@@ -148,7 +148,7 @@
         @if( Session::get('esDeUruguay'))
         <div class="w-100 d-flex flex-column align-items-center mb-2">
           <div class="d-flex flex-row align-items-center">
-            <small class=" mb-0 mr-2 text-center text-uppercase"
+            <small class="mb-0 mr-2 text-center text-uppercase"
               >Software made in Uruguay</small
             >
             <img
@@ -165,7 +165,7 @@
 
         @endif
 
-        <h2 class="h1 mb-4 text-center ">
+        <h2 class="h1 mb-4 text-center">
           Software para la gestión de
           <slider-text
             :data="[{name:'gimnasios'},{name:'escuelas de danza'},{name:'academias de artes marciales'},{name:'box funcionales'}]"
@@ -183,16 +183,18 @@
           para que lo realices de manera rápida y sencilla.
         </p>
 
-        <div class="my-5 d-flex flex-column align-items-center w-100 ">
+        <div class="my-5 d-flex flex-column align-items-center w-100">
           <small class="text-center">Agregando una membresía a un socio</small>
           <div class="col-12 col-lg-8">
-            <img
-              class="img-fluid"
-              src="{{
-                url()
-              }}/imagenes/Easysocio/gifs/notebook/agregar membresia.gif"
-              alt=""
-            />
+            <video muted autoplay loop class="img-fluid">
+              <source
+                src="{{
+                  url()
+                }}/imagenes/Easysocio/gifs/notebook/agregar-membresia.webm"
+                type="video/webm"
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
 
@@ -203,7 +205,7 @@
 </section>
 
 <section class="site-section background-white">
-  <div class="container ">
+  <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 mb-5 position-relative">
         <p class="text-center text-uppercase mb-1">
@@ -217,8 +219,8 @@
   </div>
 </section>
 
-<section class="site-section background-white  border-top border-primary">
-  <div class="container ">
+<section class="site-section background-white border-top border-primary">
+  <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 mb-5 position-relative">
         <h3 class="text-center mb-0 h2">
@@ -237,7 +239,7 @@
 </section>
 
 <section class="site-section background-gris-1">
-  <div class="container ">
+  <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 mb-5 position-relative">
         <p class="text-center text-uppercase mb-1">¿Para quién es?</p>
@@ -251,7 +253,7 @@
           url="{{ route('get_programa_para_gestionar_gimancios') }}"
         >
           <template slot="icono">
-            <div class="rounded  mb-2 ">
+            <div class="rounded mb-2">
               <img
                 src="{{ url() }}/imagenes/Easysocio/SirvePara/pesas.jpg"
                 class="img-fluid rounded"
@@ -276,7 +278,7 @@
           url="{{ route('get_programa_para_gestionar_box_crossfit') }}"
         >
           <template slot="icono">
-            <div class="rounded  mb-2 ">
+            <div class="rounded mb-2">
               <img
                 src="{{ url() }}/imagenes/Easysocio/SirvePara/box-funcional.jpg"
                 class="img-fluid rounded"
@@ -301,7 +303,7 @@
           url="{{ route('get_programa_para_gestionar_escuelas_de_danza') }}"
         >
           <template slot="icono">
-            <div class="rounded  mb-2 ">
+            <div class="rounded mb-2">
               <img
                 src="{{ url() }}/imagenes/Easysocio/SirvePara/danza.jpg"
                 class="img-fluid rounded"
@@ -327,7 +329,7 @@
           }}"
         >
           <template slot="icono">
-            <div class="rounded  mb-2 ">
+            <div class="rounded mb-2">
               <img
                 src="{{
                   url()

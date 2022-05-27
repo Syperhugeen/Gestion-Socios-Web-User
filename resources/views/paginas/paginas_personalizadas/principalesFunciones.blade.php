@@ -55,11 +55,10 @@
 <div class="col-12 mb-3 mb-lg-0 d-flex flex-column align-items-center w-100">
   <small class="text-center">Agregando una membresía a un socio</small>
   <div class="col-12 d-flex flex-column align-items-center">
-    <img
-      class="img-fluid"
-      src="{{ url() }}/imagenes/Easysocio/gifs/notebook/agregar membresia.gif"
-      alt=""
-    />
+    <video muted autoplay loop class="img-fluid" >
+      <source src="{{ url() }}/imagenes/Easysocio/gifs/notebook/agregar-membresia.webm" type="video/webm">       
+      Your browser does not support the video tag.
+    </video>
   </div>
 </div>
 </div>
@@ -192,11 +191,10 @@
         Tu viendo los reportes de gastos e ingresos
       </small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/notebook/analitics.gif"
-        alt=""
-      />
+      <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/notebook/analitics.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </div>
@@ -245,22 +243,23 @@
     >
       <small class="text-center"> Tu cliente ingresando </small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/control de acceso.gif"
-        alt=""
-      />
+     
+
+      <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/control-de-acceso.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
     </div>
     <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
       <small class="text-center">
         Tu viendo los accesos
       </small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/notebook/ver accesos.gif"
-        alt=""
-      />
+      <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/notebook/ver-accesos.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
+     
     </div>
   </div>
 </div>
@@ -368,11 +367,10 @@
         Tu viendo y gestionando los seguimientos
       </small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/notebook/seguimientos.gif"
-        alt=""
-      />
+      <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/notebook/seguimientos.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </div>
@@ -480,11 +478,10 @@
         Tu creando y gestionando las rutinas o dietas
       </small>
 
-      <img
-        class="img-fluid"
-        src="{{ url() }}/imagenes/Easysocio/gifs/notebook/rutinas.gif"
-        alt=""
-      />
+      <video muted autoplay loop class="img-fluid" >
+        <source src="{{ url() }}/imagenes/Easysocio/gifs/notebook/rutinas.webm" type="video/webm">       
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </div>

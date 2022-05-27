@@ -248,9 +248,11 @@
     titulo="Manejo easy de membresías"
     background="bg-white"
     order="right"
+    video="si"
+    video_type="video/webm"
     :con_parte_oculta="true"
-    url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/agregar membresia.gif"
-    url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/agregar membresia.gif"
+    url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/agregar-membresia.webm"
+    url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/agregar-membresia.webm"
   >
     <template slot="description-visible">
       <p>
