@@ -1,5 +1,16 @@
 <?php
 
+
+/**
+ * Para solucionar el error que genera las versiones de php mayores a 7.1
+ * count(): Parameter must be an array or an object that implements Countable
+ * 
+ * TODO Hacer Upgrade (de todo el sistema) de la versión de laravel con Laravel Shifst.
+ */
+if(version_compare(PHP_VERSION, '7.2.0', '>=')) {
+    error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+}
+
 // Authentication routes...
 require __DIR__ . '/Rutas/Auth.php';
 

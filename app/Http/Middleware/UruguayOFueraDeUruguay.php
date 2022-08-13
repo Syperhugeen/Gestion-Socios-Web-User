@@ -11,23 +11,19 @@ class UruguayOFueraDeUruguay
 {
 
     public function handle(
-                $request,
+        $request,
         Closure $next
-    )
-    {
+    ) {
 
-        if (!Session::has('esDeUruguay'))
-        {
-
+        if (!Session::has('esDeUruguay')) {
             $ip_del_user = strval($_SERVER['REMOTE_ADDR']);
-            $Response    = CurlHelper::getUrlData("http://www.geoplugin.net/json.gp?ip=" . $ip_del_user);
-            $Valor       = true;
 
-            if ($Response['Https_status'] == 200)
-            {
+            $Response = CurlHelper::getUrlData("http://www.geoplugin.net/json.gp?ip=" . $ip_del_user);
+            $Valor    = true;
+
+            if ($Response['Https_status'] == 200) {
                 $Response = $Response['Data'];
-                if ($Response->geoplugin_status == 200)
-                {
+                if ($Response->geoplugin_status == 200) {
                     $Valor = $Response->geoplugin_countryCode == 'UY' ? true : false;
                 }
             }
@@ -35,37 +31,28 @@ class UruguayOFueraDeUruguay
             Session::put('esDeUruguay', $Valor);
         }
 
-        if (!Session::has('pais'))
-        {
-
+        if (!Session::has('pais')) {
             $ip_del_user = strval($_SERVER['REMOTE_ADDR']);
             $Response    = CurlHelper::getUrlData("http://www.geoplugin.net/json.gp?ip=" . $ip_del_user);
 
             $Paises = collect(ServicioPaises::getPaises());
 
-            $Pais = $Paises->filter(function ($pais)
-            {
-                return $pais->code == 'UY';
+            $Pais = $Paises->filter(function ($pais) {
+                return $pais->code == 'US';
             })->first();
 
-            if ($Response['Https_status'] == 200)
-            {
+            if ($Response['Https_status'] == 200) {
                 $Response = $Response['Data'];
-                if ($Response->geoplugin_status == 200)
-                {
-                    $Valor  = $Response->geoplugin_countryCode == 'UY' ? true : false;
-                    $Paises = $Paises->filter(function ($pais) use ($Response)
-                    {
+                if ($Response->geoplugin_status == 200) {
+                    $Paises = $Paises->filter(function ($pais) use ($Response) {
                         return $pais->code == $Response->geoplugin_countryCode;
                     });
 
                     $Pais = $Paises->count() > 0 ? $Paises->first() : $Pais;
-
                 }
             }
 
             Session::put('pais', $Pais);
-
         }
 
         return $next($request);
