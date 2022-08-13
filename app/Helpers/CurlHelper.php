@@ -24,9 +24,9 @@ class CurlHelper
         $httpcode  = curl_getinfo($cliente, CURLINFO_HTTP_CODE);
         curl_close($cliente);
 
-        return ['Data' => $contenido,
+        return [
+            'Data'         => $contenido,
             'Https_status' => $httpcode,
         ];
-
     }
 }

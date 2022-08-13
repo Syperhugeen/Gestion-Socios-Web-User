@@ -1,10 +1,10 @@
 @foreach($Planes as $Plan)
 <div class="col-6 col-lg-3 mt-2 mb-4 mb-lg-0 px-1 px-lg-2">
   <div
-    class="w-100 d-flex flex-column align-items-center shadow border rounded py-4 px-3"
+    class="w-100 d-flex flex-column align-items-center shadow-sm border border-light rounded-lg py-4 px-1 px-lg-2 overflow-hidden bg-light"
   >
-    <header class="sub-titulos-class mb-4 mt-3 text-center text-color-black">
-      <b>Plan {{$Plan->name}}</b>
+    <header class="h5 mb-4 mt-3 text-center text-color-black">
+      Plan <br> <b>{{$Plan->name}}</b>
     </header>
 
     <ul class="p-2 mb-3 background-gris-0 list-style-none">
@@ -280,8 +280,8 @@
       <div class="contiene-precio-dato text-center">
         <img
           class="shadow-sm mr-2 rounded-circle border border-light"
-          height="40"
-          width="40"
+          height="20"
+          width="20"
           src="{{
             url()
           }}/imagenes/monedas/{{  Session::get('esDeUruguay') ? 'pesos.jpg' : 'dolar.jpg'}}"
@@ -300,8 +300,8 @@
       <div class="text-center w-100">
         <img
           class="shadow-sm mr-2 rounded-circle border border-light"
-          height="40"
-          width="40"
+          height="20"
+          width="20"
           src="{{ url() }}/imagenes/monedas/pesos.jpg"
           alt="Moneda"
         />
@@ -312,8 +312,8 @@
       <div class="mt-2 mb-2 text-center w-100">
         <img
           class="shadow-sm mr-2 rounded-circle border border-light"
-          height="40"
-          width="40"
+          height="20"
+          width="20"
           src="{{ url() }}/imagenes/monedas/dolar.jpg"
           alt="Moneda"
         />
@@ -324,16 +324,16 @@
       @endif
 
       <p
-        class="text-center color-text-gris mb-0 mt-2"
+        class="w-100 text-center color-text-gris mb-0 mt-2"
         style="font-size: 12px !important"
       >
         @if( Session::get('esDeUruguay'))
 
         <small>
-          El precio está en pesos Uruguayos. <br />
+          El precio está en pesos Uruguayos. (Precio sin impuestos) <br />
 
           Forma de pago: depósito o transferencia del BROU (Se puede hacer en
-          abitab o Red Pagos)
+          abitab o Red Pagos). 
         </small>
 
         @else
@@ -349,13 +349,13 @@
 
       <div class="w-100 d-flex flex-column align-items-center">
         <a
-          class="btn btn-primary btn-lg mt-3"
+          class="btn btn-primary btn-lg mt-3 mb-1"
           href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
         >
           Probar gratis
         </a>
 
-        <small class="text-center px-3"
+        <small class="text-center helper-fuente-pequeña px-3"
           >No te pediremos que ingreses tarjeta de crédito.</small
         >
       </div>
