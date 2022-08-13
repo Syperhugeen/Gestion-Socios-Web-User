@@ -20,13 +20,7 @@ class UruguayOFueraDeUruguay
          */
         $ip_del_user = strval($_SERVER['REMOTE_ADDR']);
 
-        if (Session::has('esDeUruguay')) {
-            Session::forget('esDeUruguay');
-        }
-
-        if (Session::has('pais')) {
-            Session::forget('pais');
-        }
+        
 
         if (!Session::has('esDeUruguay')) {
             $Response = CurlHelper::getUrlData("http://www.geoplugin.net/json.gp?ip=" . $ip_del_user);
