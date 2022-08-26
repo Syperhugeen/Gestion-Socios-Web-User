@@ -1,11 +1,11 @@
 <header-nav :scroll="true" color_tipo="simple" inline-template>
-  <header class="py-1" :class="getClassHeader" role="banner" id="headerID">
+  <header class="py-0" :class="getClassHeader" role="banner" id="headerID">
     <div class="container-fluid">
       <div class="row align-items-center justify-content-between">
         <div class="col-6  col-lg-2">
           <div class="w-100 d-flex flex-row align-items-center">
 
-            <a href="{{route('get_home')}}" class="d-block w-100">
+            <a href="{{route('get_home')}}" class="d-block"  style="width:120px;">
               <img
                 v-if="$root.scrolled > 0"
                 src="{{url()}}/imagenes/Empresa/logo-rectangular-easysocio-color.png"
@@ -20,8 +20,8 @@
 
             <img
             src="{{Session::get('pais')->url_img}}"
-            width="30"
-            height="30"
+            width="25"
+            height="25"
             class="rounded-circle ml-2"
           />
 
@@ -121,6 +121,25 @@
                           Escuela de artes marciales
                         </a>
                       </div>
+                      <div class="col-12 col-md-6 mb-2">
+                        <a
+                          class="Boton-Fuente-Chica Boton-Primario-Sin-Relleno"
+                          href="{{route('get_pagina_yoga')}}"
+                        >
+                          Centro de yoga/pilates
+                        </a>
+                      </div>
+
+                      <div class="col-12 col-md-6 mb-2">
+                        <a
+                          class="Boton-Fuente-Chica Boton-Primario-Sin-Relleno"
+                          href="{{route('pagina_personal_trainer')}}"
+                        >
+                          Personal trainers
+                        </a>
+                      </div>
+
+                      
                     </div>
 
                     <div class="modal-body"></div>

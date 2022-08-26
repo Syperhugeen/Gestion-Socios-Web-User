@@ -62,3 +62,16 @@ Route::get('/funcionalidades', [
     'uses' => 'Publicas\Paginas_Controller@get_funcionalidades',
     'as'   => 'get_funcionalidades']
 );
+
+Route::get('/software-para-centros-de-yoga-y-pilates', [
+    'uses' => 'Publicas\Paginas_Controller@get_pagina_yoga',
+    'as'   => 'get_pagina_yoga']
+);
+
+
+Route::get('/software-para-gestion-de-clientes', [
+    'uses' => 'Publicas\Paginas_Controller@get_personal_trainer',
+    'as'   => 'get_personal_trainer']
+);
+
+

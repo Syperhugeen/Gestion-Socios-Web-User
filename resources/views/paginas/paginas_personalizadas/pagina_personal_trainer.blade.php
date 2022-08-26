@@ -3,26 +3,35 @@
 
 
 
+
 {{--*/ $ImagenParaTaG         = url() . '/imagenes/PaginasPersonalizadas/Socios/easy-socio-el-software-para-administrar-gimnasios-academias-de-baile-institutos-de-ingles-y-mucho-más.jpg'/*--}}
-{{--*/ $Titulo                = $Portada->titulo_de_la_pagina /*--}}
-{{--*/ $DescriptionEtiqueta   = $Portada->description_de_la_pagina   /*--}}
-{{--*/ $PalabrasClaves        = 'Software para gimnasios, gym software' /*--}}
-{{--*/ $UrlDeLaPagina         = route('get_programa_para_gestionar_gimancios') /*--}}
 
+{{--*/ $Titulo                = 'Software para personal trainers' /*--}}
+{{--*/ $DescriptionEtiqueta   = 'El mejor programa de administración para personal trainers. '   /*--}}
 
+{{--*/ $PalabrasClaves        = '' /*--}}
+{{--*/ $UrlDeLaPagina         = route('get_pagina_yoga') /*--}}
 
 @section('og-tags')
  <meta property="og:type"               content="website" />
  <meta property="og:title"              content="{{ $Titulo}} " />
  <meta property="og:description"        content="{{$DescriptionEtiqueta}}" />
- <meta property="og:image"              content="{{$ImagenParaTaG }}" />
- <meta property="og:image:secure_url"   content="{{$ImagenParaTaG }}" />
- <meta property="og:image:width"        content="250">
- <meta property="og:image:height"       content="250">
+ <meta property="og:image"             content="{{$ImagenParaTaG }}" />
+ <meta property="og:image:secure_url"  content="{{$ImagenParaTaG }}" /> 
+ <meta property="og:image:width" content="250">
+ <meta property="og:image:height" content="250">
+
+
+@stop 
+
+@section('favicon')
+ <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}">
 @stop
 
 
+
 @section('data-estructurada')
+
  <script type="application/ld+json">
         {
          "@context": "http://schema.org",
@@ -37,22 +46,24 @@
             "@id": "{{$UrlDeLaPagina}}",
             "name": "{{$Titulo}}"
             }
-          }
+          }          
          ]
         }
 </script>
+
+
 @stop
 
-@section('favicon')
- <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}">
-@stop
+
+
 
 @section('title')
    {{$Titulo}}
 @stop
 
+
 @section('MetaContent')
-   {{$DescriptionEtiqueta}}
+      {{$DescriptionEtiqueta}}
 @stop
 
 @section('MetaRobot')
@@ -60,15 +71,12 @@
 @stop
 
 @section('palabras-claves')
-   {{$PalabrasClaves}}
+{{$PalabrasClaves}}
 @stop
 
 
-
 @section('vue')
-
-
-   @include('paginas.home.vue.section-card')
+@include('paginas.home.vue.section-card')
    @include('paginas.home.vue.pregunta-componente')
    @include('paginas.home.vue.slider-text')
    @include('paginas.home.vue.portada')
@@ -85,12 +93,14 @@
  @include('paginas.Estructura_partes.Footer.Footer')
 @stop
 
+
 @section('contenido')
+    
 
 <portada altura_portada="60">
   <template slot="titulo">
     <h1 class="text-white mb-5 col-lg-6 px-0">
-      Software para administrar gimnasios
+      Software para centros de Yoga y Pilates
     </h1>
   </template>
   <template slot="descripcion">
@@ -125,7 +135,7 @@
     <img
       class="d-none d-lg-block"
       style="position: absolute; right: 0; top: 5%; height: auto; width: 600px"
-      src="{{url()}}/imagenes/Easysocio/Paquetes/gimnasios-png.png"
+      src="{{url()}}/imagenes/Easysocio/Paquetes/yoga-png.png"
       alt=""
     />
   </template>
@@ -156,7 +166,7 @@
         @endif
 
         <h2 class="h1 mb-4 text-center">
-          Software para la gestión de gimnasios
+          Software para la gestión de centros de pilates o yoga
         </h2>
         <p class="text-center mb-0">
           EasySocio es una plataforma digital que te ofrece mucho más que un
@@ -164,7 +174,7 @@
           <a
             href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"
           >
-            administrar tu gimnasio</a
+            administrar tu centro de Yoga o Pilates</a
           >. Se trata de un conjunto de utilidades que te permitirán brindar un
           óptimo servicio para tus clientes al tiempo que facilita tu trabajo
           para que lo realices de manera
@@ -199,7 +209,7 @@
   </template>
   <template slot="description-oculta">
     <p>
-      Esta tecnología te permite como administrador de uno o varios gimnasios
+      Esta tecnología te permite como administrador de uno o varios emprendimeintos
       saber cuál es el estado financiero del negocio en tiempo real, desde
       cualquier ubicación a través de un dispositivo móvil como un celular o tu
       laptop. Además podrás obtener información valiosa sobre las estadísticas
@@ -221,7 +231,7 @@
 >
   <template slot="description-visible">
     <p>
-      Los gimnasios hoy en día son uno de los emprendimientos de mayor auge. La
+      Los centros de pilates y yoga hoy en día son uno de los emprendimientos de mayor auge. La
       industria del fittness y del cuidado personal se encuentra al alza, ya que
       millones de personas acuden en búsqueda de la oferta de productos y
       servicios que allí se ofrecen con la finalidad de mejorar su calidad de
@@ -235,7 +245,7 @@
       buenas prácticas y hábitos saludables en los individuos, resulta un
       ambiente ideal para el surgimiento de muchas ideas y modelos de negocios
       asociados al cuidado del bienestar físico. Así que, bien sea que tienes un
-      gimnasio con equipos para ejercicios anaeróbicos (pesas y máquinas de
+      centro de fitness con equipos para ejercicios anaeróbicos (pesas y máquinas de
       resistencia) una escuela de artes marciales, o un centro para las últimas
       tendencias del entrenamiento como el Crossfit, el bootcamp o el TRX, ya
       diste el primer paso y realizaste la inversión más importante, ahora lo
@@ -266,7 +276,7 @@
       <div class="col-12 mb-5 position-relative">
         <h3 class="text-center mb-0">
           <strong
-            >Herramientas pensadas para tu gimnasio que harán que tu trabajo sea
+            >Herramientas pensadas para tu centro de Yoga que harán que tu trabajo sea
             <span class="font-secondary helper-aumenta-texto">
               easy
             </span></strong
@@ -289,24 +299,17 @@
 
 
 
+    
+
+    
+
+   
+
+
+   
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
 
 @stop

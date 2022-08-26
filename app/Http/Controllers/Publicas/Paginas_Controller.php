@@ -235,4 +235,44 @@ class Paginas_Controller extends Controller
 
     }
 
+    public function get_pagina_yoga()
+    {
+        
+        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+
+        $Portada = Cache::remember('funciones', 2000, function ()
+        {
+            return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'funciones');
+        });
+
+        $blogs = $this->NoticiasRepo->getUltimosBlogs();
+
+        $Planes = ServiciosPlanes::getPlanes();
+
+        return view('paginas.paginas_personalizadas.pagina_yoga', compact('Empresa', 'Portada', 'Planes', 'blogs'));
+
+    }
+
+    public function pagina_personal_trainer()
+    {
+        
+        $Empresa = $this->EmpresaRepo->getEmpresaDatos();
+
+        $Portada = Cache::remember('funciones', 2000, function ()
+        {
+            return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'funciones');
+        });
+
+        $blogs = $this->NoticiasRepo->getUltimosBlogs();
+
+        $Planes = ServiciosPlanes::getPlanes();
+
+        return view('paginas.paginas_personalizadas.pagina_personal_trainer', compact('Empresa', 'Portada', 'Planes', 'blogs'));
+
+    }
+
+
+
+    
+
 }

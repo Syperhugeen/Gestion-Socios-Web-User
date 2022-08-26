@@ -6,43 +6,9 @@
 {{--*/ $PalabrasClaves        = 'Software para gimnasios, gym software' /*--}}
 {{--*/ $UrlDeLaPagina         = route('get_home') /*--}}
 
-@section('pixcel-facebook')
-<!-- Facebook Pixel Code -->
-<script>
-  !(function (f, b, e, v, n, t, s) {
-    if (f.fbq) return;
-    n = f.fbq = function () {
-      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-    };
-    if (!f._fbq) f._fbq = n;
-    n.push = n;
-    n.loaded = !0;
-    n.version = "2.0";
-    n.queue = [];
-    t = b.createElement(e);
-    t.async = !0;
-    t.src = v;
-    s = b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t, s);
-  })(
-    window,
-    document,
-    "script",
-    "https://connect.facebook.net/en_US/fbevents.js"
-  );
-  fbq("init", "1301666320204392");
-  fbq("track", "PageView");
-</script>
-<noscript
-  ><img
-    height="1"
-    width="1"
-    style="display: none"
-    src="https://www.facebook.com/tr?id=1301666320204392&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
 
-@stop @section('og-tags')
+
+@section('og-tags')
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ $Titulo }} " />
 <meta property="og:description" content="{{ $DescriptionEtiqueta }}" />
@@ -50,7 +16,9 @@
 <meta property="og:image:secure_url" content="{{ $ImagenParaTaG }}" />
 <meta property="og:image:width" content="250" />
 <meta property="og:image:height" content="250" />
-@stop @section('data-estructurada')
+@stop
+
+@section('data-estructurada')
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -67,22 +35,43 @@
     ]
   }
 </script>
-@stop @section('favicon')
+@stop
+
+@section('favicon')
 <link rel="shortcut icon" href="{{ asset('imagenes/favicon-easy.ico') }}" />
-@stop @section('title')
+@stop 
+
+@section('title')
 {{ $Titulo }}
-@stop @section('MetaContent')
+@stop
+
+ @section('MetaContent')
 {{ $DescriptionEtiqueta }}
-@stop @section('MetaRobot') index,follow @stop @section('palabras-claves')
+@stop 
+
+ @section('MetaRobot') index,follow @stop @section('palabras-claves')
 {{ $PalabrasClaves }}
-@stop @section('vue') @include('paginas.home.vue.section-card')
+@stop 
+
+@section('vue') 
+
+@include('paginas.home.vue.section-card')
 @include('paginas.home.vue.pregunta-componente')
 @include('paginas.home.vue.slider-text') @include('paginas.home.vue.portada')
 @include('paginas.home.vue.simple-card')
 @include('paginas.home.vue.header-component')
-@include('paginas.home.vue.vue-instance') @stop @section('header')
-@include('paginas.Estructura_partes.Header.header_comun') @stop
-@section('footer') @include('paginas.Estructura_partes.Footer.Footer') @stop
+@include('paginas.home.vue.vue-instance')
+
+@stop 
+
+@section('header')
+@include('paginas.Estructura_partes.Header.header_comun')
+@stop
+
+@section('footer') 
+
+@include('paginas.Estructura_partes.Footer.Footer') 
+@stop
 @section('contenido')
 
 <portada altura_portada="60">
@@ -356,4 +345,6 @@
 
 @include('paginas.paginas_personalizadas.planes')
 @include('paginas.paginas_personalizadas.preguntasFrecuentes')
-@include('paginas.paginas_personalizadas.blog') @stop
+@include('paginas.paginas_personalizadas.blog') 
+
+@stop
