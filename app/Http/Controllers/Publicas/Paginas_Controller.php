@@ -253,7 +253,7 @@ class Paginas_Controller extends Controller
 
     }
 
-    public function pagina_personal_trainer()
+    public function get_personal_trainer()
     {
         
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();

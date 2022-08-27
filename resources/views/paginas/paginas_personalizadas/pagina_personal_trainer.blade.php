@@ -100,7 +100,7 @@
 <portada altura_portada="60">
   <template slot="titulo">
     <h1 class="text-white mb-5 col-lg-6 px-0">
-      Software para centros de Yoga y Pilates
+      Software para personal trainers
     </h1>
   </template>
   <template slot="descripcion">
@@ -135,7 +135,7 @@
     <img
       class="d-none d-lg-block"
       style="position: absolute; right: 0; top: 5%; height: auto; width: 600px"
-      src="{{url()}}/imagenes/Easysocio/Paquetes/yoga-png.png"
+      src="{{url()}}/imagenes/Easysocio/Paquetes/personal-png.png"
       alt=""
     />
   </template>
@@ -166,7 +166,7 @@
         @endif
 
         <h2 class="h1 mb-4 text-center">
-          Software para la gestión de centros de pilates o yoga
+          Software de gestión para personal trainers 
         </h2>
         <p class="text-center mb-0">
           EasySocio es una plataforma digital que te ofrece mucho más que un
@@ -174,7 +174,7 @@
           <a
             href="https://gestionsocios.com.uy/blog/c%C3%B3mo-administrar-un-gimnasio:-6-consejos-para-que-lo-hagas-bien/24"
           >
-            administrar tu centro de Yoga o Pilates</a
+            administrar tu emprendimiento de fitnes</a
           >. Se trata de un conjunto de utilidades que te permitirán brindar un
           óptimo servicio para tus clientes al tiempo que facilita tu trabajo
           para que lo realices de manera
@@ -209,7 +209,7 @@
   </template>
   <template slot="description-oculta">
     <p>
-      Esta tecnología te permite como administrador de uno o varios emprendimeintos
+      Esta tecnología te permite como administrador de uno o varios emprendimientos
       saber cuál es el estado financiero del negocio en tiempo real, desde
       cualquier ubicación a través de un dispositivo móvil como un celular o tu
       laptop. Además podrás obtener información valiosa sobre las estadísticas
@@ -231,7 +231,7 @@
 >
   <template slot="description-visible">
     <p>
-      Los centros de pilates y yoga hoy en día son uno de los emprendimientos de mayor auge. La
+      Dar clases de entrenamiento funcional hoy en día es uno de los emprendimientos de mayor auge. La
       industria del fittness y del cuidado personal se encuentra al alza, ya que
       millones de personas acuden en búsqueda de la oferta de productos y
       servicios que allí se ofrecen con la finalidad de mejorar su calidad de

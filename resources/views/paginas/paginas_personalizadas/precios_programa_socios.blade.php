@@ -241,7 +241,7 @@
           <div>
             <small>
               Hacé sentir especiales a tus socios y prepará algo para
-              homenagear. El ratio de fidelidad despegará 🚀 ¿<span
+              homenajear. El ratio de fidelidad despegará 🚀 ¿<span
                 class="font-secondary helper-aumenta-texto"
               >
                 easy
@@ -266,6 +266,26 @@
             <small>
               Obten puntuaciones y comentarios por parte de tus socios de forma
               automática, ¿<span class="font-secondary helper-aumenta-texto">
+                easy
+              </span>
+              no?
+            </small>
+          </div>
+        </span>
+      </li>
+      <li
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
+      >
+        <span class="text-color-primary mr-2">
+          <i class="fas fa-check-circle"></i>
+        </span>
+        <span>
+          <div>
+            <b> Licencia y días que no se trabaja 😀</b>
+          </div>
+          <div>
+            <small>
+              Podrás indicar que días vas a cerrar, programar tus vacaciones y mucho más (No tendrás que reconfigurar tu calendarío) ¿<span class="font-secondary helper-aumenta-texto">
                 easy
               </span>
               no?

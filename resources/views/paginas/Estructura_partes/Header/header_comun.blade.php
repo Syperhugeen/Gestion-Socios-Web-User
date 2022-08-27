@@ -53,7 +53,7 @@
             <div
               v-if="$root.mostrar_para_celuar"
               v-on:click="set_mostrar_menu_movil"
-              class="p-5 w-100 text-right"
+              class="p-2 w-100 text-right h3 my-0"
             >
               <i class="fas fa-times"></i>
             </div>
@@ -133,7 +133,7 @@
                       <div class="col-12 col-md-6 mb-2">
                         <a
                           class="Boton-Fuente-Chica Boton-Primario-Sin-Relleno"
-                          href="{{route('pagina_personal_trainer')}}"
+                          href="{{route('get_personal_trainer')}}"
                         >
                           Personal trainers
                         </a>
@@ -205,7 +205,7 @@
         <div
           v-if="$root.mostrar_para_celuar"
           v-on:click="set_mostrar_menu_movil"
-          class="col-3 text-right titulos-class"
+          class="col-3 text-right h4 my-0"
           :class="getClassColorElement"
         >
           <i v-if="!mostrar_menu_en_movil" class="fas fa-bars"></i>
