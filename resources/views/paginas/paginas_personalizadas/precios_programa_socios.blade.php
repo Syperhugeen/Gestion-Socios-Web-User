@@ -390,7 +390,7 @@
 
 <div class="col-12 text-center my-5 helper-fuente-pequeña">
   <small
-    >si tienes más de 400 socios te cobraremos
+    >Si tienes más de 400 socios te cobraremos
     {{ Session::get('esDeUruguay') ? '$400' : 'USD 10' }} cada 100 registros
     nuevos. <br />
     Por ejemplo: <br />
