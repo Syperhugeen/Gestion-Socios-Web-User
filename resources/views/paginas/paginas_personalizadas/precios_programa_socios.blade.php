@@ -4,7 +4,8 @@
     class="w-100 d-flex flex-column align-items-center shadow-sm border border-light rounded-lg py-4 px-1 px-lg-2 overflow-hidden bg-light"
   >
     <header class="h5 mb-4 mt-3 text-center text-color-black">
-      Plan <br> <b>{{$Plan->name}}</b>
+      Plan <br />
+      <b>{{$Plan->name}}</b>
     </header>
 
     <ul class="p-2 mb-3 background-gris-0 list-style-none">
@@ -285,7 +286,10 @@
           </div>
           <div>
             <small>
-              Podrás indicar que días vas a cerrar, programar tus vacaciones y mucho más (No tendrás que reconfigurar tu calendarío) ¿<span class="font-secondary helper-aumenta-texto">
+              Podrás indicar que días vas a cerrar, programar tus vacaciones y
+              mucho más (No tendrás que reconfigurar tu calendarío) ¿<span
+                class="font-secondary helper-aumenta-texto"
+              >
                 easy
               </span>
               no?
@@ -353,7 +357,7 @@
           El precio está en pesos Uruguayos. (Precio sin impuestos) <br />
 
           Forma de pago: depósito o transferencia del BROU (Se puede hacer en
-          abitab o Red Pagos). 
+          abitab o Red Pagos).
         </small>
 
         @else
@@ -383,3 +387,16 @@
   </div>
 </div>
 @endforeach
+
+<div class="col-12 text-center my-5 helper-fuente-pequeña">
+  <small
+    >si tienes más de 400 socios te cobraremos
+    {{ Session::get('esDeUruguay') ? '$400' : 'USD 10' }} cada 100 registros
+    nuevos. <br />
+    Por ejemplo: <br />
+    Si tienes 460 socios te cobraremos lo que cuesta el Plan Pro más
+    {{ Session::get('esDeUruguay') ? '$400' : 'USD 10' }} . <br />
+    Si tienes 550 socios te cobraremos lo que cuesta el Plan Pro más
+    {{ Session::get('esDeUruguay') ? '$800' : 'USD 20' }}.
+  </small>
+</div>
