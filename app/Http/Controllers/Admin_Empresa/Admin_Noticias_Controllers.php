@@ -35,8 +35,7 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
     protected $Nombre_del_campo_imagen;
 
     public function __construct(NoticiasRepo $NoticiasRepo,
-        ImagenRepo                               $ImagenRepo)
-    {
+        ImagenRepo $ImagenRepo) {
         $this->Entidad_principal          = $NoticiasRepo;
         $this->ImagenRepo                 = $ImagenRepo;
         $this->Nombre_entidad_plural      = 'Noticias';
@@ -52,7 +51,6 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
         $this->Route_luego_de_crear       = $this->Route_index;
         $this->Path_carpeta_imagenes      = $this->Carpeta_view_admin . '/'; //donde se gurarda la imagen. Debe existir
         $this->Nombre_del_campo_imagen    = strtolower($this->Nombre_entidad_singular) . '_id';
-
     }
 
     public function getPropiedades()
@@ -88,27 +86,22 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
         $Response = CurlHelper::getUrlData('https://app.gestionsocios.com.uy/get_empresas_curl', $header);
 
-        if ($Response['Https_status'] == '200')
-        {
+        if ($Response['Https_status'] == '200') {
             $Empresas = collect($Response['Data']->Data);
 
-            $Empresas = $Empresas->filter(function ($Empresa) use ($UserNewsletterTodos)
-            {
+            $Empresas = $Empresas->filter(function ($Empresa) use ($UserNewsletterTodos) {
                 return count($Empresa->servicios_contratados_a_empresas_activos) == 0 && !$UserNewsletterTodos->contains('email', $Empresa->email);
             });
 
-            foreach ($Empresas as $Empresa)
-            {
+            foreach ($Empresas as $Empresa) {
                 $UserNewsletterRepo->crearNuevoUserNewslleter($Empresa->email);
             }
         }
 
         $UsuariosNewsletterAEnviar = $UserNewsletterRepo->getUserAEnviar($id);
 
-        if ($UsuariosNewsletterAEnviar->count() > 0)
-        {
-            foreach ($UsuariosNewsletterAEnviar as $UserNewsletter)
-            {
+        if ($UsuariosNewsletterAEnviar->count() > 0) {
+            foreach ($UsuariosNewsletterAEnviar as $UserNewsletter) {
                 $Email = $UserNewsletter->email;
 
                 try {
@@ -116,8 +109,7 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
                         //con esta funcion le envia los datos a la vista.
                         compact('Blog', 'Email'),
-                        function ($m) use ($Blog, $Email)
-                        {
+                        function ($m) use ($Blog, $Email) {
 
                             $m->from('mauricio@gestionsocios.com.uy', 'Easysocio blog');
 
@@ -125,17 +117,13 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
                                 $Email)->subject($Blog->name . ' 🚀');
                         }
                     );
-                }
-                catch (\Exception$e)
-                {
+                } catch (\Exception $e) {
 
-                    HelpersGenerales::log('error','emailNewsletter',$e->getMessage());
+                    HelpersGenerales::log('error', 'emailNewsletter',$Email .' -> ' .  $e . ' -> ' . $e->getMessage());
 
-                    if ($e->getMessage() == 'Swift_RfcComplianceException')
-                    {
+                    if ($e->getMessage() == 'Swift_RfcComplianceException' || $e == 'Swift_RfcComplianceException') {
                         $UserNewsletterRepo->setAtributoEspecifico($UserNewsletter, 'se_puede_enviar', 'no');
                     }
-
                 }
 
                 $convierto_enArray = explode(',', $UserNewsletter->ultimo_blog_enviado_id);
@@ -150,5 +138,4 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
         return redirect()->back()->with('alert', 'Se envío con éxitos');
     }
-
 }
