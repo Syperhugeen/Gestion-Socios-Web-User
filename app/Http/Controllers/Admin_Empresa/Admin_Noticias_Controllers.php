@@ -128,7 +128,10 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
                 }
                 catch (\Exception$e)
                 {
-                    if ($e == 'Swift_RfcComplianceException')
+
+                    HelpersGenerales::log('error','emailNewsletter',$e->getMessage());
+
+                    if ($e->getMessage() == 'Swift_RfcComplianceException')
                     {
                         $UserNewsletterRepo->setAtributoEspecifico($UserNewsletter, 'se_puede_enviar', 'no');
                     }

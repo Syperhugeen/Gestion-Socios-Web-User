@@ -3,6 +3,7 @@
 namespace App\Helpers;
 
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class HelpersGenerales
 {
@@ -16,13 +17,58 @@ class HelpersGenerales
         $Validacion,
         $Validacion_mensaje,
         $Data = null
-    )
-    {
+    ) {
         return [
             'Validacion'         => $Validacion,
             'Validacion_mensaje' => $Validacion_mensaje,
             'Data'               => $Data,
         ];
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @param string $type Accepta: emergency,alert,critical,error,warning,notice,info,debug
+     * @param [type] $fileName El nombre del archivo (será relativo a /storage/logs/)
+     * @param [type] $message
+     *
+     * @return void
+     */
+    public static function log($type, $fileName, $message)
+    {
+        Log::useFiles(storage_path() . '/logs/' . $fileName . '.log');
+
+        $message = 'IP: ' . strval($_SERVER['REMOTE_ADDR']) . '-> ' . $message;
+
+        switch ($type) {
+            case 'emergency':
+                Log::emergency($message);
+                break;
+            case 'alert':
+                Log::alert($message);
+                break;
+            case 'critical':
+                Log::critical($message);
+                break;
+            case 'alert':
+                Log::alert($message);
+                break;
+            case 'error':
+                Log::error($message);
+                break;
+            case 'warning':
+                Log::warning($message);
+                break;
+            case 'notice':
+                Log::notice($message);
+                break;
+            case 'info':
+                Log::info($message);
+                break;
+            case 'debug':
+                Log::debug($message);
+                break;
+        }
     }
 
     /**
@@ -45,7 +91,6 @@ class HelpersGenerales
         $cadena = str_replace('¿', '', $cadena);
 
         return $cadena;
-
     }
 
     public static function helper_convertir_cadena_solo_letras_y_numeros($cadena)
@@ -64,13 +109,11 @@ class HelpersGenerales
         $cadena = str_replace('¡', '', $cadena);
 
         return $cadena;
-
     }
 
     public static function helper_olvidar_este_cache($nombre_de_cache)
     {
-        if (Cache::has($nombre_de_cache))
-        {
+        if (Cache::has($nombre_de_cache)) {
             Cache::forget($nombre_de_cache);
         }
     }
@@ -79,12 +122,9 @@ class HelpersGenerales
     e n t r e g a   e l   v a l o r  */
     public static function helper_dame_sino_es_null_o_vacio($variable)
     {
-        if (($variable != null) || ($variable != ''))
-        {
+        if (($variable != null) || ($variable != '')) {
             return $variable;
-        }
-        else
-        {
+        } else {
             return false;
         }
     }
@@ -173,7 +213,6 @@ class HelpersGenerales
         // return $Iconos[$Random] . ' ';
 
         return '🥇 ';
-
     }
 
     public static function getSimbolitoCerrar()
