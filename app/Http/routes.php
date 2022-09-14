@@ -19,6 +19,9 @@ Route::group(['middleware' => 'uruguayOFuera'], function () {
     require __DIR__ . '/Rutas/Publicas.php';
 });
 
+// Cron routes
+require __DIR__ . '/Rutas/Cron.php';
+
 /**
  * Grupo de Rutas con middleware
  */

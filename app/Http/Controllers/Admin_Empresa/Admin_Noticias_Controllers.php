@@ -11,7 +11,9 @@ use App\Repositorios\ImagenRepo;
 use App\Repositorios\NewslleterUserRepo;
 use App\Repositorios\NoticiasRepo;
 use App\Traits\entidadesControllerComunesCrud;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
+
 
 class Admin_Noticias_Controllers extends Controller implements entidadCrudControllerInterface
 {
@@ -73,6 +75,13 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
     public function enviar_noticias_por_email($id)
     {
+
+        if(Cache::has('sendEmailInQueue'))
+        {
+            return redirect()->back()->with('alert-rojo', 'Ya hay emails en cola. Luego de que el listado quede en cero ahí se podrá preparar de nuevo.');
+        }
+        
+
         $Blog                = $this->Entidad_principal->find($id);
         $UserNewsletterRepo  = new NewslleterUserRepo();
         $UserNewsletterTodos = $UserNewsletterRepo->getAllUserNewsletter();
@@ -100,42 +109,28 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
         $UsuariosNewsletterAEnviar = $UserNewsletterRepo->getUserAEnviar($id);
 
+        $collectionToSaveInCache = collect([]);
+
         if ($UsuariosNewsletterAEnviar->count() > 0) {
             foreach ($UsuariosNewsletterAEnviar as $UserNewsletter) {
-                $Email = $UserNewsletter->email;
-
-                try {
-                    Mail::send('emails.newslleter_blog',
-
-                        //con esta funcion le envia los datos a la vista.
-                        compact('Blog', 'Email'),
-                        function ($m) use ($Blog, $Email) {
-
-                            $m->from('mauricio@gestionsocios.com.uy', 'Easysocio blog');
-
-                            $m->to(trim($Email),
-                                $Email)->subject($Blog->name . ' 🚀');
-                        }
-                    );
-                } catch (\Exception $e) {
-
-                    HelpersGenerales::log('error', 'emailNewsletter',$Email .' -> ' .  $e . ' -> ' . $e->getMessage());
-
-                    if ($e->getMessage() == 'Swift_RfcComplianceException' || $e == 'Swift_RfcComplianceException') {
-                        $UserNewsletterRepo->setAtributoEspecifico($UserNewsletter, 'se_puede_enviar', 'no');
-                    }
-                }
-
+                
+                
+                $objetData = new \stdClass;
+                $objetData->blog = $Blog;
+                $objetData->UserNewsletter = $UserNewsletter;
+                $collectionToSaveInCache->push($objetData);
+              
                 $convierto_enArray = explode(',', $UserNewsletter->ultimo_blog_enviado_id);
-
                 array_push($convierto_enArray, $id);
-
                 $UserNewsletterRepo->setAtributoEspecifico($UserNewsletter, 'ultimo_blog_enviado_id', implode(",", $convierto_enArray));
+              
             }
+
+            Cache::put('sendEmailInQueue',$collectionToSaveInCache,2000);            
 
             $this->Entidad_principal->setAtributoEspecifico($Blog, 'enviado_por_email', 'si');
         }
 
-        return redirect()->back()->with('alert', 'Se envío con éxitos');
+        return redirect()->back()->with('alert', 'Se preparó para enviar');
     }
 }
