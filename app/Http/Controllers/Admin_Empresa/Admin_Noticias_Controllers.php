@@ -11,9 +11,8 @@ use App\Repositorios\ImagenRepo;
 use App\Repositorios\NewslleterUserRepo;
 use App\Repositorios\NoticiasRepo;
 use App\Traits\entidadesControllerComunesCrud;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Mail;
-
 
 class Admin_Noticias_Controllers extends Controller implements entidadCrudControllerInterface
 {
@@ -60,6 +59,19 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
         return ['name', 'descripcion_breve', 'description', 'estado', 'url_video', 'tags', 'title_tag', 'description_tag'];
     }
 
+    public function get_admin(Request $Request)
+    {
+        $Entidades          = $this->Entidad_principal->getEntidadesAllPaginadas($Request, 10);
+        $Titulo             = $this->Nombre_entidad_plural;
+        $Route_crear        = $this->Route_crear;
+        $Route_busqueda     = $this->Route_index;
+        $Carpeta_view_admin = $this->Carpeta_view_admin;
+
+        $CantidadDeEnviosPendientes = Cache::has('sendEmailInQueue') ? Cache::get('sendEmailInQueue')->count() : 0;
+
+        return view($this->Path_view_get_admin_index, compact('Entidades', 'Route_crear', 'Titulo', 'Route_busqueda', 'Carpeta_view_admin','CantidadDeEnviosPendientes'));
+    }
+
     public function getManager($Request)
     {
         $manager = new noticia_manager(null, $Request->all());
@@ -76,11 +88,9 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
     public function enviar_noticias_por_email($id)
     {
 
-        if(Cache::has('sendEmailInQueue'))
-        {
+        if (Cache::has('sendEmailInQueue')) {
             return redirect()->back()->with('alert-rojo', 'Ya hay emails en cola. Luego de que el listado quede en cero ahí se podrá preparar de nuevo.');
         }
-        
 
         $Blog                = $this->Entidad_principal->find($id);
         $UserNewsletterRepo  = new NewslleterUserRepo();
@@ -113,20 +123,17 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
         if ($UsuariosNewsletterAEnviar->count() > 0) {
             foreach ($UsuariosNewsletterAEnviar as $UserNewsletter) {
-                
-                
-                $objetData = new \stdClass;
-                $objetData->blog = $Blog;
+                $objetData                 = new \stdClass;
+                $objetData->blog           = $Blog;
                 $objetData->UserNewsletter = $UserNewsletter;
                 $collectionToSaveInCache->push($objetData);
-              
+
                 $convierto_enArray = explode(',', $UserNewsletter->ultimo_blog_enviado_id);
                 array_push($convierto_enArray, $id);
                 $UserNewsletterRepo->setAtributoEspecifico($UserNewsletter, 'ultimo_blog_enviado_id', implode(",", $convierto_enArray));
-              
             }
 
-            Cache::put('sendEmailInQueue',$collectionToSaveInCache,2000);            
+            Cache::put('sendEmailInQueue', $collectionToSaveInCache, 2000);
 
             $this->Entidad_principal->setAtributoEspecifico($Blog, 'enviado_por_email', 'si');
         }

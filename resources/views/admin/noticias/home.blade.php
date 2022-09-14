@@ -21,6 +21,14 @@
     </div>
     @include('admin.'. $Carpeta_view_admin . '.partes.buscador')
    </div>
+
+   @if($CantidadDeEnviosPendientes > 0)
+
+   <div class="col-12 my-3"> 
+     <div class="p-3 rounded-lg shados text-info h6 my-0">Hay {{$CantidadDeEnviosPendientes}} emails pendientes</div>
+    </div>
+
+   @endif
  </div>
  <div class="container p-4">
    <div class="row col-12">
