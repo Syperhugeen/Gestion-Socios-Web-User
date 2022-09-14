@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Cron;
 use App\Helpers\HelpersGenerales;
 use App\Http\Controllers\Controller;
 use App\Repositorios\NewslleterUserRepo;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
 
@@ -12,6 +13,13 @@ class CronController extends Controller
 {
     public function sendEmailInQueue()
     {
+
+        $Now = Carbon::now();
+
+        if($Now->hour < 8 || $Now->hour > 20)
+        {
+            return "Fuera de hora para enviar";
+        }
 
         $UserNewsletterRepo = new NewslleterUserRepo();
 
