@@ -1,5 +1,5 @@
 <header-nav :scroll="true" color_tipo="simple" inline-template>
-  <header class="py-1 " :class="getClassHeader" role="banner">
+  <header class="py-2 " :class="getClassHeader" role="banner">
 
         <div class="container-fluid ">
           <div class="row align-items-center justify-content-between ">
