@@ -51,6 +51,23 @@
           </div>
         </span>
       </li>
+      <li
+        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
+      >
+        <span class="text-color-primary mr-2">
+          <i class="fas fa-check-circle"></i>
+        </span>
+        <span>
+          <div>
+            <b> Control de inventario y ventas de productos</b>
+          </div>
+          <div>
+            <small
+              >Optimiza ventas y controla productos con soluciones intuitivas y potentes.
+            </small>
+          </div>
+        </span>
+      </li>
 
       <li
         class="contiene-li-precio-nuevo border d-flex flex-row border-success"

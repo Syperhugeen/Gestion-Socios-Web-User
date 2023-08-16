@@ -1,48 +1,31 @@
+Vue.component("simple-card", {
+  props: [
+    "titulo",
+    "descripcion",
+    "url",
+    "url_img_chica",
+    "url_img_grande",
+    "call_to_action",
+  ],
 
-
-Vue.component('simple-card' ,
-{
-
-
-props:['titulo', 'descripcion','url','url_img_chica','url_img_grande','call_to_action'],
-
-
-data:function(){
+  data: function () {
     return {
-       cargando:false,
+      cargando: false,
+    };
+  },
 
-
-    }
-},
-
-watch:{
-
-
-
-
-},
-methods:{
-
-
-
-
-},
-computed:{
-
-},
-mounted: function mounted (){
-
-
-
-},
-template:`
+  watch: {},
+  methods: {},
+  computed: {},
+  mounted: function mounted() {},
+  template: `
 
 <div v-if="cargando"  class="w-100 d-flex flex-column align-items-center py-5">
     <div class="cssload-container ">
         <div class="cssload-tube-tunnel-color-3 "></div>
     </div>
 </div>
-<div v-else class="w-100 h-100 d-flex flex-column shadow rounded p-4" >
+<div v-else class="w-100 h-100 d-flex flex-column  rounded p-4" >
 <a :href="url" >
     <slot name="icono">
 
@@ -50,7 +33,7 @@ template:`
     </a>
 
     <a :href="url" >
-    <h3 class="h5 mt-2 text-dark"> <strong>@{{titulo}}</strong> </h3>
+    <h3 class="h6 mt-2 text-dark"> <strong>@{{titulo}}</strong> </h3>
     </a>
 
 
@@ -73,7 +56,5 @@ template:`
 </div>
 
 
-`
-
-
+`,
 });

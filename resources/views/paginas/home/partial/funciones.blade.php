@@ -49,7 +49,7 @@
 </div>
 
 <div class="col-11 col-lg-3 px-2 mb-3 mb-lg-0">
-  <simple-card titulo="Finanzas">
+  <simple-card titulo="Control de inventario y ventas de productos">
     <template slot="icono">
       <div
         class="d-flex flex-row align-items-center rounded mb-1"
@@ -57,16 +57,15 @@
       >
         <img
           class="img-fluid"
-          src="{{ url() }}/imagenes/Drwas/finanzas.png"
-          alt="Icono de finanzas"
+          src="{{ url() }}/imagenes/Drwas/shopping.png"
+          alt="Icono de shopping"
         />
       </div>
     </template>
     <template slot="description">
       <div class="parrafo-class-pequeño">
-        Todo lo que venís haciendo en tu planilla de excel pero ahora de manera
-        automática
-        <span class="font-secondary helper-aumenta-texto">easy</span>.
+        Optimiza ventas y controla productos con soluciones intuitivas y potentes. 
+        Simplifica la gestión de inventario, asegura disponibilidad de productos y potencia tus operaciones de venta para impulsar tu éxito empresarial.<span class="font-secondary helper-aumenta-texto">easy</span>.
       </div>
     </template>
   </simple-card>

@@ -29,7 +29,7 @@ class CronController extends Controller
             $emailDataColection = Cache::get($cacheKey);
 
             if ($emailDataColection->count() > 0) {
-                for ($i = 1; $i < 200 && $emailDataColection->count() > 0; $i++) {
+                for ($i = 1; $i < 50 && $emailDataColection->count() > 0; $i++) {
                     $data = $emailDataColection->shift();
 
                     $Blog           = $data->blog;
