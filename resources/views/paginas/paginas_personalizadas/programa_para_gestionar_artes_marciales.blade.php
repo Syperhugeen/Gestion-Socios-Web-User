@@ -66,7 +66,7 @@
 
 
 @section('vue')
-
+@include('paginas.home.vue.access-devices')
 
    @include('paginas.home.vue.section-card')
    @include('paginas.home.vue.pregunta-componente')
