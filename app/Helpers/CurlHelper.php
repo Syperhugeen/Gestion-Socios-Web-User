@@ -8,8 +8,10 @@ class CurlHelper
     /**
      * Peticióm GET usando Curl a una Url con o sin Headers- Retorna array con http info y data
      */
-    public static function getUrlData($url, $headers = [])
-    {
+    public static function getUrlData(
+        $url,
+        $headers = []
+    ) {
 
         $cliente = curl_init();
         curl_setopt($cliente, CURLOPT_URL, $url);

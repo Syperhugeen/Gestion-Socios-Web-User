@@ -205,7 +205,7 @@
 <div class="py-5 w-100 border-bottom border-primary"></div>
 
 <section-card
-  titulo_aclarador="Control de acceso"
+  titulo_aclarador="¿Quién puede acceder?"
   titulo=""
   background=""
   order="right"
@@ -215,7 +215,7 @@
 >
   <template slot="description-visible">
     <h3 class="mb-4">
-      ¿Quién puede acceder?
+      Control de acceso
       <span class="font-secondary helper-aumenta-texto"> easy </span>
     </h3>
 
@@ -237,7 +237,6 @@
     <small>No te pediremos que ingreses tarjeta de crédito.</small>
   </template>
 </section-card>
-
 
 <div class="container">
   <div class="row mx-0 align-items-center">
@@ -265,6 +264,20 @@
      
     </div>
   </div>
+</div>
+
+<div class="container mt-5 pt-4">
+  <div class="row mx-0 align-items-center">
+
+
+  <h3 class="text-center h4 w-100">La funcionalidad de control de acceso es compatible con los siguientes equipos de reconocimiento facial👇</h3>
+<div class="rounded-lg background-gris-0 p-1 p-lg-5">
+<access-devices> </access-devices>
+</div>
+  
+
+  </div>
+
 </div>
 
 

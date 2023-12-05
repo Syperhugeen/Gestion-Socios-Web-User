@@ -31,7 +31,7 @@ class NoticiasRepo extends BaseRepo
  /**
   *  Le paso un blog y busco otros similares
   */
-  public function getBlogsRelacionados($Blog)
+  public function getBlogsRelacionados($Blog, $Cantidad = 6)
   {
     $Blogs = $this->getEntidad()
                   ->Active()
@@ -67,6 +67,7 @@ class NoticiasRepo extends BaseRepo
                           }      
                        })
                   ->orderBy('id','desc')
+                  ->limit($Cantidad)
                   ->get();
 
                   return $Blogs;

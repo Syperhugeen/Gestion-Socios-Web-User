@@ -99,6 +99,63 @@
   border-radius: 16px;
 }
 
+/*  G A P */
+.gap {
+  &-2 {
+    gap: 2px;
+  }
+  &-4 {
+    gap: 4px;
+  }
+  &-6 {
+    gap: 6px;
+  }
+  &-8 {
+    gap: 8px;
+  }
+  &-10 {
+    gap: 10px;
+  }
+  &-12 {
+    gap: 12px;
+  }
+  &-14 {
+    gap: 14px;
+  }
+  &-16 {
+    gap: 16px;
+  }
+  &-18 {
+    gap: 18px;
+  }
+  &-20 {
+    gap: 20px;
+  }
+  &-22 {
+    gap: 22px;
+  }
+  &-24 {
+    gap: 24px;
+  }
+  &-26 {
+    gap: 26px;
+  }
+  &-28 {
+    gap: 28px;
+  }
+  &-30 {
+    gap: 30px;
+  }
+  &-32 {
+    gap: 32px;
+  }
+}
+
+
+.opacity-on{
+  opacity: 0.5;
+}
+
 @media (min-width: $BrackPoint-Secundario) {
   .mostrar-solo-mobil {
     display: none;

@@ -55,6 +55,7 @@
 
 @section('vue') 
 
+@include('paginas.home.vue.access-devices')
 @include('paginas.home.vue.section-card')
 @include('paginas.home.vue.pregunta-componente')
 @include('paginas.home.vue.slider-text') @include('paginas.home.vue.portada')

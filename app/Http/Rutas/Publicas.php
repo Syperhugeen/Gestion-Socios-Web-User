@@ -75,3 +75,13 @@ Route::get('/software-para-gestion-de-clientes', [
 );
 
 
+Route::group(['prefix' => 'api'], function () {
+    Route::get('access-devices',  [
+        'uses' => 'Publicas\ApiController@getAccessDevices',
+        'as'   => 'getAccessDevices']);
+});
+
+
+
+
+

@@ -3,8 +3,8 @@
   <div
     class="w-100 d-flex flex-column align-items-center shadow-sm border border-light rounded-lg py-4 px-1 px-lg-2 overflow-hidden bg-light"
   >
-    <header class="h5 mb-4 mt-3 text-center text-color-black">
-      Plan <br />
+    <header class="h4 mb-4 mt-3 text-center text-color-black">
+      
       <b>{{$Plan->name}}</b>
     </header>
 
@@ -63,7 +63,8 @@
           </div>
           <div>
             <small
-              >Optimiza ventas y controla productos con soluciones intuitivas y potentes.
+              >Optimiza ventas y controla productos con soluciones intuitivas y
+              potentes.
             </small>
           </div>
         </span>
@@ -405,15 +406,35 @@
 </div>
 @endforeach
 
-<div class="col-12 text-center my-5 helper-fuente-pequeña">
-  <small
-    >Si tienes más de 400 socios te cobraremos
-    {{ Session::get('esDeUruguay') ? '$400' : 'USD 10' }} cada 100 registros
-    nuevos. <br />
-    Por ejemplo: <br />
-    Si tienes 460 socios te cobraremos lo que cuesta el Plan Pro más
-    {{ Session::get('esDeUruguay') ? '$400' : 'USD 10' }} . <br />
-    Si tienes 550 socios te cobraremos lo que cuesta el Plan Pro más
-    {{ Session::get('esDeUruguay') ? '$800' : 'USD 20' }}.
-  </small>
+{{--*/ $lastPlan = $Planes[count($Planes) - 1]; /*--}}
+<div
+  class="w-100 row mx-0 my-4 helper-fuente-pequeña p-3 rounded-lg bg-light gap-16 justify-content-center shadow-sm"
+>
+
+<div class="text-center w-100 font-wieght-bold">
+ Aclaraciones sobre los precios
+</div>
+  <div class="col-12 col-lg-5 p-3 rounded background-gris-1">
+    <small
+      >Si tienes más de {{$lastPlan->cantidad_socios}} socios te cobraremos
+      {{ Session::get('esDeUruguay') ? '$400' : 'USD 10' }} cada 100 registros
+      nuevos. 
+      Por ejemplo: 
+      Si tienes {{$lastPlan->cantidad_socios + 40}} socios te cobraremos lo que
+      cuesta el Plan {{$lastPlan->name}} más
+      {{ Session::get('esDeUruguay') ? '$400' : 'USD 10' }} . 
+      Si tienes {{$lastPlan->cantidad_socios + 160}} socios te cobraremos lo que
+      cuesta el Plan {{$lastPlan->name}} más
+      {{ Session::get('esDeUruguay') ? '$800' : 'USD 20' }}.
+    </small>
+  </div>
+  <div class="col-12 col-lg-5  p-3 rounded background-gris-1">
+    <small>
+      La integración del control de acceso con un dispositivo de reconocimiento
+      facial conlleva un costo adicional. La cotización incluirá un cargo
+      inicial por configuración y conexión del hardware, además de un aumento
+      sobre el valor del plan seleccionado. Para obtener más detalles y recibir
+      una cotización personalizada, por favor, <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis">póngase en contacto con nosotros</a>.
+    </small>
+  </div>
 </div>
