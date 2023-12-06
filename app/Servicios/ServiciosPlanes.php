@@ -18,7 +18,7 @@ class ServiciosPlanes
         ];
 
         $Planes = Cache::remember('PlanesApi', 6000, function () use ($header) {
-            $Response = CurlHelper::getUrlData('https://app.gestionsocios.com.uy/get-planes-public', $header);
+            $Response = CurlHelper::getUrlData('https://app.gestionsocios.com.uy/api/comercial/getPlanesComercial', $header);
 
             return $Response['Https_status'] == '200' ? $Response['Data']->Data : [];
 
