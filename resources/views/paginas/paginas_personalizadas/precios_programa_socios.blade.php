@@ -414,12 +414,12 @@
 <div class="text-center w-100 font-wieght-bold">
  Aclaraciones sobre los precios
 </div>
-  <div class="col-12  p-2 rounded background-gris-1">
+  <div class="col-12  p-2 rounded background-gris-1 text-center">
     <small
       >Si tienes más de {{$lastPlan->cantidad_socios}} socios <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis">póngase en contacto con nosotros</a> para recibir una cotización.
     </small>
   </div>
-  <div class="col-12   p-2 rounded background-gris-1">
+  <div class="col-12   p-2 rounded background-gris-1 text-center">
     <small>
       La integración del control de acceso con un dispositivo de reconocimiento
       facial conlleva un costo adicional. La cotización incluirá un cargo
