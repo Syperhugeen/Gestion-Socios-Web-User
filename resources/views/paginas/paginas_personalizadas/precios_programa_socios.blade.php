@@ -414,21 +414,12 @@
 <div class="text-center w-100 font-wieght-bold">
  Aclaraciones sobre los precios
 </div>
-  <div class="col-12 col-lg-5 p-3 rounded background-gris-1">
+  <div class="col-12  p-2 rounded background-gris-1">
     <small
-      >Si tienes más de {{$lastPlan->cantidad_socios}} socios te cobraremos
-      {{ Session::get('esDeUruguay') ? '$400' : 'USD 10' }} cada 100 registros
-      nuevos. 
-      Por ejemplo: 
-      Si tienes {{$lastPlan->cantidad_socios + 40}} socios te cobraremos lo que
-      cuesta el Plan {{$lastPlan->name}} más
-      {{ Session::get('esDeUruguay') ? '$400' : 'USD 10' }} . 
-      Si tienes {{$lastPlan->cantidad_socios + 160}} socios te cobraremos lo que
-      cuesta el Plan {{$lastPlan->name}} más
-      {{ Session::get('esDeUruguay') ? '$800' : 'USD 20' }}.
+      >Si tienes más de {{$lastPlan->cantidad_socios}} socios <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis">póngase en contacto con nosotros</a> para recibir una cotización.
     </small>
   </div>
-  <div class="col-12 col-lg-5  p-3 rounded background-gris-1">
+  <div class="col-12   p-2 rounded background-gris-1">
     <small>
       La integración del control de acceso con un dispositivo de reconocimiento
       facial conlleva un costo adicional. La cotización incluirá un cargo
