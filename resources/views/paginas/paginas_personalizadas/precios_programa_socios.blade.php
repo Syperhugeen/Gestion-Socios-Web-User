@@ -1,321 +1,32 @@
 @foreach($Planes as $Plan)
-<div class="col-6 col-lg-3 mt-2 mb-4 mb-lg-0 px-1 px-lg-2">
+<div class="col-6 col-lg-3 mt-2 mb-4 mb-lg-0 ">
   <div
-    class="w-100 d-flex flex-column align-items-center shadow-sm border border-light rounded-lg py-4 px-1 px-lg-2 overflow-hidden bg-light"
+    class="w-100 d-flex flex-column gap-24 align-items-center shadow-sm border border-light rounded-lg py-4 px-1 px-lg-2 overflow-hidden bg-light"
   >
-    <header class="h4 mb-4 mt-3 text-center text-color-black">
+    <header class="h2 mb-0  text-center text-color-black">
       
       <b>{{$Plan->name}}</b>
     </header>
 
-    <ul class="p-2 mb-3 background-gris-0 list-style-none">
-      <li class="contiene-li-precio-nuevo d-flex flex-row">
+    <ul class="p-2 h4 mb-0 background-gris-0  shadow-sm rounded-lg list-style-none">
+      <li class=" h5 d-flex flex-column align-items-center mb-0 p-2 gap-6">
+
         <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-users"></i>
         </span>
-        <span>
-          Hasta <strong> {{$Plan->cantidad_socios}}</strong> socios
+
+        <small >Hasta</small>
+        
+        <span class="h3 mb-0">
+          <strong> {{$Plan->cantidad_socios}}</strong> 
         </span>
+
+        <small>soci@s</small>
       </li>
 
-      <li class="contiene-li-precio-nuevo d-flex flex-row">
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        Soporte
-      </li>
-
-      <li class="contiene-li-precio-nuevo d-flex flex-row">
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        Capacitación (curso paso a paso).
-      </li>
-
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Gestión de membresías</b>
-          </div>
-          <div>
-            <small
-              >Controlamos de manera automática el vencimiento de los planes
-              (membresías) que le vendés a tus socios. Lo mismo que hacés a mano
-              o en excel <strong>pero de manera automática</strong>
-            </small>
-          </div>
-        </span>
-      </li>
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Control de inventario y ventas de productos</b>
-          </div>
-          <div>
-            <small
-              >Optimiza ventas y controla productos con soluciones intuitivas y
-              potentes.
-            </small>
-          </div>
-        </span>
-      </li>
-
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Cuentas corrientes</b>
-          </div>
-          <div>
-            <small>
-              Te informamos sobre cuáles socios te deben y por qué.
-              <strong
-                >Además guardamos todo el historial de transacciones de cada
-                socio.</strong
-              >
-            </small>
-          </div>
-        </span>
-      </li>
-
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Finanzas 💰</b>
-          </div>
-          <div>
-            <small
-              >Registramos todas tus ventas así como tus gastos.
-              <strong>Automatizamos la contabilidad de tu negocio.</strong>
-              ¡Ólvidate de la planilla de excel!
-            </small>
-          </div>
-        </span>
-      </li>
-
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Analíticas 📈</b>
-          </div>
-          <div>
-            <small
-              >Reportes de ventas de membresías, ingresos y egresos de caja.
-              Asistencia a clases, días y horarios más concurridos por los
-              socios... y más!
-            </small>
-          </div>
-        </span>
-      </li>
-
-      <li class="contiene-li-precio-nuevo border border-info d-flex flex-row">
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>Avisos automáticos</div>
-          <small class="color-text-gris">Notificaciones por email. </small>
-        </span>
-      </li>
-
-      @if ($Plan->control_acceso == 'si')
-
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Control de acceso </b>
-          </div>
-          <div>
-            <small
-              >Nosotros somos los que le decimos a tus socios que deben dinero.
-              ¿<span class="font-secondary helper-aumenta-texto"> easy </span>
-              no?. Además te guardamos todo el historial de accesos.</small
-            >
-          </div>
-        </span>
-      </li>
-
-      @endif @if ($Plan->reserva_de_clases_on_line == 'si')
-
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Reservas online </b>
-          </div>
-          <div>
-            <small>Tus socios podrán reservar online tus clases</small>
-          </div>
-        </span>
-      </li>
-
-      @endif @if ($Plan->rutina_dieta == 'si')
-
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Rutinas y dietas 🏋️‍♀️</b>
-          </div>
-          <div>
-            <small
-              >Asígnale a tus socios rutinas de entrenamientos o dietas de
-              manera
-              <span class="font-secondary helper-aumenta-texto"> easy </span>
-            </small>
-          </div>
-        </span>
-      </li>
-
-      @endif
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Seguimiento personalizado </b>
-          </div>
-          <div>
-            <small
-              >Podrás monitorear la evolución del peso corporal (entre otros)
-              con el fin saber si se cumplió con el objetivo 🏁 de tu socio en
-              un determinado período de tiempo.
-              <span class="font-secondary helper-aumenta-texto"> easy </span>
-            </small>
-          </div>
-        </span>
-      </li>
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b>
-              Ranking de atletas
-              <i style="color: gold" class="fas fa-trophy"></i>
-            </b>
-          </div>
-          <div>
-            <small
-              >Te armamos un ranking de atletas según sus asistencias a clases y
-              desempeño (si es que los evaluas).
-              <span class="font-secondary helper-aumenta-texto"> easy </span>
-            </small>
-          </div>
-        </span>
-      </li>
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Alerta de cumpleaños 🎂 </b>
-          </div>
-          <div>
-            <small>
-              Hacé sentir especiales a tus socios y prepará algo para
-              homenajear. El ratio de fidelidad despegará 🚀 ¿<span
-                class="font-secondary helper-aumenta-texto"
-              >
-                easy
-              </span>
-              no?
-            </small>
-          </div>
-        </span>
-      </li>
-
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Reviews ⭐⭐⭐⭐⭐ </b>
-          </div>
-          <div>
-            <small>
-              Obten puntuaciones y comentarios por parte de tus socios de forma
-              automática, ¿<span class="font-secondary helper-aumenta-texto">
-                easy
-              </span>
-              no?
-            </small>
-          </div>
-        </span>
-      </li>
-      <li
-        class="contiene-li-precio-nuevo border d-flex flex-row border-success"
-      >
-        <span class="text-color-primary mr-2">
-          <i class="fas fa-check-circle"></i>
-        </span>
-        <span>
-          <div>
-            <b> Licencia y días que no se trabaja 😀</b>
-          </div>
-          <div>
-            <small>
-              Podrás indicar que días vas a cerrar, programar tus vacaciones y
-              mucho más (No tendrás que reconfigurar tu calendarío) ¿<span
-                class="font-secondary helper-aumenta-texto"
-              >
-                easy
-              </span>
-              no?
-            </small>
-          </div>
-        </span>
-      </li>
+     
     </ul>
+    
 
     <div class="contiene-precios-precios mb-1">
       @if(Auth::guest())
@@ -351,7 +62,7 @@
         $ <strong> {{ (int) $Plan->valor }} </strong> / mes
       </div>
 
-      <div class="mt-2 mb-2 text-center w-100">
+      <div class="  text-center w-100">
         <img
           class="shadow-sm mr-2 rounded-circle border border-light"
           height="20"
@@ -398,7 +109,7 @@
         </a>
 
         <small class="text-center helper-fuente-pequeña px-3"
-          >No te pediremos que ingreses tarjeta de crédito.</small
+          >  No te pediremos que ingreses tarjeta de crédito.</small
         >
       </div>
     </div>
