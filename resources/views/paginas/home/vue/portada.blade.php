@@ -40,38 +40,31 @@ mounted: function mounted (){
 
 },
 template:`
-
-<div  class="w-100 "  :style="{
-    minHeight: altura_portada + 'vh',
+<div
+  class="w-100 d-flex flex-column align-items-center justify-content-center text-white"
+  :style="{
+    minHeight: 'calc(' +  altura_portada + 'svh - ' + headerAltura + 'px)',
 
     background: grandiente != null && typeof grandiente != 'undefined' ? grandiente : 'linear-gradient(180deg, rgba(144,28,28,1) 0%, rgba(255,90,95,1) 75%)'
-  }">
-
-  <div :style="{
+  }"
+>
+  <div
+    :style="{
     paddingTop: headerAltura + 'px'
-  }">
-  </div>
+  }"
+  ></div>
 
   <div class="container py-5 position-relative">
-
-
-  <slot name="titulo">
-  </slot>
-  <slot name="descripcion">
-  </slot>
-
-
-
+    <div class="row mx-0 justify-content-center ">
+      <div class="col-12 col-lg-8 ">
+        <slot name="titulo"></slot>
+      </div>
+      <div class="col-12 col-lg-4">
+        <slot name="descripcion"></slot>
+      </div>
+    </div>
   </div>
-
-
-
-
-
-
-
 </div>
-
 
 `
 

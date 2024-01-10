@@ -92,8 +92,6 @@
     <h1 class="text-white mb-5 col-lg-6 px-0">
       Software para administrar gimnasios
     </h1>
-  </template>
-  <template slot="descripcion">
     <ul class="mb-5">
       <li class="text-white espacio-letras">
         Manejo de mebresías
@@ -121,6 +119,9 @@
     <a href="#intro" class="btn btn-outline-light cursor-pointer">
       Seguir leyendo</a
     >
+  </template>
+  <template slot="descripcion">
+    
 
     <img
       class="d-none d-lg-block"

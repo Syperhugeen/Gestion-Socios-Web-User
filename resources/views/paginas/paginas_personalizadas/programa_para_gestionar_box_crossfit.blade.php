@@ -99,8 +99,8 @@
             <template slot="titulo">
               <h1 class="text-white mb-5 col-lg-6 px-0">
                   Software para box de crossfit o funcional
-            </template>
-            <template slot="descripcion">
+
+              </h1>
               <ul class="mb-5">
                 <li class="text-white espacio-letras"> Manejo de mebresías <span class="font-secondary helper-aumenta-texto"> <b>easy</b>  </span></li>
                 <li class="text-white espacio-letras"> Finanzas <span class="font-secondary helper-aumenta-texto"> easy </span></li>
@@ -110,6 +110,9 @@
 
                <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" class="btn btn-success mr-2 cursor-pointer text-white"> Comenzar ahora</a>
                <a href="#intro" class="btn  btn-outline-light cursor-pointer"> Seguir leyendo</a>
+            </template>
+            <template slot="descripcion">
+            
 
                <img class="d-none d-lg-block " style="position: absolute; right:0; top:5%; height:auto; width:600px;"  src="{{url()}}/imagenes/Easysocio/Paquetes/crossfit-png.png" alt="">
 

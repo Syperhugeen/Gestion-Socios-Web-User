@@ -9,31 +9,29 @@ Vue.component("section-card", {
     "call_to_action",
     "con_parte_oculta",
     "video",
-    "video_type"
+    "video_type",
   ],
 
-  data: function() {
+  data: function () {
     return {
       cargando: false,
-      showSection: false
+      showSection: false,
     };
   },
 
   watch: {},
   methods: {},
   computed: {
-    ordenTextClass: function() {
+    ordenTextClass: function () {
       return `${
-        this.order == "left"
-          ? "order-1 order-lg-1"
-          : "order-1 order-lg-2 "
+        this.order == "left" ? "order-1 order-lg-1" : "order-1 order-lg-2 "
       }`;
     },
-    ordenImgClass: function() {
+    ordenImgClass: function () {
       return `${
         this.order == "left" ? "order-2  order-lg-2" : "order-2 order-lg-1"
       }`;
-    }
+    },
   },
   mounted: function mounted() {},
   template: `
@@ -89,5 +87,5 @@ Vue.component("section-card", {
 
 
 
-`
+`,
 });

@@ -13,9 +13,9 @@
           <pregunta-componente pregunta="¿Cuál es el precio?" :muestra="true">
             <template slot="respuesta">
               <p>
-                Cada negocio es un mundo, por lo tanto hemos creado varios
-                planes que se adaptan a diferente tipo de negocios. Mirá los
-                planes y precios
+                Dado que cada negocio es único, hemos diseñado una variedad de
+                planes adaptados a diferentes tipos de emprendimientos. Descubre
+                las opciones disponibles y conoce nuestros planes y precios
                 <a href="{{ route('get_pagina_precios') }}">
                   <strong>aquí</strong> </a
                 >.
@@ -25,7 +25,7 @@
                   href="{{ route('get_pagina_precios') }}
 							"
                   class="btn btn-primary mt-3"
-                  >Ver planes y precios</a
+                  >Explorar planes y precios</a
                 >
               </p>
             </template>
@@ -34,13 +34,13 @@
 
         <div class="col-12">
           <pregunta-componente
-            pregunta="¿Cuáles son los pasos a seguir si quiero contratar?"
+            pregunta="¿Cuál es el procedimiento a seguir si estoy interesado en contratar su servicio?"
             :muestra="false"
           >
             <template slot="respuesta">
               <ol>
                 <li>
-                  Avisanos que querés el software
+                  Comienza probando el software
                   <a
                     href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
                     class=""
@@ -48,53 +48,121 @@
                   >.
                 </li>
                 <li>
-                  Alquien de nuestro equipo se pondrá en contacto contigo para
-                  hablar de tu negocio, mostrarte el software y
+                  Si te ha gustado, elige el plan que más se adapte a tus
+                  necesidades
                   <a href="{{ route('get_pagina_precios') }}">
-                    elegir el plan
+                    Explorar planes y precios
                   </a>
-                  más conveniente.
                 </li>
-                <li>Te ayudaremos a configurarlo y ponerlo en marcha.</li>
-                <li>
-                  Te enseñaremos a manejarlo paso a paso cada función del
-                  software.
-                </li>
-                <li>
-                  Luego de que esté en marcha y ya sepas como usarlo te
-                  comenzaremos a cobrar.
-                </li>
+                <li>¡Listo!</li>
               </ol>
 
               <a
                 href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
                 class="btn btn-primary mt-3"
-                >Contratar
-                <span class="font-secondary helper-aumenta-texto">easy</span
-                >socio
+                >Comenzar prueba gratis
               </a>
             </template>
           </pregunta-componente>
         </div>
 
         <div class="col-12">
+          <pregunta-componente
+            pregunta="¿Es posible importar clientes de manera masiva?"
+            :muestra="false"
+          >
+            <template slot="respuesta">
+              ¡Sí, es completamente posible importar clientes de manera masiva
+              en easySocio! Puedes hacerlo de manera conveniente utilizando una
+              planilla Excel. Entendemos que cambiar de sistema puede ser un
+              proceso significativo, pero queremos asegurarte que estamos aquí
+              para facilitar esa transición. Nuestro objetivo es hacer que la
+              importación de clientes sea lo más sencilla y eficiente posible
+              para que puedas disfrutar rápidamente de todas las ventajas que
+              easySocio tiene para ofrecer. ¡Estamos listos para ayudarte en
+              cada paso del camino!.</template
+            >
+          </pregunta-componente>
+        </div>
+
+        <div class="col-12">
+          <pregunta-componente
+            pregunta="¿Es posible integrar easySocio con equipos biométricos, torniquetes y molinetes?"
+            :muestra="false"
+          >
+            <template slot="respuesta">
+              <p>
+                En la actualidad, hemos establecido integraciones exitosas con
+                una amplia variedad de equipos de reconocimiento facial, cuya
+                lista completa puedes consultar en la sección de control de
+                acceso de nuestro sitio web:
+                <a href="https://gestionsocios.com.uy/" target="_blank"
+                  >https://gestionsocios.com.uy/</a
+                >.
+              </p>
+
+              <p>
+                Además de los costos asociados a la adquisición del hardware en
+                tu país, la integración con el dispositivo de reconocimiento
+                facial conlleva dos cargos adicionales*:
+              </p>
+
+              <ul>
+                <li>
+                  Costo fijo de configuración inicial: Este cargo varía y es
+                  específico para cada proyecto.
+                </li>
+                <li>
+                  Costo mensual adicional: Este monto se suma al costo de tu
+                  plan contratado en EasySocio.
+                </li>
+              </ul>
+
+              <p>
+                En cuanto a la conectividad con otros dispositivos, como puertas
+                magnéticas o molinetes, a menudo se requiere un controlador
+                adicional. Te recomendamos buscar asesoramiento técnico por
+                parte del proveedor de hardware local para facilitar esta
+                integración.
+              </p>
+
+              <p>
+                El proceso para iniciar la integración con EasySocio comienza
+                con una investigación detallada del hardware disponible en tu
+                país, tanto para el lector de reconocimiento facial como para
+                otros dispositivos complementarios.
+              </p>
+
+              <p>
+                Si necesitas asistencia técnica o tienes preguntas adicionales,
+                nuestro equipo de soporte está disponible para guiarte en cada
+                paso del camino. Para obtener información precisa y una
+                cotización adaptada a tus necesidades específicas, te invitamos
+                a ponerte en contacto con nosotros para recibir asesoramiento
+                personalizado.
+              </p></template
+            >
+          </pregunta-componente>
+        </div>
+
+        <div class="col-12">
           <pregunta-componente pregunta="¿Me capacitan?" :muestra="false">
             <template slot="respuesta">
-              Nuestro software se aprende
-              <span class="font-secondary helper-aumenta-texto"> easy. </span> A
-              pesar de eso te enseñaremos paso a paso a como operar
-              <span class="font-secondary helper-aumenta-texto">easy</span
-              >socio.
-            </template>
+              ¡Por supuesto! Proporcionamos capacitación mediante video
+              tutoriales, permitiéndote aprender a tu propio ritmo y de acuerdo
+              a tu conveniencia. Además, estamos a tu disposición para responder
+              tus preguntas y ofrecerte asistencia en línea. Nuestra prioridad
+              es asegurarnos de que cuentes con el apoyo necesario en todo
+              momento para que alcances el éxito con comodidad.</template
+            >
           </pregunta-componente>
         </div>
 
         <div class="col-12">
           <pregunta-componente pregunta="¿Se hace contrato?" :muestra="false">
             <template slot="respuesta">
-              No se hace contrato.
-              <span class="font-secondary helper-aumenta-texto">easy</span>socio
-              es de pago mensual. Si querés dejar de usar easysocio, simplemente
+              No hay contratos complicados. EasySocio opera con un sistema de
+              pago mensual. Si decides dejar de utilizar easySocio, simplemente
               dejas de abonar y ¡listo!
             </template>
           </pregunta-componente>
@@ -104,23 +172,24 @@
           <pregunta-componente pregunta="¿Cómo se instala?" :muestra="false">
             <template slot="respuesta">
               <p>
-                <b>No se instala</b>.
+                <b>No requiere instalación</b>.
                 <span class="font-secondary helper-aumenta-texto">easy</span
-                >socio se encuentra alojado en la nube. Esta es la primera
-                ventaja que debes tener presente sobre nuestra herramienta, ya
-                que se trata de una característica que te ahorra tiempo y
-                dinero, al evitar las incómodas instalaciones de software y el
-                inevitable soporte técnico que requieren.
+                >socio está basado en la nube, lo que supone una ventaja clave.
+                Esta característica no solo ahorra tiempo y dinero al eludir las
+                complicadas instalaciones de software y el consiguiente soporte
+                técnico, sino que también elimina la necesidad de adquirir y
+                mantener costosos servidores. Al liberarte de las
+                responsabilidades asociadas con actualizaciones de memoria,
+                respaldos y la sustitución de equipos obsoletos, puedes
+                centrarte plenamente en tu negocio sin preocuparte por los
+                aspectos técnicos.
               </p>
-
               <p>
-                Además, no deberás adquirir y mantener servidores que
-                representan una gran inversión tanto en hardware como en
-                técnicos que lo manejen y le den servicio permanente. Te evitas
-                las actualizaciones de la memoria para poder crear los respaldos
-                necesarios y todos los costos asociados a estas actividades y a
-                la reposición de equipos producto de la obsolescencia
-                tecnológica.
+                Además, al estar en la nube,
+                <span class="font-secondary helper-aumenta-texto">easy</span
+                >socio garantiza una accesibilidad sin complicaciones,
+                permitiéndote gestionar tu información desde cualquier lugar y
+                dispositivo con conexión a Internet.
               </p>
             </template>
           </pregunta-componente>
@@ -134,7 +203,7 @@
             <template slot="respuesta">
               <p>
                 Solo necesitas un dispositivo (pc, celular o notebook) que esté
-                conectado a internet
+                conectado a internet.
               </p>
             </template>
           </pregunta-componente>

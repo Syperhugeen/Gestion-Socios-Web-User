@@ -11,32 +11,28 @@
 >
   <template slot="description-visible">
     <h3 class="mb-4">
-      Manejo de mebresías
+      Manejo de membresías
       <span class="font-secondary helper-aumenta-texto"> easy </span>
     </h3>
     <p></p>
-    <p>Planilla de excel para anotar las ventas ¡Olvídalo!</p>
+    <p>
+Despídete de la planilla de Excel para registrar tus ventas.</p>
 
     <p>
-      Un <span class="font-secondary helper-aumenta-texto"> easy </span> camino
-      para ahorra tiempo y dinero es usar nuestro módulo de mebresías. Te
-      permitimos:
+    Un camino sencillo para ahorrar tiempo y dinero es utilizar nuestro módulo de membresías. Te ofrecemos:
     </p>
 
     <ul>
-      <li>Manejo de membresías sin límite de asistencia (un pase libre).</li>
-      <li>Manejo de membresías con límite de asistencia (una cuponera).</li>
-      <li>Renovaciones automáticas de mebresías.</li>
+      <li>Manejo de membresías sin límite de asistencia (pase libre).</li>
+      <li>Manejo de membresías con límite de asistencia (cuponera).</li>
+      <li>Renovaciones automáticas de membresías.</li>
     </ul>
 
     <p>
-      Nuestro sistema te permite tener la información justa, cuando la necesitas
-      y donde la necesitas, lo que se traduce en una mayor productividad para la
-      administración de tu gimnasio.
+    Nuestro sistema te brinda la información precisa, en el momento y lugar que la necesitas, lo que se traduce en una mayor productividad para la administración de tu gimnasio.
     </p>
     <p>
-      Vive la vida y dejá las aburridas tareas administrativas para las
-      computadoras 😉
+    Disfruta la vida y deja las tareas administrativas aburridas para las computadoras 😉
     </p>
 
     <div class="mt-2">
@@ -81,14 +77,12 @@
     </h3>
     <p></p>
     <p>
-      ¿Tus clases tiene cupos limitados? ¿Estás organizando eso por whatsapp?
-      ¡olvídalo!
+      
+¿Tus clases tienen cupos limitados? ¿Estás organizando eso por WhatsApp? ¡Olvídalo!
     </p>
 
     <p>
-      Automatizá este proceso con nuestro módulo de reservas online
-      <span class="font-secondary helper-aumenta-texto"> easy </span> y no te
-      estreses más organizando en el grupo de whatsapp
+    Automatiza este proceso con nuestro módulo de reservas online, fácil y sin estrés, para que no tengas que organizar más en el grupo de WhatsApp.
     </p>
 
     <div class="mt-2">
@@ -148,8 +142,7 @@
     </h3>
     <p></p>
     <p>
-      ¿En qué gastás? ¿Cuánto vendés? Contate la verdad llevando tus finanzas de
-      manera <span class="font-secondary helper-aumenta-texto"> easy</span>.
+    ¿En qué gastas? ¿Cuánto vendes? Cuéntate la verdad llevando tus finanzas de manera sencilla con facilidad. <span class="font-secondary helper-aumenta-texto"> easy</span>.
     </p>
 
     <p>
@@ -219,11 +212,10 @@
       <span class="font-secondary helper-aumenta-texto"> easy </span>
     </h3>
 
-    <p>¿Te gusta tener que decirle a alguien que debe dinero? ¡Claro que no!</p>
+    <p>¿Disfrutas tener que informar a alguien que tiene una deuda? ¡Por supuesto que no!</p>
     <p>
-      Dejá está tarea en nuestras manos 😉. Cada vez que alguien entre a tu
-      negocio le informaremos sobre el estado de su mebresía. En el caso de que
-      ya tenga vencida la mebresía emitiremos una alerta para que veas que pasó.
+    Deja esa tarea en nuestras manos 😉. Nos encargaremos de informar a cada cliente que entre a tu negocio sobre el estado de su membresía. En caso de que la membresía esté vencida, emitiremos una alerta para que estés al tanto de la situación.
+   
     </p>
 
     <div class="mt-2">
@@ -237,6 +229,7 @@
     <small>No te pediremos que ingreses tarjeta de crédito.</small>
   </template>
 </section-card>
+
 
 <div class="container">
   <div class="row mx-0 align-items-center">
@@ -280,7 +273,69 @@
 
 </div>
 
+<div class="py-5 w-100 border-bottom border-primary"></div>
+<section-card
+  titulo_aclarador="Manejo de stock y venta de productos"
+  titulo=""
+  background=""
+  order="left"
+  :con_parte_oculta="false"
+  video="si"
+  url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/productos.webm"
+  url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/productos.webm"
+>
+  <template slot="description-visible">
+    <h3 class="mb-4">
+      Control de inventario y ventas de productos
+      <span class="font-secondary helper-aumenta-texto"> easy </span>
+    </h3>
 
+    <p>Optimiza la gestión de tu negocio con nuestro completo sistema de "Control de inventario y ventas de productos". Mantén un control detallado de tu inventario, realiza un seguimiento preciso de las ventas y maximiza la eficiencia en la gestión de tu stock. Con nuestra solución, podrás tomar decisiones informadas, prevenir pérdidas y garantizar una operación fluida y exitosa. Simplifica tus procesos y potencia tu negocio con un control integral que te brinda fácil acceso a la información clave.
+     </p>
+
+    <div class="mt-2">
+      <a
+        href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+        class="btn btn-lg btn-primary cursor-pointer text-white"
+      >
+        Comenzar a probar gratis</a
+      >
+    </div>
+    <small>No te pediremos que ingreses tarjeta de crédito.</small>
+  </template>
+</section-card>
+
+
+<div class="py-5 w-100 border-bottom border-primary"></div>
+<section-card
+  titulo_aclarador="Identificación con código de barras"
+  titulo=""
+  background=""
+  order="right"
+  :con_parte_oculta="false"
+  video="si"
+  url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/codigo-de-barras.webm"
+  url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/codigo-de-barras.webm"
+>
+  <template slot="description-visible">
+    <h3 class="mb-4">
+    Creación de tarjetas de identificación con códigos de barras
+      <span class="font-secondary helper-aumenta-texto"> easy </span>
+    </h3>
+
+    <p>Las tarjetas de identificación con códigos de barras tienen como finalidad facilitar el acceso mediante un lector de códigos de barras en los puntos de control. Al utilizar este sistema, se agiliza el proceso de verificación de identidad y se refuerza la seguridad. En caso de necesidad, las tarjetas pueden ser enviadas por correo electrónico o descargadas con tan solo un clic, proporcionando una solución conveniente y eficiente para la distribución y gestión de identificaciones.</p>
+
+    <div class="mt-2">
+      <a
+        href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+        class="btn btn-lg btn-primary cursor-pointer text-white"
+      >
+        Comenzar a probar gratis</a
+      >
+    </div>
+    <small>No te pediremos que ingreses tarjeta de crédito.</small>
+  </template>
+</section-card>
 
 
 <div class="py-5 w-100 border-bottom border-primary"></div>

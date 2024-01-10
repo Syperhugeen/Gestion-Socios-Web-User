@@ -116,8 +116,6 @@
               <h1 class="text-white mb-5">
                  Funcionalidades
               </h1>
-            </template>
-            <template slot="descripcion">
               <ul class="mb-5">
                 <li class="text-white espacio-letras"> Manejo de mebresías <span class="font-secondary helper-aumenta-texto"> <b>easy</b>  </span></li>
                 <li class="text-white espacio-letras"> Finanzas <span class="font-secondary helper-aumenta-texto"> easy </span></li>
@@ -126,6 +124,9 @@
               </ul>
 
                <a href="#intro" class="btn  btn-outline-light cursor-pointer"> Seguir leyendo</a>
+            </template>
+            <template slot="descripcion">
+             
 
                <img class="d-none d-lg-block " style="position: absolute; right:0; top:30%; height:auto; width:600px;"  src="{{url()}}/imagenes/Easysocio/Capturas/socios-listado-notebook.png" alt="">
 

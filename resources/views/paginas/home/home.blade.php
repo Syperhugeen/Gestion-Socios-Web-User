@@ -90,8 +90,6 @@
 ]"
       ></slider-text>
     </h1>
-  </template>
-  <template slot="descripcion">
     <ul class="mb-5">
       <li class="text-white espacio-letras">
         Manejo de mebresías
@@ -119,6 +117,9 @@
     <a href="#intro" class="btn btn-outline-light cursor-pointer">
       Seguir leyendo</a
     >
+  </template>
+  <template slot="descripcion">
+    
 
     <img
       class="d-none d-lg-block"
