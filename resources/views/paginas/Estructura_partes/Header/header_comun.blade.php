@@ -71,8 +71,8 @@
               >
             </li>
 
-            <transition name="modal" v-if="showModalSolucion">
-              <div class="modal-mask">
+            <transition name="modal" >
+              <div class="modal-mask" v-if="showModalSolucion">
                 <div class="modal-wrapper">
                   <div class="modal-container position-relative">
                     <span
