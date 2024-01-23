@@ -1,5 +1,45 @@
 var bus = new Vue({});
 
+Vue.component("lazy-width-observer", {
+  data: function () {
+    return {
+      show: false,
+      observer: null,
+    };
+  },
+
+  mounted: function mounted() {
+    const vue = this;
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            vue.show = true;
+            this.observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    this.observer.observe(this.$refs.section);
+  },
+  template: `
+  <span  ref="section">
+  <transition name="fade">
+    <span v-if="show">
+      <slot></slot>
+    </span>
+    
+  </transition>
+
+  <div style="height:80px; width:100%;"  v-if="!show">
+
+    </div>
+</span>
+`,
+});
+
 var app = new Vue({
   el: "#app",
   data: {
@@ -45,9 +85,7 @@ var app = new Vue({
       }
     },
     handleScroll: function () {
-     
-        this.scrolled = window.scrollY > 0;
-      
+      this.scrolled = window.scrollY > 0;
     },
   },
   computed: {

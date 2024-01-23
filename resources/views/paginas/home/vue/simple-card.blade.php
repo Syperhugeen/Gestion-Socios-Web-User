@@ -20,6 +20,8 @@ Vue.component("simple-card", {
   mounted: function mounted() {},
   template: `
 
+
+  <lazy-width-observer>
 <div v-if="cargando"  class="w-100 d-flex flex-column align-items-center py-5">
     <div class="cssload-container ">
         <div class="cssload-tube-tunnel-color-3 "></div>
@@ -54,6 +56,8 @@ Vue.component("simple-card", {
 
 
 </div>
+
+</lazy-width-observer>
 
 
 `,

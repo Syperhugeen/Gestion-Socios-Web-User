@@ -177,14 +177,14 @@ class HelpersGenerales
         $cadena = str_replace('(/AT)', '</a>', $cadena);
 
         //img
-        $cadena = str_replace('(IMG)', '<div class="w-100 d-flex flex-column align-items-center"> <img class="post-img-secundarias" data-src="', $cadena);
-        $cadena = str_replace('(/IMG)', '"> </div>', $cadena);
+        $cadena = str_replace('(IMG)', '<lazy-width-observer><div class="w-100 d-flex flex-column align-items-center"> <img class="post-img-secundarias" data-src="', $cadena);
+        $cadena = str_replace('(/IMG)', '"> </div></lazy-width-observer>', $cadena);
 
         $cadena = str_replace('(IMGT)', '<span class="post-img-texto text-center" >', $cadena);
         $cadena = str_replace('(/IMGT)', '</span>', $cadena);
 
-        $cadena = str_replace('(YOU)', '<div class="video-responsive" > <iframe  src="https://www.youtube.com/embed/', $cadena);
-        $cadena = str_replace('(/YOU)', '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>', $cadena);
+        $cadena = str_replace('(YOU)', '<lazy-width-observer><div class="video-responsive" > <iframe  src="https://www.youtube.com/embed/', $cadena);
+        $cadena = str_replace('(/YOU)', '" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div></lazy-width-observer>', $cadena);
 
         $cadena = str_replace('(UT)', '<ul class="timeline" >', $cadena);
         $cadena = str_replace('(/UT)', '</ul>', $cadena);

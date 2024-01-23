@@ -177,6 +177,8 @@
         <div class="my-5 d-flex flex-column align-items-center w-100">
           <small class="text-center">Agregando una membresía a un socio</small>
           <div class="col-12 col-lg-8">
+
+          <lazy-width-observer>
             <video muted autoplay loop class="img-fluid">
               <source
                 src="{{
@@ -186,6 +188,7 @@
               />
               Your browser does not support the video tag.
             </video>
+            <lazy-width-observer>
           </div>
         </div>
 
