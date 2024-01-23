@@ -1,39 +1,28 @@
+Vue.component("publicidad", {
+  props: [
+    "titulo",
+    "descripcion",
+    "url",
+    "url_img_chica",
+    "url_img_grande",
+    "call_to_action",
+  ],
 
+  data: function () {
+    return {};
+  },
 
-Vue.component('publicidad' ,
-{
-
-
-props:['titulo', 'descripcion','url','url_img_chica','url_img_grande','call_to_action'],
-
-
-data:function(){
-   
-},
-
-watch:{
-
-
-
-
-},
-methods:{
-
-
-
-
-},
-computed:{
-    url_img:function(){
-      return  this.$root.mostrar_para_celuar ? this.url_img_chica : this.url_img_grande;
-    }
-},
-mounted: function mounted (){
-
-
-
-},
-template:`
+  watch: {},
+  methods: {},
+  computed: {
+    url_img: function () {
+      return this.$root.mostrar_para_celuar
+        ? this.url_img_chica
+        : this.url_img_grande;
+    },
+  },
+  mounted: function mounted() {},
+  template: `
 
 <lazy-width-observer>
   <div class="mb-4 col-12 d-flex flex-column shadow-sm">
@@ -83,7 +72,5 @@ template:`
 
 
 
-`
-
-
+`,
 });
