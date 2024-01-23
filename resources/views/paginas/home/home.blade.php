@@ -66,7 +66,7 @@
 @stop 
 
 @section('header')
-@include('paginas.Estructura_partes.Header.header_comun')
+  @include('paginas.Estructura_partes.Header.header_comun')
 @stop
 
 @section('footer') 

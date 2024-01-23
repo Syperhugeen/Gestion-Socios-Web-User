@@ -1,4 +1,4 @@
-<header-nav :scroll="true" color_tipo="simple" inline-template>
+<header-nav  :scroll="true" color_tipo="simple" inline-template>
   <header class="py-2 py-lg-0 shadow-sm" :class="getClassHeader" role="banner" id="headerID">
     <div class="container-fluid">
       <div class="row align-items-center justify-content-between">
