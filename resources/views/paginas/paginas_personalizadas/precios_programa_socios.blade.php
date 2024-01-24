@@ -1,4 +1,4 @@
-<lazy-width-observer>
+
   @foreach($Planes as $Plan)
   <div class="col-6 col-lg-3 mt-2 mb-4 mb-lg-0">
     <div
@@ -144,4 +144,4 @@
       </small>
     </div>
   </div>
-</lazy-width-observer>
+

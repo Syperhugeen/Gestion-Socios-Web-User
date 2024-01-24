@@ -1,4 +1,5 @@
 @if(count($Planes) > 0)
+<lazy-width-observer>
       <section class="site-section background-gris-0" id="precios-section">
         <div class="container">
           <div class="row">
@@ -10,4 +11,5 @@
           </div>
         </div>
       </section>
+</lazy-width-observer>
     @endif
