@@ -1,4 +1,4 @@
-<span v-if="scrolled">
+<lazy-width-observer>
   <section class="site-section py-5">
     <div class="container">
       <div class="row">
@@ -323,3 +323,4 @@
     <template slot="description-oculta"> </template>
   </section-card>
 </span>
+</lazy-width-observer>

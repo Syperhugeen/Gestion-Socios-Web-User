@@ -1,3 +1,4 @@
+<lazy-width-observer>
 <div class="site-section background-gris-1">
   <div class="container">
     <div class="row" v-lazy-container="{ selector: 'img' }">
@@ -212,3 +213,4 @@
     </div>
   </div>
 </div>
+</lazy-width-observer>
