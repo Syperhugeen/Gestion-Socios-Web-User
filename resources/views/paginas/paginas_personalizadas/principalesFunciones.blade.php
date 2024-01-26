@@ -1,4 +1,3 @@
-
 <span v-if="scrolled">
   <section-card
     titulo_aclarador="¿Qué contrataron y cuándo se vence? ¿Quién tiene que pagar?"
@@ -58,7 +57,9 @@
       <div class="col-12 d-flex flex-column align-items-center">
         <video muted autoplay loop class="img-fluid">
           <source
-            src="{{ url() }}/imagenes/Easysocio/gifs/notebook/agregar-membresia.webm"
+            src="{{
+              url()
+            }}/imagenes/Easysocio/gifs/notebook/agregar-membresia.webm"
             type="video/webm"
           />
           Your browser does not support the video tag.
@@ -128,7 +129,9 @@
 
           <video muted autoplay loop class="img-fluid">
             <source
-              src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/reserva-exito.webm"
+              src="{{
+                url()
+              }}/imagenes/Easysocio/gifs/socioPanel/reserva-exito.webm"
               type="video/webm"
             />
             Your browser does not support the video tag.
@@ -267,7 +270,9 @@
 
           <video muted autoplay loop class="img-fluid">
             <source
-              src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/control-de-acceso.webm"
+              src="{{
+                url()
+              }}/imagenes/Easysocio/gifs/socioPanel/control-de-acceso.webm"
               type="video/webm"
             />
             Your browser does not support the video tag.
@@ -278,7 +283,9 @@
 
           <video muted autoplay loop class="img-fluid">
             <source
-              src="{{ url() }}/imagenes/Easysocio/gifs/notebook/ver-accesos.webm"
+              src="{{
+                url()
+              }}/imagenes/Easysocio/gifs/notebook/ver-accesos.webm"
               type="video/webm"
             />
             Your browser does not support the video tag.
@@ -349,8 +356,12 @@
     order="right"
     :con_parte_oculta="false"
     video="si"
-    url_img_chica="{{ url() }}/imagenes/Easysocio/gifs/notebook/codigo-de-barras.webm"
-    url_img_grande="{{ url() }}/imagenes/Easysocio/gifs/notebook/codigo-de-barras.webm"
+    url_img_chica="{{
+      url()
+    }}/imagenes/Easysocio/gifs/notebook/codigo-de-barras.webm"
+    url_img_grande="{{
+      url()
+    }}/imagenes/Easysocio/gifs/notebook/codigo-de-barras.webm"
   >
     <template slot="description-visible">
       <h3 class="mb-4">
@@ -474,7 +485,9 @@
 
           <video muted autoplay loop class="img-fluid">
             <source
-              src="{{ url() }}/imagenes/Easysocio/gifs/socioPanel/seguimientos.webm"
+              src="{{
+                url()
+              }}/imagenes/Easysocio/gifs/socioPanel/seguimientos.webm"
               type="video/webm"
             />
             Your browser does not support the video tag.
@@ -487,7 +500,9 @@
 
           <video muted autoplay loop class="img-fluid">
             <source
-              src="{{ url() }}/imagenes/Easysocio/gifs/notebook/seguimientos.webm"
+              src="{{
+                url()
+              }}/imagenes/Easysocio/gifs/notebook/seguimientos.webm"
               type="video/webm"
             />
             Your browser does not support the video tag.
@@ -657,6 +672,86 @@
   </section-card>
 
   <section-card
+    titulo_aclarador="Automatiza la Comunicación con tus Socios"
+    titulo=""
+    background=""
+    order="right"
+    :con_parte_oculta="false"
+    url_img_chica="{{ url() }}/imagenes/Drwas/emails.png"
+    url_img_grande="{{ url() }}/imagenes/Drwas/emails.png"
+  >
+    <template slot="description-visible">
+      <h3 class="mb-4">
+        Emails Inteligentes para Cada Ocasión
+        <span class="font-secondary helper-aumenta-texto"> easy </span>
+      </h3>
+
+      <p>
+        ¡Mantén a tus socios siempre informados y conectados de la manera más
+        fácil! Con Easysocio, nuestra función de envío automático de emails se
+        encarga de todo por ti. Desde recordatorios sobre vencimientos de
+        membresías hasta recibos de compras, cada comunicación importante se
+        gestiona automáticamente. Imagina enviar felicitaciones personalizadas a
+        tus socios en sus cumpleaños, o recordatorios de sus clases reservadas
+        sin tener que levantar un dedo. Esta funcionalidad no solo ahorra
+        tiempo, sino que también asegura una experiencia consistente y
+        personalizada para cada socio. Con Easysocio, la comunicación eficiente
+        es solo el comienzo de una gestión excepcional.
+      </p>
+
+      <div class="mt-2">
+        <a
+          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          class="btn btn-lg btn-primary cursor-pointer text-white"
+        >
+          Comenzar a probar gratis</a
+        >
+      </div>
+      <small>No te pediremos que ingreses tarjeta de crédito.</small>
+    </template>
+  </section-card>
+
+  <section-card
+    titulo_aclarador="Transición Fácil"
+    titulo=""
+    background=""
+    order="left"
+    :con_parte_oculta="false"
+    url_img_chica="{{ url() }}/imagenes/Drwas/importar-socios.png"
+    url_img_grande="{{ url() }}/imagenes/Drwas/importar-socios.png"
+  >
+    <template slot="description-visible">
+      <h3 class="mb-4">
+        Carga Tus Socios Directamente desde Excel
+        <span class="font-secondary helper-aumenta-texto"> easy </span>
+      </h3>
+
+      <p>
+        ¿Estás pensando en cambiar a Easysocio y te preocupa cómo transferir tu
+        actual base de clientes? ¡Tenemos la solución perfecta para ti! Con
+        nuestra función de importación desde Excel, la transición es rápida y
+        sencilla. Si ya tienes una lista de socios en una planilla de Excel,
+        puedes cargarla directamente en nuestro sistema. Esto es ideal si estás
+        migrando de otro software o si ya cuentas con una base de datos de
+        clientes. Simplemente sube tu archivo Excel y nuestro sistema se
+        encargará del resto, asegurando que la transición a Easysocio sea fluida
+        y sin complicaciones. ¡Cambia a una gestión más inteligente y eficiente
+        sin perder ningún dato importante de tus socios!
+      </p>
+
+      <div class="mt-2">
+        <a
+          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          class="btn btn-lg btn-primary cursor-pointer text-white"
+        >
+          Comenzar a probar gratis</a
+        >
+      </div>
+      <small>No te pediremos que ingreses tarjeta de crédito.</small>
+    </template>
+  </section-card>
+
+  <section-card
     titulo_aclarador="Feedback de los socios"
     titulo=""
     background=""
@@ -724,4 +819,46 @@
   </lazy-width-observer>
 
   <div class="py-5 w-100 border-bottom border-primary"></div>
+
+  <section-card
+    titulo_aclarador="Panel de Control en Tiempo Real"
+    titulo=""
+    background=""
+    order="left"
+    :con_parte_oculta="false"
+    url_img_chica="{{ url() }}/imagenes/Drwas/real-time.png"
+    url_img_grande="{{ url() }}/imagenes/Drwas/real-time.png"
+  >
+    <template slot="description-visible">
+      <h3 class="mb-4">
+        Tu Gimnasio, Más Conectado y Dinámico
+        <span class="font-secondary helper-aumenta-texto"> easy </span>
+      </h3>
+
+      <p>
+        Imagina tener toda la información clave de tu gimnasio al alcance de la
+        vista, actualizada al instante, como en un aeropuerto. ¡Eso es lo que te
+        ofrece nuestro software con su función de Panel de Control en Tiempo
+        Real! Esta herramienta innovadora muestra las agendas del día y el
+        ranking de socios en una pantalla accesible dentro de tu gimnasio.
+        Podrás ver quién ha reservado para cada clase, cuántos cupos quedan
+        disponibles y quiénes han asistido, todo actualizado al momento. Además,
+        el ranking del mes de los socios agrega un toque de emoción y
+        motivación. Esta función está diseñada no solo para facilitar la
+        gestión, sino también para involucrar a los socios, creando un ambiente
+        de comunidad y competencia sana. Deja esta pantalla abierta en tu
+        gimnasio y observa cómo se transforma la experiencia de tus socios.
+      </p>
+
+      <div class="mt-2">
+        <a
+          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          class="btn btn-lg btn-primary cursor-pointer text-white"
+        >
+          Comenzar a probar gratis</a
+        >
+      </div>
+      <small>No te pediremos que ingreses tarjeta de crédito.</small>
+    </template>
+  </section-card>
 </span>
