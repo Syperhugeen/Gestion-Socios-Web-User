@@ -31,7 +31,7 @@ class CronController extends Controller
                     $UserNewsletter = $data->UserNewsletter;
                     $Email          = $UserNewsletter->email;
 
-                    ServicioApiSendEmail::senBlogEmail($Blog, $UserNewsletter->name, $Email);
+                    ServicioApiSendEmail::senBlogEmail($Blog, isset($UserNewsletter->name) ? $UserNewsletter->name : $Email, $Email);
                 }
             }
 
