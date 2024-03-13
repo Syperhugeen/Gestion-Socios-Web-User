@@ -39,7 +39,7 @@ class ServicioApiSendEmail
             if ($response['Https_status'] === 200 || $response['Https_status'] === 202 || $response['Https_status'] === 201) {
                 HelpersGenerales::log('info', 'emailNewsletter', $Email . ' -> ' . json_encode($response['Data']) . ' -> ' . $response['Https_status']);
             } else {
-                HelpersGenerales::log('error', 'emailNewsletter', $Email . ' -> '  . json_encode($response) .'-----' .  $response['Data'] . ' -> ' . $response['Https_status']);
+                HelpersGenerales::log('error', 'emailNewsletter', $Email . ' -> '  . json_encode($response) .'-----' .  json_encode($response['Data']) . ' -> ' . $response['Https_status']);
             }
         } catch (\Exception $e) {
 
