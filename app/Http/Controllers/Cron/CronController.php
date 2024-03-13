@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers\Cron;
 
-use App\Helpers\HelpersGenerales;
 use App\Http\Controllers\Controller;
-use App\Repositorios\NewslleterUserRepo;
+use App\Servicios\ServicioApiSendEmail;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Mail;
 
 class CronController extends Controller
 {
@@ -16,12 +14,9 @@ class CronController extends Controller
 
         $Now = Carbon::now();
 
-        if($Now->hour < 8 || $Now->hour > 20)
-        {
+        if ($Now->hour < 7 || $Now->hour > 22) {
             return "Fuera de hora para enviar";
         }
-
-        $UserNewsletterRepo = new NewslleterUserRepo();
 
         $cacheKey = 'sendEmailInQueue';
 
@@ -36,25 +31,7 @@ class CronController extends Controller
                     $UserNewsletter = $data->UserNewsletter;
                     $Email          = $UserNewsletter->email;
 
-                    try {
-                        Mail::send('emails.newslleter_blog',
-                            compact('Blog', 'Email'),
-                            function ($m) use ($Blog, $Email) {
-
-                                $m->from('mauricio@gestionsocios.com.uy', 'Easysocio blog');
-
-                                $m->to(trim($Email),
-                                    $Email)->subject($Blog->name . ' 🚀');
-                            }
-                        );
-                    } catch (\Exception $e) {
-
-                        HelpersGenerales::log('error', 'emailNewsletter', $Email . ' -> ' . $e . ' -> ' . $e->getMessage());
-
-                        if ($e->getMessage() == 'Swift_RfcComplianceException' || $e == 'Swift_RfcComplianceException') {
-                            $UserNewsletterRepo->setAtributoEspecifico($UserNewsletter, 'se_puede_enviar', 'no');
-                        }
-                    }
+                    ServicioApiSendEmail::senBlogEmail($Blog, $UserNewsletter->name, $Email);
                 }
             }
 

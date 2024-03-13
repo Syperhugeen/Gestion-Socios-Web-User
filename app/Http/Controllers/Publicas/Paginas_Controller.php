@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Repositorios\EmpresaRepo;
 use App\Repositorios\NoticiasRepo;
 use App\Repositorios\PortadaDePaginaRepo;
+use App\Servicios\ServicioApiSendEmail;
 use App\Servicios\ServiciosPlanes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -97,6 +98,8 @@ class Paginas_Controller extends Controller
     {
         $Blog  = $this->NoticiasRepo->find($id);
         $Email = 'mauricio@worldmaster.com.uy';
+        
+        ServicioApiSendEmail::senBlogEmail($Blog, 'Mauricio','mauricio.worldmaster@gmail.com');
 
         return view('emails.newslleter_blog', compact('Blog', 'Email'));
     }
