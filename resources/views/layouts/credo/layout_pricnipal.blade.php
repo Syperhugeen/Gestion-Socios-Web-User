@@ -14,6 +14,8 @@
     @yield('pixcel-facebook')
     @yield('favicon')
 
+    <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"WebApplication","name":"Easysocio","applicationCategory":"Gestión","aggregateRating":{"@type":"AggregateRating","ratingValue":4.9,"ratingCount":11863}}</script>
+
     <meta name="facebook-domain-verification" content="20ezzwn14s6bw0rp4q3711awjo32zc" />
     <meta name="Description" CONTENT="@yield('MetaContent')">
     <META name="robots" content="@yield('MetaRobot')">

@@ -34,8 +34,13 @@ class HelpersGenerales
      *
      * @return void
      */
-    public static function log($type, $fileName, $message)
-    {
+    public static function log(
+        $type,
+        $fileName,
+        $message
+    ) {
+        $monolog = Log::getMonolog();
+
         Log::useFiles(storage_path() . '/logs/' . $fileName . '.log');
 
         $message = 'IP: ' . strval($_SERVER['REMOTE_ADDR']) . '-> ' . $message;
@@ -69,6 +74,8 @@ class HelpersGenerales
                 Log::debug($message);
                 break;
         }
+
+        $monolog->popHandler();
     }
 
     /**
