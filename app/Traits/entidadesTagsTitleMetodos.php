@@ -26,9 +26,9 @@ trait entidadesTagsTitleMetodos
                 $string = $this->name;
             }
 
-            return $this->getSimboloRandom() . HelpersGenerales::helper_convertir_cadena_solo_letras_y_numeros($string) . $this->getSimboloCierreRandom();
+            return HelpersGenerales::helper_convertir_cadena_solo_letras_y_numeros($string);
         } else {
-            return $this->getSimboloRandom() . $this->title_tag . $this->getSimboloCierreRandom();
+            return $this->title_tag;
         }
     }
 
@@ -47,13 +47,12 @@ trait entidadesTagsTitleMetodos
                     $Cadena .= $this->parrafo . '. ';
                 }
 
-                return $this->getSimboloRandom() . $Cadena . $this->getSimboloCierreRandom();
+                return $Cadena;
             } else {
-                return $this->getSimboloRandom() . $this->descripcion_breve . $this->getSimboloCierreRandom();
+                return $this->descripcion_breve;
             }
-
         } else {
-            return $this->getSimboloRandom() . $this->description_tag . $this->getSimboloCierreRandom();
+            return $this->description_tag;
         }
     }
 }

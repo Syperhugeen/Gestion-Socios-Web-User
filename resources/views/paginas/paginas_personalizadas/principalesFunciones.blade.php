@@ -260,6 +260,8 @@
     </template>
   </section-card>
 
+
+
   <lazy-width-observer>
     <div class="container">
       <div class="row mx-0 align-items-center">
@@ -309,6 +311,36 @@
   </lazy-width-observer>
 
   <div class="py-5 w-100 border-bottom border-primary"></div>
+  <section-card
+    titulo_aclarador="Auto registro"
+    titulo=""
+    background=""
+    order="right"
+    :con_parte_oculta="false"
+    url_img_chica="{{ url() }}/imagenes/Drwas/auto-registro.png"
+    url_img_grande="{{ url() }}/imagenes/Drwas/auto-registro.png"
+  >
+    <template slot="description-visible">
+      <h3 class="mb-4">
+      Facilita el ingreso de nuevos socios con nuestra página de auto-registro
+        <span class="font-secondary helper-aumenta-texto"> easy </span>
+      </h3>
+
+      <p>
+      Con la funcionalidad de auto-registro de EasySocio, los gimnasios pueden compartir una página personalizada donde los nuevos socios se registran fácilmente. Incluye un formulario y la opción de capturar una foto al momento. Además, puedes configurar la confirmación automática y ofrecer una clase gratis a los nuevos registrados. ¡Optimiza la inscripción y comienza a llenar tus clases rápidamente!
+      </p>
+
+      <div class="mt-2">
+        <a
+          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          class="btn btn-lg btn-primary cursor-pointer text-white"
+        >
+          Comenzar a probar gratis</a
+        >
+      </div>
+      <small>No te pediremos que ingreses tarjeta de crédito.</small>
+    </template>
+  </section-card>
   <section-card
     titulo_aclarador="Manejo de stock y venta de productos"
     titulo=""
@@ -862,34 +894,5 @@
     </template>
   </section-card>
 
-  <section-card
-    titulo_aclarador="Auto registro"
-    titulo=""
-    background=""
-    order="right"
-    :con_parte_oculta="false"
-    url_img_chica="{{ url() }}/imagenes/Drwas/auto-registro.png"
-    url_img_grande="{{ url() }}/imagenes/Drwas/auto-registro.png"
-  >
-    <template slot="description-visible">
-      <h3 class="mb-4">
-      Facilita el ingreso de nuevos socios con nuestra página de auto-registro
-        <span class="font-secondary helper-aumenta-texto"> easy </span>
-      </h3>
 
-      <p>
-      Con la funcionalidad de auto-registro de EasySocio, los gimnasios pueden compartir una página personalizada donde los nuevos socios se registran fácilmente. Incluye un formulario y la opción de capturar una foto al momento. Además, puedes configurar la confirmación automática y ofrecer una clase gratis a los nuevos registrados. ¡Optimiza la inscripción y comienza a llenar tus clases rápidamente!
-      </p>
-
-      <div class="mt-2">
-        <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
-          class="btn btn-lg btn-primary cursor-pointer text-white"
-        >
-          Comenzar a probar gratis</a
-        >
-      </div>
-      <small>No te pediremos que ingreses tarjeta de crédito.</small>
-    </template>
-  </section-card>
 </span>
