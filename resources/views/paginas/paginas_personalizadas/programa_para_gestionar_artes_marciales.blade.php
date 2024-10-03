@@ -105,7 +105,7 @@
                 <li class="text-white espacio-letras"> Control de acceso <span class="font-secondary helper-aumenta-texto"> easy </span></li>
               </ul>
 
-               <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis" class="btn btn-success mr-2 cursor-pointer text-white"> Comenzar ahora</a>
+               <a href="{{$urlToDemo}}" class="btn btn-success mr-2 cursor-pointer text-white"> Comenzar ahora</a>
                <a href="#intro" class="btn  btn-outline-light cursor-pointer"> Seguir leyendo</a>
             </template>
             <template slot="descripcion">

@@ -101,7 +101,7 @@
         <div class="w-100 d-flex flex-column align-items-center">
           <a
             class="btn btn-primary btn-lg mt-3 mb-1"
-            href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+            href="{{$urlToDemo}}"
           >
             Probar gratis
           </a>
@@ -125,7 +125,7 @@
     <div class="col-12 p-2 rounded background-gris-1 text-center">
       <small
         >Si tienes más de {{$lastPlan->cantidad_socios}} socios
-        <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+        <a href="{{$urlToDemo}}"
           >póngase en contacto con nosotros</a
         >
         para recibir una cotización.
@@ -138,7 +138,7 @@
         incluirá un cargo inicial por configuración y conexión del hardware,
         además de un aumento sobre el valor del plan seleccionado. Para obtener
         más detalles y recibir una cotización personalizada, por favor,
-        <a href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+        <a href="{{$urlToDemo}}"
           >póngase en contacto con nosotros</a
         >.
       </small>

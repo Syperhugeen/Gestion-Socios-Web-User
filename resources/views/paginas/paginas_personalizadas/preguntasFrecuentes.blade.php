@@ -43,7 +43,7 @@
                 <li>
                   Comienza probando el software
                   <a
-                    href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+                    href="{{$urlToDemo}}"
                     class=""
                     >aquí</a
                   >.
@@ -59,7 +59,7 @@
               </ol>
 
               <a
-                href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+                href="{{$urlToDemo}}"
                 class="btn btn-primary mt-3"
                 >Comenzar prueba gratis
               </a>

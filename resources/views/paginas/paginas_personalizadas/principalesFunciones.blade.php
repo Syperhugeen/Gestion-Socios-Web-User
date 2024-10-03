@@ -39,7 +39,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -98,7 +98,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -178,7 +178,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -250,7 +250,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -332,7 +332,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -370,7 +370,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -414,7 +414,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -453,7 +453,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -497,7 +497,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -578,7 +578,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -620,7 +620,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -693,7 +693,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -733,7 +733,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -773,7 +773,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -809,7 +809,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a
@@ -884,7 +884,7 @@
 
       <div class="mt-2">
         <a
-          href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+          href="{{$urlToDemo}}"
           class="btn btn-lg btn-primary cursor-pointer text-white"
         >
           Comenzar a probar gratis</a

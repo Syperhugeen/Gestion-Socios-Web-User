@@ -194,7 +194,7 @@
             <li class="header-nav-ul-li">
               <a
                 :class="getClassItemsNav"
-                href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+                href="{{$urlToDemo}}"
                 class="nav-link"
               >
                 <span class="btn btn-success text-white"> Demo </span>

@@ -122,7 +122,7 @@
     </ul>
 
     <a
-      href="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis"
+      href="{{$urlToDemo}}"
       class="btn btn-success mr-2 cursor-pointer text-white"
     >
       Comenzar ahora</a
