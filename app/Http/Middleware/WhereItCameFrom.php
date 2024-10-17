@@ -13,11 +13,27 @@ class WhereItCameFrom
         Closure $next
     ) {
 
-        $isFromGoogleAds = $request->query('origin') == 'googleAds' ? true : false;
-        $keyword         = $request->query('keyword') ? $request->query('keyword') : null;
+        $origin = $request->query('origin');
+        $isFrom = '';
+
+        switch ($origin) {
+            case 'googleAds':
+                $keyword = $request->query('keyword') ? $request->query('keyword') : null;
+                $isFrom  = "googleAds : {$keyword}";
+                break;
+            case 'emailsASociosDelSistema':
+                $isFrom = 'emailsASociosDelSistema';
+                break;
+            case 'blogs':
+                $isFrom = 'blogs';
+                break;
+            default:
+                $isFrom = 'organic';
+                break;
+        }
 
         if (!Session::has('isFrom')) {
-            Session::put('isFrom', $isFromGoogleAds ? "googleAds : {$keyword}" : 'organic');
+            Session::put('isFrom', $isFrom);
         }
 
         return $next($request);
