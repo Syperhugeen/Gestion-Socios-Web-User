@@ -28,7 +28,7 @@ class WhereItCameFrom
                 $isFrom = 'blogs';
                 break;
             default:
-                $isFrom = 'organic';
+                $isFrom = $origin ? $origin : 'organic';
                 break;
         }
 
