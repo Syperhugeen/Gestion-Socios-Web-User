@@ -22,9 +22,10 @@
       </p>
 
       <ul>
-        <li>Manejo de membresías sin límite de asistencia (pase libre).</li>
-        <li>Manejo de membresías con límite de asistencia (cuponera).</li>
-        <li>Renovaciones automáticas de membresías.</li>
+        <li>Manejo de membresías sin límite de asistencia (pase libre) ✅</li>
+        <li>Manejo de membresías con límite de asistencia (cuponera) ✅</li>
+        <li>Manejo de membresías tipo matrículas ✅</li>
+        <li>Renovaciones automáticas de membresías ✅</li>
       </ul>
 
       <p>
@@ -547,6 +548,39 @@
   <div class="py-5 w-100 border-bottom border-primary"></div>
 
   <section-card
+    titulo_aclarador="Notificaciones"
+    titulo=""
+    background=""
+    order="right"
+    :con_parte_oculta="false"
+    url_img_chica="{{ url() }}/imagenes/Drwas/notificaciones.png"
+    url_img_grande="{{ url() }}/imagenes/Drwas/notificaciones.png"
+  >
+    <template slot="description-visible">
+    <h3 class="mb-4">
+        Envío de Notificaciones Masivas 📢
+        <span class="font-secondary helper-aumenta-texto"> easy </span>
+    </h3>
+
+    <p>
+        Ahora podés enviar mensajes segmentados de manera masiva a tus socios a través de nuestro nuevo feature de notificaciones. 
+        Esto te permitirá comunicar de manera más efectiva eventos, promociones, y más. 
+        La comunicación es clave, y con esta herramienta, tu relación con los socios crecerá exponencialmente 📈 ¿<span class="font-secondary helper-aumenta-texto">easy</span> no?
+    </p>
+
+      <div class="mt-2">
+        <a
+          href="{{$urlToDemo}}"
+          class="btn btn-lg btn-primary cursor-pointer text-white"
+        >
+          Comenzar a probar gratis</a
+        >
+      </div>
+      <small>No te pediremos que ingreses tarjeta de crédito.</small>
+    </template>
+  </section-card>
+
+  <section-card
     titulo_aclarador="Rutinas"
     titulo=""
     background=""
@@ -665,6 +699,8 @@
   </lazy-width-observer>
 
   <div class="py-5 w-100 border-bottom border-primary"></div>
+
+
 
   <section-card
     titulo_aclarador="Cumpleaños"
