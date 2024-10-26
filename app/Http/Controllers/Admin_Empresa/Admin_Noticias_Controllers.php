@@ -145,12 +145,23 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
     {
         $blogs = $this->Entidad_principal->getEntidadesActivasOrdendasSegunYCantidad('id', 'desc');
 
-        $string = '';
-
+        $string = '<!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <title>Lista de Blogs</title>
+        </head>
+        <body>
+            <ul>';
+        
         foreach ($blogs as $blog) {
-            $string .= $blog->route . '\n';
+            $string .= '<li>' . htmlspecialchars($blog->route) . '</li>';
         }
-
+        
+        $string .= '</ul>
+        </body>
+        </html>';
+        
         return $string;
     }
 }

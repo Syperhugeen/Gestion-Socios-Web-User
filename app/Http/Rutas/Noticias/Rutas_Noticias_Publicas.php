@@ -16,7 +16,7 @@ Route::get('/blog-newsletter-{id}-{email}', [
     'as'   => 'get_pagina_newsletter_noticias_listado']
 );
 
-Route::get('/blogFullList}', [
+Route::get('/blogFullList', [
     'uses' => 'Admin_Empresa\Admin_Noticias_Controllers@blogFullList',
     'as'   => 'blogFullList']
 );
