@@ -36,7 +36,7 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
     protected $Nombre_del_campo_imagen;
 
     public function __construct(NoticiasRepo $NoticiasRepo,
-        ImagenRepo $ImagenRepo) {
+        ImagenRepo                               $ImagenRepo) {
         $this->Entidad_principal          = $NoticiasRepo;
         $this->ImagenRepo                 = $ImagenRepo;
         $this->Nombre_entidad_plural      = 'Noticias';
@@ -69,7 +69,7 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
         $CantidadDeEnviosPendientes = Cache::has('sendEmailInQueue') ? Cache::get('sendEmailInQueue')->count() : 0;
 
-        return view($this->Path_view_get_admin_index, compact('Entidades', 'Route_crear', 'Titulo', 'Route_busqueda', 'Carpeta_view_admin','CantidadDeEnviosPendientes'));
+        return view($this->Path_view_get_admin_index, compact('Entidades', 'Route_crear', 'Titulo', 'Route_busqueda', 'Carpeta_view_admin', 'CantidadDeEnviosPendientes'));
     }
 
     public function getManager($Request)
@@ -139,5 +139,18 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
         }
 
         return redirect()->back()->with('alert', 'Se preparó para enviar');
+    }
+
+    public function blogFullList()
+    {
+        $blogs = $this->Entidad_principal->getEntidadesActivasOrdendasSegunYCantidad('id', 'desc');
+
+        $string = '';
+
+        foreach ($blogs as $blog) {
+            $string .= $blog->route . '\n';
+        }
+
+        return $string;
     }
 }

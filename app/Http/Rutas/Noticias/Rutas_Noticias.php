@@ -35,3 +35,6 @@ Route::get('/enviar-este-articulo-{id}', [
     'uses' => 'Admin_Empresa\Admin_Noticias_Controllers@enviar_noticias_por_email',
     'as'   => 'enviar_noticias_por_email']
 );
+
+
+
