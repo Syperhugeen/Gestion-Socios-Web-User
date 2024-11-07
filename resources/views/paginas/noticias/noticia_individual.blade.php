@@ -105,6 +105,52 @@
 
 @section('vue-componenetes-cdn')
 <script  src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      const blogContainer = document.querySelector('.contenedor-blog');
+
+      if (blogContainer) {
+
+        const emptyParagraphs = blogContainer.querySelectorAll('p:empty');
+
+        emptyParagraphs.forEach(p => {
+          if (p.nextElementSibling && p.nextElementSibling.tagName === 'H2') {
+            p.remove();
+          }
+        });
+
+        blogContainer.querySelectorAll('h2').forEach(h2 => {
+          h2.classList.add('mt-5');
+          h2.classList.add('h3');
+        });
+
+        blogContainer.querySelectorAll('h3').forEach(h3 => {
+          h3.classList.add('h5');
+          h3.classList.add('mt-4');
+          h3.classList.add('font-weight-bold');
+        });
+
+        blogContainer.querySelectorAll('h4').forEach(h4 => {
+          h4.classList.add('h5');
+        });
+
+        const paragraphs = blogContainer.querySelectorAll('p');
+
+        paragraphs.forEach(p => {
+          let nextSibling = p.nextSibling;
+          
+          while (nextSibling && nextSibling.nodeType === Node.ELEMENT_NODE && nextSibling.tagName === 'BR') {
+            const toRemove = nextSibling;
+            nextSibling = nextSibling.nextSibling;
+            toRemove.remove();
+          }
+        });
+      }
+    });
+  </script>
 @stop
 
 @section('vue')

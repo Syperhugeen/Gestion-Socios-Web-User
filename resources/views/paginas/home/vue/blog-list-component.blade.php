@@ -27,7 +27,7 @@ template:'
                 <img :src="blog.url_img_portada" :alt="blog.descripcion_breve" class="servicio_lista_imagen">
               </a>              
               <div class="p-3 mt-2">
-                <h3 class="sub-titulos-class text-color-primary font-primary mb-2">
+                <h3 class="h6 text-color-primary font-primary mb-2">
                   <a :href="blog.route">
                     @{{blog.name}}
                   </a>                
