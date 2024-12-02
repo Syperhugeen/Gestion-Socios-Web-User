@@ -185,14 +185,14 @@
                 href="{{$urlToDemo}}"
                 class="nav-link"
               >
-                <button class="btn btn-primary">Comenzar gratis</button>
+                <button class="btn btn-primary">Comenzar gratis 🚀</button>
               </a>
             </li>
           </ul>
         </nav>
         <div   v-if="$root.mostrar_para_celuar" class="d-flex align-items-center gap-8 pr-2">
           <a :class="getClassItemsNav" href="{{$urlToDemo}}" class="nav-link">
-            <button class="btn btn-primary">Comenzar gratis</button>
+            <button class="btn btn-primary">Comenzar gratis 🚀</button>
           </a>
           <div            
             v-on:click="set_mostrar_menu_movil"
