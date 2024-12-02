@@ -103,7 +103,7 @@
             class="btn btn-primary btn-lg mt-3 mb-1"
             href="{{$urlToDemo}}"
           >
-            Comenzar gratis
+            Comenzar gratis 🚀
           </a>
 
           <small class="text-center helper-fuente-pequeña px-3">
