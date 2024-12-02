@@ -110,13 +110,15 @@
 
     <a
       href="{{$urlToDemo}}"
-      class="btn btn-success mr-2 cursor-pointer text-white"
+      class=""
     >
-      Comenzar ahora</a
-    >
-    <a href="#intro" class="btn btn-outline-light cursor-pointer">
-      Seguir leyendo</a
-    >
+
+    <button class="btn btn-primary btn-lg border border-white">
+      Comenzar gratis
+      
+    </button>
+    </a
+    >    
   </template>
   <template slot="descripcion">
     

@@ -62,7 +62,7 @@
             </li>
             <li @click="showModalSolucion = true" class="header-nav-ul-li">
               <span :class="getClassItemsNav" class="nav-link cursor-pointer"
-                >Nuestra solución</span
+                >Solución</span
               >
             </li>
 
@@ -190,12 +190,11 @@
             </li>
           </ul>
         </nav>
-        <div class="d-flex align-items-center gap-4 pr-2">
+        <div   v-if="$root.mostrar_para_celuar" class="d-flex align-items-center gap-4 pr-2">
           <a :class="getClassItemsNav" href="{{$urlToDemo}}" class="nav-link">
             <button class="btn btn-primary">Comenzar gratis</button>
           </a>
-          <div
-            v-if="$root.mostrar_para_celuar"
+          <div            
             v-on:click="set_mostrar_menu_movil"
             class="text-right h4 my-0"
             :class="getClassColorElement"
