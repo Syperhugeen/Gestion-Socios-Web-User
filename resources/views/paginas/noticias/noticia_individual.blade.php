@@ -261,12 +261,12 @@
   <div class="wraper-secciones-blog-titulo-content">
     <div class="contiene-otras-secciones-del-blog">
       <publicidad
-        titulo="Software en la nube para gimnasios"
-        descripcion="El programa para administrar gimnasios más simple de usar"
+        titulo="Gestión fácil para tu gym 🚀"
+        descripcion="Lleva tu gimnasio al siguiente nivel con nuestro software en la nube. 💪"
         url="https://gestionsocios.com.uy/"
         url_img_chica="https://gestionsocios.com.uy/imagenes/baner/easysocio-baner-cuadrado.png"
         url_img_grande="https://gestionsocios.com.uy/imagenes/baner/easysocio-baner-horizontal.png"
-        call_to_action="Concer más sobre Easysocio"
+        call_to_action="¡Comienza gratis ahora! ✨"
       >
       </publicidad>
     </div>

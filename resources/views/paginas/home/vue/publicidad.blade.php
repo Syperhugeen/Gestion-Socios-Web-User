@@ -25,18 +25,19 @@ Vue.component("publicidad", {
   template: `
 
 <lazy-width-observer>
-  <div class="mb-4 col-12 d-flex flex-column shadow-sm">
+  <div class="mb-4 d-flex flex-column shadow-sm">
     <a :href="url">
       <img v-lazy="url_img" :alt="titulo" class="img-fluid mb-4" />
     </a>
-    <div class="col-12 h4 mb-4">@{{titulo}}</div>
-    <p class="col-12 mb-4">@{{descripcion}}</p>
-
-    <a :href="url" class="col-12 mb-4">
-      <div class="Boton-Fuente-Chica Boton-Primario-Relleno">
-        @{{call_to_action}} <i class="fas fa-angle-double-right"></i>
-      </div>
-    </a>
+    <div class="d-flex flex-column gap-8 text-center align-items-center p-2">
+      <div class="h4 my-0">@{{titulo}}</div>
+      <p class="my-0">@{{descripcion}}</p>
+      <a :href="url">
+        <button class="btn btn-primary">
+          @{{call_to_action}} <i class="fas fa-angle-double-right"></i>
+        </button>
+      </a>
+    </div>   
   </div>
 </lazy-width-observer>
 

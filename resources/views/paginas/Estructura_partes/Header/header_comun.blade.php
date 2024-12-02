@@ -37,7 +37,7 @@
 
         <nav
           v-if="mostrar_opciones_del_menu"
-          class="col-lg-8 d-flex flex-column align-items-end"
+          class="d-flex flex-column align-items-end"
           role="navigation"
           :class="getClassMostrarMenuMovil"
         >
@@ -190,7 +190,7 @@
             </li>
           </ul>
         </nav>
-        <div   v-if="$root.mostrar_para_celuar" class="d-flex align-items-center gap-4 pr-2">
+        <div   v-if="$root.mostrar_para_celuar" class="d-flex align-items-center gap-8 pr-2">
           <a :class="getClassItemsNav" href="{{$urlToDemo}}" class="nav-link">
             <button class="btn btn-primary">Comenzar gratis</button>
           </a>
