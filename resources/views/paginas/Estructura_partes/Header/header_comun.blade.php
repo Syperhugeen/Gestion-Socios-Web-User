@@ -1,11 +1,19 @@
-<header-nav  :scroll="true" color_tipo="simple" inline-template>
-  <header class="py-2 py-lg-0 shadow-sm" :class="getClassHeader" role="banner" id="headerID">
+<header-nav :scroll="true" color_tipo="simple" inline-template>
+  <header
+    class="py-2 py-lg-0 shadow-sm"
+    :class="getClassHeader"
+    role="banner"
+    id="headerID"
+  >
     <div class="container-fluid">
       <div class="row align-items-center justify-content-between">
-        <div class="col-6  col-lg-2">
-          <div class="w-100 d-flex flex-row align-items-center">
-
-            <a href="{{route('get_home')}}" class="d-block"  style="width:120px;">
+        <div class="pl-2">
+          <div class="w-100 d-flex flex-row align-items-center gap-4">
+            <a
+              href="{{route('get_home')}}"
+              class="d-block"
+              style="width: 120px"
+            >
               <img
                 v-if="$root.scrolled > 0"
                 src="{{url()}}/imagenes/Empresa/logo-rectangular-easysocio-color.png"
@@ -19,18 +27,13 @@
             </a>
 
             <img
-            src="{{Session::get('pais')->url_img}}"
-            width="25"
-            height="25"
-            class="rounded-circle ml-2"
-          />
-
+              src="{{Session::get('pais')->url_img}}"
+              width="25"
+              height="25"
+              class="rounded-circle"
+            />
           </div>
-
-
-
         </div>
-
 
         <nav
           v-if="mostrar_opciones_del_menu"
@@ -40,15 +43,7 @@
         >
           <ul
             :class="getClassNavUlEnMovil"
-            class="
-              d-flex
-              flex-column
-              align-items-start
-              flex-lg-row
-              align-items-lg-center
-              m-0
-              px-lg-3
-            "
+            class="d-flex flex-column align-items-start flex-lg-row align-items-lg-center m-0 px-lg-3"
           >
             <div
               v-if="$root.mostrar_para_celuar"
@@ -71,17 +66,12 @@
               >
             </li>
 
-            <transition name="modal" >
+            <transition name="modal">
               <div class="modal-mask" v-if="showModalSolucion">
                 <div class="modal-wrapper">
                   <div class="modal-container position-relative">
                     <span
-                      class="
-                        modal-cerrar-icono
-                        sub-titulos-class
-                        text-center
-                        color-text-gris
-                      "
+                      class="modal-cerrar-icono sub-titulos-class text-center color-text-gris"
                       @click="showModalSolucion = !showModalSolucion"
                     >
                       <i class="fas fa-times"></i>
@@ -138,8 +128,6 @@
                           Personal trainers
                         </a>
                       </div>
-
-                      
                     </div>
 
                     <div class="modal-body"></div>
@@ -197,18 +185,23 @@
                 href="{{$urlToDemo}}"
                 class="nav-link"
               >
-                <span class="btn btn-success text-white"> Demo </span>
+                <button class="btn btn-primary">Comenzar gratis</button>
               </a>
             </li>
           </ul>
         </nav>
-        <div
-          v-if="$root.mostrar_para_celuar"
-          v-on:click="set_mostrar_menu_movil"
-          class="col-3 text-right h4 my-0"
-          :class="getClassColorElement"
-        >
-          <i v-if="!mostrar_menu_en_movil" class="fas fa-bars"></i>
+        <div class="d-flex align-items-center gap-4 pr-2">
+          <a :class="getClassItemsNav" href="{{$urlToDemo}}" class="nav-link">
+            <button class="btn btn-primary">Comenzar gratis</button>
+          </a>
+          <div
+            v-if="$root.mostrar_para_celuar"
+            v-on:click="set_mostrar_menu_movil"
+            class="text-right h4 my-0"
+            :class="getClassColorElement"
+          >
+            <i v-if="!mostrar_menu_en_movil" class="fas fa-bars"></i>
+          </div>
         </div>
       </div>
     </div>
