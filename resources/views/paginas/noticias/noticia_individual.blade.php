@@ -263,7 +263,7 @@
       <publicidad
         titulo="Gestión fácil para tu gym 🚀"
         descripcion="Lleva tu gimnasio al siguiente nivel con nuestro software en la nube. 💪"
-        url="https://gestionsocios.com.uy/"
+        url="https://app.gestionsocios.com.uy/comenzar-a-probar-gratis?organicOrPay=organicBlog--{{$Noticia->name}}&lang=es&origin=gestionsocios.com.uy"
         url_img_chica="https://gestionsocios.com.uy/imagenes/baner/easysocio-baner-cuadrado.png"
         url_img_grande="https://gestionsocios.com.uy/imagenes/baner/easysocio-baner-horizontal.png"
         call_to_action="¡Comienza gratis ahora! ✨"
