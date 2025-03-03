@@ -1,10 +1,9 @@
 <?php 
 namespace App\Repositorios;
 
-use Illuminate\Support\Facades\Storage;
+
 use Illuminate\Support\Facades\File;
-use App\Repositorios\Emails\EmailsRepo;
-use Input;
+
 use Intervention\Image\ImageManagerStatic as Image;
 
 
@@ -77,32 +76,7 @@ abstract class BaseRepo
                   ->get();
     }
 
-    /** 
-     * Trae las entidades ordenadas según el atributo y se puede elegir la canitdad. 
-     * Si no se indica cantidad traerá todas las que haya.
-     * 
-     * @return array con entidades
-     */
-    public function getEntidadesActivasOrdendasSegunYCantidad($OrdenadasSegunAtributo = 'id',$Orden = 'desc', $Cantidad = null)
-    {
-      $Entidades =  $this->entidad
-                         ->where('borrado','no')
-                         ->active()               
-                         ->orderBy($OrdenadasSegunAtributo,$Orden)
-                         ->get();
-
-       if($Cantidad === null)
-       {
-         return   $Entidades; 
-       }                 
-
-       if($Entidades->count() >= $Cantidad )   
-       {
-        return $Entidades->take($Cantidad);
-       }  
-
-       return   $Entidades;  
-    }
+   
 
     
 
@@ -215,7 +189,7 @@ abstract class BaseRepo
            {
             $this->setAtributoEspecifico($Entidad,'img',$Entidad->name_slug);
            }
-           catch (Exception $e){}
+           catch (\Exception $e){}
            
          }    
          

@@ -144,8 +144,8 @@ trait entidadesControllerComunesCrud
 
             }
 
-            HelpersGenerales::helper_olvidar_este_cache('Imagenes' . $nombre_campo . $Entidad->id);
-            HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal' . $nombre_campo . $Entidad->id);
+            HelpersGenerales::forgetThisCacheKey('Imagenes' . $nombre_campo . $Entidad->id);
+            HelpersGenerales::forgetThisCacheKey('ImagenPrincipal' . $nombre_campo . $Entidad->id);
 
         }
 

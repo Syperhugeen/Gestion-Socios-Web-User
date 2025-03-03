@@ -51,5 +51,15 @@
                              'no' => 'Desactivar'] , null,['class' => 'formulario-field'] )          !!}
 </div>
 
+<div class="formulario-label-fiel">
+  {!! Form::label('web_belong', 'Web Belong', array('class' => 'formulario-label ')) !!}
+  {!! Form::select('web_belong', array_flip(config('constants.web_belong')) , null,['class' => 'formulario-field'] )          !!}
+</div>
+
+<div class="formulario-label-fiel">
+  {!! Form::label('lang', 'Idioma', array('class' => 'formulario-label ')) !!}
+  {!! Form::select('lang',config('constants.available_langs_select') , null,['class' => 'formulario-field'] )          !!}
+</div>
+
 
 

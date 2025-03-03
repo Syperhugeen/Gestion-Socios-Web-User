@@ -118,11 +118,9 @@ class HelpersGenerales
         return $cadena;
     }
 
-    public static function helper_olvidar_este_cache($nombre_de_cache)
+    public static function forgetThisCacheKey($key)
     {
-        if (Cache::has($nombre_de_cache)) {
-            Cache::forget($nombre_de_cache);
-        }
+        Cache::forget($key);
     }
 
     /*  S i   e s t á   v a c i o   o   e s   n u e l o   d e v u e l v e   f a l s e   d e   l o   c o n t r a r i o

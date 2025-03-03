@@ -29,7 +29,7 @@ class Home_Public_Controller extends Controller
     public function get_home(Request $Request)
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
-        $blogs = $this->NoticiasRepo->getUltimosBlogs();
+        $blogs = $this->NoticiasRepo->latestBlogs();
         $Portada = Cache::remember('PortadaHome', 2000, function () {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'home');
         });

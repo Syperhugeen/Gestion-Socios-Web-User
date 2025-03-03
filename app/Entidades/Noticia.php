@@ -20,7 +20,10 @@ class Noticia extends Model
     protected $fillable         = ['name', 'description'];
     protected $img_key          = 'noticia_id';
     protected $route_admin_name = 'get_admin_noticias_editar';
-    protected $appends          = ['route', 'fecha_personalizada'];
+    protected $appends          = [
+        'route',
+        'fecha_personalizada',
+        'url_img_foto_principal', 'url_img_foto_principal_chica', 'url_img_foto_principal_vertical', 'url_img_foto_principal_vertical_chica', 'contenido_render'];
 
     public function getRouteAdminAttribute()
     {

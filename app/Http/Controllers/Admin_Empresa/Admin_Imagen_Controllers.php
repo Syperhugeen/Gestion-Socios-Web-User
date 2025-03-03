@@ -37,8 +37,8 @@ class Admin_Imagen_Controllers extends Controller
      
 
     // O l v i d o   l o s   c a c h e 
-    HelpersGenerales::helper_olvidar_este_cache('Imagenes'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
-    HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
+    HelpersGenerales::forgetThisCacheKey('Imagenes'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
+    HelpersGenerales::forgetThisCacheKey('ImagenPrincipal'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
 
   	if(!is_null($Imagen))
   	{  	
@@ -83,8 +83,8 @@ class Admin_Imagen_Controllers extends Controller
     $Imagen = $this->ImagenRepo->find($id); 
     
     // O l v i d o   l o s   c a c h e 
-  	HelpersGenerales::helper_olvidar_este_cache('Imagenes'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
-    HelpersGenerales::helper_olvidar_este_cache('ImagenPrincipal'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
+  	HelpersGenerales::forgetThisCacheKey('Imagenes'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
+    HelpersGenerales::forgetThisCacheKey('ImagenPrincipal'. $Imagen->key_id . $Imagen->valor_id_del_campo_key);
   	$this->ImagenRepo->poner_esta_imagen_como_principal($id);
 
   	return redirect()->back()->with('alert', 'Se cambió la imagen principal con éxito.'); 

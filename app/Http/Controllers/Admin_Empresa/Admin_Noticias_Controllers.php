@@ -34,9 +34,11 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
     protected $Route_luego_de_crear;
     protected $Path_carpeta_imagenes;
     protected $Nombre_del_campo_imagen;
+    protected $ImagenRepo;
 
-    public function __construct(NoticiasRepo $NoticiasRepo,
-        ImagenRepo                               $ImagenRepo) {
+    public function __construct(
+        NoticiasRepo $NoticiasRepo,
+        ImagenRepo   $ImagenRepo) {
         $this->Entidad_principal          = $NoticiasRepo;
         $this->ImagenRepo                 = $ImagenRepo;
         $this->Nombre_entidad_plural      = 'Noticias';
@@ -56,12 +58,25 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
     public function getPropiedades()
     {
-        return ['name', 'descripcion_breve', 'description', 'estado', 'url_video', 'tags', 'title_tag', 'description_tag'];
+        return ['name', 'descripcion_breve', 'description', 'estado', 'url_video', 'tags', 'title_tag', 'description_tag', 'lang', 'web_belong'];
     }
 
     public function get_admin(Request $Request)
     {
-        $Entidades          = $this->Entidad_principal->getEntidadesAllPaginadas($Request, 10);
+        $Entidades          = $this->Entidad_principal->getAllBlogsByWebBelongPaginated($Request, config('constants.web_belong.localWeb'), 20);
+        $Titulo             = $this->Nombre_entidad_plural;
+        $Route_crear        = $this->Route_crear;
+        $Route_busqueda     = $this->Route_index;
+        $Carpeta_view_admin = $this->Carpeta_view_admin;
+
+        $CantidadDeEnviosPendientes = Cache::has('sendEmailInQueue') ? Cache::get('sendEmailInQueue')->count() : 0;
+
+        return view($this->Path_view_get_admin_index, compact('Entidades', 'Route_crear', 'Titulo', 'Route_busqueda', 'Carpeta_view_admin', 'CantidadDeEnviosPendientes'));
+    }
+
+    public function get_admin_noticias_easy_externa(Request $Request)
+    {
+        $Entidades          = $this->Entidad_principal->getAllBlogsByWebBelongPaginated($Request, config('constants.web_belong.easysocioExternalWeb'), 20);
         $Titulo             = $this->Nombre_entidad_plural;
         $Route_crear        = $this->Route_crear;
         $Route_busqueda     = $this->Route_index;
@@ -81,8 +96,15 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
     public function olvidarCachesAsociadoAEstaEntidad()
     {
-        HelpersGenerales::helper_olvidar_este_cache('UltimosBlogs');
-        HelpersGenerales::helper_olvidar_este_cache('PaginaDeBlogs');
+
+        foreach (config('constants.web_belong') as $key => $webBelong) {
+            foreach (config('constants.available_langs') as $key => $lang) {
+                $cacheKey = config('cache.cacheKeys.latestBlogs.key') . "_{$lang}_{$webBelong}";
+                HelpersGenerales::forgetThisCacheKey($cacheKey);
+            }
+        }
+
+        HelpersGenerales::forgetThisCacheKey('PaginaDeBlogs');
     }
 
     public function enviar_noticias_por_email($id)
@@ -143,7 +165,7 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
 
     public function blogFullList()
     {
-        $blogs = $this->Entidad_principal->getEntidadesActivasOrdendasSegunYCantidad('id', 'desc');
+        $blogs = $this->Entidad_principal->getBlogsByBelong('id', 'desc',null, config('constants.web_belong.localWeb'), 'es');
 
         $string = '<!DOCTYPE html>
         <html lang="es">
@@ -153,15 +175,15 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
         </head>
         <body>
             <ul>';
-        
+
         foreach ($blogs as $blog) {
             $string .= '<li>' . htmlspecialchars($blog->route) . '</li>';
         }
-        
+
         $string .= '</ul>
         </body>
         </html>';
-        
+
         return $string;
     }
 }

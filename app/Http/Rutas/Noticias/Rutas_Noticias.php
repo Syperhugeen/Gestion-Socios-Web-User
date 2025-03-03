@@ -6,6 +6,12 @@ Route::get('get_admin_noticias',
         'as'   => 'get_admin_noticias',
     ]);
 
+Route::get('get_admin_noticias_easy_externa',
+    [
+        'uses' => 'Admin_Empresa\Admin_Noticias_Controllers@get_admin_noticias_easy_externa',
+        'as'   => 'get_admin_noticias_easy_externa',
+    ]);
+
 Route::get('get_admin_noticias_crear',
     [
         'uses' => 'Admin_Empresa\Admin_Noticias_Controllers@get_admin_crear',
@@ -35,6 +41,3 @@ Route::get('/enviar-este-articulo-{id}', [
     'uses' => 'Admin_Empresa\Admin_Noticias_Controllers@enviar_noticias_por_email',
     'as'   => 'enviar_noticias_por_email']
 );
-
-
-

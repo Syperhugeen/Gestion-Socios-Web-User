@@ -6,6 +6,9 @@
  *
  * TODO Hacer Upgrade (de todo el sistema) de la versión de laravel con Laravel Shifst.
  */
+
+
+
 if (version_compare(PHP_VERSION, '7.2.0', '>=')) {
     error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 }
@@ -40,6 +43,38 @@ Route::group(['middleware' => 'auth'], function () {
             Route::group(['middleware' => 'role:adminMcos522'], function () {
                 require __DIR__ . '/Rutas/Admin_Supremo.php';
             });
+        });
+    });
+});
+
+Route::group([
+    'apiWithToken' => 'apiWithToken',
+    'prefix'       => 'api',
+], function () {
+
+    Route::group([
+        'prefix' => 'blog',
+    ], function () {
+
+        Route::group([
+            'prefix'     => 'easysocio',
+            'middleware' => 'webBelong:' . config('constants.web_belong.easysocioExternalWeb'),
+        ], function () {
+
+            Route::post('getBlogs', [
+                'uses' => 'ApiBlogController@getBlogs',
+                'as'   => 'getBlogs',
+            ]);
+
+            Route::post('relatedBlogs', [
+                'uses' => 'ApiBlogController@relatedBlogs',
+                'as'   => 'relatedBlogs',
+            ]);
+
+            Route::post('getBlogById', [
+                'uses' => 'ApiBlogController@getBlogById',
+                'as'   => 'getBlogById',
+            ]);
         });
     });
 });

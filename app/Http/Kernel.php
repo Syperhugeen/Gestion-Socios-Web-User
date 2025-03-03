@@ -33,5 +33,7 @@ class Kernel extends HttpKernel
         'role'            => \App\Http\Middleware\ControlAcceso::class,
         'uruguayOFuera'   => \App\Http\Middleware\UruguayOFueraDeUruguay::class,
         'whereItCameFrom' => \App\Http\Middleware\WhereItCameFrom::class,
+        'apiWithToken'    => \App\Http\Middleware\ApiWithToken::class,
+        'webBelong'       => \App\Http\Middleware\BlogWebBelong::class,
     ];
 }

@@ -35,7 +35,7 @@ class Paginas_Controller extends Controller
     public function get_pagina_contacto($tipo)
     {
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
-        $blogs   = $this->NoticiasRepo->getUltimosBlogs();
+        $blogs   = $this->NoticiasRepo->latestBlogs();
 
         $Portada = Cache::remember('contactoPortada', 2000, function () {
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'contacto');
@@ -48,7 +48,7 @@ class Paginas_Controller extends Controller
     {
 
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
-        $blogs   = $this->NoticiasRepo->getUltimosBlogs();
+        $blogs   = $this->NoticiasRepo->latestBlogs();
 
         return view('paginas.paginas_personalizadas.contacto_easy_socio', compact('Empresa', 'blogs'));
     }
@@ -215,7 +215,7 @@ class Paginas_Controller extends Controller
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'funciones');
         });
 
-        $blogs = $this->NoticiasRepo->getUltimosBlogs();
+        $blogs = $this->NoticiasRepo->latestBlogs();
 
         $Planes = ServiciosPlanes::getPlanes();
 
@@ -231,7 +231,7 @@ class Paginas_Controller extends Controller
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'funciones');
         });
 
-        $blogs = $this->NoticiasRepo->getUltimosBlogs();
+        $blogs = $this->NoticiasRepo->latestBlogs();
 
         $Planes = ServiciosPlanes::getPlanes();
 
@@ -247,7 +247,7 @@ class Paginas_Controller extends Controller
             return $this->PortadaDePaginaRepo->getFirstEntidadSegunAtributo('name', 'funciones');
         });
 
-        $blogs = $this->NoticiasRepo->getUltimosBlogs();
+        $blogs = $this->NoticiasRepo->latestBlogs();
 
         $Planes = ServiciosPlanes::getPlanes();
 

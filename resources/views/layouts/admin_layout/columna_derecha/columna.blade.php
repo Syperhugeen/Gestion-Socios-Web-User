@@ -40,8 +40,11 @@
         </a>  
 
         <a href="{{route('get_admin_noticias')}}">
-          <li class="admin-columna-li mi-float-right"> Blog</li>
+          <li class="admin-columna-li mi-float-right"> Blog Easy Locales</li>
         </a>   
+        <a href="{{route('get_admin_noticias_easy_externa')}}">
+          <li class="admin-columna-li mi-float-right"> Blog Easy Externa</li>
+        </a> 
          <a href="{{route('get_admin_portadas_de_paginas')}}">
           <li class="admin-columna-li mi-float-right"> Portadas de páginas</li>
         </a>   
