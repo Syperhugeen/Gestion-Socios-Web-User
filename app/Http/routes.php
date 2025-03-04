@@ -75,6 +75,11 @@ Route::group([
                 'uses' => 'ApiBlogController@getBlogById',
                 'as'   => 'getBlogById',
             ]);
+
+            Route::post('getAllByLang', [
+                'uses' => 'ApiBlogController@getAllByLang',
+                'as'   => 'getAllByLang',
+            ]);
         });
     });
 });

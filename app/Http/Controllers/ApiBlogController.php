@@ -60,4 +60,13 @@ class ApiBlogController extends Controller
 
         return response()->json(['error' => 'Blog not found'], 404);
     }
+
+
+    public function getAllByLang(Request $Request)
+    {
+        $lang = $Request->get('lang');
+        $webBelong = $Request->get('webBelong');
+
+        return $this->noticiaRepo->getBlogsByLang($lang, $webBelong);
+    }
 }

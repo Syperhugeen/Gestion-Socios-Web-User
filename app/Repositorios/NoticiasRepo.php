@@ -85,7 +85,7 @@ class NoticiasRepo extends BaseRepo
     ) {
 
         $webBelong = $webBelong ?? config('constants.web_belong.localWeb');
-        $Blogs = $this->getEntidad()
+        $Blogs     = $this->getEntidad()
             ->Active()
             ->where('id', '<>', $Blog->id)
             ->whereNotIn('id', $filterThisIds)
@@ -145,5 +145,18 @@ class NoticiasRepo extends BaseRepo
             ->get();
 
         return $Blogs;
+    }
+
+    public function getBlogsByLang(
+        $lang,
+        $webBelong
+    ) {
+        return $this->entidad
+            ->where('borrado', 'no')
+            ->Active()
+            ->where('web_belong', $webBelong)
+            ->where('lang', $lang)
+            ->orderBy('id', 'desc')
+            ->get();
     }
 }

@@ -1,6 +1,9 @@
 
 <div class="col-md-6 col-lg-4 mb-4">
-    <div class="servicio_lista service">
+    <div class="servicio_lista service position-relative">
+
+
+
       <a v-lazy-container="{ selector: 'img' }" href="{{$Route}}">
         <img data-src="{{$Entidad->url_img_foto_principal_chica}}" alt="{{$Entidad->descripcion_breve}}" class="servicio_lista_imagen">
       </a>
@@ -14,7 +17,7 @@
          {{$Entidad->descripcion_breve}}
         </p>
         <p>
-          <a href="{{$Route}}"> Leer más  <i class="fas fa-chevron-right"></i></a>
+          <a href="{{$Route}}"> Leer más <i class="fas fa-chevron-right"></i></a>
         </p>
       </div>
     </div>
