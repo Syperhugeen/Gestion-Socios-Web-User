@@ -56,8 +56,8 @@ class Paginas_Controller extends Controller
     //Noticias
     public function get_pagina_noticias_listado(Request $Request)
     {
-        $blogs = Cache::remember('PaginaDeBlogs', 2000, function () {
-            return $this->NoticiasRepo->getEntidadActivasYOrdenadasSegunPaginadas('id', 'desc', 100);
+        $blogs = Cache::remember('PaginaDeBlogs', 60 * 60 * 6, function () {
+            return $this->NoticiasRepo->getBlogsByBelong('id', 'desc', 120, config('constants.web_belong.localWeb'), 'es');
         });
 
         $Empresa = $this->EmpresaRepo->getEmpresaDatos();
