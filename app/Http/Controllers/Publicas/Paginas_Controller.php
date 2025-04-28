@@ -78,7 +78,7 @@ class Paginas_Controller extends Controller
         $Noticia = $this->NoticiasRepo->find($id);
 
         if (Session::has('isFrom') && Session::get('isFrom') == 'organic') {
-            Session::put('isFrom', 'organic: Blog post -> ' . $Noticia->name);
+            Session::put('isFrom', 'organic: Blog post ------ORGANIC-------' . $Noticia->name);
         }
 
         $Empresa            = $this->EmpresaRepo->getEmpresaDatos();

@@ -14,6 +14,8 @@ class WhereItCameFrom
     ) {
 
         $origin = $request->query('origin');
+        $fbclid = $request->query('fbclid');
+        $gclid  = $request->query('gclid');
         $isFrom = '';
 
         switch ($origin) {
@@ -34,6 +36,18 @@ class WhereItCameFrom
 
         if (!Session::has('isFrom')) {
             Session::put('isFrom', $isFrom);
+        }
+
+        if ($fbclid) {
+            if (!Session::has('fbclid') || Session::get('fbclid') != $fbclid) {
+                Session::put('fbclid', $fbclid);
+            }
+        }
+
+        if ($gclid) {
+            if (!Session::has('gclid') || Session::get('gclid') != $gclid) {
+                Session::put('gclid', $gclid);
+            }
         }
 
         return $next($request);

@@ -13,19 +13,31 @@ class UrlToDemoViewComposer
     public function compose(View $view)
     {
 
-        $urlToDemo = 'https://app.gestionsocios.com.uy/comenzar-a-probar-gratis';
+        $baseUrl = 'https://app.gestionsocios.com.uy/es/comenzar-a-probar-gratis';
 
         $isFrom = Session::has('isFrom') ? Session::get('isFrom') : 'organic';
+        $fbclid = Session::get('fbclid');
+        $gclid  = Session::get('gclid');
 
         $origin = url("/");
         $origin = str_replace(['http://', 'https://'], '', $origin);
 
-        $params = http_build_query(['organicOrPay' => $isFrom, 'lang' => 'es', 'origin' => $origin]);
+        $params = [
+            'organicOrPay' => $isFrom,
+            'lang'         => 'es',
+            'origin'       => $origin,
+        ];
 
-        $urlToDemo = $urlToDemo . '?' . $params;
+        if ($fbclid) {
+            $params['fbclid'] = $fbclid;
+        }
+
+        if ($gclid) {
+            $params['gclid'] = $gclid;
+        }
+
+        $urlToDemo = $baseUrl . '?' . http_build_query($params);
 
         $view->with(compact('urlToDemo'));
-
     }
-
 }
