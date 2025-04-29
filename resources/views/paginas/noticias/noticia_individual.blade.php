@@ -96,7 +96,11 @@
 @stop
 
 @section('MetaRobot')
+  @if($Noticia->web_belong == config('constants.web_belong.localWeb') )
   index,follow
+  @else
+  noindex,nofollow
+  @endif
 @stop
 
 @section('palabras-claves')
