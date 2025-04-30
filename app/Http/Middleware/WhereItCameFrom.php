@@ -42,11 +42,19 @@ class WhereItCameFrom
             if (!Session::has('fbclid') || Session::get('fbclid') != $fbclid) {
                 Session::put('fbclid', $fbclid);
             }
+
+            if ($isFrom == 'organic') {
+                Session::put('isFrom', 'metaAds');
+            }
         }
 
         if ($gclid) {
             if (!Session::has('gclid') || Session::get('gclid') != $gclid) {
                 Session::put('gclid', $gclid);
+            }
+
+            if ($isFrom == 'organic') {
+                Session::put('isFrom', 'googleAds');
             }
         }
 
