@@ -155,7 +155,7 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
                 $UserNewsletterRepo->setAtributoEspecifico($UserNewsletter, 'ultimo_blog_enviado_id', implode(",", $convierto_enArray));
             }
 
-            Cache::put('sendEmailInQueue', $collectionToSaveInCache, 2000);
+            Cache::put('sendEmailInQueue', $collectionToSaveInCache, 60 * 60  * 24);
 
             $this->Entidad_principal->setAtributoEspecifico($Blog, 'enviado_por_email', 'si');
         }
