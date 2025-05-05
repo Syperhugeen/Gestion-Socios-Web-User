@@ -37,8 +37,52 @@ class Noticia extends Model
         return $fecha->format('d/m/Y');
     }
 
+    private function getBlogPath(
+        $name,
+        $id
+    ) {
+        // 1. Normalizar el string a forma NFD (no directamente soportado, usamos transliterator_transliterate para algo similar)
+        $slug = $name;
+
+        // 2. Eliminar acentos y diacríticos
+        if (class_exists('Transliterator')) {
+            $slug = transliterator_transliterate('NFD; [:Nonspacing Mark:] Remove; NFC;', $slug);
+        } else {
+            // Fallback simple si no está instalado intl
+            $slug = iconv('UTF-8', 'ASCII//TRANSLIT', $slug);
+        }
+
+        // 3. Eliminar cualquier carácter que no sea letras, números, espacios o guiones
+        $slug = preg_replace('/[^a-zA-Z0-9\s-]/', '', $slug);
+
+        // 4. Eliminar espacios al inicio y al final
+        $slug = trim($slug);
+
+        // 5. Reemplazar uno o más espacios por un único guion
+        $slug = preg_replace('/\s+/', '-', $slug);
+
+        // 6. Convertir a minúsculas
+        $slug = strtolower($slug);
+
+        return "{$slug}/{$id}";
+    }
+
     public function getRouteAttribute()
     {
+
+        /**
+         * ----------------------------------------------------------
+         *  If the web_belong is easysocioExternalWeb,
+         *  we need to create a custom route.
+         * ----------------------------------------------------------
+         */
+        if ($this->web_belong == config('constants.web_belong.easysocioExternalWeb')) {
+            $slug  = $this->getBlogPath($this->name, $this->id);
+            $route = "https://easysocio.app/$this->lang/blog/$slug";
+
+            return $route;
+        }
+
         return route('get_pagina_noticia_individual', [HelpersGenerales::helper_convertir_cadena_para_url($this->name), $this->id]);
     }
 
@@ -58,5 +102,4 @@ class Noticia extends Model
     {
         return route('enviar_noticias_por_email', $this->id);
     }
-
 }

@@ -135,11 +135,11 @@ class Admin_Noticias_Controllers extends Controller implements entidadCrudContro
             });
 
             foreach ($Empresas as $Empresa) {
-                $UserNewsletterRepo->crearNuevoUserNewslleter($Empresa->email);
+                $UserNewsletterRepo->crearNuevoUserNewslleter($Empresa->email,$Empresa->lang);
             }
         }
 
-        $UsuariosNewsletterAEnviar = $UserNewsletterRepo->getUserAEnviar($id);
+        $UsuariosNewsletterAEnviar = $UserNewsletterRepo->getUserAEnviar($id,$Blog->lang);
 
         $collectionToSaveInCache = collect([]);
 

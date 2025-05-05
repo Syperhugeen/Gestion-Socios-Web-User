@@ -17,21 +17,21 @@ class NewslleterUserRepo extends BaseRepo
         return $this->getEntidad()->all();
     }
 
-    public function crearNuevoUserNewslleter($email)
-    {
+    public function crearNuevoUserNewslleter(
+        $email,
+        $lang = 'es'
+    ) {
         $Entidades = $this->getEntidad()->where('email', $email)->get();
 
-        if ($Entidades->count() > 0)
-        {
+        if ($Entidades->count() > 0) {
             $Entidad                  = $Entidades->first();
             $Entidad->se_puede_enviar = 'si';
             $Entidad->save();
-        }
-        else
-        {
+        } else {
             $Entidad                  = $this->getEntidad();
             $Entidad->se_puede_enviar = 'si';
             $Entidad->email           = $email;
+            $Entidad->lang            = $lang;
             $Entidad->save();
         }
 
@@ -45,17 +45,21 @@ class NewslleterUserRepo extends BaseRepo
     {
         $userNewsletter = $this->getFirstEntidadSegunAtributo('email', $email);
 
-        if ($userNewsletter != '')
-        {
+        if ($userNewsletter != '') {
             $userNewsletter->se_puede_enviar = 'no';
             $userNewsletter->save();
         }
     }
 
-    public function getUserAEnviar($id_blog)
-    {
+    public function getUserAEnviar(
+        $id_blog,
+        $lang = 'es'
+    ) {
 
-        return $this->getEntidad()->where('se_puede_enviar', 'si')->where('ultimo_blog_enviado_id', 'not like', '%' . $id_blog . '%')->get();
+        return $this->getEntidad()
+            ->where('se_puede_enviar', 'si')
+            ->where('lang', $lang)
+            ->where('ultimo_blog_enviado_id', 'not like', '%' . $id_blog . '%')
+            ->get();
     }
-
 }
