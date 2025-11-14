@@ -14,9 +14,9 @@ class UruguayOFueraDeUruguay
                 $request,
         Closure $next
     ) {
-        $ipDelUser = $request->ip(); // Mejor que usar $_SERVER['REMOTE_ADDR']
+        $ipDelUser = $_SERVER['REMOTE_ADDR']; 
 
-        // Solo llamamos a la API si hace falta al menos uno de los dos valores
+        
         $geoData = null;
         if (!Session::has('esDeUruguay') || !Session::has('pais')) {
             $geoData = $this->getGeoDataFromIp($ipDelUser);
