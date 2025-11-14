@@ -11,54 +11,92 @@ class UruguayOFueraDeUruguay
 {
 
     public function handle(
-        $request,
+                $request,
         Closure $next
     ) {
+        $ipDelUser = $request->ip(); // Mejor que usar $_SERVER['REMOTE_ADDR']
 
-        /**
-         * Ip del usuario
-         */
-        $ip_del_user = strval($_SERVER['REMOTE_ADDR']);
-
-        
-
-        if (!Session::has('esDeUruguay')) {
-            $Response = CurlHelper::getUrlData("http://www.geoplugin.net/json.gp?ip=" . $ip_del_user);
-            $Valor    = false;
-
-            if ($Response['Https_status'] == 200) {
-                $Response = $Response['Data'];
-                if ($Response->geoplugin_status == 200) {
-                    $Valor = $Response->geoplugin_countryCode == 'UY' ? true : false;
-                }
-            }
-
-            Session::put('esDeUruguay', $Valor);
+        // Solo llamamos a la API si hace falta al menos uno de los dos valores
+        $geoData = null;
+        if (!Session::has('esDeUruguay') || !Session::has('pais')) {
+            $geoData = $this->getGeoDataFromIp($ipDelUser);
         }
 
+        /**
+         * -----------------------------------
+         *  esDeUruguay
+         * -----------------------------------
+         */
+        if (!Session::has('esDeUruguay')) {
+            $esDeUruguay = false;
+
+            if ($geoData && isset($geoData->countryCode)) {
+                $esDeUruguay = $geoData->countryCode === 'UY';
+            }
+
+            Session::put('esDeUruguay', $esDeUruguay);
+        }
+
+        /**
+         * -----------------------------------
+         *  pais
+         * -----------------------------------
+         */
         if (!Session::has('pais')) {
-            $Response = CurlHelper::getUrlData("http://www.geoplugin.net/json.gp?ip=" . $ip_del_user);
+            $paises = collect(ServicioPaises::getPaises());
 
-            $Paises = collect(ServicioPaises::getPaises());
+            // País por defecto (ajustá 'US' si querés que Uruguay sea el default)
+            $paisPorDefecto = $paises->firstWhere('code', 'US');
 
-            $Pais = $Paises->filter(function ($pais) {
-                return $pais->code == 'US';
-            })->first();
+            $paisSeleccionado = $paisPorDefecto;
 
-            if ($Response['Https_status'] == 200) {
-                $Response = $Response['Data'];
-                if ($Response->geoplugin_status == 200) {
-                    $Paises = $Paises->filter(function ($pais) use ($Response) {
-                        return $pais->code == $Response->geoplugin_countryCode;
-                    });
-
-                    $Pais = $Paises->count() > 0 ? $Paises->first() : $Pais;
+            if ($geoData && isset($geoData->countryCode)) {
+                $pais = $paises->firstWhere('code', $geoData->countryCode);
+                if ($pais) {
+                    $paisSeleccionado = $pais;
                 }
             }
 
-            Session::put('pais', $Pais);
+            Session::put('pais', $paisSeleccionado);
         }
 
         return $next($request);
+    }
+
+    /**
+     * Llama a la API de ip-api.com y devuelve el objeto de datos
+     * o null si algo falla.
+     */
+    protected function getGeoDataFromIp(?string $ip)
+    {
+        if (empty($ip)) {
+            return null;
+        }
+
+        // Ignorar IPs locales (útil en desarrollo)
+        if (in_array($ip, ['127.0.0.1', '::1'])) {
+            return null;
+        }
+
+        $response = CurlHelper::getUrlData("http://ip-api.com/json/" . $ip);
+
+        // Asumo que CurlHelper devuelve algo como:
+        // ['Https_status' => 200, 'Data' => (object)]
+        if (!isset($response['Https_status']) || $response['Https_status'] !== 200) {
+            return null;
+        }
+
+        $data = $response['Data'] ?? null;
+
+        if (!is_object($data)) {
+            return null;
+        }
+
+        // ip-api usa: status = "success" | "fail"
+        if (($data->status ?? null) !== 'success') {
+            return null;
+        }
+
+        return $data;
     }
 }
