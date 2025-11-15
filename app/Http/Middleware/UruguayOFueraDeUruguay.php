@@ -14,9 +14,8 @@ class UruguayOFueraDeUruguay
                 $request,
         Closure $next
     ) {
-        $ipDelUser = $_SERVER['REMOTE_ADDR']; 
+        $ipDelUser = $_SERVER['REMOTE_ADDR'];
 
-        
         $geoData = null;
         if (!Session::has('esDeUruguay') || !Session::has('pais')) {
             $geoData = $this->getGeoDataFromIp($ipDelUser);
@@ -46,12 +45,17 @@ class UruguayOFueraDeUruguay
             $paises = collect(ServicioPaises::getPaises());
 
             // País por defecto (ajustá 'US' si querés que Uruguay sea el default)
-            $paisPorDefecto = $paises->firstWhere('code', 'US');
+            $paisPorDefecto = $paises->filter(function ($pais) {
+                return $pais['code'] === 'US';
+            })->first();
 
             $paisSeleccionado = $paisPorDefecto;
 
             if ($geoData && isset($geoData->countryCode)) {
-                $pais = $paises->firstWhere('code', $geoData->countryCode);
+                $pais = $paises->filter(function ($pais) use ($geoData) {
+                    return $pais['code'] === $geoData->countryCode;
+                })->first();
+
                 if ($pais) {
                     $paisSeleccionado = $pais;
                 }
