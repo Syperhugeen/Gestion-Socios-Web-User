@@ -46,14 +46,14 @@ class UruguayOFueraDeUruguay
 
             // País por defecto (ajustá 'US' si querés que Uruguay sea el default)
             $paisPorDefecto = $paises->filter(function ($pais) {
-                return $pais['code'] === 'US';
+                return $pais->code === 'US';
             })->first();
 
             $paisSeleccionado = $paisPorDefecto;
 
             if ($geoData && isset($geoData->countryCode)) {
                 $pais = $paises->filter(function ($pais) use ($geoData) {
-                    return $pais['code'] === $geoData->countryCode;
+                    return $pais->code === $geoData->countryCode;
                 })->first();
 
                 if ($pais) {
